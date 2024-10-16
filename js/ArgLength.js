@@ -6,4 +6,5 @@ var argumentsLength = function (...args) {
 	return args.length;
 }
 
+// TEST CODE
 console.log(argumentsLength(1, 2, 3));
