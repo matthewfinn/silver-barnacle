@@ -12,6 +12,4 @@ var createHelloWorld = function() {
 
 
 const f = createHelloWorld();
-f(); // "Hello World"
-
-console.log(f);
+console.log(f); // "Hello World"
