@@ -10,7 +10,7 @@
  * @param {Function} fn
  * @return {number[]}
  */
-var map = function(arr, fn) {
+function testFn(arr, fn) {
 
 	for(let i = 0; i< arr.length; i++){
 		arr[i] = fn(arr[i], i)
@@ -30,7 +30,7 @@ var double = function double(n){
 
 // TEST CODE
 arr = [1,2,3];
-console.log(map(arr, plusone));
+console.log(testFn(arr, plusone));
 
 arr = [1,2,3];
-console.log(map(arr, double));
+console.log(testFn(arr, double));
