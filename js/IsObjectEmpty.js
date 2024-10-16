@@ -18,18 +18,10 @@ var isEmpty = function(obj) {
 };
 
 // TEST CODE
-/* Example 1:
+var obj1 = {"x": 5, "y": 42}
+var obj2 = {}
+var obj3 = [null, false, 0]
 
-Input: obj = {"x": 5, "y": 42}
-Output: false
-Explanation: The object has 2 key-value pairs so it is not empty.
-
-Example 2:
-Input: obj = {}
-Output: true
-Explanation: The object doesn't have any key-value pairs so it is empty.
-Example 3:
-
-Input: obj = [null, false, 0]
-Output: false
-Explanation: The array has 3 elements so it is not empty. */
+console.log(isEmpty(obj1)); // false
+console.log(isEmpty(obj2)); // true
+console.log(isEmpty(obj3)); // false
