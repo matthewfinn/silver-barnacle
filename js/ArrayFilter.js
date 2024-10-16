@@ -7,15 +7,15 @@
  * filteredArr should only contain the elements from the arr for which the expression fn(arr[i], i) evaluates to a truthy value. A truthy value is a value where Boolean(value) returns true.
  * 
  * Please solve it without the built-in Array.filter method.
- */ 
+ */
 
 
 
-var filter = function(arr, fn) {
+var filter = function (arr, fn) {
     let returnArray = [];
 
-    for(let i = 0; i < arr.length; i++){
-        if(fn(arr[i],i)){
+    for (let i = 0; i < arr.length; i++) {
+        if (fn(arr[i], i)) {
             returnArray.push(arr[i]);
         }
     }
@@ -25,9 +25,14 @@ var filter = function(arr, fn) {
 
 
 // TEST CODE
-function greaterThan10(n) { return n > 4; }
-function firstIndex(n, i) { return i === 0; }
+function greaterThan10(n) {
+    return n > 4;
+}
 
-var arr = [1,2,3,4,5,22,33];
+function firstIndex(n, i) {
+    return i === 0;
+}
+
+var arr = [1, 2, 3, 4, 5, 22, 33];
 console.log(filter(arr, greaterThan10));
 console.log(filter(arr, firstIndex));
