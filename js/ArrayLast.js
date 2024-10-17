@@ -8,10 +8,7 @@
  * @return {null|boolean|number|string|Array|Object}
  */
 Array.prototype.last = function() {
-	//console.log("Array Content: " + this);
-	var value = this.length === 0 ? -1 : this[this.length-1];
-	return value;
-    
+	return this.length  ? this[this.length-1] : -1 ;    
 };
 
 // TEST CODE
