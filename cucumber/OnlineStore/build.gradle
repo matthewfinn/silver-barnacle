@@ -14,11 +14,12 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'junit:junit:4.13.1'
     implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
-    implementation 'info.cukes:cucumber-java:1.2.4'
-    implementation 'info.cukes:cucumber-junit:1.2.4'
+    implementation 'io.cucumber:cucumber-java:7.20.1'
+    implementation 'io.cucumber:cucumber-junit:7.20.1'
 
 }
 
 test {
     useJUnitPlatform()
+    jvmArgs '--add-opens=java.base/java.lang=ALL-UNNAMED'
 }
