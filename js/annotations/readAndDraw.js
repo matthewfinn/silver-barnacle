@@ -64,7 +64,7 @@ async function readAndDraw(fileURL) {
 
           if (lastValue == null) {
             for (let index = 0; index < currentValue; index++) {
-              process.stdout.write(' '); // Print the 2nd element of each sub-array
+              process.stdout.write('\u0020'); 
             }
 
           } else {
