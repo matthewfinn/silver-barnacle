@@ -1,100 +1,79 @@
-const cheerio = require("cheerio")
 const axios = require("axios")
+const cheerio = require("cheerio")
 
 async function readAndDraw(fileURL) {
-  //const url = fileURL;
-  axios.get(fileURL)
-    .then(response => {
-      const html = response.data;
-      const $ = cheerio.load(html)
-      const rows = [];
+  const xCoordinateIndex = 0; // x - coordinate index
+  const unicodeCharacterIndex = 1 // it's the item at index 1 in each group that we would like to print 
+  const yCoordinateIndex = 2; // y - coordinate index
 
+  axios.get(fileURL) // gets the response from loading the webpage
+    .then(response => {
+      const html = response.data; // assign the webpage html to a constant
+      const $ = cheerio.load(html) // load html into the $ constant
+      const rows = []; // empty array to store each row of the table
+      const yValues = []; //empty array to story mapped Y axis values
       const selector = 'tbody tr' // selector for table on webpage
 
-      // get the elements from the webpage 
+      // get the table elements from the webpage 
       $(selector).each(function (i, e) {
-        const row = [];
-        rows.push(row);
-
+        const row = []; // empty array
         $(this).find("th, td").each(function (i, e) {
           row.push($(this).text().trim());
         });
+        rows.push(row); // push the content to the array of rows
       });
 
       rows.shift(); // removes first element from the array of arrays... which is the column headers
 
-      const splitIndex = 2; // y - coordinate index
-
-      const yValues = {};
-
+      // create a map of Y axis value keys and they're associated objects
       rows.forEach(row => {
-        const key = row[splitIndex];
+        const key = row[yCoordinateIndex];
         if (!yValues[key]) {
           yValues[key] = []; // Init an array if the key doesn't exist
         }
         yValues[key].push(row); // Append the item to the relevant group
       });
 
-      const asplitIndex = 1 // it's the item at index 1 in each group that we would like to print 
-      // Print only the 2nd element of each sub-array, grouped by key
-      // Step 1: Get the keys of the object
+
+      // Get the keys of the object
       const keys = Object.keys(yValues);
 
-      // Step 2: Sort the keys in descending order
+      // Sort the keys in descending order as the Y axis printing should start with the largest value and iterate in descedning order
       keys.sort((a, b) => Number(b) - Number(a));
 
-      console.log("KEYS:" + keys)
-
+      // loop through each set of keys
       for (const element of keys) {
 
-        //console.log("XVals for " + element +": " + yValues[element])
+        var xValues = yValues[element]; // get the objects for the Y value key in this iteration
+        xValues.sort((a, b) => a[0] - b[0]); // sort the objects by x co-ordinate value in ascending order
 
-        var xValues = yValues[element];
-        xValues.sort((a, b) => a[0] - b[0]);
-
-        //console.log("isitanarray???? " + (xValues.constructor == Array)); // true
-
-        //console.log("XVals for " + element +": " + xValues)
-
+        // declaration of var used to compare previous and current value
         let lastValue = null
+        xValues.forEach(item => {
 
-        yValues[element].forEach(item => {
+          const currentValue = item[xCoordinateIndex]; // x - coordinate
 
-          const currentValue = item[0]; // x - coordinate
-
-          if (lastValue == null) {
-            for (let index = 0; index < currentValue; index++) {
-              process.stdout.write('\u0020'); 
-            }
-
-          } else {
-            if (currentValue === lastValue) {
-              //process.stdout.write('\u0020'); 
-            } else {
+          if (lastValue !== null) {
+            if (currentValue !== lastValue) {
+              // check how many spaces between the current and last X co-ordinates, taking 1 away as 1 space is implied and doesn't require a printed space
               const spaces = currentValue - lastValue - 1;
-              //console.log("GAP between " + currentValue + " and " + lastValue + " is " + spaces); // separation between groups
-              if (spaces > 1) {
-                for (let index = 0; index < spaces; index++) {
-                  process.stdout.write('\u0020');
-                }
+              // print the unicode space character for each space
+              for (let index = 0; index < spaces; index++) {
+                process.stdout.write('\u0020');
               }
-              //console.log(`Current value (${currentValue}) is different from the last value.`);
-            }
-
+            } 
           }
 
-          process.stdout.write(item[asplitIndex]); // Print the 2nd element of each sub-array
-          lastValue = currentValue; // Update lastValue for the next iteration
+          process.stdout.write(item[unicodeCharacterIndex]); // Print the 2nd element of each sub-array which is the unicode character
+          lastValue = currentValue; // Update lastValue for the next iteration so we can compare
 
         });
-        console.log(); // separation between groups of the y axis
+        console.log(); // line separation between groups of the y axis
       }
 
 
     })
-    .catch(console.error);
-
-
+    .catch(console.error); // some error handling to diagnose anything going wrong
 
 };
 

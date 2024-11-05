@@ -1,0 +1,15 @@
+#https://www.makeuseof.com/windows-11-install-java-jdk/
+
+# download jdk from here - https://www.oracle.com/java/technologies/downloads/#jdk21-windows
+
+#Find the Java path; it will look something like this: C:\Program Files\Java\jdk-21\bin
+
+#Start-menu search for "environment variable" to open the options dialog.
+
+#Examine PATH. Remove old Java paths.
+
+#Add the new Java path to PATH.
+
+#Edit JAVA_HOME.
+
+#Close and re-open console/IDE.
