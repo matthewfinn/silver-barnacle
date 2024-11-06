@@ -1,3 +1,5 @@
+package basic;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,12 +24,14 @@ public class MiniMax {
 
         Collections.sort(arr);
 
+        // list is in ascending order so iterate through first 4 and sum
         for(int i =0 ; i <4 ; i ++){
             min += arr.get(i);
         }
 
         // reverse sort the list
         arr.sort(Collections.reverseOrder());
+        // list is in descending order so iterate through first 4 and sum
         for(int i =0 ; i <4 ; i ++){
             max += arr.get(i);
         }

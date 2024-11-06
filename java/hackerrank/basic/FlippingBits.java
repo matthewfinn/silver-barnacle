@@ -1,3 +1,5 @@
+package basic;
+
 public class FlippingBits {
     public static void main(String [] args){
         //args setup are "2147483647 1 0"
