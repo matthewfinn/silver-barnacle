@@ -9,7 +9,8 @@
 7. Absence-of-errors fallacy
 
 ### Testing shows presence of defects, not their absence
-Testing reduces the probability of undiscovered defects remaining in the software but, even if no defects are found, this is not a proof of correctness. 
+Testing reduces the probability of undiscovered defects remaining in the software but, even if no defects are found, 
+this is not a proof of correctness. 
 
 ### Exhaustive testing is impossible
 Testing everything (all combinations of inputs and preconditions) is not feasible.
@@ -25,4 +26,20 @@ decimal) and about 120 possible values.
 hours, 18 working days 
 
 ### Early testing saves time and money
-To find defects early, testing activities should be started as early as possible in the software development lifecycle, and should be focused on defined objectives
+To find defects early, testing activities should be started as early as possible in the software development lifecycle.
+and should be focused on defined objectives
+
+### Defect cluster together
+Testing effort should be focused proportionally to the expected and later observed defect density of modules.
+
+### Pesticide Paradox – Tests wear out
+If the same tests are repeated over and over again, they will no longer find any new defects. 
+To overcome this test cases need to be reviewed and revised, to exercise different parts of the software.
+
+### Testing is context dependent
+Testing is done differently in different contexts. For example, safety-critical software is tested differently from an e-commerce site 
+and Agile testing differs from sequential testing.
+
+### Absence-of-errors fallacy
+Finding and fixing defects does not help if the system built is unusable and does not fulfill the users needs and expectations. 
+Besides verification, validation should also be done.
