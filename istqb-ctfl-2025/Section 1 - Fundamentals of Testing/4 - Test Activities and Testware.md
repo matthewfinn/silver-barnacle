@@ -205,3 +205,123 @@ Proper Configuration Management should be in place to ensure thorough and consis
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | Test Coverage Items   | Overview<br/>Unique Identifier<br/>Description<br/>Priority<br/>Traceability                                                                    |
 | Test Cases | Overview<br/>Unique Identifier<br/>Objective<br/>Priority<br/>Traceability<br/>Preconditions<br/>Inputs<br/>Expected Results<br/>Actual Results |
+
+## Test Activities & Testware - Test Implementation
+### Test Implementation – Test Activities and Tasks
+* In the test implementation phase, testware necessary for test execution is created/acquired
+* ‘Do we now have everything in place to run the tests?’
+
+Ideally, all these tasks are completed before test execution as otherwise precious test execution time might be lost on test implementation tasks.
+
+* Includes the following major activities:
+  * Organising test cases into priorities test procedures
+  * Creating test suites needed for test execution
+  * Arranging test procedures within a test execution schedule for efficient execution
+  * Creating manual and automated test scripts
+  * Building and verifying the test environment
+  * Preparing test data 
+  * Verifying and updating bidirectional traceability between the test bases, test conditions, test cases, test procedures and test steps
+
+### Test Implementation – Testware
+* Testware coming from the test implementation phase include:
+  * Test procedures
+  * Manual and automated test scripts
+  * Test suites
+  * Test execution schedule
+  * Test data
+  * Test environment elements e.g:
+    * Stubs
+    * Drivers
+    * Simulators
+    * Service virtualizations
+
+### Test Procedure Specification – ISO/IEC/IEEE 29119 Standard
+| Item            | Details                                                                                                                                                                     |
+|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test Coverage Items   | Overview<br/>Unique Identifier<br/>Objective<br/>Priority<br/>ContentsTraceability                                                                                          |
+| Test Cases | Overview<br/>Unique Identifier<br/>Objective<br/>Priority<br/>Test cases to be executed (Traceability)<br/>Start-up<br/>Reationships to other procedures<br/>Stop & wrap-up |
+
+### Test Data Requirements – ISO/IEC/IEEE 29119 Standard
+* Overview
+* Unique Identifier
+* Description
+* Responsibility
+* Period needed
+* Resetting needs
+* Archiving or disposal
+
+### Test Environment Requirements – ISO/IEC/IEEE 29119 Standard
+* Overview
+* Unique Identifier
+* Description
+* Responsibility
+* Period needed
+
+
+## Test Activities & Testware - Test Execution
+### Test Execution – Test Activities and Tasks
+* Tests are run in accordance with the test execution schedule
+* Includes the following major activities:
+  * Executing tests in the planned sequence (manual or automated)
+  * Comparing actual with expected results and log anomalies as incidents
+  * Analysing anomalies to find out their likely causes (defects, false positives, false negatives)
+  * Logging the test results (pass, fail, blocked, etc.)
+  * Repeating test activities when incidents are solved (confirmation test, run corrected test, regression test)
+
+### Test Execution – Testware
+* Work products include: 
+  * Test logs
+  * Defect reports
+* Status of each element of the test basis can be determined and reported on via bidirectional traceability with the associated test procedures
+
+### Test Environment Requirements – ISO/IEC/IEEE 29119 Standard
+* Overview
+* Unique Identifier
+* Time
+* Description
+* Impact
+
+### Incident Report – ISO/IEC/IEEE 29119 Standard
+* Overview
+* Timing information
+* Originator
+* Context
+* Description of the incident
+* Originator’s assessment of the severity
+* Originator’s assessment of the priority
+* Risk
+* Status of the incident
+
+## Test Activities & Testware - Test Completion
+### Test Completion – Test Activities and Tasks
+* Collect data from completed test activities to consolidate experience, testware and other relevant information
+* Includes the following major activities:
+  * Checking whether all defects reported and closed, entering change requests or backlog items for any unresolved defects
+  * Archiving or handing over testware to maintenance teams, other project teams or stakeholders
+  * Shutting down test environment to an agreed state
+  * Analysing lessons learned to determine changes needed
+  * Creating a test completion report and communicating it to stakeholders
+* Activities occur at project milestones such as release, completion or cancellation of the test project, an Agile project iteration is finished, a test level is completed or a maintenance release has been completed
+
+### Test Completion – Testware
+* Work products include:
+  * Test Completion Report
+  * Action items for improvement
+  * Documented lessons learned
+  * Change requests or Product Backlog Items
+
+### Test Completion Report – ISO/IEC/IEEE 29119 Standard
+* Introduction
+  * Scope
+  * References
+  * Glossary
+* Testing performed
+  * Summary of testing performed
+  * Deviations from planned testing
+  * Test completion evaluation
+  * Factors that blocked progress
+  * Test measures
+  * Residual risks
+  * Test deliverables
+  * Reusable test assets
+  * Lessons learned
