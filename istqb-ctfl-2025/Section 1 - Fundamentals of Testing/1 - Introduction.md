@@ -1,3 +1,4 @@
+# Introduction
 ## What is Software Testing?
 
 * The process in the SDLC that evaluates the quality of a component, system or related work products:
@@ -68,3 +69,24 @@ defect, no reproduction or diagnosis is needed.
 ![image2.png](assets/image2.png)
 
 ### How much testing is enough?
+* **It's never enough**
+* When you are confident that the system works correctly
+* It depends on the risks for your system
+  * Risk of missing important faults
+  * Risk of incurring failure costs
+  * Risk of releasing untested or under-tested software
+  * Risk of losing credibility or market share
+  * Risk of missing market window
+  * Risk of ineffective over-testing
+
+### Risk Based Testing
+* Test time will always be limited
+* Use RISK to determine
+  * What to test first
+  * What to test most
+  * How thoroughly to test each item
+  * What not to test (this time)
+* Use RISK to
+  * Allocate the time available for testing by prioritizing testing
+
+**Prioritize tests so that at any time, whenever you stop testing, you have done the best testing in the time available.**
