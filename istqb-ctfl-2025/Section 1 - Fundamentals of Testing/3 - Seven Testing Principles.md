@@ -1,3 +1,5 @@
+[🔙 Back to Index](../index.md)
+
 # Seven Testing Principles
 
 1. Testing shows presence of defects, not their absence

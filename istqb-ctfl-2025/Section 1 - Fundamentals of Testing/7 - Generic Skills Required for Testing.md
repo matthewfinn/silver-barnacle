@@ -1,3 +1,5 @@
+[🔙 Back to Index](../index.md)
+
 # Generic Skills Required for Testing
 
 ### Increasing Effectiveness of Testing

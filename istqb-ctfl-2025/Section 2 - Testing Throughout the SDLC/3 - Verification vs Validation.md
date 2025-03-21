@@ -1,3 +1,5 @@
+[🔙 Back to Index](../index.md)
+
 # Verification vs Validation
 
 | Software Verification                                                                         | Software Validation                                                                                          |
