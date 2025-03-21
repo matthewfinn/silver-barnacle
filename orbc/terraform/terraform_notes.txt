@@ -1,0 +1,34 @@
+Appus security group - copy
+edge1.vpc
+ami use 2019 0 cant
+key_name qa
+no eip as not public facing 
+private subnet rather than public
+
+It doesn't look like any QA machine has an old enough Windows server version (2012 seems to be the max) to install an IIS version thats compatible with FMAPI (needs to be IIS 6, 7 or 8).
+A way around this might be to test using the FMAPI instance on testing-ah, but
+
+ that's only accessible on the office network 
+
+
+http://fmapi0.qa-bluetree.com/FMAPIService/FleetManagerAPI.asmx - FMAPI URL
+http://fmapi0.qa-bluetree.com/FMAPIService/Help/ - Help
+http://fmapi0.qa-bluetree.com/FMAPIGui/FormManageCustomers.aspx
+
+http://fmapi0.qa-bluetree.com/FMAPIGui/ - Admin console admin/Testing1234
+
+
+fmapi0.qa-bluetree.com/k-fceN;$zZy
+
+FMAPI user for qa8 - qa8_user/Testing1234
+
+qa-sqlserver.qa-bluetree.com - sa/Bluetr33
+
+FMAPI Admin - admin/Testing1234
+
+.Net 3.5 install. ASP Install 3.5 and 4.5
+https://docs.microsoft.com/en-us/previous-versions/orphan-topics/ws.11/hh831475(v=ws.11)?redirectedfrom=MSDN
+
+SQL Server CLR System Types (likely only 64-bit needed, but I installed both anyway).64-bit and 32-bit MSIs are at \\rcom-fs2.rcomonline.bluetree.ie\Files\Install-Kits\SQL Server
+url of the web service http://localhost/FMAPIService/FleetmanagerAPI.asmx
+Version installed: https://cruise-control.dev.orbcomm-galway.net:8080/FleetmanagerAPI_Master/2020.08.10.001/Build/install-kits/

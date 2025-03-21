@@ -1,0 +1,14 @@
+BT500 emulator setup notes
+
+Create android 10 emulator
+Install Infrastructure - need a branch to fix comms issues for android 10 refactor
+Connect to emulators own wifi network - no 
+mock_bt500 node service - mocks responses from BT500 - config.js has vehicle details - copy auth from DB for first Pair 
+MantleRootUrl http://10.0.2.2:8080 - host machine IP to contact local nginx instance for mantle and bt500 calls
+node ./server.js to run mock_bt500
+
+-- Comment from Eoin
+$ npm install
+$ node ./server.js
+ 
+Will hopefully get you started

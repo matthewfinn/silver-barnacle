@@ -1,0 +1,178 @@
+--Step 1. Send Request TRP using the SQL below:
+
+DECLARE @dtTimeStamp DATETIME = GETUTCDATE()
+DECLARE @sFormattedDateString NVARCHAR(MAX) = CAST(FORMAT(GETUTCDATE(), 'MM/dd/yyyy hh:mm:ss') AS NVARCHAR(MAX))
+DECLARE @nMessageID INT = NULL
+DECLARE @sXMLString NVARCHAR(MAX) = '<m s="1"><fm id="1030123" v="4"><t>' + @sFormattedDateString + '</t></fm></m>'
+DECLARE @uID UNIQUEIDENTIFIER = NEWID()
+EXEC dbo.M_CreateIncomingFormMessage 7430933, @dtTimeStamp, @uID, 1030123, 4, 1, @sXMLString, @nMessageID
+
+--Step 2. Execute the following response to the above form:
+DECLARE @dtTimeStamp DATETIME = GETUTCDATE()
+DECLARE @sFormattedDateString NVARCHAR(MAX) = CAST(FORMAT(GETUTCDATE(), 'MM/dd/yyyy hh:mm:ss') AS NVARCHAR(MAX))
+DECLARE @nMessageID INT = NULL
+DECLARE @sXMLString1 VARCHAR(MAX) = '<m s="1">
+  <fm id="1030173" v="3" d="Additional Information Required">
+    <t>' + @sFormattedDateString + '</t>
+    <f>DL30 - H0009</f>
+    <f>99 - Default<di type="biglist">
+        <ty>loadarea</ty>
+        <t>99</t>
+        <d>99 - Default</d>
+      </di>
+    </f>
+    <f>
+      <di type="biglist">
+        <ty>mrlist</ty>
+        <t>004</t>
+        <d>004 - CASH (Firewood - JL - 3.00)</d>
+      </di>
+      <di type="biglist">
+        <ty>mrlist</ty>
+        <t>006</t>
+        <d>006 - BOYB (Pulp - SS - 3.00)</d>
+      </di>
+    </f>
+    <f>
+      <di type="biglist">
+        <ty>product</ty>
+        <t>P</t>
+        <d>P - Pulp</d>
+        <rt>006</rt>
+      </di>
+      <di type="biglist">
+        <ty>product</ty>
+        <t>W</t>
+        <d>W - Firewood</d>
+        <rt>004</rt>
+      </di>
+    </f><f/><f/><f/>'
+DECLARE @sXMLString2 VARCHAR(MAX) = '<f>NO (SELECT IF STAGING)<di type="biglist">
+    <ty>staging</ty>
+    <t>NONE</t>
+    <d>NO (SELECT IF STAGING)</d>
+  </di>
+  <di type="biglist">
+    <ty>staging</ty>
+    <t>STG-KERT01</t>
+    <d>STG-KERT01 - Kerrigan Transport</d>
+  </di>
+</f>
+<f>
+  <di type="biglist">
+    <ty>trailer</ty>
+    <t>AD3734</t>
+    <d>AD3734</d>
+  </di>
+  <di type="biglist">
+    <ty>trailer</ty>
+    <t>DF2533</t>
+    <d>DF2533</d>
+  </di>
+  <di type="biglist">
+    <ty>trailer</ty>
+    <t>DF2568</t>
+    <d>DF2568</d>
+  </di>
+  <di type="biglist">
+    <ty>trailer</ty>
+    <t>DF2689</t>
+    <d>DF2689</d>
+  </di>
+  <di type="biglist">
+    <ty>trailer</ty>
+    <t>DF2690</t>
+    <d>DF2690</d>
+  </di>
+  <di type="biglist">
+    <ty>trailer</ty>
+    <t>DF2725</t>
+    <d>DF2725</d>
+  </di>
+  <di type="biglist">
+    <ty>trailer</ty>
+    <t>DF2803</t>
+    <d>DF2803</d>
+  </di>
+</f>
+<f>DL30</f>
+<f>H0009</f>
+<f>797003</f>
+<ui>1</ui>
+</fm>
+</m>'
+DECLARE @sString2 VARCHAR(MAX) = @sXMLString1 + @sXMLString2
+EXEC dbo.EX_SendFormMessage 430, 'Test', @dtTimeStamp, 1030173, 4, 1, @sString2, @nMessageID
+
+--Step 3. Respond from the form with the following Information (Job Information)
+--SO: OSB
+--Product: Pulp
+--Destination: TBA - Ballina Railhead
+--Species: SS
+--Length: 3.1
+--Collection Date: Some time in the future
+
+DECLARE @dtTimeStamp DATETIME = GETUTCDATE()
+DECLARE @nMessageID INT = NULL
+DECLARE @sFormattedDateString NVARCHAR(MAX) = CAST(FORMAT(GETUTCDATE(), 'MM/dd/yyyy hh:mm:ss') AS NVARCHAR(MAX))
+DECLARE @sXMLString NVARCHAR(MAX) = '<m s="1"><fm id="1030174" v="3"><f>CK16 - H0025</f><f>99 - Default</f><f>004 - OSB (Pulp - SS - 3.00)</f><f>P - Pulp</f><f>TBA - Ballina Railhead</f><f>SS - Sitka Spruce</f><f>3.1</f><f>NO (SELECT IF STAGING)</f><f>0206</f><f>0756</f><f>AFL1</f><f>No</f><f>No</f><f>CK16</f><f>H0025</f><f>3695715</f><t>' + @sFormattedDateString + '</t></fm></m>'
+EXEC dbo.M_CreateIncomingMessage 7430933, @dtTimeStamp, NULL, NULL, @sXMLString, @nMessageID
+
+--Step 4. Execute the following response to the above form:
+
+DECLARE @dtTimeStamp DATETIME = GETUTCDATE()
+DECLARE @sFormattedDateString NVARCHAR(MAX) = CAST(FORMAT(GETUTCDATE(), 'MM/dd/yyyy hh:mm:ss') AS NVARCHAR(MAX))
+DECLARE @nMessageID INT = NULL
+DECLARE @sXMLString NVARCHAR(MAX) = '<m s="1"><fm id="1030177" v="3" d="Job Confirmation Required"><t>' + @sFormattedDateString + '</t><f>CK16 - H0025</f><f>99 - Default</f><f>OSB - Smartply Europe Ltd</f><f>P - SS - 3.0 to TBA</f><f>AFL1</f><f /><f>06-02-2020 5:29PM</f><f /><f>3695718</f><f>Yes<i>Yes</i><i>No</i></f><ui>3</ui></fm></m>'
+EXEC dbo.EX_SendFormMessage 430, 'Test', @dtTimeStamp, 1030177, 3, 1, @sXMLString, @nMessageID
+
+--Step 5. Respond to the above form by running the following SQL:
+
+DECLARE @dtTimeStamp DATETIME = GETUTCDATE()
+DECLARE @sFormattedDateString NVARCHAR(MAX) = CAST(FORMAT(GETUTCDATE(), 'MM/dd/yyyy hh:mm:ss') AS NVARCHAR(MAX))
+DECLARE @nMessageID INT = NULL
+DECLARE @sXMLString NVARCHAR(MAX) = '<m s="1"><fm id="1030115" v="9"><f>Yes</f><f>3695718</f><t>' + @sFormattedDateString + '</t></fm></m>'
+EXEC dbo.M_CreateIncomingMessage 7430933, @dtTimeStamp, NULL, NULL, @sXMLString, @nMessageID
+
+
+--Step 6. Execute the following SQL to recieve a Job:
+
+DECLARE @dtTimeStamp DATETIME = GETUTCDATE()
+DECLARE @sFormattedDateString NVARCHAR(MAX) = CAST(FORMAT(GETUTCDATE(), 'MM/dd/yyyy hh:mm:ss') AS NVARCHAR(MAX))
+DECLARE @sFormattedDateString2 NVARCHAR(MAX) = CAST(FORMAT(GETUTCDATE(), 'yyyy-MM-dd hh:mm:ss') AS NVARCHAR(MAX))
+DECLARE @uGUID VARCHAR(36) = CAST(NEWID() AS VARCHAR(36)) 
+DECLARE @uGUID2 VARCHAR(36) = CAST(NEWID() AS VARCHAR(36)) 
+DECLARE @nMessageID INT = NULL
+
+DECLARE @nLastTripID INT
+SELECT TOP 1 @nLastTripID = CAST(Message AS XML).value('m[1]/trip[1]/@id', 'nvarchar(max)')
+FROM EX_OutgoingFormMessages
+WHERE Message LIKE '%New Job Received - Please click on flag icon to view job%'
+ORDER BY CreationTime DESC 
+
+DECLARE @sXMLString NVARCHAR(MAX) = '<m s="1"><fm id="1030116" v="3" d="New Job Received - Please click on flag icon to view job"><t>' + @sFormattedDateString + '</t></fm><trip id="' + CAST((@nLastTripID + 1) AS VARCHAR(10)) +'" chron="true" forceorder="true" description="TRP/TTD 2877756 CK16/H0025 TBA [P SS 3.0]" lock="True"><td>' + @sFormattedDateString2 + '</td><journeyNumber>568848</journeyNumber><stop index="0" skip="0" id="' + @uGUID + '" db="true" auto="true" arm="true" at="2020-02-17 00:00:01" ao="False" lock="true"><title>Loading Area - CK16/H0025/99 [G]</title><details>TRP/TTD 2877756 CK16/H0025 TBA [P SS 3.0]</details><eta>' + @sFormattedDateString2 + '</eta><trp n="TRP/TTD">2877757</trp><mr n="MR Number">004</mr><certNo n="Cert No">CertReg:SA-FM/COC-000706 FSC 100%  (Coillte To SmartPly Europe DAC)</certNo><lat>51.791777</lat><long>-8.640066</long><nr>0.001</nr><pr>2.5</pr><ar>0.5</ar><cr>0.7</cr><cra d="3600" h="true">1.2</cra><asd>60</asd><crsd>0</crsd><cd>10800</cd><wsxqueueid h="true">3695725</wsxqueueid><trpnum h="true">2877756 - CK16/H0025/99</trpnum><cust h="true">OSB - Smartply Europe Ltd</cust><statusStart h="true">R</statusStart><statusProx h="true">X</statusProx><statusArrive h="true">W</statusArrive><statusComplete h="true">L</statusComplete><origgroupcode h="true"/><origproduct h="true">P - Pulp<di type="biglist"><ty>product</ty><t>P</t><d>P - Pulp</d><rt/></di>
+			</origproduct><origdestination h="true">TBA - Ballina Railhead</origdestination><origspecies h="true">SS - Sitka Spruce</origspecies><origlength h="true">3.0</origlength><origstaging h="true">NO (SELECT IF STAGING)<di type="biglist"><ty>staging</ty><t>NO (SELECT IF STAGING)</t><d>NO (SELECT IF STAGING)</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-DUN-10 - Newmarket</t><d>STG-DUN-10 - Newmarket</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-DUN-11 - Chipper Van</t><d>STG-DUN-11 - Chipper Van</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-DUN-12 - Beet Factory</t><d>STG-DUN-12 - Beet Factory</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-DUN-13 - Kildorrery</t><d>STG-DUN-13 - Kildorrery</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-DUN-14 - Castlehyde</t><d>STG-DUN-14 - Castlehyde</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-DUN-15 - Fermoy Amber Station</t><d>STG-DUN-15 - Fermoy Amber Station</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-DUN-16 - Farnanes</t><d>STG-DUN-16 - Farnanes</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-L-01 - Kilworth</t><d>STG-L-01 - Kilworth</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-LB-12 - Piltown Base</t><d>STG-LB-12 - Piltown Base</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-LMC-13 - Kilworth</t><d>STG-LMC-13 - Kilworth</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-LMT-01 - Liams Base</t><d>STG-LMT-01 - Liams Base</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-PB - Peader Barker Base</t><d>STG-PB - Peader Barker Base</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-PB-03 - Barker Yard Ennis Staging Bay</t><d>STG-PB-03 - Barker Yard Ennis Staging Bay</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-PT-05 - Old Sawmill Cong</t><d>STG-PT-05 - Old Sawmill Cong</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-PT-08 - Recess Village Staging Bay</t><d>STG-PT-08 - Recess Village Staging Bay</d><rt/></di>
+				<di type="biglist"><ty>staging</ty><t>STG-TOT-01 - Tottenham Timber Tullamore</t><d>STG-TOT-01 - Tottenham Timber Tullamore</d><rt/></di>
+			</origstaging><origtrailer h="true">AFL1<di type="biglist"><ty>trailer</ty><t>AFL1</t><d>AFL1</d></di>
+			</origtrailer><origovernight h="true">No<di type="biglist"><ty>overnight</ty><t>NO</t><d>No</d><rt/></di>
+				<di type="biglist"><ty>overnight</ty><t>YES</t><d>Yes</d><rt/></di>
+			</origovernight><a id="0" s="s"><s id="1030118" v="18" ui="1"/></a><a id="1" s="p"><s id="1030119" v="7" ui="1"/></a><a id="2" s="a"><s id="1030120" v="7" ui="1"/></a><a id="4" s="c"><s id="1030121" v="7" ui="1"/></a></stop><stop index="1" skip="0" id="' + @uGUID2 + '" db="true" auto="true" arm="true" ao="False" lock="true"><title>Destination - TBA Ballina Railhead</title><details>TRP/TTD 2877756 CK16/H0025 TBA [P SS 3.0]</details><eta>' + @sFormattedDateString2 + '</eta><trp n="TRP/TTD">2877757</trp><mr n="MR Number">004</mr><certNo n="Cert No">CertReg:SA-FM/COC-000706 FSC 100%  (Coillte To SmartPly Europe DAC)</certNo><lat>54.10638</lat><long>-9.163967</long><nr>0.001</nr><pr>5</pr><ar>0.25</ar><cr>0.3</cr><cra d="7200" h="true">0.35</cra><asd>10</asd><crsd>0</crsd><cd>0</cd><wsxqueueid h="true">3695724</wsxqueueid><origgrouplist><di type="biglist"><ty>grouplist</ty><t>TBA_DEF</t><d>TBA_DEF</d></di><di type="biglist"><ty>grouplist</ty><t>TBA19042</t><d>TBA19042</d></di><di type="biglist"><ty>grouplist</ty><t>TBA19043</t><d>TBA19043</d></di><di type="biglist"><ty>grouplist</ty><t>TBA19045</t><d>TBA19045</d></di><di type="biglist"><ty>grouplist</ty><t>TBA19046</t><d>TBA19046</d></di><di type="biglist"><ty>grouplist</ty><t>TBA19047</t><d>TBA19047</d></di><di type="biglist"><ty>grouplist</ty><t>TBA19048</t><d>TBA19048</d></di><di type="biglist"><ty>grouplist</ty><t>TBA19049</t><d>TBA19049</d></di></origgrouplist><trpnum h="true">2877756</trpnum><origweighbdkt h="true">Not Required</origweighbdkt><cust h="true">OSB - Smartply Europe Ltd</cust><statusStart h="true">L</statusStart><statusProx h="true">Y</statusProx><statusArrive h="true">A</statusArrive><statusComplete h="true">E</statusComplete><a id="0" s="p"><s id="1030119" v="7" ui="1"/></a><a id="1" s="a"><s id="1030120" v="7" ui="1"/></a><a id="2" s="a"><s id="1030135" v="7" ui="4"/></a><a id="3" s="c"><s id="1030121" v="7" ui="1"/></a></stop></trip></m>'
+
+EXEC dbo.EX_SendFormMessage 430, 'Test', @dtTimeStamp, 1030116, 3, 1, @sXMLString, @nMessageID
+
+

@@ -1,0 +1,12 @@
+https://www.automatetheplanet.com/adb-cheat-sheet/
+
+
+adb shell
+run-as ie.bluetree.android.incab.infrastructure
+cd /data/data/ie.bluetree.android.incab.infrastructure/databases/
+
+    // -s to give device id -d to push over USB 
+adb -s R9WN92YV79J -d install ie.bluetree.android.incab.hos_3592_4.22.7-feature-sdk30-hos-0.0.2.apk
+
+
+adb -d shell "run-as ie.bluetree.android.incab.infrastructure cat /data/data/ie.bluetree.android.incab.infrastructure/databases/locallogdb" > locallogdb.sqlite

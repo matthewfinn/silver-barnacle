@@ -1,0 +1,9 @@
+platform :json
+
+output_path 'output/'
+
+formatting :none
+
+source :xlsx,
+       :path => 'input/FCOM_Localisations.xlsx',
+	   :sheet => 'localisations'

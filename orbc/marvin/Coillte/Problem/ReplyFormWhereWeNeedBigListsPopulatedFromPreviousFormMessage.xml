@@ -1,0 +1,157 @@
+<m s="1">
+	<form_def id="1030170" v="3" name="Transfer Docket Selection" ttsdescription="">
+		<label>
+			<x>0</x>
+			<y>0</y>
+			<size>30</size>
+			<value>Complete all selection fields</value>
+		</label>
+		<label>
+			<x>0</x>
+			<y>1</y>
+			<size>10</size>
+			<value>Forest-HU</value>
+		</label>
+		<label>
+			<x>0</x>
+			<y>2</y>
+			<size>8</size>
+			<value>Product</value>
+		</label>
+		<label>
+			<x>0</x>
+			<y>3</y>
+			<size>12</size>
+			<value>Destination</value>
+		</label>
+		<label>
+			<x>0</x>
+			<y>4</y>
+			<size>8</size>
+			<value>Species</value>
+		</label>
+		<label>
+			<x>0</x>
+			<y>5</y>
+			<size>7</size>
+			<value>Length</value>
+		</label>
+		<label>
+			<x>0</x>
+			<y>6</y>
+			<size>10</size>
+			<value>Coll Date</value>
+		</label>
+		<label>
+			<x>0</x>
+			<y>7</y>
+			<size>8</size>
+			<value>Trailer</value>
+		</label>
+		<field id="0" name="forspprop">
+			<x>13</x>
+			<y>1</y>
+			<size>27</size>
+			<type>string</type>
+			<default type="form">origforspprop</default>
+			<readonly>true</readonly>
+		</field>
+		<field id="1" name="product">
+			<x>13</x>
+			<y>2</y>
+			<size>27</size>
+			<type>biglist<subtype>product</subtype>
+			</type>
+			<onchange>
+				<filter>transbay</filter>
+			</onchange>
+			<default type="form">origproduct</default>
+			<required>t</required>
+		</field>
+		<field id="2" name="transbay">
+			<x>13</x>
+			<y>3</y>
+			<size>27</size>
+			<type>biglist<subtype>transbay</subtype>
+			</type>
+			<onchange>
+				<filter>species</filter>
+			</onchange>
+			<default type="form">origtransbay</default>
+			<required>t</required>
+		</field>
+		<field id="3" name="species">
+			<x>13</x>
+			<y>4</y>
+			<size>27</size>
+			<type>biglist<subtype>species</subtype>
+			</type>
+			<onchange>
+				<filter>length</filter>
+			</onchange>
+			<default type="form">origspecies</default>
+			<required>t</required>
+		</field>
+		<field id="4" name="length">
+			<x>13</x>
+			<y>5</y>
+			<size>27</size>
+			<type>biglist<subtype>length</subtype>
+			</type>
+			<default type="form">origlength</default>
+			<required>t</required>
+		</field>
+		<field id="5" name="colldate">
+			<x>13</x>
+			<y>6</y>
+			<size>13</size>
+			<format>MMdd</format>
+			<displayformat>dd/MM</displayformat>
+			<type>date</type>
+			<default type="system">now</default>
+			<required>t</required>
+		</field>
+		<field id="6" name="colltime">
+			<x>27</x>
+			<y>6</y>
+			<size>13</size>
+			<format>HHmm</format>
+			<displayformat>HH:mm</displayformat>
+			<type>time</type>
+			<required>t</required>
+		</field>
+		<field id="7" name="trailer">
+			<x>13</x>
+			<y>7</y>
+			<size>27</size>
+			<type>biglist<subtype>trailer</subtype>
+			</type>
+			<default type="form">origtrailer</default>
+			<required>t</required>
+		</field>
+		<field id="8" name="forest" invisible="true">
+			<x>0</x>
+			<y>8</y>
+			<size>4</size>
+			<type>string</type>
+			<default type="form">origforest</default>
+			<invisible>t</invisible>
+		</field>
+		<field id="9" name="sp" invisible="true">
+			<x>5</x>
+			<y>8</y>
+			<size>4</size>
+			<type>string</type>
+			<default type="form">origsp</default>
+			<invisible>t</invisible>
+		</field>
+		<field id="10" name="queueid" invisible="true">
+			<x>10</x>
+			<y>8</y>
+			<size>4</size>
+			<type>string</type>
+			<default type="form">origqueueid</default>
+			<invisible>t</invisible>
+		</field>
+	</form_def>
+</m>

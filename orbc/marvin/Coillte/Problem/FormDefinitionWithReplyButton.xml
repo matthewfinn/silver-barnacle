@@ -1,0 +1,86 @@
+<m s="1">
+	<form_def id="1030169" v="5" name="Transfer Docket Selection Notification" ttsdescription="">
+		<reply_id v="3">1030170</reply_id>
+		<label>
+			<x>2</x>
+			<y>0</y>
+			<size>36</size>
+			<value>To complete Transfer Docket request</value>
+		</label>
+		<label>
+			<x>0</x>
+			<y>1</y>
+			<size>40</size>
+			<value>please reply by clicking envelope-arrow</value>
+		</label>
+		<label>
+			<x>3</x>
+			<y>2</y>
+			<size>34</size>
+			<value>icon at the bottom of this screen</value>
+		</label>
+		<field name="origforspprop" invisible="true" id="0">
+			<x>0</x>
+			<y>3</y>
+			<size>4</size>
+			<type>string</type>
+			<invisible>t</invisible>
+		</field>
+		<field name="origproduct" invisible="true" id="1">
+			<x>5</x>
+			<y>3</y>
+			<size>4</size>
+			<type>string</type>
+			<invisible>t</invisible>
+		</field>
+		<field name="origtransbay" invisible="true" id="2">
+			<x>10</x>
+			<y>3</y>
+			<size>4</size>
+			<type>string</type>
+			<invisible>t</invisible>
+		</field>
+		<field name="origspecies" invisible="true" id="3">
+			<x>15</x>
+			<y>3</y>
+			<size>4</size>
+			<type>string</type>
+			<invisible>t</invisible>
+		</field>
+		<field name="origlength" invisible="true" id="4">
+			<x>20</x>
+			<y>3</y>
+			<size>4</size>
+			<type>string</type>
+			<invisible>t</invisible>
+		</field>
+		<field name="origtrailer" invisible="true" id="5">
+			<x>25</x>
+			<y>3</y>
+			<size>4</size>
+			<type>string</type>
+			<invisible>t</invisible>
+		</field>
+		<field name="origforest" invisible="true" id="6">
+			<x>30</x>
+			<y>3</y>
+			<size>4</size>
+			<type>string</type>
+			<invisible>t</invisible>
+		</field>
+		<field name="origsp" invisible="true" id="7">
+			<x>35</x>
+			<y>3</y>
+			<size>4</size>
+			<type>string</type>
+			<invisible>t</invisible>
+		</field>
+		<field name="origqueueid" invisible="true" id="8">
+			<x>0</x>
+			<y>4</y>
+			<size>4</size>
+			<type>string</type>
+			<invisible>t</invisible>
+		</field>
+	</form_def>
+</m>
