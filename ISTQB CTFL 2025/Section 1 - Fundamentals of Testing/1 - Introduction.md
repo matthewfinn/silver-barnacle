@@ -43,8 +43,28 @@ Testing can:
 * Find defects in the test object (static testing)
 
 ### Debugging
-* Debugging is an activity that finds, analyses and eliminates the cause of the failure/defect found in dynamic testing.
+* Debugging is an activity that finds, analyses and eliminates the cause of the failure/defect found in dynamic testing
 * Debugging a defect found in static testing, debugging is simply removing the
 defect, no reproduction or diagnosis is needed.
 
-![image1.png](assets%2Fimage1.png)
+![image1.png](assets/image1.png)
+
+## Why is testing necessary?
+* Helps in achieving agreed upon goals
+* NOT limited to the Test Team
+* Testing Contributes to success
+  * Cost-effective way to find defects
+  * Evaluation of quality leads to well-informed decisions
+  * Testers represent the users in the development project
+  * Can be required (contractually, legally, industry-specific)
+
+### Testing reduces risk
+* Reduce risk of software failure in operation by:
+  * Being involved in reviews & refinements - prevent defects
+  * Working with designers - prevent design defects through early test identification
+  * Working with developers - increase understanding of code - reduce code and test defects
+  * Verify and validate before production release - detect and fix failures and more effectively fulfill stakeholder requirements
+
+![image2.png](assets/image2.png)
+
+### How much testing is enough?

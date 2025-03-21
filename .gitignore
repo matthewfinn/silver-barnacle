@@ -9,9 +9,67 @@ out
 ## IntelliJ
 ##############################
 .idea
+.idea/
+*.iml
+*.iws
+out/
 
 ##############################
 ## Node
 ##############################
 node_modules/
 package-lock.json
+
+
+##############################
+## Build directories
+##############################
+/bin/
+/target/
+/build/
+
+##############################
+## Maven
+##############################
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+##############################
+## Gradle
+##############################
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+gradle.log
+
+##############################
+## Node modules
+##############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+##############################
+## Build artifacts
+##############################
+dist/
+build/
+coverage/
+
+##############################
+## Package manager locks (if you want them ignored)
+##############################
+package-lock.json
+yarn.lock
+
+##############################
+## Windows
+##############################
+Thumbs.db
+ehthumbs.db

@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.mf'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    def restAssuredVersion = '5.5.1'
+    def junitDataProviderVersion = '2.10'
+    def jacksonDatabindVersion = '2.18.3'
+    def jacksonAnnotationsVersion = '2.18.3'
+    def junitVersion = '4.13.1' // this might have been causing an issue with the DataProviderRunner class
+
+    testImplementation "io.rest-assured:rest-assured:${restAssuredVersion}"
+    testImplementation "com.fasterxml.jackson.core:jackson-databind:${jacksonDatabindVersion}"
+    testImplementation "com.fasterxml.jackson.core:jackson-annotations:${jacksonAnnotationsVersion}"
+    testImplementation "junit:junit:${junitVersion}"
+    testImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:${junitDataProviderVersion}"
+
+
+}
