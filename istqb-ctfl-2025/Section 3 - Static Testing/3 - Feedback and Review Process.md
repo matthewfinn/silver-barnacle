@@ -157,3 +157,53 @@ If you have to fail, **fail fast!**
 Buddy check, pairing, pair review, peer review
 ###### Main purpose
 Detecting anomalies
+###### Possible Additional Purposes
+Generating new ideas of solutions, quickly solving minor problems
+###### Characteristics
+* Not based on a formal documented process
+* May not involve a review meeting
+* May be performed by a colleague of the author or by more people
+* Results may be documented
+* Varies in usefulness depending on the reviewers
+* Use of checklists is optional
+* Very common in Agile development
+
+#### Walkthrough
+###### Main purpose
+Find anomalies, evaluate quality, building confidence in the work product, improve the software product, consider alternative implementations, evaluate conformance to standards and specifications
+###### Possible Additional Purposes
+Exchanging new ideas about techniques or style variations, educating reviewers, gaining consensus, motivate authors to improve and detect anomalies
+###### Characteristics
+- Individual preparation before the review meeting is optional
+- Review meeting is typically led by the author of the work product
+- Use of checklists is optional
+- May take the form of scenarios, dry runs or simulations
+- Potential defect logs and review reports may be produced
+- May vary from quite informal to very formal
+
+#### Technical Review
+###### Main purpose
+Detecting potential defects, gaining consensus, make decisions on technical problems
+###### Possible Additional Purposes
+Evaluating quality and building confidence in the work product, generating new ideas, motivating and enabling authors to improve future work products, considering alternative implementations
+###### Characteristics
+- Reviewers should be technical peers of the author and technical experts
+- Individual preparation before the review meeting is required - Led by a trained moderator (not the author)
+- Use of checklists is optional
+- Potential defect logs and review reports are typically produced
+
+#### Inspection
+###### Main purpose
+Detecting the maximum nr of anomalies, evaluating quality and building confidence in the work product, preventing future similar defects through author learning and root cause analysis
+###### Possible Additional Purposes
+Motivating and enabling authors to improve future work products and the software development process, achieving consensus
+###### Characteristics
+- Follows a defined process with formal documented outputs, based on rules and checklists
+- Uses clearly defined roles (mandatory) and may include a dedicated reader - Individual preparation before the review meeting is required
+- Reviewers are peers of the author or experts in other relevant disciplines- Specified entry and exit criteria are used
+- Scribe is mandatory
+- Review meeting is led by a trained facilitator (not the author)
+- Author cannot act as review leader, reader or scribe
+- Potential defect logs and review reports are produced
+- Metrics are collected and used to improve the entire software development process
+
