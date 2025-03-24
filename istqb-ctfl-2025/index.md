@@ -22,4 +22,7 @@
 - [5   Incremental And Iterative Models](Section%202%20-%20Testing%20Throughout%20the%20SDLC/5%20-%20Incremental%20and%20Iterative%20Models.md)
 - [6   Agile Software Development](Section%202%20-%20Testing%20Throughout%20the%20SDLC/6%20-%20Agile%20Software%20Development.md)
 - [7   Good Testing Practices](Section%202%20-%20Testing%20Throughout%20the%20SDLC/7%20-%20Good%20Testing%20Practices.md)
+- [8   Test First Approaches](Section%202%20-%20Testing%20Throughout%20the%20SDLC/8%20-%20Test%20First%20Approaches.md)
+- [9   DevOps And Testing](Section%202%20-%20Testing%20Throughout%20the%20SDLC/9%20-%20DevOps%20and%20Testing.md)
+- [10   Shift Left Approach](Section%202%20-%20Testing%20Throughout%20the%20SDLC/10%20-%20Shift-Left%20Approach.md)
 
