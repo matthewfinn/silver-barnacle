@@ -38,3 +38,10 @@
 - [21   Maintenance Testing](Section%202%20-%20Testing%20Throughout%20the%20SDLC/21%20-%20Maintenance%20Testing.md)
 - [22   Summary](Section%202%20-%20Testing%20Throughout%20the%20SDLC/22%20-%20Summary.md)
 
+## Section 3   Static Testing
+
+- [1   Static Testing](Section%203%20-%20Static%20Testing/1%20-%20Static%20Testing.md)
+- [2   Static Vs Dynamic Testing](Section%203%20-%20Static%20Testing/2%20-%20Static%20vs%20Dynamic%20Testing.md)
+- [3   Feedback And Review Process](Section%203%20-%20Static%20Testing/3%20-%20Feedback%20and%20Review%20Process.md)
+- [4   Summary](Section%203%20-%20Static%20Testing/4%20-%20Summary.md)
+

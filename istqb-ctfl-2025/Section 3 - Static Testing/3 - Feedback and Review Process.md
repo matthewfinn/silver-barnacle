@@ -1,3 +1,5 @@
+[🔙 Back to Index](../index.md)
+
 # Feedback and Review Process
 
 ## Early & Frequent Feedback
@@ -207,3 +209,15 @@ Motivating and enabling authors to improve future work products and the software
 - Potential defect logs and review reports are produced
 - Metrics are collected and used to improve the entire software development process
 
+## Success Factors for Reviews
+* Clear, predefined objectives
+* Measurable exit criteria
+* The review is conducted in an atmosphere of trust; the outcome will not be used for the evaluation of the participants
+* Review types are applied that are suitable to achieve the objectives
+* Large work products are written and reviewed in small chunks
+* Feedback is given to the participants so the process and their activities can be improved
+* Participants have adequate time to prepare for the review
+* Reviews are made part of the organizational culture to promote learning and improvement
+* Management supports the review process
+* Adequate training is give; especially for the more formal review types
+* Facilitate meetings

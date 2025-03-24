@@ -1,3 +1,5 @@
+[🔙 Back to Index](../index.md)
+
 # Static vs Dynamic Testing
 
 | Static Testing                                                                                  | Dynamic Testing                                                                                 |
