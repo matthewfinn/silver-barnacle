@@ -153,8 +153,7 @@ If you have to fail, **fail fast!**
 * Focus depends on the agreed objectives of the review
 
 #### Informal Review
-
-##### _AKA_
+###### _AKA_
 Buddy check, pairing, pair review, peer review
-##### _Main purpose_
+###### _Main purpose_
 Detecting anomalies
