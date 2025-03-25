@@ -4,8 +4,6 @@
 
 **Sample Exams**
 
-Section 2 - Testing Throughout the SDLC/7 - Good Testing Practices.md
-
 # generate_toc.js
 ### What This Does
 1. Creates index.md (Table of Contents)
