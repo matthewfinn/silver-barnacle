@@ -59,27 +59,40 @@ function generateToC(directory = ".") {
     let folders = {};
 
     function scanDir(dir) {
+        console.log(`🔍 Scanning directory: ${dir}`); // Debugging: Log every scanned directory
+
         fs.readdirSync(dir).forEach(file => {
             let fullPath = path.join(dir, file);
             let relativePath = path.relative(directory, fullPath).replace(/\\/g, "/");
 
+            console.log(`   📂 Found: ${relativePath}`); // Debugging: Log every found file
+
+            // Skip .idea and assets folders
+            if (file === ".idea" || file === "assets") return;
+
             if (fs.statSync(fullPath).isDirectory()) {
-                scanDir(fullPath);
+                scanDir(fullPath); // Recursively scan subdirectories
             } else if (file.endsWith(".md") && !IGNORE_FILES.has(file)) {
                 let folder = path.dirname(relativePath);
                 if (!folders[folder]) folders[folder] = [];
                 folders[folder].push(relativePath);
-
-                // Add back link dynamically
                 addBackLinks(fullPath, directory);
+            } else if (file.endsWith(".pdf")) {
+                console.log(`   ✅ PDF Detected: ${relativePath}`); // Debugging: Log found PDFs
+                let folder = path.dirname(relativePath);
+                if (!folders[folder]) folders[folder] = [];
+                folders[folder].push(relativePath);
             }
         });
     }
 
+
+
+
     scanDir(directory);
 
     // Sort folders alphabetically
-    Object.keys(folders).sort().forEach(folder => {
+    Object.keys(folders).sort(customSort).forEach(folder => {
         if (folder !== ".") toc += `## ${folder.replace(/[-_]/g, " ")}\n\n`;
 
         // Sort the files in the folder numerically first, then alphabetically
@@ -94,6 +107,13 @@ function generateToC(directory = ".") {
     // Write the table of contents to the output file
     fs.writeFileSync(OUTPUT_FILE, toc);
     console.log(`✅ Updated ${OUTPUT_FILE} with ${Object.keys(folders).length} sections.`);
+
+    function customSort(a, b) {
+        // Ensure "resources" is always last
+        if (a.toLowerCase() === "resources") return 1;
+        if (b.toLowerCase() === "resources") return -1;
+        return a.localeCompare(b, undefined, { numeric: true });
+    }
 }
 
 // Run the script

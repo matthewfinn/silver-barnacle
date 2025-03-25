@@ -1,6 +1,4 @@
-[🔙 Back to Index](../index.md)
-
-[🔙 Back to Index](../index.md)
+[🔙 Back to Index](../index.md)]
 
 # Black-Box Test Techniques
 
@@ -13,6 +11,7 @@
 * Functional and non-functional
 
 ### Characteristics
+
 * Test conditions, test cases and test data are derived from a test basis that may include
   * Software requirement
   * Specifications
@@ -20,4 +19,3 @@
   * User stories
 * Test cases may be used to detect gaps between requirements and the implementation of the requirements as well as deviations from the requirements
 * Coverage is measured based on the items tested in the test basis and the technique applied to the test basis
-

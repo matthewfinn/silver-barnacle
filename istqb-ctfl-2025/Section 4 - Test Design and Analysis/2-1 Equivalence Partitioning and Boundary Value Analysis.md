@@ -1,7 +1,5 @@
 [🔙 Back to Index](../index.md)
 
-[🔙 Back to Index](../index.md)
-
 # Black-Box Test Techniques
 
 ## Equivalence Partitioning
@@ -183,6 +181,3 @@
 | Coupon       | T        | F        | T        | F        | T        | F        | T        | F        |
 | **Actions**  | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
 | Discount %   | N/A      | N/A      | 20       | 15       | 30       | 10       | 20       | 0        |
-
-## State Transition Testing
-/////////////////////////// slide 365

@@ -55,3 +55,8 @@
 - [3 White Box Test Techniques](Section%204%20-%20Test%20Design%20and%20Analysis/3%20White-Box%20Test%20Techniques.md)
 - [4 Experience Based Test Techniques](Section%204%20-%20Test%20Design%20and%20Analysis/4%20Experience-Based%20Test%20Techniques.md)
 
+## Resources
+
+- [ISTQB Foundation Certified Tester Sample Questions & Exercises 2024 V4.0.Pdf](Resources/ISTQB%20Foundation%20Certified%20Tester%20Sample%20Questions%20%26%20Exercises%202024%20V4.0.pdf)
+- [ISTQB Foundation Level Certified Tester Slide Handout 2024 V4.0.Pdf](Resources/ISTQB%20Foundation%20Level%20Certified%20Tester%20Slide%20Handout%202024%20V4.0.pdf)
+
