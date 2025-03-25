@@ -13,7 +13,7 @@
   * Building
   * Testing
 
-### Incremental development visualized
+### Incremental development visualised
 ![image5.png](assets/image5.png)
 
 ## What is Iterative development?
@@ -23,7 +23,7 @@
 * In each iteration, static and dynamic testing may be done on ALL test levels
 * Fast feedback and extensive regression testing is needed for frequent delivery of increments
 
-### Iterative development visualized
+### Iterative development visualised
 ![image6.png](assets/image6.png)
 
 ## Testing in Spiral Models

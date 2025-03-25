@@ -18,7 +18,7 @@ Several Black-Box (specification-based) test techniques have been discussed in t
 * **State transition testing**
   * Test cases are designed to exercise elements of a state transition model
 * **Use case testing**
-  * Test cases are designed to exercise use case behaviors.
+  * Test cases are designed to exercise use case behaviours.
 
 ### White-Box Test Techniques
 Several White-Box (structure-based) test techniques have been discussed in this course:
@@ -54,7 +54,7 @@ course:
 
 Think for example of collaborative user story writing.
 * Acceptance Criteria are defined which are
-  * The criteria that a component or system must satisfy in order to be accepted by a user, customer, or other authorized entity
+  * The criteria that a component or system must satisfy in order to be accepted by a user, customer, or other authorised entity
 * Acceptance criteria can be written in a lot of formats, the most common ones being:
   * Scenario-based or
   * Rule-based

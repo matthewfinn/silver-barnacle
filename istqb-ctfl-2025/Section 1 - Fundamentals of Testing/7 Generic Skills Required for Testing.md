@@ -18,4 +18,4 @@ Keep in mind:
 * Stay objective and factual, not focused on the person
 * Try to understand the way the other person feels and reacts
 * Be sure the other person understood what you have said
-* Clear test objectives influence plans and individual behavior
+* Clear test objectives influence plans and individual behaviour

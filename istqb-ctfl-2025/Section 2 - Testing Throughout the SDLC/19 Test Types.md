@@ -4,7 +4,7 @@
 A group of test activities aimed at specific characteristics of a software system or a part of the system. A test type is based on specific test objectives:
 * Evaluating the functions the system or component should perform
 * Evaluating non-functional quality characteristics
-* Checking the system’s behavior against its’ specifications
+* Checking the system’s behaviour against its’ specifications
 * Cover the underlying structure by the tests to an acceptable level
 
 ### Functional Testing
@@ -28,16 +28,16 @@ A group of test activities aimed at specific characteristics of a software syste
   * Particular use base
 
 ### Black-box Testing
-* Checking the system’s behavior against its’ specifications
+* Checking the system’s behaviour against its’ specifications
 * Specification-based test type
 * Tests are derived from documentation external to the test object (specification documents, user stories, etc)
-* Considers the **external** behavior of the software
+* Considers the **external** behaviour of the software
 
 ### White-box Testing
 * Cover the underlying structure by the tests to an acceptable level
 * Structure-based test type
 * Tests are derived from the system’s internal structure or implementation (code, architecture, work-flows, data flows, etc)
-* Considers the **internal** behavior of the software
+* Considers the **internal** behaviour of the software
 * Measuring the thoroughness of testing through assessment of coverage of a type of structure – Code coverage
 * Tools can be used to measure the code coverage of elements (like statements or decisions)
 

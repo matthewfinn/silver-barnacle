@@ -26,7 +26,7 @@
 
 ## Specific Methods and Agile Practices
 * Acceptance-test driven Development (ATDD)
-* Behavior-driven Development (BDD)
+* behaviour-driven Development (BDD)
 * Domain-driven Design (DDD)
 * Extreme programming (XP)
 * Feature-driven Development (FDD)

@@ -1,13 +1,13 @@
 [🔙 Back to Index](../index.md)
 
 # Acceptance Testing
-* Focuses on the behavior and capabilities of a whole system or product
+* Focuses on the behaviour and capabilities of a whole system or product
 * Demonstrating the readiness for release, that the user’s business needs are fulfilled
 
 ### Objectives
 * Establishing confidence in the quality of the system as a whole
 * Validating that the system is complete and will work as expected
-* Verifying that functional and non-functional behavior of the system is as specified
+* Verifying that functional and non-functional behaviour of the system is as specified
 * May also satisfy legal or regulatory standards or requirements
 * Finding defects is often NOT an objective and can be considered a project risk
 

@@ -6,7 +6,7 @@
 
 ## Equivalence Partitioning
 * Can be applied on all testing levels
-* Idea is to divide (partition) data into groups or sets for which the behavior is assumed to be the same (test object should handle each value in a partition **equivalently**)
+* Idea is to divide (partition) data into groups or sets for which the behaviour is assumed to be the same (test object should handle each value in a partition **equivalently**)
 * Equivalent partitions are also known as equivalence classes
 * Test cases designed to execute representatives from **ALL** equivalence partitions
   * Valid values are values that should be accepted by the component or system and are in a **valid equivalence partition**
@@ -45,7 +45,7 @@
 * Extension of **EP**, generally used to test requirements that call for a range of numbers
 * Can ONLY be used when the partitions are ordered
 * Exercising the boundaries of equivalence partitions – min and max values of a partition
-* Behavior at the boundaries of equivalence partitions are **more likely** to be incorrect than within the partitions
+* behaviour at the boundaries of equivalence partitions are **more likely** to be incorrect than within the partitions
 * 2 elements (values) belonging to the same partition – all values in between must also belong to that partition
 * Boundary values are the MIN AND MAX values of Equivalence Partitions
 * Typically, locations of defects found by BVA at misplaced boundaries
@@ -55,7 +55,7 @@
   $$
 
 ### Identifying Boundary Values
-* Divide a set of test conditions into groups or sets for which the behavior is assumed to be the same
+* Divide a set of test conditions into groups or sets for which the behaviour is assumed to be the same
 * Draw up your Equivalence Partition table
 * Identify the minimum and maximum values of each partition - These are your Boundary Values
 ![image2.png](assets/image2.png)
@@ -150,7 +150,7 @@
 * Effective way to record complex logic such as business rules
 * Helps identify all the important combinations of conditions
 * Systematic way to identify all combinations of conditions
-* If a lot of combinations, or having multiple types of input that are not binary, use risk assessment or a minimized decision table to decide which rules to execute
+* If a lot of combinations, or having multiple types of input that are not binary, use risk assessment or a minimised decision table to decide which rules to execute
 * Decision tables can be simplified and made smaller by:
   * Deleting columns with infeasible combinations of conditions
   * Merging columns to minimize the table (ONLY if some conditions do not affect the outcome)

@@ -86,7 +86,7 @@ Tests should include positive and negative scenarios. Various participants play 
    </tr>
 </table>
 
-##### Behavior-Driven Development
+##### behaviour-Driven Development
 
 * BDD helps developers collaborate with other stakeholders to define accurate tests focused on business needs
 * Allows a developer to focus on testing the code based on the expected behaviour
@@ -101,7 +101,7 @@ Tests should include positive and negative scenarios. Various participants play 
 
 * Define the scope and functionality of a user story
 * Uses a list of:
-  * Functional and Behavioral parameters
+  * Functional and behavioural parameters
 * Format looks more like ‘Waterfall’ scenarios – each function listed individually
 * This can be in the form of a:
   * Bullet point verification list

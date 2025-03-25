@@ -133,7 +133,7 @@ Proper Configuration Management should be in place to ensure thorough and consis
      Black Box, White Box and Experience Based test techniques can be useful in Test Analysis to define more precise and accurate test conditions and not miss important test conditions
 
 ### Test Analysis - Testware
-* Defined and prioritized test conditions (such as Acceptance Criteria)
+* Defined and prioritised test conditions (such as Acceptance Criteria)
 * Defect reports regarding defects in the test basis
 
 ### Test Design Specification – ISO/IEC/IEEE 29119 Standard

@@ -5,7 +5,7 @@
 | Static Testing                                                                                  | Dynamic Testing                                                                                 |
 |-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | Finds **defects** in work products                                                              | Finds **failures** caused by defects when running the software                                  |
-| Used to improve the **consistency** and **internal quality**                                    | Focuses on **externally visible** behavior                                                      |
+| Used to improve the **consistency** and **internal quality**                                    | Focuses on **externally visible** behaviour                                                      |
 | Quality characteristics **not** depending on executing code (code quality, maintainability,etc) | Quality characteristics depending on executing code (performance efficiency,functionality, etc) |
 
 

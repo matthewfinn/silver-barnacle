@@ -10,7 +10,7 @@
 
 ### Objectives
 * Reducing risk
-* Verifying whether the functional and non-functional behavior of the component is as designed and specified
+* Verifying whether the functional and non-functional behaviour of the component is as designed and specified
 * Building confidence in the quality of the component
 * Finding defects in the component
 * Preventing defects from getting into higher test levels

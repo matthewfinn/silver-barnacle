@@ -8,7 +8,7 @@
 
 ### Objectives
 * Reducing risk
-* Verifying whether the functional and non-functional behavior of the interfaces is as designed as specified
+* Verifying whether the functional and non-functional behaviour of the interfaces is as designed as specified
 * Building confidence in the quality of the interfaces – mainly through automation
 * Finding defects in the interfaces, interactions or components
 * Preventing defects from getting into higher test levels

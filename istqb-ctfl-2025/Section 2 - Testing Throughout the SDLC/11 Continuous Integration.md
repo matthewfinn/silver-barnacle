@@ -42,7 +42,7 @@ Build tools are often linked to automatic deployment tools, which:
   * Production
 
 This process reduces errors and delays associated with having to rely on
-specialized staff or programmers to install releases.
+specialised staff or programmers to install releases.
 
 ### CI - Possible Benefits
 * Allows earlier detection and root cause analysis of integration problems

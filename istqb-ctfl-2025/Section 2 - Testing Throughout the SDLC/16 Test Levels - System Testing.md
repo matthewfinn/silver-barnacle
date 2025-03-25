@@ -1,8 +1,8 @@
 [🔙 Back to Index](../index.md)
 
 # System Testing
-* Focuses on the behavior and capabilities of a whole system or product
-* Looks at the functional end-to-end tasks the system can perform and the non-functional behavior when performing these tasks
+* Focuses on the behaviour and capabilities of a whole system or product
+* Looks at the functional end-to-end tasks the system can perform and the non-functional behaviour when performing these tasks
 * Automated system regression tests provide confidence
 * Often produces information for the stakeholders to make release decisions
 * May also satisfy legal or regulatory standards or requirements
@@ -10,7 +10,7 @@
 
 ### Objectives
 * Reducing risk
-* Verifying whether the functional and non-functional behavior of the system is as designed and specified
+* Verifying whether the functional and non-functional behaviour of the system is as designed and specified
 * Validating that the system is complete and will work as expected
 * Building confidence in the quality of the system as a whole
 * Finding defects
@@ -35,18 +35,18 @@
 
 ### Typical Defects & Failures
 * Incorrect calculations
-* Incorrect or unexpected functional or non-functional system behavior
+* Incorrect or unexpected functional or non-functional system behaviour
 * Incorrect control or data flows within the system
 * Failure to properly and completely carry out end-to-end functionality
 * Failure of the system to work properly in the production environment
 * Failure of the system to work as described in the system and user manuals
 
 ### Approach & Responsibilities
-* Should focus on the overall, end-to-end behavior of the system as a whole
+* Should focus on the overall, end-to-end behaviour of the system as a whole
 * Includes **functional** and **non-functional**
 * Can be tested using specification-based techniques (black box) or structure-based techniques (white-box)
 * Typically performed by independent testers
-* Specification defects can lead to misunderstanding of expected system behavior, which can lead to false positives or false negatives
+* Specification defects can lead to misunderstanding of expected system behaviour, which can lead to false positives or false negatives
 * Early involvement of testers reduces the risk of above situations occurring
 
 ### Examples

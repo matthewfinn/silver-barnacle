@@ -8,7 +8,7 @@
 
 ### Objectives
 * Reducing risk
-* Verifying whether the functional and non-functional behavior of the integrated system(s) is as designed and specified
+* Verifying whether the functional and non-functional behaviour of the integrated system(s) is as designed and specified
 * Building confidence in the quality of the system
 * Finding defects in the system(s)
 * Preventing defects from getting into the acceptance level

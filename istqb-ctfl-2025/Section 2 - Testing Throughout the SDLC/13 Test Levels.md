@@ -1,7 +1,7 @@
 [🔙 Back to Index](../index.md)
 
 # Test Levels
-* Groups of test activities that are organized and managed together
+* Groups of test activities that are organised and managed together
 * Performed in relation to software at a given level of development
 * Identify missing areas and prevent overlap and repetition of tests in the SDLC
 * Implementation of Test levels depends on the SDLC

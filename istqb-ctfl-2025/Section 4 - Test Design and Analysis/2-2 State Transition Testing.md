@@ -7,7 +7,7 @@
   * State is determined by rules of the machine
   * Different response on an event depending on the current conditions and previous history
 * Test cases can be designed to execute valid and invalid state transitions
-* Behavior in a system is shown in a **state transition diagram model**, which shows:
+* behaviour in a system is shown in a **state transition diagram model**, which shows:
   * Possible states and valid transitions
   * Events that cause or result in a transition from one state to another
   * Actions that result from a transition

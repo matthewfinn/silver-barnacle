@@ -71,15 +71,15 @@ experience and knowledge of common issues in authentication systems.
 
 3. **Execute Test Cases**
 * Execute each test case against the login functionality of the web application 
-* Record the actual results and any observed deviations from expected behavior
+* Record the actual results and any observed deviations from expected behaviour
 
 4. **Analyse Results**
-* Analyze the results of each test case to identify any errors or unexpected behavior encountered during the testing process 
+* Analyze the results of each test case to identify any errors or unexpected behaviour encountered during the testing process 
 * Pay attention to any discrepancies between the expected and actual outcomes
 
 5. **Report and Document Findings**
 * Document the findings, including any errors or faults identified during the testing process
-* Report the details of each issue, including steps to reproduce, observed behavior, and potential impact on the application's functionality or security
+* Report the details of each issue, including steps to reproduce, observed behaviour, and potential impact on the application's functionality or security
 
 6. **Retest and Verify Fixes**#
 * After developers address the reported issues, retest the affected areas to ensure that the fixes have been successfully implemented and that no new errors have been introduced
