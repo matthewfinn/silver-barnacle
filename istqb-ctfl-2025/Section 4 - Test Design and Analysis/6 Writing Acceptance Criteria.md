@@ -1,5 +1,7 @@
 [🔙 Back to Index](../index.md)
 
+[🔙 Back to Index](../index.md)
+
 # Writing Acceptance Criteria
 
 ### User Story Writing – 3C Concept
@@ -21,7 +23,7 @@ Tests should include positive and negative scenarios. Various participants play 
   * Functional characteristics AND
   * Non-Functional characteristics
 
-### Why do we need acceptance criteria?
+### Why do we need Acceptance Criteria?
 
 **Acceptance Criteria:**
 
@@ -57,7 +59,6 @@ Tests should include positive and negative scenarios. Various participants play 
 
 **Scenario:** Requesting the cash from an overdrawn (negative balance) account
 
-
 <table>
    <tr>
       <th colspan="2" style="background-color: #649864;"><b>User Story:</b> As a bank card user, I want to be able to request cash from my account<br>
@@ -86,6 +87,7 @@ Tests should include positive and negative scenarios. Various participants play 
 </table>
 
 ##### Behavior-Driven Development
+
 * BDD helps developers collaborate with other stakeholders to define accurate tests focused on business needs
 * Allows a developer to focus on testing the code based on the expected behaviour
 * As tests are based on the exhibited behaviour, the tests are easier to understand
@@ -96,6 +98,7 @@ Tests should include positive and negative scenarios. Various participants play 
 * From these requirements, the framework generates code (test classes) that dev can use to create test cases
 
 ### Rule-oriented Acceptance Criteria
+
 * Define the scope and functionality of a user story
 * Uses a list of:
   * Functional and Behavioral parameters
@@ -105,6 +108,7 @@ Tests should include positive and negative scenarios. Various participants play 
   * Tabulated form of input-output mapping
 
 ##### Example
+
 <table>
    <tr>
       <th colspan="2" style="background-color: #649864;"><b>User Story:</b> As a bank card user, I want to be able to request cash from my account<br>

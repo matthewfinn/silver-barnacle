@@ -61,8 +61,10 @@
 - [4 1 Error Guessing](Section%204%20-%20Test%20Design%20and%20Analysis/4-1%20Error%20Guessing.md)
 - [4 2 Exploratory Testing](Section%204%20-%20Test%20Design%20and%20Analysis/4-2%20Exploratory%20Testing.md)
 - [4 3 Checklist Based Testing](Section%204%20-%20Test%20Design%20and%20Analysis/4-3%20Checklist-Based%20Testing.md)
-- [5   Collaborative User Story Writing](Section%204%20-%20Test%20Design%20and%20Analysis/5%20-%20Collaborative%20User%20Story%20Writing.md)
-- [6   Writing Acceptance Criteria](Section%204%20-%20Test%20Design%20and%20Analysis/6%20-%20Writing%20Acceptance%20Criteria.md)
+- [5 Collaborative User Story Writing](Section%204%20-%20Test%20Design%20and%20Analysis/5%20Collaborative%20User%20Story%20Writing.md)
+- [6 Writing Acceptance Criteria](Section%204%20-%20Test%20Design%20and%20Analysis/6%20Writing%20Acceptance%20Criteria.md)
+- [7 Use ATDD To Derive Test Cases](Section%204%20-%20Test%20Design%20and%20Analysis/7%20Use%20ATDD%20to%20derive%20test%20cases.md)
+- [8 Summary](Section%204%20-%20Test%20Design%20and%20Analysis/8%20Summary.md)
 
 ## Resources
 
