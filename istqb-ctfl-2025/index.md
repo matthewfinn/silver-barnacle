@@ -53,7 +53,13 @@
 - [2 2 State Transition Testing](Section%204%20-%20Test%20Design%20and%20Analysis/2-2%20State%20Transition%20Testing.md)
 - [2 3 Use Case Testing](Section%204%20-%20Test%20Design%20and%20Analysis/2-3%20Use%20Case%20Testing.md)
 - [3 White Box Test Techniques](Section%204%20-%20Test%20Design%20and%20Analysis/3%20White-Box%20Test%20Techniques.md)
+- [3 1 Statement Testing And Coverage](Section%204%20-%20Test%20Design%20and%20Analysis/3-1%20Statement%20Testing%20and%20Coverage.md)
+- [3 2 Decision Testing And Coverage](Section%204%20-%20Test%20Design%20and%20Analysis/3-2%20Decision%20Testing%20and%20Coverage.md)
+- [3 3 Branch Testing And Coverage](Section%204%20-%20Test%20Design%20and%20Analysis/3-3%20Branch%20Testing%20and%20Coverage.md)
+- [3 4 Path Testing And Coverage](Section%204%20-%20Test%20Design%20and%20Analysis/3-4%20Path%20Testing%20and%20Coverage.md)
 - [4 Experience Based Test Techniques](Section%204%20-%20Test%20Design%20and%20Analysis/4%20Experience-Based%20Test%20Techniques.md)
+- [4 1 Error Guessing](Section%204%20-%20Test%20Design%20and%20Analysis/4-1%20Error%20Guessing.md)
+- [4 2 Exploratory Testing](Section%204%20-%20Test%20Design%20and%20Analysis/4-2%20Exploratory%20Testing.md)
 
 ## Resources
 
