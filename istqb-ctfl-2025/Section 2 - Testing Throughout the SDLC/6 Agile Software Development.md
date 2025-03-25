@@ -75,7 +75,7 @@ The Agile manifesto values the concepts on the right, but believes the ones on t
 
 
 ### Agile Approaches – Kanban
-Kanban utilizes three instruments
+Kanban utilises three instruments
 - Kanban Board
 - Work-in-Progress Limit
 - Lead Time

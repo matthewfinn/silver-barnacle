@@ -153,7 +153,7 @@
 * If a lot of combinations, or having multiple types of input that are not binary, use risk assessment or a minimised decision table to decide which rules to execute
 * Decision tables can be simplified and made smaller by:
   * Deleting columns with infeasible combinations of conditions
-  * Merging columns to minimize the table (ONLY if some conditions do not affect the outcome)
+  * Merging columns to minimise the table (ONLY if some conditions do not affect the outcome)
 
 * Technique is to:
   1. Identify all inputs (conditions) and outputs (actions) and put them in a table as rows

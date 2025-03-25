@@ -23,7 +23,7 @@
 * Test approach
 * Risk Analysis and Risk Control are used to:
   * Select test activities
-  * Prioritize test activities
+  * Prioritise test activities
   * Manage test activities
 
 ## Risk Definition & Risk Attributes

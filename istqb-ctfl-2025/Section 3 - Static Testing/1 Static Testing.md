@@ -40,7 +40,7 @@ Can be used on almost any work product that can be **read** and **understood**:
 ### Static Testing – When can it NOT be used
 * Work Products that can not be read or understood
 * Work products that are difficult to interpret by human beings
-* Work Products that should not be analyzed by tools:
+* Work Products that should not be analysed by tools:
   * Code
   * Models
 
@@ -58,7 +58,7 @@ Can be used on almost any work product that can be **read** and **understood**:
 * Goal is to find defects rather than failures
 
 ### Static Analysis by Tools
-* Tools analyze program code (e.g. control flow and data flow) as well as generated output (e.g. html, xml)
+* Tools analyse program code (e.g. control flow and data flow) as well as generated output (e.g. html, xml)
 * Typical defects found are:
   * Referencing a variable with an undefined value
   * Inconsistent interfaces between modules and components

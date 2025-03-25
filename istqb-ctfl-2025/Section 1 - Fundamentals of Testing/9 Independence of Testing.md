@@ -14,7 +14,7 @@
 * Independence of testing can be implemented in many ways
 
 ### Benefits
-* Likely to recognize different kind of failures compared to developers
+* Likely to recognise different kind of failures compared to developers
 * Independent tester can verify, challenge or disprove assumptions made by stakeholders in specification and implementation
 
 ### Risks

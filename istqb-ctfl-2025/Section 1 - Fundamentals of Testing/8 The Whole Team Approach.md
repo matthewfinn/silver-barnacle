@@ -12,7 +12,7 @@
 * One of the main ideas behind Agile development
 
 ### Whole-Team Approach - Purpose
-* Maximize the business value
+* Maximise the business value
 * The whole team is responsible for the quality
 * Collaboration between testers and other team members to achieve the desired quality levels creates **transparency** and knowledge sharing
   * Testers work with developers and business to achieve desired quality

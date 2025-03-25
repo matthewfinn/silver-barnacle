@@ -43,7 +43,7 @@ Defects are usually fixed as soon as they are found without formal defect manage
 
 ### Examples
 * Validate that adding two positive numbers returns the correct sum
-* Verify that a function correctly capitalizes the first letter of a word
+* Verify that a function correctly capitalises the first letter of a word
 * Verify that a function extracts names correctly from an API response
 * Verify that a function correctly identifies leap years
 * Verify that adding multiple items calculates the total price correctly

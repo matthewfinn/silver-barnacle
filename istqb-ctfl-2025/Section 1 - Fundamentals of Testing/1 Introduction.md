@@ -91,4 +91,4 @@ defect, no reproduction or diagnosis is needed.
 * Use RISK to
   * Allocate the time available for testing by prioritizing testing
 
-**Prioritize tests so that at any time, whenever you stop testing, you have done the best testing in the time available.**
+**Prioritise tests so that at any time, whenever you stop testing, you have done the best testing in the time available.**

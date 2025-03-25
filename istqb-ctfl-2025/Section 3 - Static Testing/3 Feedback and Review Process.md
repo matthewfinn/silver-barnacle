@@ -125,13 +125,13 @@ If you have to fail, **fail fast!**
 
 
 | Role                  | Responsibility                                                                                                                                                                                                                           |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Manager               | Decides what is to be reviews<br/>Decides on planning of the review<br/>Allocates staff, budget & time<br/>Monitors ongoing cost-effectiveness<br/>Executes control decisions in the event of inadequate outcomes                        |
 | Author                | Creates the work product under review<br/>Fixes defects in the work product under review                                                                                                                                                 |
 | Moderator/Facilitator | Ensure effective running of meetings<br/>Mediates between various points of view<br/>Plans the review wrt time & time management<br/>Ensures a safe review environment<br/>Often the person upon which the success of the review depends |
 | Scribe/Recorder       | Collects and documents all anomalies found during the individual review activity by the reviewers<br/>Records new anomalies, open points and decisions from the review                                                                   |
 | Reviewer              | Reviewing of the work products<br/>Can be a project participant, SME, any other stakeholder<br/>Identify & log anomalies in work product under review<br/>May represent different perspectives                                           |
-| Review Leader         | Takes overall responsibility for the review<br/> Decides who will be involved and organizes when and where it will happen                                                                                                                |
+| Review Leader         | Takes overall responsibility for the review<br/> Decides who will be involved and organises when and where it will happen                                                                                                                |
 
 ## Review Types
 

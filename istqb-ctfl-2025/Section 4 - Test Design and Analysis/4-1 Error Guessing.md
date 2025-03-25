@@ -74,7 +74,7 @@ experience and knowledge of common issues in authentication systems.
 * Record the actual results and any observed deviations from expected behaviour
 
 4. **Analyse Results**
-* Analyze the results of each test case to identify any errors or unexpected behaviour encountered during the testing process 
+* Analyse the results of each test case to identify any errors or unexpected behaviour encountered during the testing process 
 * Pay attention to any discrepancies between the expected and actual outcomes
 
 5. **Report and Document Findings**
