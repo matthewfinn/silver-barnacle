@@ -1,8 +1,5 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
-
-[🔙 Back to Index](../index.md)
 
 # Writing Acceptance Criteria
 

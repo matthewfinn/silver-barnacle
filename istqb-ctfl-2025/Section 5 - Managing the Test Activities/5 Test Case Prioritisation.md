@@ -1,4 +1,4 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
 # Test Case Prioritisation
 ## Test Execution Schedule

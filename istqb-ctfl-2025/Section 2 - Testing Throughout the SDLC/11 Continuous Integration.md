@@ -1,9 +1,7 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
 
 # Continuous Integration
-
 ### Continuous Integration - Visualised
 ![image16.png](assets/image16.png)
 

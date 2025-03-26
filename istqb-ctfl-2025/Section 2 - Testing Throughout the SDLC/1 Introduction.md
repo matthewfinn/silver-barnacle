@@ -1,6 +1,6 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
+
 
 # Introduction
 ## Software Development Lifecycle Model

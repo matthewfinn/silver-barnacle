@@ -1,6 +1,6 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
+
 
 # Test Types
 A group of test activities aimed at specific characteristics of a software system or a part of the system. A test type is based on specific test objectives:

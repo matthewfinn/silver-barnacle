@@ -1,4 +1,5 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
+
 
 # Product Risk Analysis
 
@@ -44,7 +45,7 @@
 ## Product Risk Analysis
 
 * Goal – Provide awareness of product risks
-  * Focus testing efforts to minimize the residual level of product risk.
+  * Focus testing efforts to minimise the residual level of product risk.
 * Should start early in the SDLC
 * Consists of two main activities
 
@@ -164,6 +165,3 @@ Analyzed risks can be responded to with:
     <li>Independent testers external to the organization (on-site or off-site)</li>
   </ul>
 </div>
-
-
-

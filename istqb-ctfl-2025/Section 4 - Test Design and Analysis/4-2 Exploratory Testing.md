@@ -1,4 +1,4 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
 # Exploratory Testing
 * Informal test technique

@@ -1,4 +1,4 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
 # The Test Pyramid
 * Layers of the pyramid represent groups of tests

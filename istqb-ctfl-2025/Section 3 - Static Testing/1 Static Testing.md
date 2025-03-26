@@ -1,9 +1,8 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
 
-# Static Testing 
 
+# Static Testing
 ### Testing Techniques - Visualised
 ![image1.png](assets/image1.png)
 

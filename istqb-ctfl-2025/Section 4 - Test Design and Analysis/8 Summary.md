@@ -1,6 +1,5 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
 
 # Summary
 ### Test Analysis and Design Process
@@ -62,4 +61,3 @@ Think for example of collaborative user story writing.
   * Rule-based
 * Acceptance criteria are used in **Acceptance-Test Driven Developement** for the creation of Acceptance Test Cases
 * Acceptance Test Driven Development is a collaboration-based test-first approach that defines acceptance tests in the stakeholders' domain language
-

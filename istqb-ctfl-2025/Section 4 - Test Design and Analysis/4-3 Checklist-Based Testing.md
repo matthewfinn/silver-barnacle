@@ -1,4 +1,4 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
 # Checklist-Based Testing
 * Testers design, implement and execute tests to cover test conditions found in a checklist

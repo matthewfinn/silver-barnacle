@@ -1,6 +1,6 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
+
 
 # Component Integration Testing
 * AKA Unit Integration Testing#

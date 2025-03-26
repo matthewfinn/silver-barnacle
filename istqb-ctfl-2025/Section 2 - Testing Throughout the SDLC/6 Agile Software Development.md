@@ -1,9 +1,8 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
+
 
 # Agile Software Development
-
 ## The Fundamentals of Agile Software Development 
 ### The Agile Manifesto
 * **Individuals and interactions** _over_ processes and tools 
@@ -108,5 +107,3 @@ Kanban utilises three instruments
 * More of a coaching role, can be difficult
 * Constant time pressure and less time to think about testing new features
 * Regression becomes extremely important and automation more beneficial
-
-

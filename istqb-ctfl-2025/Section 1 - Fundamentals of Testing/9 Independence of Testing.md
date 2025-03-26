@@ -1,6 +1,6 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
+
 
 # Independence of Testing
 ![image13.png](assets/image13.png)

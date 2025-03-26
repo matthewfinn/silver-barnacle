@@ -1,4 +1,4 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
 # Use Case Testing
 * Identify test cases that exercise the whole system on transaction by transaction basis from start to finish (scenarios of use cases)
@@ -76,5 +76,3 @@ $$
     <td>PIN invalid 3 times<br>S: Eat card and exit</td>
   </tr>
 </table>
-
-

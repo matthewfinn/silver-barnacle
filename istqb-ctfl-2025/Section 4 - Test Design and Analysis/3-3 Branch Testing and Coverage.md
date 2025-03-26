@@ -1,4 +1,4 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
 # Branch Testing & Coverage
 * A branch is transfer between two nodes in the control flow

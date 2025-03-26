@@ -1,4 +1,4 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
 # Introduction
 ## Testing Techniques
@@ -34,8 +34,3 @@
   * Test objectives 
   * Types of defects expected
   * Available documentation
-
-
-
-
-

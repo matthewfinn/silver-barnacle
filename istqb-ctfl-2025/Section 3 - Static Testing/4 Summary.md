@@ -1,4 +1,4 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
 # Summary
 ## Static Testing
@@ -17,4 +17,4 @@
 * An **Inspection** is a type of formal review that uses defined team roles and measurement to identify defects in a work product and improve the review process and the software development process
 * **Anomaly**: A condition that deviates from expectation
 * **Static testing**: Testing that does not involve the execution of a test item
-* **Dynamic testing**: Testing that involves the execution of the test item. 
+* **Dynamic testing**: Testing that involves the execution of the test item.

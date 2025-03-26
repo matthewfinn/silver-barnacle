@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const OUTPUT_FILE = "index.md";
+const OUTPUT_FILE = "home.md";
 const IGNORE_FILES = new Set([OUTPUT_FILE, "README.md"]);
 
 // Function to safely encode URLs (Handle spaces and special characters in filenames)
@@ -15,21 +15,25 @@ function getRelativePath(file, baseDir = ".") {
     if (filePath === "") {
         return "./" + OUTPUT_FILE;  // If it's in the base folder
     }
-    // Replace subfolder path with necessary `../` to navigate back to index.md
+    // Replace subfolder path with necessary `../` to navigate back to home.md
     return "../".repeat(filePath.split("/").length - 1) + OUTPUT_FILE;
 }
 
-// Function to add or update "Back to Index" at the top of Markdown files
+// Function to add or update "Home" at the top of Markdown files
 function addBackLinks(file, baseDir = ".") {
-    let content = fs.readFileSync(file, "utf-8");
-    let backLink = `[🔙 Back to Index](${getRelativePath(file, baseDir)})\n\n`;
+    let content = fs.readFileSync(file, "utf-8").trim();  // Trim to avoid leading/trailing whitespace issues
 
-    // Remove existing back links (to avoid duplicates)
-    content = content.replace(/^(\[🔙 Back to Index\]\(.*\)\n\n)/, "");
+    // Regular expression to match and remove any existing back links (with optional newlines after)
+    const backLinkRegex = /\[🔙 Home\]\(.*\)\n?\n?/;
 
-    // Prepend new back link
+    // Remove any existing back links (to avoid duplicates)
+    content = content.replace(backLinkRegex, "");
+
+    // Prepend the new back link with exactly one newline after it
+    let backLink = `[🔙 Home](${getRelativePath(file, baseDir)})\n\n`;
     content = backLink + content;
 
+    // Write the updated content back to the file
     fs.writeFileSync(file, content);
 }
 

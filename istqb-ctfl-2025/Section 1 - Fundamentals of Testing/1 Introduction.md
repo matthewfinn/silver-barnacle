@@ -1,6 +1,4 @@
-[🔙 Back to Index](../index.md)
-
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
 # Introduction
 ## What is Software Testing?

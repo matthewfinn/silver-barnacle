@@ -1,6 +1,6 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
+
 
 # System Integration Testing
 * Focuses on interactions between systems, packages and microservices (also external)
@@ -49,4 +49,3 @@
 * User Authentication Across Systems – Verifying if a Single Sign-On (SSO) solution (e.g., Okta, Auth0) correctly integrates across multiple applications.
 * Airline Reservation System – Ensuring that a flight booking system correctly integrates with third-party services for seat selection, payment, and loyalty programs.
 * Logistics & Supply Chain Integration – Verifying that a shipping company’s tracking system integrates correctly with warehouse and inventory management systems.
-

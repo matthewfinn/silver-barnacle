@@ -1,6 +1,5 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
 
 # Experience Based Test Techniques
 

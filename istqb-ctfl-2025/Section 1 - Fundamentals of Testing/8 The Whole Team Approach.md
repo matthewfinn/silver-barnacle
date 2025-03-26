@@ -1,6 +1,6 @@
-[🔙 Back to Index](../index.md)
+[🔙 Home](../home.md)
 
-[🔙 Back to Index](../index.md)
+
 
 # The Whole Team Approach
 
@@ -29,4 +29,4 @@
 * Creating synergy in the team by enabling the various skill sets within the team to be leveraged to the benefit of the project
 * Helps team members learn and share knowledge with each other
 * Making every team collectively responsible for the result
-* **Making quality everyone’s responsibility** 
+* **Making quality everyone’s responsibility**

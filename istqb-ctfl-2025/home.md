@@ -79,6 +79,8 @@
 - [9 Product Risk Analysis](Section%205%20-%20Managing%20the%20Test%20Activities/9%20Product%20Risk%20Analysis.md)
 - [10 Test Monitoring, Test Control And Test Completion](Section%205%20-%20Managing%20the%20Test%20Activities/10%20Test%20Monitoring%2C%20Test%20Control%20and%20Test%20Completion.md)
 - [11 Metrics Used For Testing](Section%205%20-%20Managing%20the%20Test%20Activities/11%20Metrics%20used%20for%20Testing.md)
+- [12 Test Reports](Section%205%20-%20Managing%20the%20Test%20Activities/12%20Test%20Reports.md)
+- [13 Communicating The Status Of Testing](Section%205%20-%20Managing%20the%20Test%20Activities/13%20Communicating%20the%20Status%20of%20Testing.md)
 
 ## Resources
 
