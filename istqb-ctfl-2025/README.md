@@ -14,24 +14,34 @@
 1. Save the script as generate_toc.js
 2. Run it `node generate_toc.js`
 
-### Automate it - NEEDS TESTING
+### Automate it
 1. Open the Git hooks directory:
 ```shell
 cd your-repo/.git/hooks
 ```
 2. Create/Edit `post-commit` hook
 ```shell
-notepad post-commit
+echo post-commit
 ```
 3. Add the below script
 ```shell
 #!/bin/sh
+
+# Get the latest commit message
+latest_commit_message=$(git log -1 --pretty=%B)
+
+# Check if the commit message already contains the " - amended by TOC script" suffix
+if echo "$latest_commit_message" | grep -q " - amended by TOC script"; then
+    echo "Commit already amended by TOC script. Exiting to prevent infinite loop."
+    exit 0
+fi
+
+# Run the node script to generate the TOC
 node istqb-ctfl-2025/generate_toc.js
-git add istqb-ctfl-2025/.
-git commit --amend --no-edit
-```
-#### Not sure this is necessary
-4. Make it executable
-```shell
-chmod +x post-commit
+
+# Add all changes to the staging area
+git add .
+
+# Amend the commit without changing the commit message, but add " - amended by TOC script" to prevent looping
+git commit --amend --no-edit -m "$(git log -1 --pretty=%B) - amended by TOC script"
 ```
