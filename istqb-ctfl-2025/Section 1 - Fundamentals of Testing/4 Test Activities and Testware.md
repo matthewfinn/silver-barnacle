@@ -27,17 +27,17 @@
 
 ### Testware
 
-Artifacts produced during the test process required to plan, design, and execute tests, such as documentation, scripts,
-inputs, expected results, set-up and clear-up procedures, files, databases, environment, and any additional software or utilities used in testing.
+Artifacts produced during the test process required to plan, design, & execute tests, such as documentation, scripts,
+inputs, expected results, set-up & clear-up procedures, files, databases, environment, & any additional software or utilities used in testing.
 
 * Created as part of the test activities in the test process
 * Each test activity creates test work products (aka testware)
 * Types of work products vary as the test process varies
-* Much testware can be captured and managed using
+* Much testware can be captured & managed using
   * Test Management Tools
   * Defect Management Tools
 
-Proper Configuration Management should be in place to ensure thorough and consistent testware
+Proper Configuration Management should be in place to ensure thorough & consistent testware
 
 ### Fundamental Testware
 
@@ -49,12 +49,12 @@ Proper Configuration Management should be in place to ensure thorough and consis
 
 ## Test Activities & Testware - Test Planning
 
-### Test Planning – Test Activities and Tasks
+### Test Planning – Test Activities & Tasks
 
 * Define objectives of testing
 * Selecting approach that best achieves objectives
 * Starts at the beginning of the software development project
-* Must regularly be checked and may be updated and adjusted based on feedback from the monitoring & control activities
+* Must regularly be checked & may be updated & adjusted based on feedback from the monitoring & control activities
 
 ### Test Planning – Testware
 
@@ -67,17 +67,17 @@ Proper Configuration Management should be in place to ensure thorough and consis
 ### Test Plan - ISO/IEC/IEEE 29119 Standard
 | Item                            | Details                                                                                                                                                                                                                                                                                                                          |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Context of testing              | Type of Test Plan<br />Test Items<br />Test Scope<br />Assumptions and Constraints<br />Stakeholders                                                                                                                                                                                                                             |
+| Context of testing              | Type of Test Plan<br />Test Items<br />Test Scope<br />Assumptions & Constraints<br />Stakeholders                                                                                                                                                                                                                             |
 | Testing Lines of Communication  | -                                                                                                                                                                                                                                                                                                                                |
 | Risk Register                   | Risks                                                                                                                                                                                                                                                                                                                            |
-| Testing Activites and Estimates | -                                                                                                                                                                                                                                                                                                                                |
+| Testing Activites & Estimates | -                                                                                                                                                                                                                                                                                                                                |
 | Staffing                        | Roles<br />Tasks<br />Responsibilites<br />Training Needs<br />Hiring Needs                                                                                                                                                                                                                                                      |
 | Schedule                        | -                                                                                                                                                                                                                                                                                                                                |
 | Test Strategy (of the project)  | Test Sub-processes<br />Test Deliverables<br />Test Design Techniques<br />Test completions criteria<br />Metrics to be collected<br />Test Data requirements<br />Test Environment requirements<br />Retesting & regression testing<br />Suspension & resumption criteria<br />Deviations from the organisational test strategy |
 
 
 ## Test Activities & Testware - Test Monitoring & Control
-### Test Monitoring & Control - Test Activities and Tasks
+### Test Monitoring & Control - Test Activities & Tasks
 #### Test Monitoring
 * **Ongoing** check of all test activities
 * **Ongoing** comparison of actual progress vs the test plan using metrics
@@ -86,12 +86,12 @@ Proper Configuration Management should be in place to ensure thorough and consis
 * Taking actions needed to meet the objectives of testing
 * Updating the Test Plan according to feedback
 
-#### Monitoring and Control are supported by the evaluation of exit criteria (definition of done), which may include:
-* Checking of test results and logs against coverage criteria
-* Assessing component or system quality based on the test results and logs
+#### Monitoring & Control are supported by the evaluation of exit criteria (definition of done), which may include:
+* Checking of test results & logs against coverage criteria
+* Assessing component or system quality based on the test results & logs
 * Determining if more tests are needed
 
-**Progress, deviations and information needed to determine to stop testing is reported in Test Progress Reports, Documentation of Control Directives and Risk information**
+**Progress, deviations & information needed to determine to stop testing is reported in Test Progress Reports, Documentation of Control Directives & Risk information**
 
 ### Test Monitoring & Control - Testware
 * Various type of **Test Reports** such as:
@@ -99,26 +99,26 @@ Proper Configuration Management should be in place to ensure thorough and consis
   * Test Summary Reports
   * Documentation of Control Directives
   * Risk Information
-* These reports provide relevant information on the test progress and a summary of test execution results 
+* These reports provide relevant information on the test progress & a summary of test execution results 
 
 ### Test Progress Report – ISO/IEC/IEEE 29119 Standard
 * Reporting Period
 * Progress against the test plan
 * Factors blocking progress
 * Test Measures
-* New and changed risks
+* New & changed risks
 * Planned testing
 
 ## Test Activities & Testware - Test Analysis
-### Test Analysis - Test Activities and Tasks
+### Test Analysis - Test Activities & Tasks
 * Answers "what to test?" using measurable coverage criteria
 * Major activities are:
 
   1. Analysing the test basis to:
     * Identify testable features
-    * Test basis include Requirement Specifications, Design and Implementation information, implementation of the component itself, Risk Analysis reports, etc.
+    * Test basis include Requirement Specifications, Design & Implementation information, implementation of the component itself, Risk Analysis reports, etc.
   
-  2. Evaluating the Test Basis and test objects to identify defects and their testability such as:
+  2. Evaluating the Test Basis & test objects to identify defects & their testability such as:
      * Ambiguities
      * Omissions
      * Inconsistencies
@@ -126,16 +126,16 @@ Proper Configuration Management should be in place to ensure thorough and consis
      * Contradictions
      * Redundant statements
      
-  3. Defining & Prioritizing test conditions, their risks and risk levels per feature based on:
+  3. Defining & Prioritizing test conditions, their risks & risk levels per feature based on:
      * Analysis of the Test Basis
-     * Consideration on functional, non-functional and structural characteristics
+     * Consideration on functional, non-functional & structural characteristics
      * Business & technical factors
      * Levels of risk
 
-     Black Box, White Box and Experience Based test techniques can be useful in Test Analysis to define more precise and accurate test conditions and not miss important test conditions
+     Black Box, White Box & Experience Based test techniques can be useful in Test Analysis to define more precise & accurate test conditions & not miss important test conditions
 
 ### Test Analysis - Testware
-* Defined and prioritised test conditions (such as Acceptance Criteria)
+* Defined & prioritised test conditions (such as Acceptance Criteria)
 * Defect reports regarding defects in the test basis
 
 ### Test Design Specification – ISO/IEC/IEEE 29119 Standard
@@ -145,15 +145,15 @@ Proper Configuration Management should be in place to ensure thorough and consis
 | Test Conditions | Overview<br/>Unique Identifier<br/>Description<br/>Priority<br/>Traceability                     |
 
 ## Test Activities & Testware - Test Design
-### Test Design - Test Activities and Tasks
-* The test conditions are used to create high level test cases and other testware, often involving test design techniques
+### Test Design - Test Activities & Tasks
+* The test conditions are used to create high level test cases & other testware, often involving test design techniques
 * Answers "How to test?"
 * Includes the following major activities:
   * Identify coverage items
-  * Designing test cases and sets of test cases
+  * Designing test cases & sets of test cases
   * Defining the test data requirements to support test cases
   * Designing the test environment
-  * Identifying required infrastructure and tools
+  * Identifying required infrastructure & tools
 * Identification of defects during Test Design is a potential benefit
 
 #### A good test case is:
@@ -193,7 +193,7 @@ Proper Configuration Management should be in place to ensure thorough and consis
 |4|12|100|
 
 ### Test Design - Testware
-* Prioritised test cases and sets of test cases
+* Prioritised test cases & sets of test cases
 * Other work products may include:
   * Test Charters
   * Coverage Items
@@ -211,7 +211,7 @@ Proper Configuration Management should be in place to ensure thorough and consis
 | Test Cases | Overview<br/>Unique Identifier<br/>Objective<br/>Priority<br/>Traceability<br/>Preconditions<br/>Inputs<br/>Expected Results<br/>Actual Results |
 
 ## Test Activities & Testware - Test Implementation
-### Test Implementation – Test Activities and Tasks
+### Test Implementation – Test Activities & Tasks
 * In the test implementation phase, testware necessary for test execution is created/acquired
 * ‘Do we now have everything in place to run the tests?’
 
@@ -221,15 +221,15 @@ Ideally, all these tasks are completed before test execution as otherwise precio
   * Organising test cases into priorities test procedures
   * Creating test suites needed for test execution
   * Arranging test procedures within a test execution schedule for efficient execution
-  * Creating manual and automated test scripts
-  * Building and verifying the test environment
+  * Creating manual & automated test scripts
+  * Building & verifying the test environment
   * Preparing test data 
-  * Verifying and updating bidirectional traceability between the test bases, test conditions, test cases, test procedures and test steps
+  * Verifying & updating bidirectional traceability between the test bases, test conditions, test cases, test procedures & test steps
 
 ### Test Implementation – Testware
 * Testware coming from the test implementation phase include:
   * Test procedures
-  * Manual and automated test scripts
+  * Manual & automated test scripts
   * Test suites
   * Test execution schedule
   * Test data
@@ -263,11 +263,11 @@ Ideally, all these tasks are completed before test execution as otherwise precio
 
 
 ## Test Activities & Testware - Test Execution
-### Test Execution – Test Activities and Tasks
+### Test Execution – Test Activities & Tasks
 * Tests are run in accordance with the test execution schedule
 * Includes the following major activities:
   * Executing tests in the planned sequence (manual or automated)
-  * Comparing actual with expected results and log anomalies as incidents
+  * Comparing actual with expected results & log anomalies as incidents
   * Analysing anomalies to find out their likely causes (defects, false positives, false negatives)
   * Logging the test results (pass, fail, blocked, etc.)
   * Repeating test activities when incidents are solved (confirmation test, run corrected test, regression test)
@@ -276,7 +276,7 @@ Ideally, all these tasks are completed before test execution as otherwise precio
 * Work products include: 
   * Test logs
   * Defect reports
-* Status of each element of the test basis can be determined and reported on via bidirectional traceability with the associated test procedures
+* Status of each element of the test basis can be determined & reported on via bidirectional traceability with the associated test procedures
 
 ### Test Environment Requirements – ISO/IEC/IEEE 29119 Standard
 * Overview
@@ -297,14 +297,14 @@ Ideally, all these tasks are completed before test execution as otherwise precio
 * Status of the incident
 
 ## Test Activities & Testware - Test Completion
-### Test Completion – Test Activities and Tasks
-* Collect data from completed test activities to consolidate experience, testware and other relevant information
+### Test Completion – Test Activities & Tasks
+* Collect data from completed test activities to consolidate experience, testware & other relevant information
 * Includes the following major activities:
-  * Checking whether all defects reported and closed, entering change requests or backlog items for any unresolved defects
+  * Checking whether all defects reported & closed, entering change requests or backlog items for any unresolved defects
   * Archiving or handing over testware to maintenance teams, other project teams or stakeholders
   * Shutting down test environment to an agreed state
   * Analysing lessons learned to determine changes needed
-  * Creating a test completion report and communicating it to stakeholders
+  * Creating a test completion report & communicating it to stakeholders
 * Activities occur at project milestones such as release, completion or cancellation of the test project, an Agile project iteration is finished, a test level is completed or a maintenance release has been completed
 
 ### Test Completion – Testware

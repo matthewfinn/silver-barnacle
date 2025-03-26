@@ -2,14 +2,14 @@
 
 # Test Case Prioritisation
 ## Test Execution Schedule
-* Test cases and test procedures have been created and assembled into test suites
+* Test cases & test procedures have been created & assembled into test suites
 * Test suites are then arranged in a test execution schedule
-* Test execution schedule should take into account priority, dependencies, confirmation tests, regression tests, the most efficient sequence and available resources
+* Test execution schedule should take into account priority, dependencies, confirmation tests, regression tests, the most efficient sequence & available resources
 * Ideally the sequencing is done only on priority but this is not possible if there are dependencies:
   * On lower priority test cases
   * Across test cases
-* Confirmation and regression tests should also be prioritised based on importance of rapid feedback, but dependencies may apply
-* Various sequences of tests can have different levels of efficiency, so trade-offs between efficiency and prioritisation are needed
+* Confirmation & regression tests should also be prioritised based on importance of rapid feedback, but dependencies may apply
+* Various sequences of tests can have different levels of efficiency, so trade-offs between efficiency & prioritisation are needed
 
 ## How to Prioritise Test Cases
 * Risk-based prioritisation

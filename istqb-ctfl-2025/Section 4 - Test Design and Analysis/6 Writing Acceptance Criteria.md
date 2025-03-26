@@ -7,11 +7,11 @@
 
 **Card** – Simple card or other medium accurately describing the user story
 
-**Conversation** – Explains how the software will be used and can be documented or verbal.
-Begins during release-planning and continue while the story is scheduled to be picked up.
+**Conversation** – Explains how the software will be used & can be documented or verbal.
+Begins during release-planning & continue while the story is scheduled to be picked up.
 
-**Confirmation** – Acceptance criteria are used to confirm whether a story is done and may concern multiple user stories.
-Tests should include positive and negative scenarios. Various participants play the role of tester (dev, specialists, testers, etc)
+**Confirmation** – Acceptance criteria are used to confirm whether a story is done & may concern multiple user stories.
+Tests should include positive & negative scenarios. Various participants play the role of tester (dev, specialists, testers, etc)
 
 ### What are Acceptance Criteria
 
@@ -30,7 +30,7 @@ Tests should include positive and negative scenarios. Various participants play 
 * Reach consensus among the stakeholders
 * Describe both positive **AND** negative scenarios
 * Serve as a basis for the user story acceptance testing
-* Allow accurate planning and estimation
+* Allow accurate planning & estimation
 
 ### How to write Acceptance Criteria?
 
@@ -54,14 +54,14 @@ Tests should include positive and negative scenarios. Various participants play 
 
 ##### Example
 
-**User Story:** As a bank card user, I want to be able to request cash from my account at an ATM so that I will be able to receive available money from my account quickly and in different places.
+**User Story:** As a bank card user, I want to be able to request cash from my account at an ATM so that I will be able to receive available money from my account quickly & in different places.
 
 **Scenario:** Requesting the cash from an overdrawn (negative balance) account
 
 <table>
    <tr>
       <th colspan="2" style="background-color: #649864;"><b>User Story:</b> As a bank card user, I want to be able to request cash from my account<br>
-         at an ATM so that I will be able to receive available money<br>from my account quickly and in different places.
+         at an ATM so that I will be able to receive available money<br>from my account quickly & in different places.
       </th>
    </tr>
    <tr>
@@ -98,9 +98,9 @@ Tests should include positive and negative scenarios. Various participants play 
 
 ### Rule-oriented Acceptance Criteria
 
-* Define the scope and functionality of a user story
+* Define the scope & functionality of a user story
 * Uses a list of:
-  * Functional and behavioural parameters
+  * Functional & behavioural parameters
 * Format looks more like ‘Waterfall’ scenarios – each function listed individually
 * This can be in the form of a:
   * Bullet point verification list
@@ -111,7 +111,7 @@ Tests should include positive and negative scenarios. Various participants play 
 <table>
    <tr>
       <th colspan="2" style="background-color: #649864;"><b>User Story:</b> As a bank card user, I want to be able to request cash from my account<br>
-         in the healthcare app with specific rules and constraints to ensure efficient<br>scheduling and to avoid conflicts.
+         in the healthcare app with specific rules & constraints to ensure efficient<br>scheduling & to avoid conflicts.
       </th>
    </tr>
    <tr>
@@ -120,11 +120,11 @@ Tests should include positive and negative scenarios. Various participants play 
    </tr>
    <tr>
       <td style="background-color: #647b98;"><b>Rule #2</b></td>
-      <td style="background-color: #7e68d1;">Appointments requests must include the preferred date and time</td>
+      <td style="background-color: #7e68d1;">Appointments requests must include the preferred date & time</td>
    </tr>
    <tr>
       <td style="background-color: #647b98;"><b>Rule #3</b></td>
-      <td style="background-color: #7e68d1;">The app should check the availability of the doctor for the<br>requested date and time</td>
+      <td style="background-color: #7e68d1;">The app should check the availability of the doctor for the<br>requested date & time</td>
    </tr>
    <tr>
       <td style="background-color: #647b98;"><b>Rule #4</b></td>

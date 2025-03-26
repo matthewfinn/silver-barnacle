@@ -8,7 +8,7 @@
   * Release
   * Iteration
 * Stakeholders should know that:
-  * The **estimate** is based on a number of assumptions and is subject to estimation errors
+  * The **estimate** is based on a number of assumptions & is subject to estimation errors
   * Estimating for **small** tasks is more accurate than for large tasks
   * Tasks that are too large should be **broken up** into smaller tasks, that can be estimated more accurately
 
@@ -26,10 +26,10 @@
 * Complexity of the product domain
 * Requirements for quality characteristics (performance, usability, etc)
 * Required level of detail for test documentation
-* Requirements for legal and regulatory requirements
+* Requirements for legal & regulatory requirements
 
 #### Development Process Characteristics influencing Test Effort
-* Stability and maturity of the organisation
+* Stability & maturity of the organisation
 * Development model in use
 * Test approach
 * Tools used
@@ -39,15 +39,15 @@
 #### People Characteristics influencing Test Effort
 * Skills of the people involved
 * Experience of the people involved (domain knowledge)
-* Team cohesion and leadership
+* Team cohesion & leadership
 
 #### Test Results influencing Test Effort
-* Number and severity of defects found
+* Number & severity of defects found
 * Amount of rework required
 
 ## Test Estimation Categories
 ### Expert–based approach
-Estimating based on the experience of the owners of the testing tasks or by the experts and experienced staff members.
+Estimating based on the experience of the owners of the testing tasks or by the experts & experienced staff members.
 Examples here are
 * Wideband Delphi estimation
 * Planning poker in Agile
@@ -55,9 +55,9 @@ Examples here are
 ### Metrics-based approach
 Estimating based on metrics of former or similar projects or based on typical values:
 * Dev-QA ratio
-* Project size and complexity
+* Project size & complexity
 * Defect removal models
-* Burndown charts and velocity
+* Burndown charts & velocity
 
 ## Test Estimation Techniques
 * Estimation based on ratios (metrics-based)
@@ -87,13 +87,13 @@ Estimating based on metrics of former or similar projects or based on typical va
 ‘The action of estimating or concluding something by assuming that existing trends will continue or a current method will remain applicable.’
 
 * Metrics-based technique
-* Measuring and gathering data as **early** as possible in the **current** project
+* Measuring & gathering data as **early** as possible in the **current** project
 * When there are enough measurements, effort for the remaining work can be estimated by extrapolating the data
 * Very suitable for iterative SDLC models
 
 #### Extrapolation - Example 1
 * A project has started 3 sprints ago; each sprint taking 2 weeks
-* The velocity (delivery capacity) in story points of the team has been the below, divided into development and test:
+* The velocity (delivery capacity) in story points of the team has been the below, divided into development & test:
 
 <table>
    <tr>
@@ -119,7 +119,7 @@ Estimating based on metrics of former or similar projects or based on typical va
    </tr>
 </table>
 
-* Based on this, calculate the dev AND test velocity for the next sprint using extrapolation
+* Based on this, calculate the dev & test velocity for the next sprint using extrapolation
   * Dev: (13+18+17)/3 = 16 story points
   * Test: (3+6+6)/3 = 5 story points
 
@@ -159,7 +159,7 @@ Estimating based on metrics of former or similar projects or based on typical va
 * Iterative, expert-based technique
 * Experts make experience-based estimations
 * Each expert estimates the effort in isolation
-* Results are collected and if there are unacceptable deviations the estimates are discussed
+* Results are collected & if there are unacceptable deviations the estimates are discussed
 * After the discussion each expert (in isolation) should make a new estimate based on the feedback
 * This is repeated until there is consensus
 
@@ -172,11 +172,11 @@ Estimating based on metrics of former or similar projects or based on typical va
   * Priority
 * In Planning poker,
   * Business representative presents a user story
-  * After all questions and discussions, the estimation can begin
+  * After all questions & discussions, the estimation can begin
   * Each estimator (team member) privately selects a card to represent the estimate
   * All cards are revealed at the same time
   * If all have the same, that becomes the estimate, otherwise the poker continues until agreement is reached –
-  this should be done by communication – so discuss the lowest and highest effort given and try to see whether
+  this should be done by communication – so discuss the lowest & highest effort given & try to see whether
   some people in the team missed something or everyone else missed something.
 * Each estimator has a deck of cards with values similar to the Fibonacci sequence (0,1,2,3,5,8,13,21,34,55,89…), OR shirt sizes, OR jelly beans, OR…..
 * Fibonacci – recommended as uncertainty grows exponentially with the size of the story
@@ -195,7 +195,7 @@ Estimating based on metrics of former or similar projects or based on typical va
   * The most pessimistic estimation
 * Calculate the estimate of these three estimations with a weighed formula
 * Calculate the standard deviation, or measurement error
-* The result is the range between the calculated estimate minus the deviation and the calculated estimate plus the deviation
+* The result is the range between the calculated estimate minus the deviation & the calculated estimate plus the deviation
 
 #### Three-Point Estimation - Example
 * Three estimates are made by experts
@@ -207,7 +207,7 @@ Estimating based on metrics of former or similar projects or based on typical va
 $$
 E = \frac{a + 4m + b}{6}
 $$
-* The most likely estimate is weighed 4 times and the others only once
+* The most likely estimate is weighed 4 times & the others only once
 * The estimate E is:
   $$
   E = \frac{12 + (4 \times 14) + 18}{6} = 14.33 days
@@ -220,4 +220,4 @@ $$
 $$
   SD = \frac{(18-12)}{6} = 1 day(s)
 $$
-* Meaning the final estimate in person days is between (14.33-1=) 13.33 and (14.33+1=) 15.33
+* Meaning the final estimate in person days is between (14.33-1=) 13.33 & (14.33+1=) 15.33

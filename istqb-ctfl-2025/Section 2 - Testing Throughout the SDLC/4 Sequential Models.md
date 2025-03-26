@@ -10,7 +10,7 @@
   * Implement
   * Test
 * Each phase must be finished before the next phase starts
-* Testers start participating in requirement reviews, test analysis and test
+* Testers start participating in requirement reviews, test analysis & test
   design
 * Dynamic testing cannot start early in the SDLC
 
@@ -27,12 +27,12 @@
 ![image3.png](assets/image3.png)
 
 ### Advantages of the V-model
-* Simple and easy
+* Simple & easy
 * Systematic
 * Easy to track
 * Testing starts from requirement phase
 * All the functional areas can be covered
-* Instructions and recommendations included
+* Instructions & recommendations included
 * Detailed explanations of problems
 * Defects can be found at an early stage
 * Works well for small projects
@@ -41,7 +41,7 @@
 * Not flexible
 * Regular updates required if the project changes
 * Can’t be used in complex projects
-* No scope for risk management and mitigation
+* No scope for risk management & mitigation
 * It ends when the project is over
 
 ## Testing in the W-model
@@ -49,7 +49,7 @@
 
 ### Advantages of the W-model
 * Testing can run in parallel with development process
-* No division between development and testing tasks – all are integrated
+* No division between development & testing tasks – all are integrated
 * Often developer are responsible for removing defects
 
 ### Disadvantages of the W-model

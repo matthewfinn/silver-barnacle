@@ -5,20 +5,20 @@
 # White-box Test Techniques
 
 * Aka **structure-based** techniques 
-* Based on an analysis of the architecture, detailed design, internal structure, code and processing **within** the test object 
-* Test cases are dependent on the **internal** structure and processing within the test object 
+* Based on an analysis of the architecture, detailed design, internal structure, code & processing **within** the test object 
+* Test cases are dependent on the **internal** structure & processing within the test object 
 * Software design is the basis for test cases, so test cases can not be created before the design or implementation of the test object
 
 ### Characteristics
-* Test conditions, test cases and test data are derived from a test basis that may include 
+* Test conditions, test cases & test data are derived from a test basis that may include 
   * Code
   * Software Architecture
   * Detailed design
   * Any other info regarding the software structure
 * Specifications are often used as an additional source of information to determine the expected outcome of test cases
 * **Coverage** is measured based on the items tested **within** a selected structure (i.e. code or interfaces)
-* Based on how the software is constructed and designed, internal structure of the software is used to derive test cases
-* Mainly on component level, but also on integration and system/ acceptance level
+* Based on how the software is constructed & designed, internal structure of the software is used to derive test cases
+* Mainly on component level, but also on integration & system/ acceptance level
 * Serves 2 purposes:
     1. Test coverage **measurement** (from specification-based techniques)
     2. Structural **test case design** (to increase test coverage)
@@ -47,7 +47,7 @@
 
 ### Why White-Box Testing?
 * Provides an objective measurement of code coverage
-* Provides information needed to create additional tests to **increase** the coverage and increasing the confidence in the code
+* Provides information needed to create additional tests to **increase** the coverage & increasing the confidence in the code
 * The entire software implementation is considered, defects can be found even if the software specs are:
   * Vague
   * Outdated

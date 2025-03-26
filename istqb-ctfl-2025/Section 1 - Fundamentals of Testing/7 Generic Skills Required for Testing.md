@@ -16,8 +16,8 @@
 ### (Don’t) Shoot the Messenger
 Keep in mind:
 * Confirmation bias
-* Collaboration and teamwork instead of battles
-* Stay objective and factual, not focused on the person
-* Try to understand the way the other person feels and reacts
+* Collaboration & teamwork instead of battles
+* Stay objective & factual, not focused on the person
+* Try to understand the way the other person feels & reacts
 * Be sure the other person understood what you have said
-* Clear test objectives influence plans and individual behaviour
+* Clear test objectives influence plans & individual behaviour

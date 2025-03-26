@@ -1,6 +1,6 @@
 [🔙 Home](../home.md)
 
-# Path Testing and Coverage
+# Path Testing & Coverage
 * Taking branch testing one step further
 * Does not only execute each path, but ALSO each combination between different statements
 * 100 % Path Coverage = 100 % Branch Coverage = 100% Decision Coverage = 100 % Statement Coverage – not vice versa

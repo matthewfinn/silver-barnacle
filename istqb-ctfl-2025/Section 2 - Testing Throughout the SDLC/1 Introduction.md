@@ -5,7 +5,7 @@
 # Introduction
 ## Software Development Lifecycle Model
 * Abstract, high-level representation of the Software Development Process
-* Defines relation between Development Phases and types of activities:
+* Defines relation between Development Phases & types of activities:
   * Logically
   * Chronologically
 * Many different SDLC models
@@ -26,7 +26,7 @@
 ### Incremental 
 * Unified Process
 
-## Specific Methods and Agile Practices
+## Specific Methods & Agile Practices
 * Acceptance-test driven Development (ATDD)
 * behaviour-driven Development (BDD)
 * Domain-driven Design (DDD)

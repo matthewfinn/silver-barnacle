@@ -2,7 +2,7 @@
 
 
 # Metrics used for Testing
-## Defining and Using Test Metrics
+## Defining & Using Test Metrics
 **‘What doesn’t get measured, doesn’t get done’**
 
 * Testing metrics categories:
@@ -13,11 +13,11 @@
 
 ## Metrics used for Testing
 * Test Metrics can be collected at the end of any test activity to assess:
-  * Progress against the planned schedule and budget
+  * Progress against the planned schedule & budget
   * Current quality of the test object
   * Adequacy of the test approach
   * Effectiveness of the test activities with respect to the objectives
-* Mainly gathered in Test Monitoring to support Test Control and Test Completion
+* Mainly gathered in Test Monitoring to support Test Control & Test Completion
 
 ### Common Test Metrics
 
@@ -44,7 +44,7 @@
     <tr><td class="col1">Project Process Metrics</td><td class="second-col">Task completion<br>Resource usage<br>test effort</td></tr>
     <tr><td class="col2">Test Progress Metrics</td><td class="second-col">Test case implementation progress<br>Test environment preparation progress<br>No. of test cases run/not run<br>No. of test cases passed/failed<br>Test execution time</td></tr>
     <tr><td class="col3">Product Quality Metrics</td><td class="second-col">Availability<br>Response time<br>Mean time to failure</td></tr>
-    <tr><td class="col4">Defect Metrics</td><td class="second-col">Number of and priority of defects found/fixed<br>Defect density<br>Defect detection percentage</td></tr>
+    <tr><td class="col4">Defect Metrics</td><td class="second-col">Number of & priority of defects found/fixed<br>Defect density<br>Defect detection percentage</td></tr>
     <tr><td class="col5">Risk Metrics</td><td class="second-col">Residual risk level</td></tr>
     <tr><td class="col6">Coverage Metrics</td><td class="second-col">Requirements coverage<br>Code coverage</td></tr>
     <tr><td class="col7">Cost Metrics</td><td class="second-col">Cost of Testing<br>Organisation Cost of Quality</td></tr>
@@ -68,9 +68,9 @@
 * Often too many metrics are defined instead of the most useful ones
 
 #### Tracking of Metrics
-* Reporting and merging metrics should be as much automated as possible
+* Reporting & merging metrics should be as much automated as possible
 * Variations of measurements over time may differ from the agreed upon interpretation
-* Possible differences between reality and expectations should be analysed as well as the reasons for these differences
+* Possible differences between reality & expectations should be analysed as well as the reasons for these differences
 
 #### Reporting of Metrics
 * Objective is to provide an immediate understanding of the information, for management purposes

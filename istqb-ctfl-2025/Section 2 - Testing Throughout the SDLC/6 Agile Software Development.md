@@ -5,27 +5,27 @@
 # Agile Software Development
 ## The Fundamentals of Agile Software Development 
 ### The Agile Manifesto
-* **Individuals and interactions** _over_ processes and tools 
+* **Individuals & interactions** _over_ processes & tools 
 * **Working software** _over_ comprehensive documentation
 * **Customer collaboration** _over_ contract negotiation
 * **Responding to change** _over_ following a plan 
 
 The Agile manifesto values the concepts on the right, but believes the ones on the left have greater value
 
-### Individuals and Interactions
+### Individuals & Interactions
 * Agile is people-centred
 * Teams build software
-* Continuous communication and interaction enable teams to work most effectively
-* Processes and tools are important, but not as important as people and communication
+* Continuous communication & interaction enable teams to work most effectively
+* Processes & tools are important, but not as important as people & communication
 
 ### Working Software
 * Customers do not care about detailed documentation
-* Working software is more useful and valuable
+* Working software is more useful & valuable
 * Enables rapid feedback to the development team
 * Availability of working software can result in time-to-market advantage
 * Agile development is especially useful in:
   * Fast-changing business environments
-  * Environments where problems and solutions are unclear
+  * Environments where problems & solutions are unclear
   * Environments where the business wants to innovate in new problem domains
 
 ### Customer Collaboration
@@ -35,9 +35,9 @@ The Agile manifesto values the concepts on the right, but believes the ones on t
 * Contracts are important, working closely together with customers is more likely to bring success
 
 ### Responding to Change
-* Change is inevitable and should be responded to
+* Change is inevitable & should be responded to
 * Flexibility is more important than sticking to the plan
-* Smart and flexible planning is needed
+* Smart & flexible planning is needed
 * Many factors can have a major influence on the project:
   * Environment
   * Business domain
@@ -45,19 +45,19 @@ The Agile manifesto values the concepts on the right, but believes the ones on t
   * Technological advances
 
 ### Whole-Team Approach
-* Involving everyone with the needed skills and knowledge to ensure success.
-* The team includes customer and other business representatives
+* Involving everyone with the needed skills & knowledge to ensure success.
+* The team includes customer & other business representatives
 * Teams should be relatively small (3-9 people), larger teams to be split up
-* Ideally the team shares the same workspace (for communication and interaction)
+* Ideally the team shares the same workspace (for communication & interaction)
 * Approach is supported through daily stand-up meetings with the entire team
-* Promotes more effective and efficient team dynamics
+* Promotes more effective & efficient team dynamics
 * One of the main ideas behind Agile development
 
 ### Early & Frequent Feedback
-* Short iterations enable early and continuous feedback on product quality
+* Short iterations enable early & continuous feedback on product quality
 * If you have to fail, fail fast!
 * Agile teams can better implement new changes into the development process
-* The team can better focus on features with the highest business value and risk
+* The team can better focus on features with the highest business value & risk
 * Team management is better as the capability is transparent to all:
   * How much work can we do?
   * What could help us go faster?
@@ -67,7 +67,7 @@ The Agile manifesto values the concepts on the right, but believes the ones on t
 * Changes will occur, so:
   * Use lightweight documentation
   * Implement extensive test automation
-* Makes Regression testing easier and faster
+* Makes Regression testing easier & faster
 
 * Use experience-based testing for manual test activities - not to waste time on extensive test analysis & design
 
@@ -105,5 +105,5 @@ Kanban utilises three instruments
 * Less well-documented requirements
 * Testers feel less needed as dev does more component testing
 * More of a coaching role, can be difficult
-* Constant time pressure and less time to think about testing new features
-* Regression becomes extremely important and automation more beneficial
+* Constant time pressure & less time to think about testing new features
+* Regression becomes extremely important & automation more beneficial

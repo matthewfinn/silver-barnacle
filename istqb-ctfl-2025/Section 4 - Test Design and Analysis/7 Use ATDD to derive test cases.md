@@ -2,13 +2,13 @@
 
 # Use Acceptance Test-Driven Development to derive test cases
 ### Acceptance Test-Driven Development
-* Acceptance criteria and tests are defined during the creation of the user stories
-* Encourages collaboration amongst the business, developer and tester
-* Every stakeholder should understand how the software component has to behave and what is needed to ensure this behaviour
+* Acceptance criteria & tests are defined during the creation of the user stories
+* Encourages collaboration amongst the business, developer & tester
+* Every stakeholder should understand how the software component has to behave & what is needed to ensure this behaviour
 * ATDD creates reusable tests for regression testing
-* Tools support creation and execution of tests (often in the CI process)
-* Tools can connect to data and service layers of the application (enabling execution on system or acceptance levels)
-* ATDD allows quick resolution of defects and validation of feature behaviour
+* Tools support creation & execution of tests (often in the CI process)
+* Tools can connect to data & service layers of the application (enabling execution on system or acceptance levels)
+* ATDD allows quick resolution of defects & validation of feature behaviour
 * Helps determine if the acceptance criteria are met for the feature
 
 **Is the code doing what it is supposed to do?**
@@ -25,7 +25,7 @@
 
 ### Acceptance Test-Driven Development - Process
 1. First a specification workshop takes place
-   * Workshop is a collaboration between developers, testers and the business
+   * Workshop is a collaboration between developers, testers & the business
    * User stories are:
      * Analysed 
      * Discussed 
@@ -44,8 +44,8 @@
 * Tests are examples that:
   * Describe the specific characteristics of the user story
   * Will help the team to implement the user story correctly
-  * Start with basic examples and open questions
-  * The tests can be created using black-box, white-box and experience-based test techniques
+  * Start with basic examples & open questions
+  * The tests can be created using black-box, white-box & experience-based test techniques
 
 ### Acceptance Test-Driven Development - Tests
 

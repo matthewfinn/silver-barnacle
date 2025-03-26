@@ -14,7 +14,7 @@ Aka ‘Definition of Ready’**
 **Exit Criteria: ‘define what must be achieved to declare an activity completed’
 Aka ‘Definition of Done’**
 
-Both Entry and Exit criteria should be defined for:
+Both Entry & Exit criteria should be defined for:
 * Each test level
 * Each test type
 * Differ based on the test objectives
@@ -29,7 +29,7 @@ Both Entry and Exit criteria should be defined for:
 
 ### Typical Exit Criteria (Definition of Done)
 **When to safely stop testing, when to declare a certain test activity Done? 
-Should be a balance of quality, budget, schedule and feature considerations.**
+Should be a balance of quality, budget, schedule & feature considerations.**
 * Measures of thoroughness
   * Achieved level of coverage
   * Number of unresolved defects
@@ -53,49 +53,49 @@ Even without the exit criteria satisfied, test activities can also stop due to:
 ## Definition of Done – Test Levels – Unit Testing
 * 100% decision coverage where possible
 * Static analysis performed on all code
-* No unresolved major defects (ranked based on priority and severity)
-* No known unacceptable technical debt remaining in the design and the code
-* All code, unit tests, and unit test results reviewed
+* No unresolved major defects (ranked based on priority & severity)
+* No known unacceptable technical debt remaining in the design & the code
+* All code, unit tests, & unit test results reviewed
 * All unit tests automated
 * Important characteristics are within agreed limits (e.g., performance)
 
 ## Definition of Done – Test Levels – Integration Testing
-* All functional requirements tested, including both positive and negative, with the number of tests based on size, complexity, and risks
+* All functional requirements tested, including both positive & negative, with the number of tests based on size, complexity, & risks
 * All interfaces between units tested
 * All quality risks covered according to the agreed extent of testing
-* No unresolved major defects (prioritised according to risk and importance)
+* No unresolved major defects (prioritised according to risk & importance)
 * All defects found are reported
 * All regression tests automated, where possible, with all automated tests stored in a common repository
 
 ## Definition of Done – Test Levels – System Testing
-* End-to-end tests of user stories, features, and functions
+* End-to-end tests of user stories, features, & functions
 * All user personas covered
 * The most important quality characteristics of the system covered (e.g., performance, robustness, reliability)
 * Testing done in a production-like environment(s)
 * All quality risks covered according to the agreed extent of testing
 * All regression tests automated, where possible, with all automated tests stored in a common repository
-* All defects found are reported and possibly fixed
-* No unresolved major defects (prioritised according to risk and importance)
+* All defects found are reported & possibly fixed
+* No unresolved major defects (prioritised according to risk & importance)
 
 ## Definition of Done – User Story
-* The user stories selected for the iteration are complete, understood by the team, and have detailed, testable acceptance criteria
-* All the elements of the user story are specified, reviewed (including the user story acceptance tests) and have been completed
-* Tasks necessary to implement and test the selected user stories have been identified and estimated by the team 
+* The user stories selected for the iteration are complete, understood by the team, & have detailed, testable acceptance criteria
+* All the elements of the user story are specified, reviewed (including the user story acceptance tests) & have been completed
+* Tasks necessary to implement & test the selected user stories have been identified & estimated by the team 
 
 ## Definition of Done – Feature
-* All user stories, with acceptance criteria, are defined and approved by the customer
+* All user stories, with acceptance criteria, are defined & approved by the customer
 * The design is complete, with no known technical debt
 * The code is complete, with no known technical debt or unfinished refactoring
-* Unit tests have been performed and have achieved the defined level of coverage
-* Integration tests and system tests for the feature have been performed according to the defined coverage criteria
+* Unit tests have been performed & have achieved the defined level of coverage
+* Integration tests & system tests for the feature have been performed according to the defined coverage criteria
 * No major defects remain to be corrected
-* Feature documentation is complete, which may include release notes, user manuals, and on-line help functions 
+* Feature documentation is complete, which may include release notes, user manuals, & on-line help functions 
 
 ## Definition of Done – Iteration
-* All features for the iteration are ready and individually tested according to the feature level criteria
-* Any non-critical defects that cannot be fixed within the constraints of the iteration added to the product backlog and prioritised
-* Integration of all features for the iteration completed and tested
-* Documentation written, reviewed, and approved 
+* All features for the iteration are ready & individually tested according to the feature level criteria
+* Any non-critical defects that cannot be fixed within the constraints of the iteration added to the product backlog & prioritised
+* Integration of all features for the iteration completed & tested
+* Documentation written, reviewed, & approved 
 
 ## Definition of Done – Release
 * Coverage

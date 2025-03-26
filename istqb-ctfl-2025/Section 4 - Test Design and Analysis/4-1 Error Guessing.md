@@ -3,7 +3,7 @@
 
 # Error Guessing
 
-A technique that anticipates the occurrence of mistakes, defects and failures, based on the knowledge of the tester:
+A technique that anticipates the occurrence of mistakes, defects & failures, based on the knowledge of the tester:
 * How the application worked in the past
 * What types of mistakes the developers tend to make
 * The type of defects that result from these errors made by developers
@@ -14,7 +14,7 @@ A technique that anticipates the occurrence of mistakes, defects and failures, b
   * Wrong kind of data or input
   * ’That should not happen’ or ‘There is no risk’ is a trigger to test that condition as assumption is the mother…
 
-### Error Guessing – Typical Errors, Defects and Failures
+### Error Guessing – Typical Errors, Defects & Failures
 ![image10.png](assets/image10.png)
 
 ### Error Guessing - Examples
@@ -23,16 +23,16 @@ A technique that anticipates the occurrence of mistakes, defects and failures, b
 * Division by zero
 * Submitting a form without entering values
 * Entering invalid values
-* Replacing @ and dot(.) in email addresses (eg: matt.finn.hotmail@com)
+* Replacing @ & dot(.) in email addresses (eg: matt.finn.hotmail@com)
 * Last names with non-alphanumeric characters (eg: ronald.o’neil@testing.com)
-* Ignoring the default maximum and minimum characters to be entered in some fields
+* Ignoring the default maximum & minimum characters to be entered in some fields
 
 ### Fault Attacks
-* Methodical and focused way of error guessing
-* List possible errors, defects and failures based on experience
+* Methodical & focused way of error guessing
+* List possible errors, defects & failures based on experience
 * These lists can be based on:
   * Experience
-  * Defect and failure data
+  * Defect & failure data
   * Knowledge on why software fails
 * Design tests that will:
   * Identify associated defects associated with the errors
@@ -45,11 +45,11 @@ A technique that anticipates the occurrence of mistakes, defects and failures, b
 ### The Process of Error Guessing
 **Scenario**
 Imagine you are testing a web application's login functionality. 
-The application allows users to log in with their username and password to access their account dashboard.
+The application allows users to log in with their username & password to access their account dashboard.
 
 1. **Identification of Potential Errors**
 * Begin by identifying potential errors or faults that could occur in the login functionality based on your
-experience and knowledge of common issues in authentication systems. 
+experience & knowledge of common issues in authentication systems. 
 
 * Some potential errors might include:
   * Invalid username/password combination
@@ -60,10 +60,10 @@ experience and knowledge of common issues in authentication systems.
 
 2. **Design Test Cases to Systematically Test Each Scenario**
 * Examples:
-  * Test Case 1: Attempt to login with a valid username and an incorrect password
-  * Test Case 2: Attempt to login with a valid username and a valid password
-  * Test Case 3: Attempt to login with an empty username and a valid password
-  * Test Case 4: Attempt to login with a valid username and an empty password
+  * Test Case 1: Attempt to login with a valid username & an incorrect password
+  * Test Case 2: Attempt to login with a valid username & a valid password
+  * Test Case 3: Attempt to login with an empty username & a valid password
+  * Test Case 4: Attempt to login with a valid username & an empty password
   * Test Case 5: Attempt to login with a username containing special characters
   * Test Case 6: Attempt to login with a password containing special characters
   * Test Case 7: Attempt to login with a long username (exceeding character limit)
@@ -72,17 +72,17 @@ experience and knowledge of common issues in authentication systems.
 
 3. **Execute Test Cases**
 * Execute each test case against the login functionality of the web application 
-* Record the actual results and any observed deviations from expected behaviour
+* Record the actual results & any observed deviations from expected behaviour
 
 4. **Analyse Results**
 * Analyse the results of each test case to identify any errors or unexpected behaviour encountered during the testing process 
-* Pay attention to any discrepancies between the expected and actual outcomes
+* Pay attention to any discrepancies between the expected & actual outcomes
 
-5. **Report and Document Findings**
+5. **Report & Document Findings**
 * Document the findings, including any errors or faults identified during the testing process
-* Report the details of each issue, including steps to reproduce, observed behaviour, and potential impact on the application's functionality or security
+* Report the details of each issue, including steps to reproduce, observed behaviour, & potential impact on the application's functionality or security
 
-6. **Retest and Verify Fixes**#
-* After developers address the reported issues, retest the affected areas to ensure that the fixes have been successfully implemented and that no new errors have been introduced
+6. **Retest & Verify Fixes**#
+* After developers address the reported issues, retest the affected areas to ensure that the fixes have been successfully implemented & that no new errors have been introduced
 
-**This way, testers can methodically and structurally identify and address potential errors or faults in software applications, helping to improve the overall quality, reliability, and security of the software**
+**This way, testers can methodically & structurally identify & address potential errors or faults in software applications, helping to improve the overall quality, reliability, & security of the software**

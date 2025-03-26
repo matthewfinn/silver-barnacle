@@ -16,7 +16,7 @@
 * Static Testing (reviewing) of the specification
 * Write test cases before the code is written
 * Run the code in a test harness during implementation
-* Implement CI and CD
+* Implement CI & CD
 * Complete static analysis before dynamic testing
 * Non-Functional tests should also be done earlier (shift-left)
 

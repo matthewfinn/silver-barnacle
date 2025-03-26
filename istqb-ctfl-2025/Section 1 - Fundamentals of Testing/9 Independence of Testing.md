@@ -7,8 +7,8 @@
 
 ### Points of Attention
 * Usually best to test with multiple levels of independence. For example:
-  * Developers perform component and component integration testing 
-  * Test team performs system and system integration testing 
+  * Developers perform component & component integration testing 
+  * Test team performs system & system integration testing 
   * Business representative performs acceptance testing
 * Testing can be done by testers or by people in other roles
 * Independence often makes testers more efficient
@@ -17,7 +17,7 @@
 
 ### Benefits
 * Likely to recognise different kind of failures compared to developers
-* Independent tester can verify, challenge or disprove assumptions made by stakeholders in specification and implementation
+* Independent tester can verify, challenge or disprove assumptions made by stakeholders in specification & implementation
 
 ### Risks
 * Isolation from the development team

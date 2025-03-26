@@ -6,7 +6,7 @@
 
   * Increase the likelihood of achieving objectives
   * Improve the quality of the products
-  * Increase stakeholders trust and confidence
+  * Increase stakeholders trust & confidence
 * Main risk management activities are:
 
   * Risk Analysis
@@ -23,7 +23,7 @@
 ## Risk-Based Testing
 
 * Test approach
-* Risk Analysis and Risk Control are used to:
+* Risk Analysis & Risk Control are used to:
   * Select test activities
   * Prioritise test activities
   * Manage test activities
@@ -37,7 +37,7 @@
 Risk is characterised by two factors:
 
 * Risk **likelihood**
-  * ‘The probability of the risk occurrence’ (greater than zero and less than 1)
+  * ‘The probability of the risk occurrence’ (greater than zero & less than 1)
 * Risk **impact**
   * ‘The consequences of this occurrence’ – the harm
 
@@ -46,7 +46,7 @@ Risk is characterised by two factors:
 * A measure for the risk
   * The higher the risk level, the more important the treatment
 * A calculated result from the combination of:
-  * Risk Likelihood (greater than zero and smaller than one)
+  * Risk Likelihood (greater than zero & smaller than one)
   * Risk Impact
 
 ### Risk Likelihood
@@ -61,7 +61,7 @@ Factors that influence the likelihood include:
       <td>Weak leadership</td>
    </tr>
    <tr>
-      <td>Personnel and training issues</td>
+      <td>Personnel & training issues</td>
       <td>Pressure</td>
    </tr>
    <tr>
@@ -78,10 +78,10 @@ Factors that influence the likelihood include:
    </tr>
    <tr>
       <td>Legacy vs new approaches</td>
-      <td>Interfacing and integration issues</td>
+      <td>Interfacing & integration issues</td>
    </tr>
    <tr>
-      <td>Tools and technology</td>
+      <td>Tools & technology</td>
       <td>Etc.</td>
    </tr>
 </table>
@@ -119,7 +119,7 @@ Factors that influence the likelihood include:
 
 ## Project Risk
 ### Definition
-* Are related to the Management and Control of the project
+* Are related to the Management & Control of the project
 * If project risks occur, this may have a negative effect on:
   * Project Schedule
   * Budget

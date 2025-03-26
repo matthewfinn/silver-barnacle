@@ -1,7 +1,7 @@
 [🔙 Home](../home.md)
 
 # Checklist-Based Testing
-* Testers design, implement and execute tests to cover test conditions found in a checklist
+* Testers design, implement & execute tests to cover test conditions found in a checklist
 * To create the checklist, the tester may:
   * Create a new checklist
   * Amend an existing checklist
@@ -9,13 +9,13 @@
 * Checklists are based on
   * Experience
   * Knowledge about importance for the user
-  * Understanding why and how software fails
+  * Understanding why & how software fails
 * Checklist items are often phrased as questions
 * Each item should be separately ‘checkable’
 * Checklist items may refer to:
 ![image13.png](assets/image13.png)
 * Checklists can support different test types (Functional, Non-Functional)
-* If there are no detailed test cases, checklists can provide guidelines and consistency
+* If there are no detailed test cases, checklists can provide guidelines & consistency
 * If checklists are high level, variability will most likely occur, resulting in:
   * Greater coverage
   * Less repeatability
@@ -35,9 +35,9 @@
 
 ### Checklist-Based testing - Benefits
 * Structured approach to testing
-* Promote consistency and repeatability
+* Promote consistency & repeatability
 * Improve communication between team members
-* Helps new testers test new products more confidently and more efficiently
+* Helps new testers test new products more confidently & more efficiently
 
 ### Checklist-Based testing - Risks
 * Checklist become gradually less effective – developers learn from their mistakes

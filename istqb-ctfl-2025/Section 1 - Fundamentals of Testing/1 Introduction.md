@@ -4,7 +4,7 @@
 ## What is Software Testing?
 
 * The process in the SDLC that evaluates the quality of a component, system or related work products:
-  * Meets the business and technical requirements that guided its design and development
+  * Meets the business & technical requirements that guided its design & development
   * Works as expected
   * Can be implemented with the same characteristics
   
@@ -13,7 +13,7 @@
   * Reduces the risk of software failure in operation
 
 ## Misconceptions about Software Testing
-* **Software testing is a set of activities to discover defects and evaluate the quality of test
+* **Software testing is a set of activities to discover defects & evaluate the quality of test
 objects**
 
 * **Misconceptions**:
@@ -21,11 +21,11 @@ objects**
   * Only focused on verifying the test object
     * Also involves validation
   * Can be fully automated
-    * It is an intellectual process and it requires:
+    * It is an intellectual process & it requires:
       * Specialised knowledge
       * Use of analytical skill
       * Application of critical thinking
-  * Proves that the software is correct and has no faults
+  * Proves that the software is correct & has no faults
 
 ## Typical Test Objectives
 
@@ -37,7 +37,7 @@ objects**
 * Verify compliance to contractual, legal/regulatory requirements
 * Provide adequate information to stakeholders
 * Build confidence in the quality of the test object
-* Validate whether the test object is complete and works as expected
+* Validate whether the test object is complete & works as expected
 
 ## Testing & Debugging
 ### Testing 
@@ -46,7 +46,7 @@ Testing can:
 * Find defects in the test object (static testing)
 
 ### Debugging
-* Debugging is an activity that finds, analyses and eliminates the cause of the failure/defect found in dynamic testing
+* Debugging is an activity that finds, analyses & eliminates the cause of the failure/defect found in dynamic testing
 * Debugging a defect found in static testing, debugging is simply removing the
 defect, no reproduction or diagnosis is needed.
 
@@ -65,8 +65,8 @@ defect, no reproduction or diagnosis is needed.
 * Reduce risk of software failure in operation by:
   * Being involved in reviews & refinements - prevent defects
   * Working with designers - prevent design defects through early test identification
-  * Working with developers - increase understanding of code - reduce code and test defects
-  * Verify and validate before production release - detect and fix failures and more effectively fulfill stakeholder requirements
+  * Working with developers - increase understanding of code - reduce code & test defects
+  * Verify & validate before production release - detect & fix failures & more effectively fulfill stakeholder requirements
 
 ![image2.png](assets/image2.png)
 

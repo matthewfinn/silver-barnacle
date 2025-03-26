@@ -1,9 +1,9 @@
 [🔙 Home](../home.md)
 
-# Statement Testing and Coverage
+# Statement Testing & Coverage
 
 * Coverage items are executable statements
-* Executable statements perform computations and control the output of the program
+* Executable statements perform computations & control the output of the program
 * Design test cases that exercise statement until an acceptable level of coverage
 
 ### Statement testing & coverage – Coverage

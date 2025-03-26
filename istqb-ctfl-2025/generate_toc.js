@@ -4,7 +4,7 @@ const path = require("path");
 const OUTPUT_FILE = "home.md";
 const IGNORE_FILES = new Set([OUTPUT_FILE, "README.md"]);
 
-// Function to safely encode URLs (Handle spaces and special characters in filenames)
+// Function to safely encode URLs (Handle spaces & special characters in filenames)
 function encodeURL(filePath) {
     return encodeURIComponent(filePath).replace(/%2F/g, "/");
 }
@@ -75,7 +75,7 @@ function generateToC(directory = ".") {
 
             console.log(`   📂 Found: ${relativePath}`); // Debugging: Log every found file
 
-            // Skip .idea and assets folders
+            // Skip .idea & assets folders
             if (file === ".idea" || file === "assets") return;
 
             if (fs.statSync(fullPath).isDirectory()) {

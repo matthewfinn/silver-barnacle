@@ -6,13 +6,13 @@
 
 * AKA Unit testing, Module testing
 * Focuses on software components that are separately testable
-* Components are tested in isolation and stubs and drivers are used to mimic the interface between components
-* **Test harness** - A test environment comprised of stubs and drivers needed to execute a test – find middleware issues
+* Components are tested in isolation & stubs & drivers are used to mimic the interface between components
+* **Test harness** - A test environment comprised of stubs & drivers needed to execute a test – find middleware issues
 * Automated component regression is very important
 
 ### Objectives
 * Reducing risk
-* Verifying whether the functional and non-functional behaviour of the component is as designed and specified
+* Verifying whether the functional & non-functional behaviour of the component is as designed & specified
 * Building confidence in the quality of the component
 * Finding defects in the component
 * Preventing defects from getting into higher test levels
@@ -26,14 +26,14 @@
 
 ### Test Objects
 * Components, units or modules
-* Code and data structures
+* Code & data structures
 * Classes
 * Database Modules
 
 ### Typical Defects & Failures
 * Incorrect functionality (not as described in the test basis)
 * Data flow problems
-* Incorrect code and logic
+* Incorrect code & logic
 
 Defects are usually fixed as soon as they are found without formal defect management.
 

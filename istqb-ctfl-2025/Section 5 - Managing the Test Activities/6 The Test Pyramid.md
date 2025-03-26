@@ -2,7 +2,7 @@
 
 # The Test Pyramid
 * Layers of the pyramid represent groups of tests
-* Different Goals are supported by different levels of testing and test automation
+* Different Goals are supported by different levels of testing & test automation
 * Supports the team in:
   * Test Automation
   * Test Effort Allocation

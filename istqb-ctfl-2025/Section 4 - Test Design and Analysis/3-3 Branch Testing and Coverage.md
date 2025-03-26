@@ -12,8 +12,8 @@
 * Branch testing focuses on the percentage of branches that have been executed by a test suite 
 * Difference with Decision testing is that where:
   * Decision testing focus **ONLY** on the conditional branches
-  * Branch testing focuses on **BOTH** conditional and unconditional branches
-* In practice Decision Testing and Branch Testing mostly give the same results
+  * Branch testing focuses on **BOTH** conditional & unconditional branches
+* In practice Decision Testing & Branch Testing mostly give the same results
 * Coverage Calculation:
 
 $$

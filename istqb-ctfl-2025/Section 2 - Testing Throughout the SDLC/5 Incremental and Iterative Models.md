@@ -2,7 +2,7 @@
 
 
 
-# Incremental and Iterative Models
+# Incremental & Iterative Models
 
 ## What is Incremental development?
 * The system is not built in one go, but in pieces
@@ -22,8 +22,8 @@
 * Builds are provided in iterations
 * Each iteration involves cross-functional teams working simultaneously on the different phases
 * End of each iteration is a shippable product
-* In each iteration, static and dynamic testing may be done on ALL test levels
-* Fast feedback and extensive regression testing is needed for frequent delivery of increments
+* In each iteration, static & dynamic testing may be done on ALL test levels
+* Fast feedback & extensive regression testing is needed for frequent delivery of increments
 
 ### Iterative development visualised
 ![image6.png](assets/image6.png)

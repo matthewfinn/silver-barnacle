@@ -5,10 +5,10 @@
 * Used when an aspect of the system is in a ‘finite state machine’
   * Limited number of states
   * State is determined by rules of the machine
-  * Different response on an event depending on the current conditions and previous history
-* Test cases can be designed to execute valid and invalid state transitions
+  * Different response on an event depending on the current conditions & previous history
+* Test cases can be designed to execute valid & invalid state transitions
 * behaviour in a system is shown in a **state transition diagram model**, which shows:
-  * Possible states and valid transitions
+  * Possible states & valid transitions
   * Events that cause or result in a transition from one state to another
   * Actions that result from a transition
 * If one event from the same state can result in 2 or more different transitions, the event may be qualified by a **guard
@@ -19,7 +19,7 @@
 
 ### State Transition Tables
 
-State transition tables are often used to identify valid and invalid transitions
+State transition tables are often used to identify valid & invalid transitions
 
 * Tests can be designed to:
   * Cover a typical sequence of states
@@ -29,7 +29,7 @@ State transition tables are often used to identify valid and invalid transitions
   * Exercise all transitions
   * Test invalid transitions
 * Rows represent states, columns represent events (with or without guard conditions)
-* Cell entries represent transitions and contain the target state and possible actions
+* Cell entries represent transitions & contain the target state & possible actions
 * IF a cell is empty, that is an invalid transition
 * Example:
 
@@ -76,27 +76,27 @@ $$
 $$
 
 3. **All Transitions Coverage**
-   * Coverage items are ALL transitions (valid and invalid)
+   * Coverage items are ALL transitions (valid & invalid)
    * 100% all transition coverage:
      * Exercise all valid transitions
      * Try to exercise all invalid transitions
    * Test only one invalid transition per test case to avoid **fault masking**
-   * Often a minimum requirement for mission and safety-critical software
+   * Often a minimum requirement for mission & safety-critical software
 $$
- \frac{\textbf{No. of exercised valid and invalid transitions}}{\textbf{Total no. of valid and invalid transitions}} \times 100\%
+ \frac{\textbf{No. of exercised valid & invalid transitions}}{\textbf{Total no. of valid & invalid transitions}} \times 100\%
 $$
 
 #### State Transition Testing - Summary
-* 100% All Transitions Coverage guarantees 100% Valid Transitions coverage AND 100% All States Coverage
+* 100% All Transitions Coverage guarantees 100% Valid Transitions coverage & 100% All States Coverage
 * 100% Valid Transitions coverage guarantees 100% All States Coverage
 * Full Valid Transitions Coverage is most widely used
 * All states coverage is weakest as typically it does not cover all transitions
 
 #### State Transition Testing - Example
-* Website shopping cart starts empty – purchases are selected and added to the cart. 
+* Website shopping cart starts empty – purchases are selected & added to the cart. 
 * Items can also be removed from the cart. 
-* On checkout, a summary of basket and cost is shown and customer indicates whether this is OK or not. 
-* If all is ok, then leave the summary display and go to the payment system. 
+* On checkout, a summary of basket & cost is shown & customer indicates whether this is OK or not. 
+* If all is ok, then leave the summary display & go to the payment system. 
 * Otherwise go back to shopping.
 ![image3.png](assets/image3.png)
 

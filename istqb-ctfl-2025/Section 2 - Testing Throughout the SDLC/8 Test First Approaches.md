@@ -6,7 +6,7 @@
 Approaches to produce quality products – introduce testing as early as possible:
 
 * Writing tests in advance - before the code
-* Focusing on early defect prevention, detection and removal
+* Focusing on early defect prevention, detection & removal
 * Following a shift-left approach
 * Ensuring the right types of tests are run at the right time as part of the right test level
 * Use automated tests to ensure code quality in future adaptations or code refactoring
@@ -15,18 +15,18 @@ Approaches to produce quality products – introduce testing as early as possibl
 
 ### Test-Driven Development (TDD)
 * Develop code guided by automated test cases
-* Mainly on unit level and code-focused - can also be on system/integration level
+* Mainly on unit level & code-focused - can also be on system/integration level
 * Helps developers focus on clearly expected results
-* Tests are automated and used in CI
+* Tests are automated & used in CI
 
 ### Acceptance Test-Driven Development (ATDD)
-* Acceptance criteria and tests are defined during the creation of user stories
-* Encourages collaboration amongst business, developer and tester
-* Every stakeholder should understand how the software component has to behave and what is needed to ensure this behaviour
+* Acceptance criteria & tests are defined during the creation of user stories
+* Encourages collaboration amongst business, developer & tester
+* Every stakeholder should understand how the software component has to behave & what is needed to ensure this behaviour
 * ATDD creates reusable tests for regression testing
-* Tools support creation and execution of tests (often in the CI process)
-* Tools can connect to data and service layers of the application (enabling execution on system or acceptance levels)
-* ATDD allows quick resolution of defects and validation of feature behaviour
+* Tools support creation & execution of tests (often in the CI process)
+* Tools can connect to data & service layers of the application (enabling execution on system or acceptance levels)
+* ATDD allows quick resolution of defects & validation of feature behaviour
 * Helps determine if the acceptance criteria are met for the feature
 
 **Is the code doing what it is supposed to do?**

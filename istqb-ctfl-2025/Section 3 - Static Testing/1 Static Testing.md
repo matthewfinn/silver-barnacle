@@ -9,7 +9,7 @@
 ### Overview
 Testing the software under test **without** executing the software
 
-* Relies on manual examination (reviews) and automated analysis (static analysis)
+* Relies on manual examination (reviews) & automated analysis (static analysis)
 * Main Objectives:
   * Improving quality
   * Detecting defects
@@ -18,16 +18,16 @@ Testing the software under test **without** executing the software
 ![image2.png](assets/image2.png)
 
 ### Static testing
-* Testers, business reps and developers work together in evaluation of work products
+* Testers, business reps & developers work together in evaluation of work products
 * Ensure work products meet the **Definition of Ready**
 * Review techniques can be applied to ensure:
-  * User stories are complete and understandable and include testable acceptance criteria
-  * By asking the right questions, testers explore, challenge and help improve the proposed
+  * User stories are complete & understandable & include testable acceptance criteria
+  * By asking the right questions, testers explore, challenge & help improve the proposed
     user stories. 
 
 ### Work Products Examinable by Static Testing
 #### Static testing
-Can be used on almost any work product that can be **read** and **understood**:
+Can be used on almost any work product that can be **read** & **understood**:
 * Specs & Requirements
 * Epics, User Stories & Acceptance Criteria
 * Architecture & Design Specs
@@ -53,16 +53,16 @@ Can be used on almost any work product that can be **read** and **understood**:
 * Evaluate maintainability
 * Evaluate security
 * Static analysis can be used on any work product:
-  * That has a formal structure (mainly code and models)
+  * That has a formal structure (mainly code & models)
   * For which an appropriate static analysis tool exists
 * Is ideally performed before formal reviews
 * Goal is to find defects rather than failures
 
 ### Static Analysis by Tools
-* Tools analyse program code (e.g. control flow and data flow) as well as generated output (e.g. html, xml)
+* Tools analyse program code (e.g. control flow & data flow) as well as generated output (e.g. html, xml)
 * Typical defects found are:
   * Referencing a variable with an undefined value
-  * Inconsistent interfaces between modules and components
+  * Inconsistent interfaces between modules & components
   * Improper declaration of variables
   * Unreachable (dead) code
   * Missing or erroneous logic (e,g, infinite loops)
@@ -72,12 +72,12 @@ Can be used on almost any work product that can be **read** and **understood**:
   * Security vulnerabilities
 
 ### Static Testing - Benefits
-* Early defect detection and correction - Reducing total cost of quality due to fewer failures later in the lifecycle
-* More efficient defect detection and correction
+* Early defect detection & correction - Reducing total cost of quality due to fewer failures later in the lifecycle
+* More efficient defect detection & correction
 * Find defects that are not (easily) found by dynamic testing
 * Preventing defects in design or coding
 * Increased development productivity
-* Reduced development time and cost
-* Reduced testing time and cost
-* Evaluate the quality of and build confidence in work products
+* Reduced development time & cost
+* Reduced testing time & cost
+* Evaluate the quality of & build confidence in work products
 * Improved communication between team members

@@ -2,7 +2,7 @@
 
 
 # Summary
-### Test Analysis and Design Process
+### Test Analysis & Design Process
 ![image17.png](assets/image17.png)
 
 ### Test Techniques – Visualised
@@ -15,7 +15,7 @@ Several Black-Box (specification-based) test techniques have been discussed in t
 * **Boundary Value Analysis**
   * Test cases are designed based on boundary values
 * **Decision table testing**
-  * Test cases are designed to exercise the combinations of conditions and the resulting actions shown in a decision table
+  * Test cases are designed to exercise the combinations of conditions & the resulting actions shown in a decision table
 * **State transition testing**
   * Test cases are designed to exercise elements of a state transition model
 * **Use case testing**
@@ -46,7 +46,7 @@ course:
 * **Error Guessing**
   * A test technique in which tests are derived on the basis of the tester's knowledge of past failures, or general knowledge of failure modes
 * **Exploratory Testing**
-  * An approach to testing in which the testers dynamically design and execute tests based on their knowledge, exploration of the test item and the results of previous tests
+  * An approach to testing in which the testers dynamically design & execute tests based on their knowledge, exploration of the test item & the results of previous tests
 * **Checklist Based testing**
   * An experience-based test technique in which test cases are designed to exercise the items of a checklist
 

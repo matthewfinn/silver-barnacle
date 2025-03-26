@@ -3,7 +3,7 @@
 # Maintenance Testing
 
 * Testing the changes to an operational system or the impact of a changed environment on an operational system
-* Changes are inevitable and include:
+* Changes are inevitable & include:
   * Corrective - Fixes of defects
   * Adaptive to changes in the environment 
   * Preserve or improve non-functional quality aspects such as:
@@ -23,20 +23,20 @@
   * Use if needed, ignore if not needed
 
 ### Triggers for Maintenance
-* Modifications (planned enhancements, corrective and (emergency) changes, patches for defects and vulnerabilities)
+* Modifications (planned enhancements, corrective & (emergency) changes, patches for defects & vulnerabilities)
 * Upgrades or migrations of the operational environment:
-  * From one platform to another – tests in the new environment AND the changed software
+  * From one platform to another – tests in the new environment & the changed software
   * Data from one application into the system being maintained
 * Retirement of an application:
   * Data archiving
-  * Restore and retrieval procedures
+  * Restore & retrieval procedures
 
 ### Impact Analysis for Maintenance
 * Identify intended consequences
-* Identify expected and possible side effects
+* Identify expected & possible side effects
 * Identify areas in the system that will be affected by the change
 * Help to identify the impact of a change on existing tests
-* May be done before a change is made and can be taken into account to determine whether a change should be made
+* May be done before a change is made & can be taken into account to determine whether a change should be made
 * Impact Analysis can be difficult if:
   * Specifications are old or missing
   * Test cases are old or not documented

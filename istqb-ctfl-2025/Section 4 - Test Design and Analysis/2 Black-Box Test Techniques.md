@@ -10,14 +10,14 @@
 * Does **NOT** take the internal structure into account
 * Test cases are independent of the way the software is implemented
 * If the implementation changes, the test cases are still valid
-* Functional and non-functional
+* Functional & non-functional
 
 ### Characteristics
 
-* Test conditions, test cases and test data are derived from a test basis that may include
+* Test conditions, test cases & test data are derived from a test basis that may include
   * Software requirement
   * Specifications
   * Use cases
   * User stories
-* Test cases may be used to detect gaps between requirements and the implementation of the requirements as well as deviations from the requirements
-* Coverage is measured based on the items tested in the test basis and the technique applied to the test basis
+* Test cases may be used to detect gaps between requirements & the implementation of the requirements as well as deviations from the requirements
+* Coverage is measured based on the items tested in the test basis & the technique applied to the test basis

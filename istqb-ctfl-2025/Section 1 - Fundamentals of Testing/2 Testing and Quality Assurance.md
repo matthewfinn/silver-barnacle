@@ -1,9 +1,9 @@
 [🔙 Home](../home.md)
 
-# Testing and Quality Assurance
+# Testing & Quality Assurance
 ![image3.png](assets/image3.png)
 
-## Errors, Defects, Failures and root causes
+## Errors, Defects, Failures & root causes
 ### Terms Explained
 * **Error**: a human action that produces an incorrect result
 * **Defect**: a manifestation of an error in a software work product
@@ -21,7 +21,7 @@
   * Misunderstanding
   * Lack of experience
   * Lack of skill
-* Bad assumptions and blind spots
+* Bad assumptions & blind spots
   * We might make the same mistakes when we check our own work as we made when we did it.
     So we may not notice the flaws in what we have done - important to get someone else to review.
 
@@ -43,7 +43,7 @@ Defects can be found in any stage of the SDLC in any work product.
   * False negatives
   * False positives
 
-### Root causes of defects and their impact
+### Root causes of defects & their impact
 * Root cause
   * A fundamental reason for the occurrence of a problem
   * Earliest action / condition that created a defect

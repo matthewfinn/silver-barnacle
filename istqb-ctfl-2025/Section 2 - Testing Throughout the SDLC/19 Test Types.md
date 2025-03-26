@@ -10,7 +10,7 @@ A group of test activities aimed at specific characteristics of a software syste
 * Cover the underlying structure by the tests to an acceptable level
 
 ### Functional Testing
-* Checking the functional completeness, functional correctness and functional appropriateness
+* Checking the functional completeness, functional correctness & functional appropriateness
 * Evaluates the functions the system should perform
 * The functions are ‘**what**’ the system does 
 * Mostly described in business requirement specs, epics, user stories, use cases

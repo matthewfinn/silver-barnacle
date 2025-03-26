@@ -6,7 +6,7 @@
 ## Risk-Based Testing & Product Quality
 
 * Risk is used to focus effort required during testing
-  * Where and when to start testing
+  * Where & when to start testing
   * Which areas need more attention
 * Testing is used to:
   * Reduce the likelihood of a negative event occurring
@@ -18,20 +18,20 @@
   * Can reduce the levels of product risk in an early stage in the SDLC
   * Includes **product risk analysis**
     * Identifies product risks
-    * Assesses the likelihood and impact of each risk
+    * Assesses the likelihood & impact of each risk
   * Product risk information is used to guide:
     * Test Planning
-    * The specification, preparation and execution of test cases
-    * Test monitoring and control
-* Product Risk Analysis can influence the scope and the thoroughness of testing
+    * The specification, preparation & execution of test cases
+    * Test monitoring & control
+* Product Risk Analysis can influence the scope & the thoroughness of testing
 * In **risk-based** testing, the results of **product risk analysis** are used to:
   * Determine the scope of testing to be carried out
-  * Determine the particular test levels and propose test types to be performed
-  * Determine the test techniques to be used and the coverage to be achieved
+  * Determine the particular test levels & propose test types to be performed
+  * Determine the test techniques to be used & the coverage to be achieved
   * Estimate the test effort required for each task
   * Prioritise testing in an attempt to find critical defects as early as possible
   * Determine whether other activities besides testing should be carried out to reduce risk
-* Collective knowledge and insight of the project stakeholders is used for product risk analysis
+* Collective knowledge & insight of the project stakeholders is used for product risk analysis
 * Minimising the likelihood of a product failure, risk management provides a disciplined approach to:
   * Analyse risks
   * Determine which risks are important to deal with
@@ -68,7 +68,7 @@
 * Determining the **importance** of each risk item
   * This can be done in a lot of ways, including:
   * Project documentation.
-  * Stakeholder’s knowledge about the product and existing product in the market.
+  * Stakeholder’s knowledge about the product & existing product in the market.
   * Inputs on most used functionality.
   * Inputs from consulting a domain expert.
   * Data from the previous version of the product or similar product in the market.
@@ -85,7 +85,7 @@
 
 Two approaches (or both mixed) can be used in **Risk Assessment:**
 
-* **Quantitative approach** – Risk level is calculated by multiplying the risk likelihood and risk impact
+* **Quantitative approach** – Risk level is calculated by multiplying the risk likelihood & risk impact
 * **Qualitative approach** – Risk level can be determined using a risk matrix
 
 ### Determining the Impact
@@ -93,12 +93,12 @@ Two approaches (or both mixed) can be used in **Risk Assessment:**
 * Determining the likelihood of risk occurrence
 * Likelihood of risk occurrence can be due to:
   * Poor understanding of the feature by the product development team.
-  * Improper architecture and design.
+  * Improper architecture & design.
   * Insufficient time to design.
   * Incompetency of the team.
-  * Inadequate resources – people, tools, and technology
+  * Inadequate resources – people, tools, & technology
 * Use a 3x3 grid to execute the risk analysis
-* Likelihood is on the Y axis and answers the question how likely a feature (for example) is to fail in live operation if no further testing is undertaken in this area
+* Likelihood is on the Y axis & answers the question how likely a feature (for example) is to fail in live operation if no further testing is undertaken in this area
   * likely
   * quite likely
   * unlikely
@@ -112,8 +112,8 @@ What is the **likelihood** of failure in live operation if no further testing is
   * Cost impact, resulting in a loss.
     * Business impact resulting in losing business or losing market share, Law proceedings, Loss of licence
   * Quality impact, resulting in substandard or incompetent product release.
-  * Bad user experience, resulting in dissatisfaction and loss of a customer.
-* Impact is on the X axis and answers the question what is the impact of a failure in live operation as experienced by the customer (interruption, minor, visible or High, medium, low)
+  * Bad user experience, resulting in dissatisfaction & loss of a customer.
+* Impact is on the X axis & answers the question what is the impact of a failure in live operation as experienced by the customer (interruption, minor, visible or High, medium, low)
 * Executed by the **Business Specialists**
 
 What is the impact of a failure in live operation as experienced by the customer?
@@ -146,10 +146,10 @@ Analyzed risks can be responded to with:
 * Contingency plan
 
 ### Mitigating Product Risks by Testing
-* Select the testers with the right level of experience and skill for a given risk type
+* Select the testers with the right level of experience & skill for a given risk type
 * Apply an appropriate level of independence of testing
-* Conduct reviews and static analysis
-* Apply the correct test techniques and coverage levels
+* Conduct reviews & static analysis
+* Apply the correct test techniques & coverage levels
 * Apply the appropriate test types addressing the affected quality characteristics
 * Perform dynamic testing, including regression testing
 

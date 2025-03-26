@@ -3,14 +3,14 @@
 
 
 # System Integration Testing
-* Focuses on interactions between systems, packages and microservices (also external)
+* Focuses on interactions between systems, packages & microservices (also external)
 * External dependencies can cause challenges
 * Can be performed after or during System testing – mainly by testers
 * Test environments should be as close to the operational environment as possible
 
 ### Objectives
 * Reducing risk
-* Verifying whether the functional and non-functional behaviour of the integrated system(s) is as designed and specified
+* Verifying whether the functional & non-functional behaviour of the integrated system(s) is as designed & specified
 * Building confidence in the quality of the system
 * Finding defects in the system(s)
 * Preventing defects from getting into the acceptance level
@@ -37,15 +37,15 @@
 
 ### Approach & Responsibilities
 * Should focus on the integration itself, not on individual systems
-* Functional, non-functional and structural test types are applicable
-* Best practice is to first plan integration test and integration strategy before building the systems
+* Functional, non-functional & structural test types are applicable
+* Best practice is to first plan integration test & integration strategy before building the systems
 * System integration testing heavily depends on the Integration strategy (top-down, bottom-up, big bang, incremental)
 * Risk analysis helps to focus system integration testing
 * Greater scope means more difficulty in isolating defects – Continuous Integration including test automation can help
 
 ### Examples
-* E-commerce System Integration – Ensuring an online store correctly integrates with a payment gateway (e.g., Stripe, PayPal) and an inventory management system.
-* HR & Payroll System – Checking if an HR system correctly integrates with a payroll processing service and a tax calculation system.
+* E-commerce System Integration – Ensuring an online store correctly integrates with a payment gateway (e.g., Stripe, PayPal) & an inventory management system.
+* HR & Payroll System – Checking if an HR system correctly integrates with a payroll processing service & a tax calculation system.
 * User Authentication Across Systems – Verifying if a Single Sign-On (SSO) solution (e.g., Okta, Auth0) correctly integrates across multiple applications.
-* Airline Reservation System – Ensuring that a flight booking system correctly integrates with third-party services for seat selection, payment, and loyalty programs.
-* Logistics & Supply Chain Integration – Verifying that a shipping company’s tracking system integrates correctly with warehouse and inventory management systems.
+* Airline Reservation System – Ensuring that a flight booking system correctly integrates with third-party services for seat selection, payment, & loyalty programs.
+* Logistics & Supply Chain Integration – Verifying that a shipping company’s tracking system integrates correctly with warehouse & inventory management systems.

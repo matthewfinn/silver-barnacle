@@ -16,11 +16,11 @@ PBI = Product Backlog Item
 ### User Story Writing – 3C Concept
 **Card** – Simple card or other medium accurately describing the user story
 
-**Conversation** – Explains how the software will be used and can be documented or verbal. 
-Begins during release-planning and continue while the story is scheduled to be picked up.
+**Conversation** – Explains how the software will be used & can be documented or verbal. 
+Begins during release-planning & continue while the story is scheduled to be picked up.
 
-**Confirmation** – Acceptance criteria are used to confirm whether a story is done and may concern multiple user stories. 
-Tests should include positive and negative scenarios. Various participants play the role of tester (dev, specialists, testers, etc)
+**Confirmation** – Acceptance criteria are used to confirm whether a story is done & may concern multiple user stories. 
+Tests should include positive & negative scenarios. Various participants play the role of tester (dev, specialists, testers, etc)
 
 ### User Story Writing - Issues
 * Poor specifications (user stories) often result in failure
@@ -36,12 +36,12 @@ Tests should include positive and negative scenarios. Various participants play 
 
 ### Collaborative User Story Writing
 * Software development heavily depends on user stories
-* User stories are captured and acceptance criteria defined from different perspectives:
+* User stories are captured & acceptance criteria defined from different perspectives:
   * Developers
   * Testers 
   * Business Representatives
 * Shared vision through frequent informal reviews
-* User stories should address functional and non-functional requirements
+* User stories should address functional & non-functional requirements
   * Acceptance criteria define when a feature is done
 
   As a [ROLE] I want [GOAL TO BE ACCOMPLISHED] so that I can
