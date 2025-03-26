@@ -41,3 +41,13 @@ Tools are used by developers for:
 Code & Unit tests are constantly checked into the Configuration Management system, using automated build & test frameworks for CI / CD including automated DevOps pipelines
 
 ### Functional Testing & Configuration Management
+* Automated tests can also include functional tests on the integration & system levels
+* These tests can be integrated with the other automated tests as part of the CI framework
+
+Functional automated tests can be created using:
+* Functional testing harnesses
+* Open-source UI test tools
+* Commercial Tools
+
+As automated functional tests take longer than unit tests, often these are separated:
+* E.g. unit tests run every day or during every check-in; functional tests every few days
