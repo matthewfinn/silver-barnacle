@@ -14,22 +14,23 @@
 1. Save the script as generate_toc.js
 2. Run it `node generate_toc.js`
 
-### Automate it
+### Automate it - NEEDS TESTING
 1. Open the Git hooks directory:
 ```shell
 cd your-repo/.git/hooks
 ```
 2. Create/Edit `post-commit` hook
 ```shell
-nano post-commit
+notepad post-commit
 ```
 3. Add the below script
 ```shell
 #!/bin/sh
-node generate_toc.js
-git add index.md
+node istqb-ctfl-2025/generate_toc.js
+git add istqb-ctfl-2025/.
 git commit --amend --no-edit
 ```
+#### Not sure this is necessary
 4. Make it executable
 ```shell
 chmod +x post-commit
