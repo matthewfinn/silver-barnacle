@@ -65,6 +65,7 @@ function compareFiles(a, b) {
 function generateToC(directory = ".") {
     let toc = "# Table of Contents\n\n";
     let folders = {};
+    let resourcesFiles = []; // Store all files inside "resources" folder
 
     function scanDir(dir) {
         console.log(`🔍 Scanning directory: ${dir}`); // Debugging: Log every scanned directory
@@ -79,27 +80,41 @@ function generateToC(directory = ".") {
             if (file === ".idea" || file === "assets") return;
 
             if (fs.statSync(fullPath).isDirectory()) {
-                scanDir(fullPath); // Recursively scan subdirectories
+                // If the folder is inside "resources", do NOT create a new section for it
+                if (relativePath.toLowerCase().startsWith("resources")) {
+                    scanDir(fullPath); // Just scan and collect files
+                } else {
+                    scanDir(fullPath); // Recursively scan subdirectories
+                }
             } else if (file.endsWith(".md") && !IGNORE_FILES.has(file)) {
                 let folder = path.dirname(relativePath);
-                if (!folders[folder]) folders[folder] = [];
-                folders[folder].push(relativePath);
+                if (folder.toLowerCase() === "resources") {
+                    resourcesFiles.push(relativePath); // Store files for later use
+                } else {
+                    if (!folders[folder]) folders[folder] = [];
+                    folders[folder].push(relativePath);
+                }
                 addBackLinks(fullPath, directory);
             } else if (file.endsWith(".pdf")) {
                 console.log(`   ✅ PDF Detected: ${relativePath}`); // Debugging: Log found PDFs
-                let folder = path.dirname(relativePath);
+                let folder = path.dirname(relativePath).toLowerCase();
+
+                // Skip any PDF in "resources" folder or its subfolders
+                if (folder.includes("resources")) {
+                    return; // Don't add this PDF to the ToC
+                }
+
+                // If it's not in "resources", then add it to the appropriate folder in the ToC
                 if (!folders[folder]) folders[folder] = [];
                 folders[folder].push(relativePath);
             }
+
         });
     }
 
-
-
-
     scanDir(directory);
 
-    // Sort folders alphabetically
+    // Sort and add folders (except "resources") to ToC
     Object.keys(folders).sort(customSort).forEach(folder => {
         if (folder !== ".") toc += `## ${folder.replace(/[-_]/g, " ")}\n\n`;
 
@@ -112,14 +127,24 @@ function generateToC(directory = ".") {
         toc += "\n";
     });
 
+    // Ensure "Resources" section is last and contains all its files
+    if (resourcesFiles.length > 0) {
+        toc += "## Resources\n\n";
+        resourcesFiles.sort(compareFiles).forEach(file => {
+            let title = path.basename(file, ".md").replace(/[-_]/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+            toc += `- [${title}](${encodeURL(file)})\n`;
+        });
+        toc += "\n";
+    }
+
     // Write the table of contents to the output file
     fs.writeFileSync(OUTPUT_FILE, toc);
     console.log(`✅ Updated ${OUTPUT_FILE} with ${Object.keys(folders).length} sections.`);
 
     function customSort(a, b) {
         // Ensure "resources" is always last
-        if (a.toLowerCase() === "resources") return 1;
-        if (b.toLowerCase() === "resources") return -1;
+        if (a.toLowerCase().startsWith("resources")) return 1;
+        if (b.toLowerCase().startsWith("resources")) return -1;
         return a.localeCompare(b, undefined, { numeric: true });
     }
 }

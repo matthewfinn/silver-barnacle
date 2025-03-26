@@ -95,6 +95,6 @@
 
 ## Resources
 
-- [ISTQB Foundation Certified Tester Sample Questions & Exercises 2024 V4.0.Pdf](Resources/ISTQB%20Foundation%20Certified%20Tester%20Sample%20Questions%20%26%20Exercises%202024%20V4.0.pdf)
-- [ISTQB Foundation Level Certified Tester Slide Handout 2024 V4.0.Pdf](Resources/ISTQB%20Foundation%20Level%20Certified%20Tester%20Slide%20Handout%202024%20V4.0.pdf)
+- [Resources](Resources/Resources.md)
+- [Sample Exams](Resources/Sample%20Exams.md)
 
