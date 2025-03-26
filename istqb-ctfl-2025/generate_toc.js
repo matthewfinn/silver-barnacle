@@ -1,8 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 
-const OUTPUT_FILE = "home.md";
-const IGNORE_FILES = new Set([OUTPUT_FILE, "README.md"]);
+const OUTPUT_FILE = "home.md"; // The name of the output file
+const IGNORE_FILES = new Set([OUTPUT_FILE, "README.md"]); // Files to be ignored
+
+// Get the path of the target directory (this assumes the script is executed from outside 'istqb-ctfl-2025')
+const directory = path.resolve("istqb-ctfl-2025"); // Using relative path to 'istqb-ctfl-2025'
 
 // Function to encode URLs safely (for spaces and special characters)
 function encodeURL(filePath) {
@@ -10,13 +13,13 @@ function encodeURL(filePath) {
 }
 
 // Function to generate the relative path for the "Home" link
-function getRelativePath(file, baseDir = ".") {
+function getRelativePath(file, baseDir = directory) {
     let filePath = path.relative(baseDir, file).replace(/\\/g, "/");
     return filePath === "" ? `./${OUTPUT_FILE}` : `../`.repeat(filePath.split("/").length - 1) + OUTPUT_FILE;
 }
 
 // Function to insert the "Home" link at the top of Markdown files
-function addBackLinks(file, baseDir = ".") {
+function addBackLinks(file, baseDir = directory) {
     let content = fs.readFileSync(file, "utf-8");
     const firstLine = content.split("\n")[0].trim();
     if (firstLine !== `[🔙 Home](${getRelativePath(file, baseDir)})`) {
@@ -39,7 +42,7 @@ function compareFiles(a, b) {
     return numA !== numB ? numA - numB : a.localeCompare(b);
 }
 
-// Function to scan a directory and categorize files into folders (ignoring "attempts")
+// Function to scan a directory and categorize files into folders
 function scanDir(dir, folders, resourcesFiles, baseDir) {
     fs.readdirSync(dir).forEach(file => {
         let fullPath = path.join(dir, file);
@@ -47,12 +50,14 @@ function scanDir(dir, folders, resourcesFiles, baseDir) {
 
         if (file === ".idea" || file === "assets") return; // Skip unwanted folders
         if (fs.statSync(fullPath).isDirectory()) {
+            // Skip "resources/attempts" subdirectory
+            if (relativePath.toLowerCase() === "resources/attempts") {
+                return;
+            }
             scanDir(fullPath, folders, resourcesFiles, baseDir); // Recurse into subdirectories
         } else if (file.endsWith(".md") && !IGNORE_FILES.has(file)) {
             let folder = path.dirname(relativePath);
-            if (folder.toLowerCase() === "resources/attempts") {
-                resourcesFiles.push(relativePath); // Collect "attempts" files separately
-            } else if (folder.toLowerCase() === "resources") {
+            if (folder.toLowerCase() === "resources") {
                 resourcesFiles.push(relativePath); // Collect "resources" files
             } else {
                 folders[folder] = folders[folder] || [];
@@ -70,11 +75,10 @@ function scanDir(dir, folders, resourcesFiles, baseDir) {
 }
 
 // Main function to generate the Table of Contents
-function generateToC(directory = ".") {
+function generateToC() {
     let toc = "# Table of Contents\n\n"; // Initialize TOC
     let folders = {}; // Store folders and files
     let resourcesFiles = []; // Store resources files separately
-    let attemptsFiles = []; // Store "attempts" files separately
 
     // Scan the directory
     scanDir(directory, folders, resourcesFiles, directory);
@@ -98,10 +102,11 @@ function generateToC(directory = ".") {
         });
         toc += "\n";
     }
-    
-    // Write the TOC to the output file
-    fs.writeFileSync(OUTPUT_FILE, toc);
-    console.log(`✅ Updated ${OUTPUT_FILE} with ${Object.keys(folders).length} sections.`);
+
+    // Write the TOC to the output file inside the target directory
+    const outputPath = path.join(directory, OUTPUT_FILE); // Ensure the output file is within the target directory
+    fs.writeFileSync(outputPath, toc);
+    console.log(`✅ Updated ${OUTPUT_FILE} inside ${directory} with ${Object.keys(folders).length} sections.`);
 }
 
 // Sorting function to keep "resources" section last

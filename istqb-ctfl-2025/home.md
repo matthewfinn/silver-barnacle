@@ -95,7 +95,8 @@
 
 ## Resources
 
-- [Test Results](Resources/attempts/Test%20Results.md)
+- [Exam Attempts](Resources/Exam%20Attempts.md)
 - [Resources](Resources/Resources.md)
 - [Sample Exams](Resources/Sample%20Exams.md)
+- [Test](Resources/Test.md)
 
