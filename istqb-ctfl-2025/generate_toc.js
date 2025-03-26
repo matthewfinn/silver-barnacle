@@ -21,21 +21,25 @@ function getRelativePath(file, baseDir = ".") {
 
 // Function to add or update "Home" at the top of Markdown files
 function addBackLinks(file, baseDir = ".") {
-    let content = fs.readFileSync(file, "utf-8").trim();  // Trim to avoid leading/trailing whitespace issues
+    let content = fs.readFileSync(file, "utf-8");
 
-    // Regular expression to match and remove any existing back links (with optional newlines after)
-    const backLinkRegex = /\[🔙 Home\]\(.*\)\n?\n?/;
+    // Check if the first non-empty line contains the "Home" link
+    const firstLine = content.split("\n")[0].trim();
 
-    // Remove any existing back links (to avoid duplicates)
-    content = content.replace(backLinkRegex, "");
+    // Only add or update the "Home" link if it's not already the first line
+    if (firstLine !== `[🔙 Home](${getRelativePath(file, baseDir)})`) {
+        // Remove any existing back links (even with extra whitespace)
+        content = content.replace(/^\[🔙 Home\]\(.*\)\s*\n?/, "");
 
-    // Prepend the new back link with exactly one newline after it
-    let backLink = `[🔙 Home](${getRelativePath(file, baseDir)})\n\n`;
-    content = backLink + content;
+        // Prepend the new back link with exactly one newline after it
+        let backLink = `[🔙 Home](${getRelativePath(file, baseDir)})\n\n`;
+        content = backLink + content;
 
-    // Write the updated content back to the file
-    fs.writeFileSync(file, content);
+        // Write the updated content back to the file
+        fs.writeFileSync(file, content);
+    }
 }
+
 
 // Function to extract numeric prefix from file names
 function extractNumericPrefix(fileName) {
