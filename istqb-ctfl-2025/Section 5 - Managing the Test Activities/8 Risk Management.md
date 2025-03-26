@@ -1,3 +1,5 @@
+[🔙 Back to Index](../index.md)
+
 # Risk Management
 
 * Allows an organization to:

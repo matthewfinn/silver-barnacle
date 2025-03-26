@@ -1,5 +1,7 @@
 [🔙 Back to Index](../index.md)
 
+[🔙 Back to Index](../index.md)
+
 # Acceptance Testing
 * Focuses on the behaviour and capabilities of a whole system or product
 * Demonstrating the readiness for release, that the user’s business needs are fulfilled

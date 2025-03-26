@@ -1,3 +1,5 @@
+[🔙 Back to Index](../index.md)
+
 # Entry & Exit Criteria
 
 ### Entry vs Exit Criteria

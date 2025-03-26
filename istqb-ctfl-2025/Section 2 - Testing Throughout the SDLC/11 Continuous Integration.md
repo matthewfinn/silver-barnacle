@@ -1,5 +1,7 @@
 [🔙 Back to Index](../index.md)
 
+[🔙 Back to Index](../index.md)
+
 # Continuous Integration
 
 ### Continuous Integration - Visualised

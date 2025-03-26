@@ -1,5 +1,7 @@
 [🔙 Back to Index](../index.md)
 
+[🔙 Back to Index](../index.md)
+
 # System Integration Testing
 * Focuses on interactions between systems, packages and microservices (also external)
 * External dependencies can cause challenges

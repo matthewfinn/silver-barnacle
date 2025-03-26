@@ -1,5 +1,7 @@
 [🔙 Back to Index](../index.md)
 
+[🔙 Back to Index](../index.md)
+
 # Summary
 ### Test Analysis and Design Process
 ![image17.png](assets/image17.png)

@@ -66,6 +66,20 @@
 - [7 Use ATDD To Derive Test Cases](Section%204%20-%20Test%20Design%20and%20Analysis/7%20Use%20ATDD%20to%20derive%20test%20cases.md)
 - [8 Summary](Section%204%20-%20Test%20Design%20and%20Analysis/8%20Summary.md)
 
+## Section 5   Managing the Test Activities
+
+- [1 Test Plan](Section%205%20-%20Managing%20the%20Test%20Activities/1%20Test%20Plan.md)
+- [2 Testers Contribution To Iteration And Release Planning](Section%205%20-%20Managing%20the%20Test%20Activities/2%20Testers%20Contribution%20to%20Iteration%20and%20Release%20Planning.md)
+- [3 Entry And Exit Criteria](Section%205%20-%20Managing%20the%20Test%20Activities/3%20Entry%20and%20Exit%20Criteria.md)
+- [4 Test Estimation Techniques](Section%205%20-%20Managing%20the%20Test%20Activities/4%20Test%20Estimation%20Techniques.md)
+- [5 Test Case Prioritisation](Section%205%20-%20Managing%20the%20Test%20Activities/5%20Test%20Case%20Prioritisation.md)
+- [6 The Test Pyramid](Section%205%20-%20Managing%20the%20Test%20Activities/6%20The%20Test%20Pyramid.md)
+- [7 Testing Quadrants](Section%205%20-%20Managing%20the%20Test%20Activities/7%20Testing%20Quadrants.md)
+- [8 Risk Management](Section%205%20-%20Managing%20the%20Test%20Activities/8%20Risk%20Management.md)
+- [9 Product Risk Analysis](Section%205%20-%20Managing%20the%20Test%20Activities/9%20Product%20Risk%20Analysis.md)
+- [10 Test Monitoring, Test Control And Test Completion](Section%205%20-%20Managing%20the%20Test%20Activities/10%20Test%20Monitoring%2C%20Test%20Control%20and%20Test%20Completion.md)
+- [11 Metrics Used For Testing](Section%205%20-%20Managing%20the%20Test%20Activities/11%20Metrics%20used%20for%20Testing.md)
+
 ## Resources
 
 - [ISTQB Foundation Certified Tester Sample Questions & Exercises 2024 V4.0.Pdf](Resources/ISTQB%20Foundation%20Certified%20Tester%20Sample%20Questions%20%26%20Exercises%202024%20V4.0.pdf)

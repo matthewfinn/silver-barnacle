@@ -2,6 +2,8 @@
 
 [🔙 Back to Index](../index.md)
 
+[🔙 Back to Index](../index.md)
+
 # Writing Acceptance Criteria
 
 ### User Story Writing – 3C Concept

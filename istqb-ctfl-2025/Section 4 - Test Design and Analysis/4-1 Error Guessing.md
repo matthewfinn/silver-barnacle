@@ -1,5 +1,7 @@
 [🔙 Back to Index](../index.md)
 
+[🔙 Back to Index](../index.md)
+
 # Error Guessing
 
 A technique that anticipates the occurrence of mistakes, defects and failures, based on the knowledge of the tester:

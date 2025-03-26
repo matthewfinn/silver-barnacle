@@ -1,5 +1,7 @@
 [🔙 Back to Index](../index.md)
 
+[🔙 Back to Index](../index.md)
+
 # System Testing
 * Focuses on the behaviour and capabilities of a whole system or product
 * Looks at the functional end-to-end tasks the system can perform and the non-functional behaviour when performing these tasks

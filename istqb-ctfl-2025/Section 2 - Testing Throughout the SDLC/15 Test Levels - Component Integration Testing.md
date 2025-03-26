@@ -1,5 +1,7 @@
 [🔙 Back to Index](../index.md)
 
+[🔙 Back to Index](../index.md)
+
 # Component Integration Testing
 * AKA Unit Integration Testing#
 * Focuses on interfaces and interactions between integrated components
