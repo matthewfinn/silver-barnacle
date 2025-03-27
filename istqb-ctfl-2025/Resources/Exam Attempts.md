@@ -362,30 +362,36 @@ equivalence partitions.
 
 ### Question 34 - Incorrect Answer
 > **Question**
-> ?
+> In the context of risk management, identify the statement that NOT accurately depict the relationship between product risk and test planning?
 
 > **Answer**
-> A:
+> A: The required quality of the network module is ambiguous, resulting in the execution of additional risk analyses in this area.
 
 > **Justification**
-> ? 
+> FL-5.2.4 (K2) Explain what measures can be taken in response to analyzed product risks [CTFL 4.0]
+> 
+> If the quality of a module is unclear, additional risk analysis is necessary, but this is not a task of risk control. Test planning should aim to eliminate uncertainties and ensure quality (see [CTFL 4.0], Section 5.2.4).
 
 ### Question 35 - Incorrect Answer
 > **Question**
-> ?
+> Which of the following is a product quality metric?
 
 > **Answer**
-> A:
+> A: Mean time to failure
 
 > **Justification**
-> ?
+> FL-5.3.1 (K1) Recall metrics used for testing [CTFL 4.0]
+> 
+> CORRECT – Product quality metrics measure quality characteristics. Mean time to failure measures maturity, so it is a product quality metric (see [CTFL4.0], section 5.3.1, 3rd bullet point)
 
 ### Question 40 - Incorrect Answer
 > **Question**
-> ?
+> Which of the following is MOST likely to apply to test automation?
 
 > **Answer**
-> A:
+> A: Test automation provides measurement of more complex coverage criteria.
 
 > **Justification**
-> ?
+> FL-6.2.1 (K1) Recall the benefits and risks of test automation [CTFL 4.0] 
+> 
+> CORRECT – Test automation can provide measures that are too complicated for humans to derive, such as white-box test coverage measures for all but the most trivial code (see[CTFL4.0], section 6.2, bullet point 3)
