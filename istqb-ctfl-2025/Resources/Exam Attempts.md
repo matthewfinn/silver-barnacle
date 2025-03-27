@@ -2,6 +2,7 @@
 
 # Test Results
 
-| Exam | Result |
-|------|--------|
-| test | 1000   |
+
+| Exam | Result | Open Book | Link to Exam Paper(s) |
+| ---- |--------| --------- | --------------------- |
+| test |        |           |                       |

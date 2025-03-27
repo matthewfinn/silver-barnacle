@@ -9,12 +9,12 @@ git commit -m "Commit message"
 git reset --soft HEAD~1
 ```
 
-### Undo a commit
+### Undo a commit & reset changes
 ```shell
-git reset --soft HEAD~1
+git reset HEAD~1
 ```
 
-### Git Post-Commit hook instructions
+### Git Post-Commit hook execute script instructions
 1. Open the Git hooks directory:
 ```shell
 cd your-repo/.git/hooks
