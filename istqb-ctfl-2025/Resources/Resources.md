@@ -6,3 +6,4 @@
 [ISTQB CTFL Syllabus v4.0](resources/ISTQB_CTFL_Syllabus-v4.0_EN_.pdf)
 [ISTQB Exam Structure Tables v1.11](resources/ISTQB_Exam-Structure-Tables_v1.11__ALL_.pdf)
 [ISTQB Exam Structures & Rules v1.1](resources/ISTQB_Exam-Structures-and-Rules_v1.1_ALL_.pdf)
+

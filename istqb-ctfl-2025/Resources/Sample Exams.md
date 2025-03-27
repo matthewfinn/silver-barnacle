@@ -3,6 +3,9 @@
 # ISTQB Sample Exams & Resources
 
 ## Exams
+### ISTQB Ones here
+https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/
+
 ### ISQI
 [ISTQB CTFL Sample Exam Questions SET F v1.1.pdf](exams/ISTQB%20CTFL%20Sample%20Exam%20Questions%20SET%20F%20v1.1.pdf)
 [ISTQB CTFL Sample Exam Answers SET F v1.1.pdf](exams/ISTQB%20CTFL%20Sample%20Exam%20Answers%20SET%20F%20v1.1.pdf)
