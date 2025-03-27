@@ -4,8 +4,9 @@ const path = require("path");
 const OUTPUT_FILE = "home.md"; // The name of the output file
 const IGNORE_FILES = new Set([OUTPUT_FILE, "README.md"]); // Files to be ignored
 
-// Get the path of the target directory (this assumes the script is executed from outside 'istqb-ctfl-2025')
-const directory = path.resolve("istqb-ctfl-2025"); // Using relative path to 'istqb-ctfl-2025'
+// Get the path of the target directory when the script is executed from outside 'istqb-ctfl-2025'
+const directory = path.basename(process.cwd()).toLowerCase() === "istqb-ctfl-2025"
+        ? process.cwd() : "istqb-ctfl-2025"; // Using relative path to 'istqb-ctfl-2025' if thats NOT the CWD
 
 // Function to encode URLs safely (for spaces and special characters)
 function encodeURL(filePath) {
