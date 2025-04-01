@@ -14,6 +14,17 @@ git reset --soft HEAD~1
 git reset HEAD~1
 ```
 
+### Detailed diff of all changes:
+```shell
+git diff HEAD
+```
+
+### Line Endings warning
+``git config --global core.autocrlf true``
+
+**true**: Git will convert CRLF to LF when committing, and LF to CRLF when checking out.
+**input**: Git will convert CRLF to LF when committing, but it won't modify line endings when checking out files.
+
 ### Git Post-Commit hook execute script instructions
 1. Open the Git hooks directory:
 ```shell

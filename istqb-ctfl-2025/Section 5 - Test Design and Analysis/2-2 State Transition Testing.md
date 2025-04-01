@@ -35,12 +35,12 @@ State transition tables are often used to identify valid & invalid transitions
 
     <table>
       <tr>
-        <th style="background-color: #787676;"></th>
-        <th style="background-color: #787676;">Event</th>
+        <th style="background-colour: #787676;"></th>
+        <th style="background-colour: #787676;">Event</th>
       </tr>
       <tr>
-        <th style="background-color: #787676;">State</th>
-        <th style="background-color: #787676;">Press OK</th>
+        <th style="background-colour: #787676;">State</th>
+        <th style="background-colour: #787676;">Press OK</th>
       </tr>
       <tr>
         <td>Open</td>
@@ -102,53 +102,53 @@ $$
 
 <table>
       <tr>
-        <th style="background-color: #787676;"></th>
-        <th colspan="6" style="background-color: #787676;">Event</th>
+        <th style="background-colour: #787676;"></th>
+        <th colspan="6" style="background-colour: #787676;">Event</th>
       </tr>
       <tr>
-        <th style="background-color: #787676;">State</th>
-        <th style="background-color: #787676;">Add item</th>
-        <th style="background-color: #787676;">Remove Item (N > 1)</th>
-        <th style="background-color: #787676;">Remove Item (N = 1)</th>
-        <th style="background-color: #787676;">Check out</th>
-        <th style="background-color: #787676;">Not OK</th>
-        <th style="background-color: #787676;">OK</th>
+        <th style="background-colour: #787676;">State</th>
+        <th style="background-colour: #787676;">Add item</th>
+        <th style="background-colour: #787676;">Remove Item (N > 1)</th>
+        <th style="background-colour: #787676;">Remove Item (N = 1)</th>
+        <th style="background-colour: #787676;">Check out</th>
+        <th style="background-colour: #787676;">Not OK</th>
+        <th style="background-colour: #787676;">OK</th>
       </tr>
       <tr>
-        <td style="background-color: #787676;">S1 Empty</td>
-        <td style="background-color: #438007;">S2</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
+        <td style="background-colour: #787676;">S1 Empty</td>
+        <td style="background-colour: #438007;">S2</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
       </tr>
       <tr>
-        <td style="background-color: #787676;">S2 Shopping</td>
-        <td style="background-color: #438007;">S2</td>
-        <td style="background-color: #438007;">S2</td>
-        <td style="background-color: #438007;">S1</td>
-        <td style="background-color: #438007;">S3</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
+        <td style="background-colour: #787676;">S2 Shopping</td>
+        <td style="background-colour: #438007;">S2</td>
+        <td style="background-colour: #438007;">S2</td>
+        <td style="background-colour: #438007;">S1</td>
+        <td style="background-colour: #438007;">S3</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
       </tr>
       <tr>
-        <td style="background-color: #787676;">S3 Summary</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #438007;">S2</td>
-        <td style="background-color: #438007;">S4</td>
+        <td style="background-colour: #787676;">S3 Summary</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #438007;">S2</td>
+        <td style="background-colour: #438007;">S4</td>
       </tr>
       <tr>
-        <td style="background-color: #787676;">S4 Payment</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
-        <td style="background-color: #bd0606;">-</td>
+        <td style="background-colour: #787676;">S4 Payment</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
+        <td style="background-colour: #bd0606;">-</td>
       </tr>
 </table>
 
@@ -162,48 +162,48 @@ A test to cover all valid transitions would be:
 
 <table>
     <tr>
-        <th style="background-color: #787676;">State</th>
-        <th style="background-color: #787676;">Event</th>
+        <th style="background-colour: #787676;">State</th>
+        <th style="background-colour: #787676;">Event</th>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S1</td>
-        <td style="background-color: #066506;">Add Item</td>
+        <td style="background-colour: #066506;">S1</td>
+        <td style="background-colour: #066506;">Add Item</td>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S2</td>
-        <td style="background-color: #066506;">Remove Item</td>
+        <td style="background-colour: #066506;">S2</td>
+        <td style="background-colour: #066506;">Remove Item</td>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S1</td>
-        <td style="background-color: #066506;">Add Item</td>
+        <td style="background-colour: #066506;">S1</td>
+        <td style="background-colour: #066506;">Add Item</td>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S2</td>
-        <td style="background-color: #066506;">Add Item</td>
+        <td style="background-colour: #066506;">S2</td>
+        <td style="background-colour: #066506;">Add Item</td>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S2</td>
-        <td style="background-color: #066506;">Remove Item</td>
+        <td style="background-colour: #066506;">S2</td>
+        <td style="background-colour: #066506;">Remove Item</td>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S2</td>
-        <td style="background-color: #066506;">Checkout</td>
+        <td style="background-colour: #066506;">S2</td>
+        <td style="background-colour: #066506;">Checkout</td>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S3</td>
-        <td style="background-color: #066506;">Not OK</td>
+        <td style="background-colour: #066506;">S3</td>
+        <td style="background-colour: #066506;">Not OK</td>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S2</td>
-        <td style="background-color: #066506;">Checkout</td>
+        <td style="background-colour: #066506;">S2</td>
+        <td style="background-colour: #066506;">Checkout</td>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S3</td>
-        <td style="background-color: #066506;">Ok</td>
+        <td style="background-colour: #066506;">S3</td>
+        <td style="background-colour: #066506;">Ok</td>
     </tr>
     <tr>
-        <td style="background-color: #066506;">S4</td>
-        <td style="background-color: #066506;"></td>
+        <td style="background-colour: #066506;">S4</td>
+        <td style="background-colour: #066506;"></td>
     </tr>
 </table>
 

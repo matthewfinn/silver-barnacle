@@ -97,25 +97,25 @@ Estimating based on metrics of former or similar projects or based on typical va
 
 <table>
    <tr>
-      <th style="background-color: #649864;"></th>
-      <th style="background-color: #649864;">Sprint 1</th>
-      <th style="background-color: #649864;">Sprint 2</th>
-      <th style="background-color: #649864;">Sprint 3</th>
-      <th style="background-color: #649864;">Sprint 4?</th>
+      <th style="background-colour: #649864;"></th>
+      <th style="background-colour: #649864;">Sprint 1</th>
+      <th style="background-colour: #649864;">Sprint 2</th>
+      <th style="background-colour: #649864;">Sprint 3</th>
+      <th style="background-colour: #649864;">Sprint 4?</th>
    </tr>
    <tr>
-      <td style="background-color: #647b98;">Dev</td>
-      <td style="background-color: #647b98;">13</td>
-      <td style="background-color: #647b98;">18</td>
-      <td style="background-color: #647b98;">17</td>
-      <td style="background-color: #647b98;">???</td>
+      <td style="background-colour: #647b98;">Dev</td>
+      <td style="background-colour: #647b98;">13</td>
+      <td style="background-colour: #647b98;">18</td>
+      <td style="background-colour: #647b98;">17</td>
+      <td style="background-colour: #647b98;">???</td>
    </tr>
    <tr>
-      <td style="background-color: #ae3838;">Test</td>
-      <td style="background-color: #ae3838;">3</td>
-      <td style="background-color: #ae3838;">6</td>
-      <td style="background-color: #ae3838;">6</td>
-      <td style="background-color: #ae3838;">???</td>
+      <td style="background-colour: #ae3838;">Test</td>
+      <td style="background-colour: #ae3838;">3</td>
+      <td style="background-colour: #ae3838;">6</td>
+      <td style="background-colour: #ae3838;">6</td>
+      <td style="background-colour: #ae3838;">???</td>
    </tr>
 </table>
 
@@ -128,25 +128,25 @@ Estimating based on metrics of former or similar projects or based on typical va
 * How long do you estimate the entire project to take?
 <table>
    <tr>
-      <th style="background-color: #649864;"></th>
-      <th style="background-color: #649864;">Sprint 1</th>
-      <th style="background-color: #649864;">Sprint 2</th>
-      <th style="background-color: #649864;">Sprint 3</th>
-      <th style="background-color: #649864;">Sprint 4</th>
+      <th style="background-colour: #649864;"></th>
+      <th style="background-colour: #649864;">Sprint 1</th>
+      <th style="background-colour: #649864;">Sprint 2</th>
+      <th style="background-colour: #649864;">Sprint 3</th>
+      <th style="background-colour: #649864;">Sprint 4</th>
    </tr>
    <tr>
-      <td style="background-color: #647b98;">Dev</td>
-      <td style="background-color: #647b98;">13</td>
-      <td style="background-color: #647b98;">18</td>
-      <td style="background-color: #647b98;">17</td>
-      <td style="background-color: #647b98;">16</td>
+      <td style="background-colour: #647b98;">Dev</td>
+      <td style="background-colour: #647b98;">13</td>
+      <td style="background-colour: #647b98;">18</td>
+      <td style="background-colour: #647b98;">17</td>
+      <td style="background-colour: #647b98;">16</td>
    </tr>
    <tr>
-      <td style="background-color: #ae3838;">Test</td>
-      <td style="background-color: #ae3838;">3</td>
-      <td style="background-color: #ae3838;">6</td>
-      <td style="background-color: #ae3838;">6</td>
-      <td style="background-color: #ae3838;">5</td>
+      <td style="background-colour: #ae3838;">Test</td>
+      <td style="background-colour: #ae3838;">3</td>
+      <td style="background-colour: #ae3838;">6</td>
+      <td style="background-colour: #ae3838;">6</td>
+      <td style="background-colour: #ae3838;">5</td>
    </tr>
 </table>
 

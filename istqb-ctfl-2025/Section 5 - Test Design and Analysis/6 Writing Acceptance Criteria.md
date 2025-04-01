@@ -60,12 +60,12 @@ Tests should include positive & negative scenarios. Various participants play th
 
 <table>
    <tr>
-      <th colspan="2" style="background-color: #649864;"><b>User Story:</b> As a bank card user, I want to be able to request cash from my account<br>
+      <th colspan="2" style="background-colour: #649864;"><b>User Story:</b> As a bank card user, I want to be able to request cash from my account<br>
          at an ATM so that I will be able to receive available money<br>from my account quickly & in different places.
       </th>
    </tr>
    <tr>
-      <td style="background-color: #647b98;" colspan="2"><b>Scenario:</b> Requesting the cash from an overdrawn (negative balance) account</td>
+      <td style="background-colour: #647b98;" colspan="2"><b>Scenario:</b> Requesting the cash from an overdrawn (negative balance) account</td>
    </tr>
    <tr>
       <td><b>Given</b></td>
@@ -110,24 +110,24 @@ Tests should include positive & negative scenarios. Various participants play th
 
 <table>
    <tr>
-      <th colspan="2" style="background-color: #649864;"><b>User Story:</b> As a bank card user, I want to be able to request cash from my account<br>
+      <th colspan="2" style="background-colour: #649864;"><b>User Story:</b> As a bank card user, I want to be able to request cash from my account<br>
          in the healthcare app with specific rules & constraints to ensure efficient<br>scheduling & to avoid conflicts.
       </th>
    </tr>
    <tr>
-      <td style="background-color: #647b98;"><b>Rule #1</b></td>
-      <td style="background-color: #7e68d1;">Patients should be able to request appointments with specific<br>doctors from within the app</td>
+      <td style="background-colour: #647b98;"><b>Rule #1</b></td>
+      <td style="background-colour: #7e68d1;">Patients should be able to request appointments with specific<br>doctors from within the app</td>
    </tr>
    <tr>
-      <td style="background-color: #647b98;"><b>Rule #2</b></td>
-      <td style="background-color: #7e68d1;">Appointments requests must include the preferred date & time</td>
+      <td style="background-colour: #647b98;"><b>Rule #2</b></td>
+      <td style="background-colour: #7e68d1;">Appointments requests must include the preferred date & time</td>
    </tr>
    <tr>
-      <td style="background-color: #647b98;"><b>Rule #3</b></td>
-      <td style="background-color: #7e68d1;">The app should check the availability of the doctor for the<br>requested date & time</td>
+      <td style="background-colour: #647b98;"><b>Rule #3</b></td>
+      <td style="background-colour: #7e68d1;">The app should check the availability of the doctor for the<br>requested date & time</td>
    </tr>
    <tr>
-      <td style="background-color: #647b98;"><b>Rule #4</b></td>
-      <td style="background-color: #7e68d1;">If the doctor is unavailable, the system should suggest alternative<br>slots or ask the patient to choose a different doctor</td>
+      <td style="background-colour: #647b98;"><b>Rule #4</b></td>
+      <td style="background-colour: #7e68d1;">If the doctor is unavailable, the system should suggest alternative<br>slots or ask the patient to choose a different doctor</td>
    </tr>
 </table>

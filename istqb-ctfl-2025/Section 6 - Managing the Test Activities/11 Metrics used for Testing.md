@@ -29,14 +29,14 @@
     <style>
         table { border-collapse: collapse; width: 100%; }
         td { width: 250px; height: 100px; text-align: center; font-weight: bold}
-        .col1 { background-color: #649864; }
-        .col2 { background-color: #099509; }
-        .col3 { background-color: #647b98; }
-        .col4 { background-color: #4d88c6; }
-        .col5 { background-color: #4d65c6; }
-        .col6 { background-color: #334eff; }
-        .col7 { background-color: #7e68d1; }
-        .second-col { width: 600px; background-color: #abc1a5; font-weight: normal}
+        .col1 { background-colour: #649864; }
+        .col2 { background-colour: #099509; }
+        .col3 { background-colour: #647b98; }
+        .col4 { background-colour: #4d88c6; }
+        .col5 { background-colour: #4d65c6; }
+        .col6 { background-colour: #334eff; }
+        .col7 { background-colour: #7e68d1; }
+        .second-col { width: 600px; background-colour: #abc1a5; font-weight: normal}
     </style>
 </head>
 <body>

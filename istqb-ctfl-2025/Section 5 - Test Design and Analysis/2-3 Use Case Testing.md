@@ -37,9 +37,9 @@ $$
 
 <table>
   <tr>
-    <th style="background-color: #787676;"></th>
-    <th style="background-color: #787676;">Step</th>
-    <th style="background-color: #787676;">Description</th>
+    <th style="background-colour: #787676;"></th>
+    <th style="background-colour: #787676;">Step</th>
+    <th style="background-colour: #787676;">Description</th>
   </tr>
   <tr>
     <td rowspan="5">Main Success Scenario<br>A: Actor<br> S: System</td>
