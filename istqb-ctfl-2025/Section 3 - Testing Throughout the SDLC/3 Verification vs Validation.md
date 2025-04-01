@@ -1,7 +1,5 @@
 [🔙 Home](../home.md)
 
-
-
 # Verification vs Validation
 
 | Software Verification                                                                         | Software Validation                                                                                          |
@@ -11,3 +9,6 @@
 
 ## Verification vs Validation - Visualised
 ![image1.png](assets/image1.png)
+
+* **Verification → "Ver for Verify the specs"**
+* **Validation → "Val for Value to the customer"**

@@ -45,7 +45,7 @@ Main focus on:
 * Promotes & advocates the testers, test team & the test profession within the organisation
 * Develops the skills & careers of testers (training, evaluations, coaching, etc.)
 
-Way in which the role is carried out depends on the Software Development Lifecycle:
+Way in which the role is carried out depends on the SDLC:
 * Agile – some of the tasks may be carried out by the team
 * Some of the day to day management is taken care of by test managers outside of the development teams (test coaches)
 

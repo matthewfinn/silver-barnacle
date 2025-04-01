@@ -328,3 +328,29 @@ Ideally, all these tasks are completed before test execution as otherwise precio
   * Test deliverables
   * Reusable test assets
   * Lessons learned
+
+### Notes on Key Differences Between Test Case and Test Script
+
+| **Aspect**           | **Test Case**                                         | **Test Script**                                           |
+|----------------------|-------------------------------------------------------|----------------------------------------------------------|
+| **Definition**        | High-level description of what needs to be tested     | Step-by-step instructions for executing the test case manually |
+| **Content**           | Includes inputs, expected results, preconditions, and postconditions | Includes **exact** steps to follow manually during the test |
+| **Purpose**           | Describes **what** to test and **why**                | Describes **how** to execute the test case manually       |
+| **Execution**         | Not executable by itself; defines a test to be done   | **Executable** manually; provides a clear sequence of actions to perform |
+| **Example**           | "Verify login with valid credentials"                 | 1. Open the login page.<br> 2. Enter username: `user123`.<br> 3. Enter password: `pass123`.<br> 4. Click the login button.<br> 5. Verify that the dashboard is displayed. |
+| **Detail Level**      | Higher level, focusing on the **what** and **why**     | Lower level, focusing on **step-by-step execution**       |
+| **Typical Timing**    | Created during **Test Analysis and Test Design**     | Created during **Test Implementation**                    |
+
+### Test Case Example (Manual)
+
+| **Test Case ID** | **Test Case Description**        | **Preconditions**  | **Test Steps**  | **Expected Results**  |
+|------------------|----------------------------------|--------------------|-----------------|-----------------------|
+| TC001            | Verify login with valid credentials | The app is open    | 1. Open the login page.<br> 2. Enter username: `user123`.<br> 3. Enter password: `pass123`.<br> 4. Click the login button. | User is redirected to the dashboard. |
+
+### Test Script Example (Manual)
+1. Open the login page at `https://example.com/login`.
+2. In the **username** field, type `user123`.
+3. In the **password** field, type `pass123`.
+4. Click the **login** button.
+5. **Verify** that the URL is redirected to the dashboard page.
+6. **Verify** that the dashboard page displays a welcome message with the username.
