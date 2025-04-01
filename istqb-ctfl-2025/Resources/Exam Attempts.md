@@ -248,7 +248,7 @@ points).
 
 ### Question 18 - Incorrect Answer
 > **Question**
-> The generic review process recognizes the following roles, among others:
+> The generic review process recognises the following roles, among others:
 > 1. Scribe
 > 2. Review leader
 > 3. Facilitator

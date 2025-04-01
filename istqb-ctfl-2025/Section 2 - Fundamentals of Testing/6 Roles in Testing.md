@@ -34,12 +34,12 @@ Main focus on:
 * Adapts Test Plan & planning based on test results, progress & feedback
 
 ### Test Management Role - Test Completion
-* Checks the status of the exit criteria – ‘Is the testing done?’
+* Checks the status of the exit criteria – **"Is the testing done?"**
 * Prepares & delivers the completion report
 * Initiates the archiving or handing over the testware to the appropriate team(s)
 * Initiates analysis of lessons learned
 
-### Test Management role - Additionally
+### Test Management Role - Additionally
 * Supports the selection & implementation of tools to support the test process
 * Decides about the implementation of test environment(s)
 * Promotes & advocates the testers, test team & the test profession within the organisation
@@ -60,7 +60,7 @@ Main focus on:
 * Test Implementation
 * Test Execution
 
-### Testing role – Activities
+### Testing Role – Activities
 * Reviews & contributes to test plans
 * Analyses, reviews & assesses requirements, user stories, acceptance criteria, specifications & models for testability
 * Identifies & documents test conditions & captures traceability between test cases, test conditions & the test basis
