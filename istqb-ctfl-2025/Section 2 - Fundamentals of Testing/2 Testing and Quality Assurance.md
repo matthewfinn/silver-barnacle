@@ -6,12 +6,26 @@
 ## Errors, Defects, Failures & root causes
 ### Terms Explained
 * **Error**: a human action that produces an incorrect result
+  * In this context, human action refers to any activity or decision made by a person that contributes to an error. This could include:
+    * Misunderstanding requirements 
+    * Writing incorrect code 
+    * Entering the wrong data 
+    * Misconfiguring a system 
+    * Misinterpreting test results
 * **Defect**: a manifestation of an error in a software work product
   * aka a fault or bug 
   * if executed, a defect _may_ cause a failure
 * **Failure**: deviation of the software from its expected delivery or service
 
 ![image4.png](assets/image4.png)
+
+**Example:**
+| Stage      | What Happens?                           | Example                              |
+|-----------|--------------------------------|--------------------------------------|
+| **Error**   | A developer makes a mistake while coding. | Mistakenly uses `=` instead of `==`. |
+| **Defect (Bug)** | The incorrect code is included in the software. | Any user gets admin access. |
+| **Failure** | The software behaves incorrectly when executed. | A normal user gains unauthorized admin access. |
+
 
 ### Why do defects occur?
 * Humans make mistakes

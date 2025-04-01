@@ -7,7 +7,7 @@
   * What went well?
   * What can be improved?
   * How to keep the good & improve the bad in the future?
-* Timing & organization fully depends on the SDLC model
+* Timing & organisation fully depends on the SDLC model
 * Participants include developers, testers, architects, product owners, business analysts, etc
 * Topics include:
   * Process

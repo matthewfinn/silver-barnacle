@@ -107,7 +107,7 @@ If you have to fail, **fail fast!**
 #### Review Techniques – Role-based
 
 * Reviewers evaluate the work product from the perspective of individual stakeholder roles
-* Typical roles are specific end user types & roles in the organization such as:
+* Typical roles are specific end user types & roles in the organisation such as:
   * Experienced, inexperienced
   * User administrator
   * System administrator
@@ -219,7 +219,7 @@ Motivating & enabling authors to improve future work products & the software dev
 * Large work products are written & reviewed in small chunks
 * Feedback is given to the participants so the process & their activities can be improved
 * Participants have adequate time to prepare for the review
-* Reviews are made part of the organizational culture to promote learning & improvement
+* Reviews are made part of the organisational culture to promote learning & improvement
 * Management supports the review process
 * Adequate training is give; especially for the more formal review types
 * Facilitate meetings

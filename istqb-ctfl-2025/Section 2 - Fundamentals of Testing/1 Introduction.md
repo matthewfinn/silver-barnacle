@@ -6,7 +6,7 @@
 * The process in the SDLC that evaluates the quality of a component, system or related work products:
   * Meets the business & technical requirements that guided its design & development
   * Works as expected
-  * Can be implemented with the same characteristics
+  * Can be implemented with the same characteristics (can be consistently deployed or reproduced in different environments while maintaining its intended functionality, performance, and behaviour)
   
 * Software Testing:
   * Assesses the quality of the software

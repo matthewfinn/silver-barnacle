@@ -92,4 +92,4 @@
   * Test Environment Requirements
   * Retesting & regression testing
   * Suspension & resumption criteria
-  * Deviations from the organizational test strategy
+  * Deviations from the organisational test strategy

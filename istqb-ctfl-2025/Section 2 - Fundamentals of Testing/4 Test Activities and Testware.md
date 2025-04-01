@@ -27,8 +27,7 @@
 
 ### Testware
 
-Artifacts produced during the test process required to plan, design, & execute tests, such as documentation, scripts,
-inputs, expected results, set-up & clear-up procedures, files, databases, environment, & any additional software or utilities used in testing.
+Artifacts produced during the test process required to plan, design, & execute tests, such as documentation, scripts, inputs, expected results, set-up & clear-up procedures, files, databases, environment, & any additional software or utilities used in testing.
 
 * Created as part of the test activities in the test process
 * Each test activity creates test work products (aka testware)
@@ -60,7 +59,7 @@ Proper Configuration Management should be in place to ensure thorough & consiste
 
 * Test Plan(s)
 * Includes Information on
-  * Test Basis
+  * Test Basis e.g. requirements documents, design specifications, user stories, or even code itself
   * Traceability information
   * Exit Criteria (that's used in test monitoring & control)
 
@@ -115,8 +114,8 @@ Proper Configuration Management should be in place to ensure thorough & consiste
 * Major activities are:
 
   1. Analysing the test basis to:
-    * Identify testable features
-    * Test basis include Requirement Specifications, Design & Implementation information, implementation of the component itself, Risk Analysis reports, etc.
+     * Identify testable features
+     * Test basis include Requirement Specifications, Design & Implementation information, implementation of the component itself, Risk Analysis reports, etc.
   
   2. Evaluating the Test Basis & test objects to identify defects & their testability such as:
      * Ambiguities
@@ -126,7 +125,7 @@ Proper Configuration Management should be in place to ensure thorough & consiste
      * Contradictions
      * Redundant statements
      
-  3. Defining & Prioritizing test conditions, their risks & risk levels per feature based on:
+  3. Defining & Prioritising test conditions, their risks & risk levels per feature based on:
      * Analysis of the Test Basis
      * Consideration on functional, non-functional & structural characteristics
      * Business & technical factors
@@ -237,7 +236,7 @@ Ideally, all these tasks are completed before test execution as otherwise precio
     * Stubs
     * Drivers
     * Simulators
-    * Service virtualizations
+    * Service virtualisations
 
 ### Test Procedure Specification – ISO/IEC/IEEE 29119 Standard
 | Item            | Details                                                                                                                                                                     |

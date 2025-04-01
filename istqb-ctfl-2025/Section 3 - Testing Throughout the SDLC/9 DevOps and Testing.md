@@ -7,7 +7,7 @@
 * Removing the silos between development & operations 
 * Working together towards achieving a set of common goals 
 * There are no separate agendas for development & operations 
-* Implementation requires an organizational & cultural shift 
+* Implementation requires an organisational & cultural shift 
 * All functions are treated with equal value 
 * The team has full autonomy
 

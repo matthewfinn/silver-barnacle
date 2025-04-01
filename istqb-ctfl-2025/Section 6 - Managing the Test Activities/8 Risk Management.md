@@ -2,7 +2,7 @@
 
 # Risk Management
 
-* Allows an organization to:
+* Allows an organisation to:
 
   * Increase the likelihood of achieving objectives
   * Improve the quality of the products
@@ -128,7 +128,7 @@ Factors that influence the likelihood include:
 **Impacts the project’s ability to achieve its objectives**
 
 ### Examples
-* **Organizational issues**
+* **Organisational issues**
   * Delays in work product deliveries, inaccurate estimates, cost-cutting, etc
 * **People issues**
   * Insufficient skill, training needs, staff shortage, personnel issues, conflicts, communication issues, etc.

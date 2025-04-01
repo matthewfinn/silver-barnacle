@@ -56,7 +56,7 @@
 * Examples: Zoom, MS Teams, Slack
 
 ### Tools Supporting Scalability & Deployment Standardisation
-* Virtual machines, containerization tools
+* Virtual machines, containerisation tools
 * Examples: Citrix Hypervisor, Kubernetes, Docker
 
 ### Any Other Tool that assists in Testing!!!

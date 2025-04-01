@@ -161,7 +161,7 @@ Analyzed risks can be responded to with:
     <br>
     <li>Authors test their own work product</li>
     <li>Work products are tested by the author’s peers in the same team</li>
-    <li>Independent test team or group within the organization but outside the team</li>
-    <li>Independent testers external to the organization (on-site or off-site)</li>
+    <li>Independent test team or group within the organisation but outside the team</li>
+    <li>Independent testers external to the organisation (on-site or off-site)</li>
   </ul>
 </div>

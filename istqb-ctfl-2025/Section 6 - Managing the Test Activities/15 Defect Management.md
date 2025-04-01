@@ -27,7 +27,7 @@
 * Unique Identifier
 * Title & short summary of the anomaly
 * Date when the anomaly was observed, issuing
-organization, author, author role
+organisation, author, author role
 * Identification of the test object and test environment
 * Context of the defect:
   * Development lifecycle phase

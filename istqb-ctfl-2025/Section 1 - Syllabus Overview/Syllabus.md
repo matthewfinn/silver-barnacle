@@ -90,7 +90,7 @@ A number of testing principles offering general guidelines applicable to all tes
 1. **Testing shows the presence, not the absence of defects.**
    Testing can show that defects are present in the test object, but cannot prove that there are no defects (Buxton 1970). Testing reduces the probability of defects remaining undiscovered in the test object, but even if no defects are found, testing cannot prove test object correctness.
 2. **Exhaustive testing is impossible.**
-   Testing everything is not feasible except in trivial cases (Manna 1978). Rather than attempting to test exhaustively, test techniques (see chapter 4), test case prioritization (see section 5.1.5), and risk-based testing (see section 5.2), should be used to focus test efforts.
+   Testing everything is not feasible except in trivial cases (Manna 1978). Rather than attempting to test exhaustively, test techniques (see chapter 4), test case prioritisation (see section 5.1.5), and risk-based testing (see section 5.2), should be used to focus test efforts.
 3. **Early testing saves time & money.**
    Defects that are removed early in the process will not cause subsequent defects in derived work products. The cost of quality will be reduced since fewer failures will occur later in the SDLC (Boehm 1981). To find defects early, both static testing (see chapter 3) and dynamic testing (see chapter 4) should be started as early as possible.
 4. **Defects cluster together.**
@@ -126,20 +126,20 @@ A test process usually consists of the main groups of activities described below
 **Test completion** usually occurs at project milestones (e.g., release, end of iteration, test level completion). For any unresolved defects, change requests or product backlog items are created. Any testware that may be useful in the future is identified and archived or handed over to the appropriate teams. The test environment is shut down to an agreed state. The test activities are analyzed to identify lessons learned and improvements for future iterations, releases, or projects (see section 2.1.6). A test completion report is created and communicated to the stakeholders.
 
 ## 1.4.2. Test Process in Context
-Testing is not performed in isolation. Test activities are an integral part of the development processes carried out within an organization. Testing is also funded by stakeholders and its final goal is to help fulfill the stakeholders’ business needs. Therefore, the way the testing is carried out will depend on a number of contextual factors including: 
+Testing is not performed in isolation. Test activities are an integral part of the development processes carried out within an organisation. Testing is also funded by stakeholders and its final goal is to help fulfill the stakeholders’ business needs. Therefore, the way the testing is carried out will depend on a number of contextual factors including: 
 * Stakeholders (needs, expectations, requirements, willingness to cooperate, etc.)
 * Team members (skills, knowledge, level of experience, availability, training needs, etc.)
 * Business domain (criticality of the test object, identified risks, market needs, specific legal regulations, etc.)
 * Technical factors (type of software, product architecture, technology used, etc.)
 * Project constraints (scope, time, budget, resources, etc.) 
-* Organisational factors (organizational structure, existing policies, practices used, etc.)
+* Organisational factors (organisational structure, existing policies, practices used, etc.)
 * Software development lifecycle (engineering practices, development methods, etc.) 
 * Tools (availability, usability, compliance, etc.)
 
 These factors will have an impact on many test-related issues, including: test strategy, test techniques used, degree of test automation, required level of coverage, level of detail of testware, test reporting, etc. 
 
 ## 1.4.3. Testware
-Testware is created as output work products from the test activities described in section 1.4.1. There is a significant variation in how different organizations produce, shape, name, organize and manage their work products. Proper configuration management (see section 5.4) ensures consistency and integrity of work products. The following list of work products is not exhaustive:
+Testware is created as output work products from the test activities described in section 1.4.1. There is a significant variation in how different organisations produce, shape, name, organize and manage their work products. Proper configuration management (see section 5.4) ensures consistency and integrity of work products. The following list of work products is not exhaustive:
 * **Test planning work products** include: test plan, test schedule, risk register, entry criteria and exit criteria (see section 5.1). Risk register is a list of risks together with risk likelihood, risk impact and information about risk mitigation (see section 5.2). Test schedule, risk register, entry criteria and exit criteria are often a part of the test plan.
 * **Test monitoring and test control work products** include: test progress reports (see section 5.3.2), documentation of control directives (see section 5.3) and information about risks (see section 5.2).
 * **Test analysis work products** include: (prioritized) test conditions (e.g., acceptance criteria, see section 4.5.2), and defect reports regarding defects in the test basis (if not fixed directly).
@@ -158,9 +158,9 @@ Accurate traceability supports coverage evaluation, so it is very useful if meas
 In addition to evaluating coverage, good traceability makes it possible to determine the impact of changes, facilitates audits, and helps meet IT governance criteria. Good traceability also makes test progress reports and test completion reports more easily understandable by including the status of test basis elements. This can also assist in communicating the technical aspects of testing to stakeholders in an understandable manner. Traceability provides information to assess product quality, process capability, and project progress against business goals.
 
 ## 1.4.5. Roles in Testing
-In this syllabus, two principal roles in testing are covered: a test management role and a testing role. The activities and tasks assigned to these two roles depend on factors such as the project and product context, the skills of the people in the roles, and the organization. 
+In this syllabus, two principal roles in testing are covered: a test management role and a testing role. The activities and tasks assigned to these two roles depend on factors such as the project and product context, the skills of the people in the roles, and the organisation. 
 
-The test management role takes overall responsibility for the test process, test team and leadership of the test activities. The test management role is mainly focused on the activities of test planning, test monitoring, test control and test completion. The way in which the test management role is carried out varies depending on the context. For example, in Agile software development, some of the test management tasks may be handled by the Agile team. Tasks that span multiple teams or the entire organization may be performed by test managers outside of the development team. 
+The test management role takes overall responsibility for the test process, test team and leadership of the test activities. The test management role is mainly focused on the activities of test planning, test monitoring, test control and test completion. The way in which the test management role is carried out varies depending on the context. For example, in Agile software development, some of the test management tasks may be handled by the Agile team. Tasks that span multiple teams or the entire organisation may be performed by test managers outside of the development team. 
 
 The testing role takes overall responsibility for the engineering (technical) aspect of testing. The testing role is mainly focused on the activities of test analysis, test design, test implementation and test execution.
 
@@ -192,7 +192,7 @@ Depending on the context, the whole team approach may not always be appropriate.
 ## 1.5.3. Independence of Testing 
 A certain degree of independence makes the tester more effective at finding defects due to differences between the author’s and the tester’s cognitive biases (cf. Salman 1995). Independence is not, however, a replacement for familiarity, e.g., developers can efficiently find many defects in their own code.
 
-Work products can be tested by their author (no independence), by the author's peers from the same team (some independence), by testers from outside the author's team but within the organization (high independence), or by testers from outside the organization (very high independence). For most projects, it is usually best to carry out testing with multiple levels of independence (e.g., developers performing component testing and component integration testing, test team performing system and system integration testing, and business representatives performing acceptance testing).
+Work products can be tested by their author (no independence), by the author's peers from the same team (some independence), by testers from outside the author's team but within the organisation (high independence), or by testers from outside the organisation (very high independence). For most projects, it is usually best to carry out testing with multiple levels of independence (e.g., developers performing component testing and component integration testing, test team performing system and system integration testing, and business representatives performing acceptance testing).
 
 The main benefit of independence of testing is that independent testers are likely to recognize different kinds of failures and defects compared to developers because of their different backgrounds, technical perspectives, and biases. Moreover, an independent tester can verify, challenge, or disprove assumptions made by stakeholders during specification and implementation of the system.
 
@@ -242,7 +242,7 @@ Behavior-Driven Development (BDD):
 For all the above approaches, tests may persist as automated tests to ensure the code quality in future adaptions / refactoring.
 
 ## 2.1.4. DevOps & Testing
-DevOps is an organizational approach aiming to create synergy by getting development (including testing) and operations to work together to achieve a set of common goals. DevOps requires a cultural shift within an organization to bridge the gaps between development (including testing) and operations while treating their functions with equal value. DevOps promotes team autonomy, fast feedback, integrated toolchains, and technical practices like continuous integration (CI) and continuous delivery(CD). This enables the teams to build, test and release high-quality code faster through a DevOps delivery pipeline (Kim 2016).
+DevOps is an organisational approach aiming to create synergy by getting development (including testing) and operations to work together to achieve a set of common goals. DevOps requires a cultural shift within an organisation to bridge the gaps between development (including testing) and operations while treating their functions with equal value. DevOps promotes team autonomy, fast feedback, integrated toolchains, and technical practices like continuous integration (CI) and continuous delivery(CD). This enables the teams to build, test and release high-quality code faster through a DevOps delivery pipeline (Kim 2016).
 
 From the testing perspective, some of the benefits of DevOps are as follows:
 * Fast feedback on the code quality, and whether changes adversely affect existing code
@@ -274,7 +274,7 @@ Shift left might result in extra training, effort and/or costs earlier in the pr
 For shift left it is important that stakeholders are convinced and bought into this concept.
 
 ## 2.1.6. Retrospectives & Process Improvement
-Retrospectives are often held at the end of a project or an iteration, at a release milestone, or can be held when needed. The timing and organization of the retrospectives depend on the particular SDLC model being followed. In these meetings the participants (not only testers, but also e.g., developers, architects, product owner, business analysts) discuss:
+Retrospectives are often held at the end of a project or an iteration, at a release milestone, or can be held when needed. The timing and organisation of the retrospectives depend on the particular SDLC model being followed. In these meetings the participants (not only testers, but also e.g., developers, architects, product owner, business analysts) discuss:
 * What was successful, and should be retained?
 * What was not successful and could be improved?
 * How to incorporate the improvements and retain the successes in the future?
@@ -393,7 +393,7 @@ Static testing and dynamic testing practices complement each other. They have si
 
 Typical defects that are easier and/or cheaper to find through static testing include: 
 * Defects in requirements (e.g., inconsistencies, ambiguities, contradictions, omissions, inaccuracies, duplications)
-* Design defects (e.g., inefficient database structures, poor modularization)
+* Design defects (e.g., inefficient database structures, poor modularisation)
 * Certain types of coding defects (e.g., variables with undefined values, undeclared variables, unreachable or duplicated code, excessive code complexity)
 * Deviations from standards (e.g., lack of adherence to naming conventions in coding standards)
 * Incorrect interface specifications (e.g., mismatched number, type or order of parameters)
@@ -448,7 +448,7 @@ There are several factors that determine the success of reviews, which include:
 * Providing feedback from reviews to stakeholders and authors so they can improve the product and their activities (see section 3.2.1)
 * Providing adequate time to participants to prepare for the review
 * Support from management for the review process
-* Making reviews part of the organization’s culture, to promote learning and process improvement
+* Making reviews part of the organisation’s culture, to promote learning and process improvement
 * Providing adequate training for all participants so they know how to fulfil their role
 * Facilitating meetings 
 
@@ -477,7 +477,7 @@ Equivalence partitions can be identified for any data element related to the tes
 
 For simple test items, EP can be easy, but in practice, understanding how the test object will treat different values is often complicated. Therefore, partitioning should be done with care.
 
-A partition containing valid values is called a valid partition. A partition containing invalid values is called an invalid partition. The definitions of valid and invalid values may vary among teams and organizations. For example, valid values may be interpreted as those that should be processed by the test object or as those for which the specification defines their processing. Invalid values may be interpreted as those that should be ignored or rejected by the test object or as those for which no processing is defined in the test object specification.
+A partition containing valid values is called a valid partition. A partition containing invalid values is called an invalid partition. The definitions of valid and invalid values may vary among teams and organisations. For example, valid values may be interpreted as those that should be processed by the test object or as those for which the specification defines their processing. Invalid values may be interpreted as those that should be ignored or rejected by the test object or as those for which no processing is defined in the test object specification.
 
 In EP, the coverage items are the equivalence partitions. To achieve 100% coverage with this test technique, test cases must exercise all identified partitions (including invalid partitions) by covering each partition at least once. Coverage is measured as the number of partitions exercised by at least one test case, divided by the total number of identified partitions, and is expressed as a percentage.
 
@@ -503,7 +503,7 @@ When creating decision tables, the conditions and the resulting actions of the s
 
 The notation for conditions is as follows: “T” (true) means that the condition is satisfied. “F” (false) means that the condition is not satisfied. “–” means that the value of the condition is irrelevant for the action outcome. “N/A” means that the condition is infeasible for a given rule. For actions: “X” means that the action should occur. Blank means that the action should not occur. Other notations may also be used.
 
-A full decision table has enough columns to cover every combination of conditions. The table can be simplified by deleting columns containing infeasible combinations of conditions. The table can also be minimized by merging columns, in which some conditions do not affect the outcome, into a single column. Decision table minimization algorithms are out of scope of this syllabus.
+A full decision table has enough columns to cover every combination of conditions. The table can be simplified by deleting columns containing infeasible combinations of conditions. The table can also be minimized by merging columns, in which some conditions do not affect the outcome, into a single column. Decision table minimisation algorithms are out of scope of this syllabus.
 
 In decision table testing, the coverage items are the columns containing feasible combinations of conditions. To achieve 100% coverage with this technique, test cases must exercise all these columns. Coverage is measured as the number of exercised columns, divided by the total number of feasible columns, and is expressed as a percentage.
 
@@ -566,7 +566,7 @@ Error guessing is a test technique used to anticipate the occurrence of errors, 
 * The types of errors the developers tend to make and the types of defects that result from these errors
 * The types of failures that have occurred in other, similar applications
 
-In general, errors, defects and failures may be related to: input (e.g., correct input not accepted, parameters wrong or missing), output (e.g., wrong format, wrong result), logic (e.g., missing cases, wrong operator), computation (e.g., incorrect operand, wrong computation), interfaces (e.g., parameter mismatch, incompatible types), or data (e.g., incorrect initialization, wrong type).
+In general, errors, defects and failures may be related to: input (e.g., correct input not accepted, parameters wrong or missing), output (e.g., wrong format, wrong result), logic (e.g., missing cases, wrong operator), computation (e.g., incorrect operand, wrong computation), interfaces (e.g., parameter mismatch, incompatible types), or data (e.g., incorrect initialisation, wrong type).
 
 Fault attacks are a way to implement error guessing. This test technique requires the tester to create or acquire a list of possible errors, defects and failures, and to design tests that will identify defects associated with the errors, expose the defects, or cause the failures. These lists can be built based on experience, defect and failure data, or from common knowledge about why software fails.
 
@@ -678,7 +678,7 @@ Test effort estimation involves predicting the amount of test-related work neede
 
 In this syllabus, the following four estimation techniques are described.
 
-**Estimation based on ratios.** In this metrics-based technique, figures are collected from previous projects within the organization, which makes it possible to derive “standard” ratios for similar projects. The ratios of an organization’s own projects (e.g., taken from historical data) are generally the best source to use in the estimation process. These standard ratios can then be used to estimate the test effort for the new project. For example, if in the previous project the development-to-test effort ratio was 3:2, and in the current project the development effort is expected to be 600 person-days, the test effort can be estimated to be 400 person-days.
+**Estimation based on ratios.** In this metrics-based technique, figures are collected from previous projects within the organisation, which makes it possible to derive “standard” ratios for similar projects. The ratios of an organisation’s own projects (e.g., taken from historical data) are generally the best source to use in the estimation process. These standard ratios can then be used to estimate the test effort for the new project. For example, if in the previous project the development-to-test effort ratio was 3:2, and in the current project the development effort is expected to be 600 person-days, the test effort can be estimated to be 400 person-days.
 
 **Extrapolation.** In this metrics-based technique, measurements are made as early as possible in the current project to gather the data. Having enough observations, the effort required for the remaining work can be approximated by extrapolating this data (usually by applying a mathematical model). This method is very suitable in iterative SDLCs. For example, the team may extrapolate the test effort in the forthcoming iteration as the averaged effort from the last three iterations. 
 
@@ -689,13 +689,13 @@ The advantage of this technique is that it allows the experts to calculate the m
 
 See (Kan 2003, Koomen 2006, Westfall 2009) for these and many other test estimation techniques.
 
-## 5.1.5. Test Case Prioritization 
-Once the test cases and test procedures are specified and assembled into test suites, these test suites can be arranged in a test execution schedule that defines the order in which they are to be run. When prioritizing test cases, different factors can be taken into account. The most commonly used test case prioritization strategies are as follows:
-* Risk-based prioritization, where the order of test execution is based on the results of risk analysis(see section 5.2.3). Test cases covering the most important risks are executed first.
-*  Coverage-based prioritization, where the order of test execution is based on coverage (e.g., statement coverage). Test cases achieving the highest coverage are executed first. In another variant, called additional coverage prioritization, the test case achieving the highest coverage is executed first; each subsequent test case is the one that achieves the highest additional coverage.
-* Requirements-based prioritization, where the order of test execution is based on the priorities of the requirements traced back to the corresponding test cases. Requirement priorities are defined by stakeholders. Test cases related to the most important requirements are executed first.
+## 5.1.5. Test Case Prioritisation 
+Once the test cases and test procedures are specified and assembled into test suites, these test suites can be arranged in a test execution schedule that defines the order in which they are to be run. When prioritizing test cases, different factors can be taken into account. The most commonly used test case prioritisation strategies are as follows:
+* Risk-based prioritisation, where the order of test execution is based on the results of risk analysis(see section 5.2.3). Test cases covering the most important risks are executed first.
+*  Coverage-based prioritisation, where the order of test execution is based on coverage (e.g., statement coverage). Test cases achieving the highest coverage are executed first. In another variant, called additional coverage prioritisation, the test case achieving the highest coverage is executed first; each subsequent test case is the one that achieves the highest additional coverage.
+* Requirements-based prioritisation, where the order of test execution is based on the priorities of the requirements traced back to the corresponding test cases. Requirement priorities are defined by stakeholders. Test cases related to the most important requirements are executed first.
 
-Ideally, test cases would be ordered to run based on their priority levels, using, for example, one of the above-mentioned prioritization strategies. However, this practice may not work if the test cases or the features being tested have dependencies. If a test case with a higher priority is dependent on a test case with a lower priority, the lower priority test case must be executed first.
+Ideally, test cases would be ordered to run based on their priority levels, using, for example, one of the above-mentioned prioritisation strategies. However, this practice may not work if the test cases or the features being tested have dependencies. If a test case with a higher priority is dependent on a test case with a lower priority, the lower priority test case must be executed first.
 
 The order of test execution must also take into account the availability of resources. For example, the required test tools, test environments or people that may only be available for a specific time window.
 
@@ -711,7 +711,7 @@ In this model, tests can be business facing or technology facing. Tests can also
 * **Quadrant Q4 (technology facing, critique the product).** This quadrant contains smoke tests and non-functional tests (except usability tests). These tests are often automated.
 
 # 5.2 Risk Management
-Organizations face many internal and external factors that make it uncertain whether and when they will achieve their objectives (ISO 31000). Risk management allows the organizations to increase the likelihood of achieving objectives, improve the quality of their products and increase the stakeholders’ confidence and trust.
+Organisations face many internal and external factors that make it uncertain whether and when they will achieve their objectives (ISO 31000). Risk management allows the organisations to increase the likelihood of achieving objectives, improve the quality of their products and increase the stakeholders’ confidence and trust.
 
 The main risk management activities are:
 * Risk analysis (consisting of risk identification and risk assessment; see section 5.2.3) 
@@ -730,7 +730,7 @@ These two factors express the risk level, which is a measure for the risk. The h
 In software testing one is generally concerned with two types of risks: project risks and product risks.
 
 **Project risks** are related to the management and control of the project. Project risks include:
-* Organizational issues (e.g., delays in work products deliveries, inaccurate estimates, cost cutting)
+* Organisational issues (e.g., delays in work products deliveries, inaccurate estimates, cost cutting)
 * People issues (e.g., insufficient skills, conflicts, communication problems, shortage of staff)
 * Technical issues (e.g., scope creep, poor tool support)
 * Supplier issues (e.g., third-party delivery failure, bankruptcy of the supporting company) 
@@ -748,7 +748,7 @@ Project risks, when they occur, may have an impact on the project schedule, budg
 ## 5.2.3. Product Risk Analysis
 From a testing perspective, the goal of product risk analysis is to provide an awareness of product risk to focus the test effort in a way that minimizes the residual level of product risk. Ideally, product risk analysis begins early in the SDLC. 
 
-Product risk analysis consists of risk identification and risk assessment. Risk identification is about generating a comprehensive list of risks. Stakeholders can identify risks by using various techniques and tools, e.g., brainstorming, workshops, interviews, or cause-effect diagrams. Risk assessment involves: categorization of identified risks, determining their risk likelihood, risk impact and risk level, prioritizing, and proposing ways to handle them. Categorization helps in assigning mitigation actions, because usually risks falling into the same category can be mitigated using a similar approach. 
+Product risk analysis consists of risk identification and risk assessment. Risk identification is about generating a comprehensive list of risks. Stakeholders can identify risks by using various techniques and tools, e.g., brainstorming, workshops, interviews, or cause-effect diagrams. Risk assessment involves: categorisation of identified risks, determining their risk likelihood, risk impact and risk level, prioritizing, and proposing ways to handle them. Categorisation helps in assigning mitigation actions, because usually risks falling into the same category can be mitigated using a similar approach. 
 
 Risk assessment can use a quantitative or qualitative approach, or a mix of them. In the quantitative approach the risk level is calculated as the multiplication of risk likelihood and risk impact. In the qualitative approach the risk level can be determined using a risk matrix. 
 
@@ -792,7 +792,7 @@ Common test metrics include:
 * Defect metrics (e.g., number and priorities of defects found/fixed, defect density, defect detection percentage)
 * Risk metrics (e.g., residual risk level)
 * Coverage metrics (e.g., requirements coverage, code coverage)
-* Cost metrics (e.g., cost of testing, organizational cost of quality)
+* Cost metrics (e.g., cost of testing, organisational cost of quality)
 
 ## 5.3.2. Purpose, Content and Audience for Test Reports 
 Test reporting summarizes and communicates test information during and after testing. Test progress reports support the ongoing test control and must provide enough information to make modifications to the test schedule, resources, or test plan, when such changes are needed due to deviation from the plan or changed circumstances. Test completion reports summarize a specific test activity (e.g., test level, test cycle, iteration) and can give information for subsequent testing.
@@ -819,7 +819,7 @@ Different audiences require different information in the reports and influence t
 The ISO/IEC/IEEE 29119-3 standard includes templates and examples for test progress reports (called test status reports) and test completion reports.
 
 ## 5.3.3. Communicating the Status of Testing 
-The best means of communicating test status varies, depending on test management concerns, organizational test strategies, regulatory standards, or, in the case of self-organizing teams (see section 1.5.2), on the team itself. The options include:
+The best means of communicating test status varies, depending on test management concerns, organisational test strategies, regulatory standards, or, in the case of self-organizing teams (see section 1.5.2), on the team itself. The options include:
 * Verbal communication with team members and other stakeholders
 * Dashboards (e.g., CI/CD dashboards, task boards, and burn-down charts)
 * Electronic communication channels (e.g., email, chat)
@@ -852,7 +852,7 @@ Typical defect reports have the following objectives:
 A defect report logged during dynamic testing typically includes:
 * Unique identifier
 * Title with a short summary of the anomaly being reported
-* Date when the anomaly was observed, issuing organization, and author, including their role
+* Date when the anomaly was observed, issuing organisation, and author, including their role
 * Identification of the test object and test environment
 * Context of the defect (e.g., test case being run, test activity being performed, SDLC phase, and other relevant information such as the test technique, checklist or test data being used)
 * Description of the failure to enable reproduction and resolution including the test steps that detected the anomaly, and any relevant test logs, database dumps, screenshots, or recordings
@@ -873,7 +873,7 @@ Test tools support and facilitate many test activities. Examples include, but ar
 * Non-functional testing tools – allow the tester to perform non-functional testing that is difficult or impossible to perform manually
 * DevOps tools – support the DevOps delivery pipeline, workflow tracking, automated build process(es), CI/CD
 * Collaboration tools – facilitate communication
-* Tools supporting scalability and deployment standardization (e.g., virtual machines, containerization tools)
+* Tools supporting scalability and deployment standardisation (e.g., virtual machines, containerisation tools)
 * Any other tool that assists in testing (e.g., a spreadsheet is a test tool in the context of testing)
 
 # 6.2. Benefits and Risks of Test Automation 

@@ -12,8 +12,8 @@
 ## Test Management Role
 Overall responsibility for:
 * Test Process
-* Test team
-* Leadership of test activities
+* Test Team
+* Leadership of Test Activities
 
 Main focus on:
 * Test Planning 
