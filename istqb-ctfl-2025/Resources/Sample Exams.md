@@ -56,3 +56,4 @@ https://www.guru99.com/istqb-certification-quiz.html
 
 https://tryqa.com/istqb-dumps-download-mock-tests-and-sample-question-papers/ 
 
+https://istqbquestionbank.blogspot.com/

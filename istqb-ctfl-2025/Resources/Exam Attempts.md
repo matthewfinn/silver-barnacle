@@ -21,12 +21,13 @@ Incorrect Answers Explained in the following format
 <details>
 <summary><b>Test Results</b></summary>
 
-| Test # | Time Started | Time Finished | Exam            | Result | Open Book          | Link to Exam Paper(s)                                                                                                                                                                                                                                                                                     |
-| ------ | ------------ | ------------- | --------------- | ------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1      | N/A          | N/A           | SET A v2.1      | 35/40  | :white_check_mark: | Q:[ISTQB CTFL40 Questions SET A v2.1 - Attempt 1.pdf](attempts/ISTQB%20CTFL40%20Questions%20SET%20A%20v2.1%20-%20Attempt%201.pdf)<br>A:[ISTQB CTFL40 Sample Exam Answers SET A v2.1.pdf](exams/ISTQB%20CTFL40%20Sample%20Exam%20Answers%20SET%20A%20v2.1.pdf)                                             |
-| 2      | N/A          | N/A           | Patshala Test 1 | 27     | :x:                | [Test 1](https://istqb.patshala.com/tests/mode.php?tn=17)                                                                                                                                                                                                                                                 |
-| 3      | N/A          | N/A           | SET B v1.3.2    | 30     | :x:                | Q:[ISTQB CTFL40 Sample Exam Questions SET B v1.3.2 - Attempt 1.pdf](attempts/ISTQB%20CTFL40%20Sample%20Exam%20Questions%20SET%20B%20v1.3.2%20-%20Attempt%201.pdf)<br>A:[ISTQB CTFL40 Sample Exam Answers SET B v1.3.2.pdf](exams/ISTQB%20CTFL40%20Sample%20Exam%20Answers%20SET%20B%20v1.3.2.pdf)         |
-| 4      | 13:33        | 13:55         | SET C v1.5      | 26     | :x:                | Q:[ISTQB CTFL v4.0 Sample Exam C Questions v1.5 EN - Attempt 1.pdf](attempts/ISTQB%20CTFL%20v4.0%20Sample%20Exam%20C%20Questions%20v1.5%20EN%20-%20Attempt%201.pdf)<br>A:[ISTQB CTFL v4.0 Sample Exam C Answers v1.5 EN .pdf](exams/ISTQB%20CTFL%20v4.0%20Sample%20Exam%20C%20Answers%20v1.5%20EN%20.pdf) |
+| Test # | Time Started | Time Finished | Exam            | Result | Open Book          |                                                                                                                                                                                                                                                           
+|--------|--------------|---------------|-----------------|--------|--------------------|
+| 1      | N/A          | N/A           | SET A v2.1      | 35/40  | :white_check_mark: | 
+| 2      | N/A          | N/A           | Patshala Test 1 | 27     | :x:                | 
+| 3      | N/A          | N/A           | SET B v1.3.2    | 30     | :x:                | 
+| 4      | 13:33        | 13:55         | SET C v1.5      | 26     | :x:                | 
+| 5      | 17:52        | 18:19         | SET D v1.4      | 23     | :x:                |                                                                                                                                                                                                                                                                                             
 
 </details>
 
@@ -207,8 +208,7 @@ Question 6 - Incorrect Answer
 > 4. Evaluating whether the number of tests for each requirement is consistent with the level of product risk
 >
 > Consider the following ways traceability can help testing:
-> A. Improve understandability of test status reports to include status
-> of test basis items
+> A. Improve understandability of test status reports to include status of test basis items
 > B. Make testing activities auditable
 > C. Provide information to assess process quality
 > D. Analyze the impact of changes
@@ -271,12 +271,13 @@ Question 18 - Incorrect Answer
 > 2. Review leader
 > 3. Facilitator
 > 4. Manager
->    In the context of reviews, these roles can take on the following
->    responsibilities:
->    A. Ensures the effective running of review meetings and the setting up of a safe review environment
->    B. Records review information, such as decisions and new anomalies found during the review meeting
->    C. Decides what is to be reviewed and provides resources, such as staff and time for the review
->    D. Takes overall responsibility for the review such as organizing when and where the review will take place
+>    
+> In the context of reviews, these roles can take on the following responsibilities:
+> 
+> A. Ensures the effective running of review meetings and the setting up of a safe review environment
+> B. Records review information, such as decisions and new anomalies found during the review meeting
+> C. Decides what is to be reviewed and provides resources, such as staff and time for the review
+> D. Takes overall responsibility for the review such as organizing when and where the review will take place
 
 > **Answer**
 > A: 1B, 2D, 3A, 4C
@@ -338,6 +339,11 @@ Question 30 - Incorrect Answer
 > 3. Perform component testing for the submitted code
 >
 > Which of the following  criteria is BEST suited as an entry criterion for step (2) of this pipeline?
+> 
+> a) The Static analysis does not report any defect or no high severity warnings for the submitted code
+b) The Version control does not report any conflicts when compiling and integrating the code into the “test” branch
+c) The Component tests are compiled and ready to run in the “Test” branch
+d) The Statement coverage of the component test is at least 80%
 
 > **Answer**
 > A: The Static analysis does not report any defect or no high severity warnings for the submitted code
@@ -784,5 +790,236 @@ d) Impact on the interests of stakeholders
 > c) Is not correct. The test object is identified (WebShop v0.99)
 > 
 > d) Is not correct. The impact is included – this is severity (high)
+
+</details>
+
+<details>
+<summary><b>Test 5 - Incorrect answers and clarifications</b></summary>
+<b> Question 1 </b>
+
+> **Question**
+> Which of the following is a typical test objective?
+      a) Finding and fixing defects in the test object
+      b) Maintaining effective communications with developers
+      c) Validating that legal requirements have been met
+      d) **Building confidence in the quality of the test object**
+Select ONE option.
+
+> **Answer**
+>  **d) Building confidence in the quality of the test object**
+
+> **Justification**
+>a) Is not correct. Finding and fixing defects in the test object is not a typical test objective as although identifying defects is an objective of testing, fixing defects is not a testing activity
+b) Is not correct. Maintaining effective communications with developers is not a typical test objective as although it is useful in achieving other objectives of testing, such as providing stakeholders with information that enables them to make informed decisions, it is not a primary reason for performing testing
+c) Is not correct. Validating that legal requirements have been met is not a typical test objective because validation is concerned with checking whether the system meets users’ and other stakeholders’ needs in its operational environment. Checking that legal requirements have been met is a form of verification
+d) **Is correct. Building confidence in the quality of the test object is achieved by executing tests that pass**
+
+<b> Question 2 </b>
+
+> **Question**
+>A designer documents a design for a user interface that does not suitably address disabled users because the designer is tired. The programmer implements the user interface in line with the design but as they are working under severe time pressure, they do not include suitable exception handling in their program code for bonus calculations. When the operational system is used, complaints are made by some disabled users about the interface and the company is subsequently fined by the relevant regulatory authority. No one notices that bonus calculations are sometimes incorrect.
+> 
+>Which of the following statements is CORRECT?
+a) The miscalculation of bonuses is a defect that occasionally occurs
+b) The fine received for failing to address some disabled users is a failure
+c) **The programmer working under severe time pressure is a root cause**
+d) The design of the user interface includes a designer error
+
+> **Answer**
+> **c) The programmer working under severe time pressure is a root cause**
+
+> **Justification**
+> a) Is not correct. The **miscalculation of bonuses is a failure** by the system, not a defect
+b) Is not correct. The system **not suitably supporting disabled users is a failure which eventually results in a fine**, but the fine itself is not a failure(it appears to be the correct functioning ofthe regulatory system)
+c) **Is correct. The error is made by the programmer and this mistake is caused by them working under severe time pressure, which is the root cause of the subsequent defect**
+d) Is not correct. The poor design of the user interface, which does not suitably address disabled users, **is a design defect caused by the designer error**. Thus the design of the user interface includes a design defect not a designer error
+
+<b> Question 4 </b>
+
+> **Question**
+>Given the following test tasks:
+> 1. Derive test cases from test conditions
+> 2. Identify reusable testware
+> 3. Organize test cases into test procedures
+> 4. Evaluate test basis and test object
+   And the following test activities:
+A. Test analysis
+B. Test design
+C. Test implementation
+D. Test completion
+
+> Which of the following BEST matches the tasks with the activities?
+   a) 1B,  2A,  3D,  4C
+   b) 1B,  2D,  3C,  4A
+   c) 1C,  2A,  3B,  4D
+   d) 1C,  2D,  3A,  4B
+
+> **Answer**
+> **b) 1B,  2D,  3C,  4A**
+
+> **Justification**
+> Considering each of the listed test activities and their tasks:
+A. Test analysis - To identify the features that require testing, the test basis is analyzed and defined as test conditions, which are then prioritized along with related risks. During this test analysis, defects in the test basis are typically uncovered, and the test object's testability may also be assessed. (Task 4)
+B. Test design - Involves using test conditions to create test cases and other necessary testware, such as test data requirements and test charters for exploratory testing. (Task 1)
+C. Test implementation - Test procedures, such as manual and automated test scripts, are created from test cases and may be assembled into test suites. Test procedures are prioritized and arranged in a test execution schedule. (Task 3)
+D. Test completion - Occurs at project milestones, such as release, end of iteration or end of test level. Testware is identified and archived or handed to the appropriate teams for reuse, the test environment is shut down, and the test activities are analyzed for lessons learned and future improvements. (Task 2)
+
+>Thus:
+a) Is not correct
+b) **Is correct. The CORRECT match is: 1B, 2D, 3C, 4A**
+c) Is not correct
+d) Is not correct
+
+
+<b> Question 9 </b>
+
+> **Question**
+>Which of the following is a good testing practice that applies to all software development lifecycles?
+a) Each test level has specific and distinct test objectives
+b) Test implementation and execution for a given test level should start during the corresponding development phase
+c) Testers should start test design as soon as drafts of the relevant work products become available
+d) Every dynamic testing activity has a corresponding static testing activity
+Select ONE option.
+
+> **Answer**
+> **a) Each test level has specific and distinct test objectives**
+
+> **Justification**
+>a) **Is correct. Each test level has specific and distinct test objectives as a different form of test object (e.g., single component, complete system) is tested at each test level and overlapping test objectives would lead to unnecessary duplication**
+b) Is not correct. Test analysis and design for a given test level should start during the corresponding development phase to facilitate early testing(e.g., acceptance test analysis and design should begin during requirements analysis). Test implementation will generally start later, and test execution will start during the test level
+c) Is not correct. Test design for a given test level should start during the corresponding development phase to facilitate early testing, however test design (e.g., test case generation) needs to be based on an agreed test basis, not an early draft, otherwise significant test effort may be wasted on creating test cases for a design that later changes
+d) Is not correct. Quality control applies to all development activities, meaning that every software development activity has a corresponding test activity. However, the same symmetry does not apply to dynamic and static testing. There are some static testing activities (e.g., static analysis) for which there is no obvious corresponding dynamic testing activity
+
+<b> Question 13 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 14 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 16 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 17 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 20 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 23 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 25 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 28 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 31 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 33 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 34 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
+
+<b> Question 35 </b>
+
+> **Question**
+>
+
+> **Answer**
+>
+
+> **Justification**
+>
 
 </details>
