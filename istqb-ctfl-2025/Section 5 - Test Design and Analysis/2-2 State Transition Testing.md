@@ -7,12 +7,11 @@
   * State is determined by rules of the machine
   * Different response on an event depending on the current conditions & previous history
 * Test cases can be designed to execute valid & invalid state transitions
-* behaviour in a system is shown in a **state transition diagram model**, which shows:
+* Behaviour in a system is shown in a **state transition diagram model**, which shows:
   * Possible states & valid transitions
   * Events that cause or result in a transition from one state to another
   * Actions that result from a transition
-* If one event from the same state can result in 2 or more different transitions, the event may be qualified by a **guard
-  condition** (precondition for an event), standard syntax is **‘event [guard condition] / action’**
+* If one event from the same state can result in 2 or more different transitions, the event may be qualified by a **guard condition** (precondition for an event), standard syntax is **‘event [guard condition] / action’**
 * Transitions are assumed to be instantaneous
 * Transitions may result in the software taking action
 * An event can cause a different action from a different state

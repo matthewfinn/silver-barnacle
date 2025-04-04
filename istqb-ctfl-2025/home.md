@@ -100,6 +100,7 @@
 ## Resources
 
 - [Exam Attempts](Resources/Exam%20Attempts.md)
+- [ISTQB Foundation Level Study Notes](Resources/ISTQB%20Foundation%20Level%20Study%20Notes.md)
 - [Resources](Resources/Resources.md)
 - [Sample Exams](Resources/Sample%20Exams.md)
 

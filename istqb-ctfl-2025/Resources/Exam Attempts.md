@@ -27,8 +27,9 @@ Incorrect Answers Explained in the following format
 | 2      | N/A          | N/A           | Patshala Test 1 | 27     | :x:                | 
 | 3      | N/A          | N/A           | SET B v1.3.2    | 30     | :x:                | 
 | 4      | 13:33        | 13:55         | SET C v1.5      | 26     | :x:                | 
-| 5      | 17:52        | 18:19         | SET D v1.4      | 23     | :x:                |                                                                                                                                                                                                                                                                                             
-
+| 5      | 17:52        | 18:19         | SET D v1.4      | 24     | :x:                |    
+| 6      | 12:00        | 12:25         | SET E v1.2      | 30     | :x:                |     
+| 7      | 14:18        | 14:45         | SET F v1. 1     | 28     | :x:                | 
 </details>
 
 
@@ -893,133 +894,555 @@ d) Is not correct. Quality control applies to all development activities, meanin
 <b> Question 13 </b>
 
 > **Question**
->
+>Which of the following tests is MOST likely to be performed as part of functional testing?
+> 
+>  a) The test checks that the sort function puts the elements of the list or array in ascending order
+   b) The test checks whether the sort function completes sorting within one second of starting
+   c) The test checks how easily the sort function can be changed from sorting ascending to sorting descending
+   d) The test checks that the sort function still functions correctly when moved from a 32-bit to a 64-bit architecture
+> 
+> Select ONE option.
 
 > **Answer**
->
+> **a) The test checks that the sort function puts the elements of the list or array in ascending order**
 
 > **Justification**
->
+> **a) Is correct. Checking that the sort function puts the elements of the list or array in ascending order is evaluating the functional correctness of the sort function, which is part of functional testing**
+> 
+> b) Is not correct. Assessing whether the sort function meets its nonfunctional requirement to complete within one second is part of testing its performance efficiency, which is part of non-functional testing
+> 
+> c) Is not correct. Evaluating the ease with which the sort function can be modified from sorting ascending to sorting descending is testing its modifiability, a form of non-functional maintainability testing, which is part of non-functional testing
+> 
+> d) Is not correct. Assessing that the sort function still functions correctly when moved from a 32-bit to a 64-bit architecture is testing its adaptability, a form of portability testing, which is part of non-functional testing
 
 <b> Question 14 </b>
 
 > **Question**
->
+> Which of the following is MOST likely to be a trigger that leads to maintenance testing of a
+currency exchange system?
+
+> a) The developers reported that changing the currency exchange system was difficult and the testers decided to check if this was true
+> 
+> b) The refund option of the currency exchange system was removed as it did not always repay the correct amount to customers
+> 
+> c) The agile team has started developing a user story that adds a new customer loyalty feature to the currency exchange system
+> 
+> d)  The language support option of the currency exchange system was used to enable both English and local language currency transactions
+> 
+> Select ONE option.
 
 > **Answer**
->
+> **b) The refund option of the currency exchange system was removed as it did not always repay the correct amount to customers**
 
 > **Justification**
->
+>a) Is not correct. Assuming that testers could check the ease of changing the currency exchange system then it would be done by maintainability testing rather than maintenance testing, so this is not a trigger for maintenance testing
+> 
+> **b) Is correct. A system modification (such as a fix or enhancement) is an example of a trigger for maintenance testing. The removal of the refund option of the currency exchange system was a fix that would lead to maintenance testing**
+> 
+> c) Is not correct. If the agile team has started developing a user story that adds a new customer loyalty feature to the currency exchange system, then this will result in them testing the new feature, and then they would perform regression testing. No maintenance testing is required in this situation
+> 
+> d) Is not correct. Reconfiguration of the currency exchange system to support both the local language and English currency transactions is not a system modification, a change to the operational environment, or a system retirement, which are the three triggers for maintenance testing
 
 <b> Question 16 </b>
 
 > **Question**
->
+> Question #16 (1 Point)
+Which of the following statements about the value of static testing is CORRECT?
+> 
+> a) The defect types found by static testing are different from the defect types that can be found by dynamic testing
+> 
+> b) Dynamic testing can detect the defect types that can be found by static testing plus some additional defect types
+> 
+> c) Dynamic testing can identify some of the defects that can be found by static testing but not all of them
+> 
+> d) Static testing can identify the defect types that can be found by dynamic testing as well as some extra defect types
+> 
+> Select ONE option.
 
 > **Answer**
->
+> **c) Dynamic testing can identify some of the defects that can be found by static testing but not all of them**
 
 > **Justification**
->
+> Some defect types that can only be detected by static testing, such as unreachable code, design patterns not implemented as desired and defects in non-executable work products. Some defect types that can be found by both static testing and dynamic testing, such as a programming defect that can be observed by a reviewer in a code review and which causes an observable failure during dynamic testing. And some defect types that can only be detected by dynamic testing, such as performance issues or memory issues that can only be observed when executing the code or system.
+> 
+> Thus:
+a) Is not correct
+b) Is not correct
+c) Is correct
+d) Is not correct
+
 
 <b> Question 17 </b>
 
 > **Question**
+> Given the following descriptions of review activities:
+> 
+> 1. Detected anomalies are deliberated upon, and determinations are reached regarding their status, ownership, and any further steps needed
+> 2. Issues are recorded, and any needed updates are addressed prior to the acceptance of the work product
+> 3. Reviewers employ techniques to come up with suggestions and questions about the work product and to spot anomalies
+> 4. The objective of the review and its schedule are established to ensure a focused and efficient review
+> 5. Participants are provided with access to the item being reviewed Which of the following is the CORRECT sequence in the review process of the activities that correspond to the descriptions?
 >
+>   a) 4 – 3 – 5 – 2 – 1
+   b) 4 – 5 – 3 – 1 – 2
+   c) 5 – 4 – 1 – 3 – 2
+   d) 5 – 4 – 3 – 2 – 1
+>
+>   Select ONE option.
 
 > **Answer**
->
+> **b) 4 – 5 – 3 – 1 – 2**
 
 > **Justification**
->
+> The five listed descriptions and the corresponding review process activities are:
+> 1. This describes part of the ‘communication and analysis’ activity
+> 2. This describes part of the ‘fixing and reporting’ activity
+> 3. This describes part of the ‘individual review’ activity
+> 4. This describes part of the ‘planning’ activity
+> 5. This describes part of the ‘review initiation’ activity
+   The generic review process from ISO/IEC 20246, which is outlined in the syllabus, comprises the following activities in this logical order:
+>   - Planning (4)
+>   - Review initiation (5)
+>   - Individual review (3)
+>   - Communication and analysis (1)
+>   - Fixing and reporting (2)
+   Thus:
+   a) Is not correct
+   b) Is correct. The correct sequence of activities is: 4 – 5 – 3 – 1 – 2
+   c) Is not correct
+   d) Is not correct
 
 <b> Question 20 </b>
 
 > **Question**
->
+> The system for selling cinema tickets calculates the discount type based on the client’s birth year (BY) and on the current year (CY) as follows:
+Let D be the difference between CY and BY, that is, D = CY – BY
+> - If D < 0 then print the error message “birth year cannot be greater than current year”
+> - If 0 ≤ D < 18 then apply the student discount
+> - If 18 ≤ D < 65 then apply no discount
+> - If D ≥ 65 then apply the pensioner discount
+> 
+> Your test suite already contains two test cases:
+> - BY = 1990,  CY = 2020,  expected result: no discount
+> - BY = 2030,  CY = 2029,  expected result: print the error message
+Which of the following test data sets should be added to achieve full valid equivalence partitioning coverage for the discount type?
+a) BY = 2001, CY = 2065
+b) BY = 1900, CY = 1965  
+c) BY = 1965, CY = 1900
+d) BY = 2011, CY = 2029
+e) BY = 2000, CY = 2000  
+Select TWO options.
 
 > **Answer**
->
+> **b) BY = 1900, CY = 1965, e) BY = 2000, CY = 2000**
 
 > **Justification**
->
+> There are two equivalence partitions that are not yet covered, which correspond to “student discount” and “pensioner discount”.
+a) Is not correct. CY – BY = 64, so these inputs correspond to the already covered “no discount” partition
+b) **Is correct. CY – BY = 65, so these inputs correspond to a partition that is not yet covered (“pensioner discount”)**
+c) Is not correct. CY – BY = –65, so these inputs correspond to the already covered “error message” partition
+d) Is not correct. CY – BY = 18, so these inputs correspond to the already covered “no discount” partition
+e) **Is correct. CY – BY = 0, so these inputs correspond to a partition that is not yet covered (“student discount”)**
 
 <b> Question 23 </b>
 
 > **Question**
->
+> You are applying state transition testing to the hotel room reservation system modeled by the following state transition table, with 4 states and 5 different events:
+> ![test-5-image1.png](attempts/assets/test-5-image1.png)
+> Assuming all test cases start in the ‘Requesting’ state, which of the following test cases, represented as sequences of events, achieves the highest valid transitions coverage?
+> a) NotAvailable, Available, ChangeRoom, NotAvailable, Cancel
+b) Available, ChangeRoom, NotAvailable, Available, Pay
+> c) Available, ChangeRoom, Available, ChangeRoom, NotAvailable
+> d) NotAvailable, Cancel, ChangeRoom, Available, Pay
 
 > **Answer**
->
+> **b) Available, ChangeRoom, NotAvailable, Available, Pay**
+
 
 > **Justification**
->
+> a) Is not correct. This sequence of five events covers 4 different valid transitions (both “NotAvailable” events correspond to the same transition between S1 and S3). This test case covers 4 out of 7 valid transitions
+**b) Is correct. This sequence of five events covers 5 different transitions(the first “Available” event corresponds to a transition between S1 and S2, and the second “Available” event corresponds to a transition between S3 and S2, so two different transitions are covered). This test case covers 5 out of 7 valid transitions and achieves the highest valid transitions coverage**
+c) Is not correct. This sequence of five events covers 3 different transitions(both “Available” events correspond to the same transition from S1 to S2; both “ChangeRoom” events correspond to the same transition from S2 to S1). This test case covers 3 out of 7 valid transitions
+>d) Is not correct. This sequence of five events does not represent a feasible test case, because after “Cancel” the system ends up
 
 <b> Question 25 </b>
 
 > **Question**
->
+> Why does white-box testing facilitate defect detection even when the software specification is vague, outdated or incomplete?
+a) Test cases are designed based on the structure of the test object rather than the specification
+b) For each white-box test technique the coverage can be well-defined and easily measured  
+c) White-box test techniques are very well designed to detect omissions in the requirements
+d) White-box test techniques can be used in both static testing and dynamic testing
 
 > **Answer**
->
+> **a) Test cases are designed based on the structure of the test object rather than the specification**
 
 > **Justification**
->
+> a) **Is correct. A fundamental strength that all white-box test techniques share is that the entire software implementation is taken into account during testing, which facilitates defect detection even when the software specification is vague, outdated or incomplete. This means white-box testing can find defects such as an extra feature added to the code(either accidentally or deliberately) that is not supposed to be there, which black-box testing cannot detect** 
+b) Is not correct. The fact that the coverage can be precisely defined is not the right reason. The achieved level of coverage would have much more impact than the possibility to measure the coverage
+c) Is not correct. If the software does not implement one or more requirements, white-box testing is unlikely to detect the resulting defects of omission
+d) Is not correct. While this is true, this is not the right answer, because there is no connection between the capability to be used in both static testing and dynamic testing and the claim that white-box testing facilitates defect detection with poor specifications
 
 <b> Question 28 </b>
 
 > **Question**
->
+> Which collaborative user story writing practice enables the team to achieve a collective understanding of what needs to be delivered?
+a) Planning poker, so that a team can achieve consensus on the effort needed to implement a user story
+b) Reviews, so that a team can detect inconsistencies and contradictions in a user story
+c) Iteration planning, so that user stories with the highest business value for a customer can be prioritized for implementation
+d) Conversation, so that team members can understand how the software will be used
 
 > **Answer**
->
+> **d) Conversation, so that team members can understand how the software will be used**
+
 
 > **Justification**
->
+> a) Is not correct. Planning poker can estimate effort for a user story that is already written. It does not help in understanding what should be delivered
+b) Is not correct. Reviews are not a collaborative user story writing practice
+c) Is not correct. Iteration planning is a project-related practice, used to plan the work, not to understand what needs to be delivered
+d) **Is correct. Conversation explains how the software will be used and often allows the team to define meaningful acceptance criteria, thus obtaining a shared vision of what should be delivered**
+
 
 <b> Question 31 </b>
 
 > **Question**
->
+> The team wants to estimate the time needed for one tester to execute four test cases for a software component. The team has gathered the following measures of the effort used to execute a single test case:
+> - Best-case scenario: 1 hour
+> - Worst-case scenario: 8 hours
+> - Most likely scenario: 3 hours
+Given that the three-point estimation technique is being used, what is the final estimate of the time needed to execute all four test cases?
+a) 14 hours
+b) 3.5 hours
+c) 16 hours
+d) 12 hours
+Select ONE option.
 
 > **Answer**
->
+> **a) 14 hours**
 
 > **Justification**
->
+> Using the three-point estimation technique, the final estimate (E) is calculated as:
+            E = (a + 4*m + b) / 6,
+where a is the most optimistic estimate, m is the most likely estimate, and b is the most pessimistic estimate.
+Thus:
+a) Is correct. In this case, the estimate for executing a single test case is:
+E = (1h + 4*3h + 8h) / 6 = 3.5 hours
+So, the total time needed for the tester to execute 4 test cases is:
+3.5h * 4 = 14 hours
+
 
 <b> Question 33 </b>
 
 > **Question**
->
+> How can the testing quadrants be beneficial for testing?
+a) They help in test planning by dividing the test process into four stages, corresponding to the four basic test levels: component, integration, system, and acceptance testing
+b) They help in assessing the high-level coverage (e.g., requirements coverage) based on low-level coverage (e.g., code coverage)
+c) They help non-technical stakeholders to understand the different types of tests and that some test types are more relevant to certain test levels than others
+d) They help agile teams to develop a communication strategy based on classifying people according to four basic psychological types, and on modelling the relations between them
 
 > **Answer**
->
+> **c) They help non-technical stakeholders to understand the different types of tests and that some test types are more relevant to certain test levels than others**
 
 > **Justification**
->
+> a) Is not correct. Testing quadrants have nothing to do with describing the relationships between test levels
+b) Is not correct. Testing quadrants cannot help in assessing any type of coverage
+c) **Is correct. Testing quadrants allow managers and other stakeholders to understand the relationships between test types, the activities they support (team support or product critique), and the viewpoint they are focused on (business- or technology-facing)**
+d) Is not correct. Testing quadrants is not a psychological model
 
 <b> Question 34 </b>
 
 > **Question**
->
+> Question #34 (1 Point)
+For a given risk, its risk level is $1,000 and its risk likelihood is estimated as 50%.
+What is the risk impact?
+a) $500
+b) $2,000
+c) $50,000
+d) $200
+Select ONE options.
 
 > **Answer**
->
+> **b) $2,000**
 
 > **Justification**
->
+> Risk assessment can use a quantitative or qualitative approach, or a mix of them. In the quantitative approach the risk level is calculated as the multiplication of risk likelihood and risk impact. 
+So, Risk level = Risk likelihood * Risk impact
+Then, Risk impact = Risk level / Risk likelihood.
+In our case, Risk impact = $1,000 / 50% = $1,000 / 0.5 = $2,000.
+Thus:
+a) Is not correct
+b) Is correct
+c) Is not correct
+d) Is not correct
 
 <b> Question 35 </b>
 
 > **Question**
->
+> Which of the following are product risks?
+a) Scope creep
+b) Poor architecture
+c) Cost-cutting
+d) Poor tool support
+e) Response time too long
+Select TWO options.
 
 > **Answer**
->
+> **b) Poor architecture, e) Response time too long**
 
 > **Justification**
+> a) Is not correct. Scope creep is an example of a project risk related to technical issues
+**b) Is correct. Poor architecture is an example of a product risk since it refers to a product characteristic**
+c) Is not correct. Cost-cutting is an example of a project risk, related to organizational issues
+d) Is not correct. Poor tool support is an example of a project risk related to technical issues
+**e) Is correct. Response time too long is an example of a product risk since it refers to a product characteristic**
+
+</details>
+
+<details>
+<summary><b>Test 6 - Incorrect answers and clarifications</b></summary>
+<b> Question 4 </b>
+
+> **Question**
+> Which of the following is an example of a task that can be carried out as part of the test implementation of the test process?
+> a) Analyzing a defect
+> b) Designing test data
+> c) Assigning a version to a test item
+> d) Writing a user story
+
+> **Answer**
+> **b) Designing test data**
+
+> **Justification**
+>  Creating test data is a test implementation task
+
+<b> Question 10 </b>
+
+> **Question**
+> Which of the following described development approaches does NOT define testing as a driver of software development?
+> a) Tests are created first. Then the code is written
+> b) Test cases drive the coding
+> c) The desired behavior of an application is defined by test cases
+> d) Tests are derived from acceptance criteria and partially automated
+
+> **Answer**
+> **d) Tests are derived from acceptance criteria and partially automated**
+
+> **Justification**
+> This approach does not define test-driven development because in this statement, the test cases are designed and automated based on acceptance criteria, but not necessarily before development (see [CTFL 4.0], Section 2.1.3, 1st paragraph, 2nd sentence). The tests do not necessarily have an explicit influence on development, so it is not an effective approach.
+
+<b> Question 17 </b>
+
+> **Question**
+>Which of the review types listed below is BEST suited when the review is to be conducted in accordance with the full general review process and with the aim of finding as many anomalies as possible?
+> a) Informal Review
+> b) Technical Review
+> c) Inspection
+> d) Walkthrough
+
+
+> **Answer**
+> **c) Inspection**
+
+> **Justification**
+> Inspection utilizes the full general review process with the aim of uncovering as many anomalies or deviations as possible, among other objectives (see[CTFL 4.0], Section 3.2.4, 3rd paragraph, 4th bullet point).
+
+<b> Question 18 </b>
+
+> **Question**
+> During a phase of intense project overtime, an extensive system architecture specification is sent to various project participants, along with additional information and the announcement of a technical review in three days. The technical review was not originally scheduled. No further adjustments are made to the assigned tasks of the project participants who are to act as reviewers during the technical review.
+> 
+> Based on the information provided, which of the following success
+factors for reviews is missing, based solely on the information given?
+> a) Appropriate type of review
+> b) Sufficient time for preparation
+> c) Setting clear goals and measurable end criteria
+> d) Well-led review session
+
+> **Answer**
+> **b) Sufficient time for preparation**
+
+> **Justification**
+> Sufficient preparation time is an important success factor for reviews, but the project participants are already working overtime and have no additional time for an"Individual Review" since their assigned tasks are not reduced. In short: Adequate preparation time is not scheduled (see [CTFL 4.0], Section 3.2.5, 1st paragraph, 5th bullet point). Sufficient preparation time is crucial to ensure that the reviewers can thoroughly examine the system architecture specification and provide high-quality feedback. Without sufficient preparation time, the effectiveness of the review may be compromised.
+
+<b> Question 20 </b>
+
+> **Question**
+> A daily radiation recorder for plants produces a sunshine score based on a combination of the number of hours a plant is exposed to the sun(below 3 hours, 3 to 6 hours or above 6 hours) and the average intensity of the sunshine (very low, low, medium, high).
+Given the following test cases:
+
+|        | **Hours** | **Intensity** | **Score** |
+|--------|-----------|---------------|-----------|
+| **T1** | 1.5       | very low      | 10        |
+| **T2** | 7.0       | medium        | 60        |
+| **T3** | 0.5       | very low      | 10        |
+ 
+>What is the minimum number of additional test cases that are needed to
+ensure full coverage of ALL VALID INPUT equivalence partitions?
+Select ONE option! (1 out of 4)
+   a) 1
+   b) 2
+   c) 3
+   d) 4
+
+> **Answer**
+> **b) 2**
+
+> **Justification**
+> The following valid input equivalence partitions can be identified:
+> - Hours
+> 1. Below 3 hours
+> 2. 3 to 6 hours
+> 3. Above 6 hours
+>- Intensity
+> 4. Very low
+> 5. Low
+> 6. Medium
+> 7. High
+> Thus, the missing valid input equivalence partitions are: (2), (5) and (7). These can be covered by two test cases, as (2) can be combined with either (5) or (7).
 >
+|        | **Hours** | **Intensity** | **Score** |
+|--------|-----------|---------------|-----------|
+| **T4** | 4         | low           | 30        |
+| **T5** | 4         | high          | 80        |
+
+
+<b> Question 21 </b>
+
+> **Question**
+> A smart home app measures the average temperature in the house over the previous week and provides feedback to the occupants on their environmental friendliness based on this temperature.
+The feedback for different average temperature ranges (to the nearest °C)should be:
+> * Up to 10°C - Icy Cool!
+> * 11°C to 15°C - Chilled Out!
+> * 16°C to 19°C - Cool Man!
+> * 20°C to 22°C - Too Warm!
+> * Above 22°C - Hot & Sweaty!
+Using BVA (only Min- and Max values), which of the following sets of test inputs provides the highest level of boundary coverage?
+Select exactly ONE correct option! (1 out of 4)
+> a) 0°C, 11°C, 20°C, 22°C, 23°C
+> b) 9°C, 15°C, 19°C, 23°C, 100°C
+> c) 10°C, 16°C, 19°C, 22°C, 23°C
+> d) 14°C, 15°C, 18°C, 19°C, 21°C 22°C
+
+> **Answer**
+> **c) 10°C, 16°C, 19°C, 22°C, 23°C**
+
+> **Justification**
+> For the input equivalence partitions given, the above used boundary value technique yields the following 8 coverage items:
+10°C, 11°C, 15°C, 16°C, 19°C, 20°C, 22°C, 23°C.
+> 
+> Hence, the options have the following boundary value coverage:
+a) FALSE – 4 out of 8 (11, 20 ,22 and 23)
+b) FALSE – 3 out of 8 (15, 19 and 23)
+c) **CORRECT – 5 out of 8 (10, 16, 19, 22 and 23)**
+d) FALSE – 3 out of 8 (15, 19 and 22)
+
+<b> Question 23 </b>
+
+> **Question**
+> Consider the following state transition diagram for a credit-card only, unattended gasoline pump:
+> ![test-6-image1.png](attempts/assets/test-6-image1.png)
+> Assume that you want to develop the minimum number of tests to cover each transition in the state transition diagram. Assume further that each test must start at the beginning state, waiting for customer, and each test ends when a transition arrives at the beginning state.
+How many tests do you need?
+Select ONE option! (1 out of 4)
+a) 4
+b) 7
+c) 1
+d) Infinite
+
+
+> **Answer**
+> **a) 4**
+
+> **Justification**
+> Each transition must be traversed at least once. To do so, the first test can cover the happy path, a successful purchase, the next test cancels, or timeout from waiting for pumping, the next test cancels, or timeout from waiting for fuel type, and the last test the insertion of an invalid credit card. While the order is immaterial, fewer than four tests fail to cover one of the transitions inbound to waiting for customer or violates the rules about where a test starts or ends. More than four tests include tests that re-traverse already-covered transitions.
+
+<b> Question 24 </b>
+
+> **Question**
+>Which of the following descriptions of statement coverage applies?
+Select ONE option! (1 out of 4)
+
+>a) Statement coverage is a measure of the number of source code lines (excluding comments) that were executed during the test.  
+b) Statement coverage is a measure of the percentage of instructions in the source code that were executed during the test.  
+c) Statement coverage is a measure of the percentage of source code lines(excluding comments) that were executed during the test.  
+d) Statement coverage is a measure of the number of instructions in the source code that were executed during the test.
+
+> **Answer**
+> **b) Statement coverage is a measure of the percentage of instructions in the source code that were executed during the test.**
+
+> **Justification**
+> Coverage is measured as the number of statements executed by the test cases divided by the total number of statements in the code and expressed as a percentage.
+> 
+> – The percentage of statements is the proportion of executed statements in the test to all statements, that is, the number of statements executed by the test divided by the total number of statements, expressed as a percentage
+
+<b> Question 28 </b>
+
+> **Question**
+> An agile development team has formulated the following user story: "As a user, I want the volume of the electronic egg timer's alarm to be adjustable so that I can always hear it."
+> 
+>Which of the following acceptance criteria is BEST suited from a testing perspective for designing clear acceptance tests?
+> 
+>Select ONE option! (1 out of 4)
+
+>a) The volume is easy to adjust for every person, i.e., the adjustment buttons must have a usable size.  
+b) The tester can hear the alarm tone well even at the lowest level.
+c) The volume can be adjusted within a range of 40 to 80 decibels.
+d) The volume adjustment works correctly in the best-selling models of this egg timer.
+
+> **Answer**
+> **c) The volume can be adjusted within a range of 40 to 80 decibels**
+
+> **Justification**
+> Acceptance criteria are considered as test conditions and should therefore support a check for correctness or adequacy (see [CTFL 4.0], Sections 4.5.2 and 2.2.2). This is the case here, as the adjustment range is clearly defined, and the assigned volume is measurable (and corresponds to the general limits of "quiet" to "loud").
+
+<b> Question 29 </b>
+
+> **Question**
+> Please consider the following user story:
+"As a system administrator, I want to be able to monitor the server's performance to ensure that the system is running efficiently."
+>
+>Which test case is BEST suited for an acceptance test-driven development of the user story?
+Select ONE option! (1 out of 4)
+>
+>a) 1. Login as system administrator; select the server; check the server
+performance.
+GIVEN: I am logged in as a system administrator
+AND
+GIVEN: I have selected the server,
+WHEN I select "Check server performance",
+THEN I am shown an overview of the server's performance.
+>
+>b) 2. Login as user; perform a task; check the server performance.
+GIVEN: I am logged in as a user
+AND
+GIVEN: I have performed a task,
+WHEN I select "Check server performance",
+THEN I am shown an overview of the server's performance.
+>
+>c) 3. Login as system administrator; select the server; perform a performance test.
+GIVEN: I am logged in as a system administrator
+AND
+GIVEN: I have selected the server,
+WHEN I select "Perform performance test",
+THEN a performance test is performed and I receive an overview of the results.
+>
+>d) 4. Login as system administrator; perform a performance test; check the server
+performance.
+GIVEN: I am logged in as a system administrator
+AND
+GIVEN: I have performed a performance test,
+WHEN I select "Check server performance",
+THEN I am shown an overview of the server's performance.
+
+> **Answer**
+> c) **3. Login as system administrator; select the server; perform a performance test.
+GIVEN: I am logged in as a system administrator
+AND
+GIVEN: I have selected the server,
+WHEN I select "Perform performance test",
+THEN a performance test is performed and I receive an overview of the results.**
+
+> **Justification**
+> SUITABLE - This option includes **both the role of the system administrator** AND the **specific actions of selecting the server and performing a performance test**, which corresponds to the user story
 
 </details>

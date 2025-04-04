@@ -20,11 +20,12 @@
 ![image4.png](assets/image4.png)
 
 **Example:**
-| Stage      | What Happens?                           | Example                              |
-|-----------|--------------------------------|--------------------------------------|
-| **Error**   | A developer makes a mistake while coding. | Mistakenly uses `=` instead of `==`. |
-| **Defect (Bug)** | The incorrect code is included in the software. | Any user gets admin access. |
-| **Failure** | The software behaves incorrectly when executed. | A normal user gains unauthorized admin access. |
+| Term     | When it Happens         | What it Is                                               | Example                                                                 | Clarification                                                                 |
+|----------|-------------------------|-----------------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| Error    | During development      | A human mistake made during coding, design, or other tasks| A developer uses `=` instead of `==` in a condition statement.         | An error is a human mistake that can lead to a defect in the software.       |
+| Defect   | In the code or design   | A problem or bug introduced due to an error               | A developer codes the wrong formula for tax calculation.               | A defect is a flaw in the software, but it might not cause issues unless triggered. |
+| Failure  | During execution/runtime| The system behaves incorrectly when the defect is triggered| The app calculates the wrong tax on a customer's bill when run.        | A failure is the visible effect of a defect when the system is running.     |
+
 
 
 ### Why do defects occur?
