@@ -27,7 +27,7 @@
 
 ### Testware
 
-Artifacts produced during the test process required to plan, design, & execute tests, such as documentation, scripts, inputs, expected results, set-up & clear-up procedures, files, databases, environment, & any additional software or utilities used in testing.
+Artifacts produced during the test process required to plan, design, & execute tests, such as documentation, scripts, inputs, expected results, set-up & clean-up procedures, files, databases, environment, & any additional software or utilities used in testing.
 
 * Created as part of the test activities in the test process
 * Each test activity creates test work products (aka testware)
@@ -64,15 +64,15 @@ Proper Configuration Management should be in place to ensure thorough & consiste
   * Exit Criteria (that's used in test monitoring & control)
 
 ### Test Plan - ISO/IEC/IEEE 29119 Standard
-| Item                            | Details                                                                                                                                                                                                                                                                                                                          |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Context of testing              | Type of Test Plan<br />Test Items<br />Test Scope<br />Assumptions & Constraints<br />Stakeholders                                                                                                                                                                                                                             |
-| Testing Lines of Communication  | -                                                                                                                                                                                                                                                                                                                                |
-| Risk Register                   | Risks                                                                                                                                                                                                                                                                                                                            |
-| Testing Activites & Estimates | -                                                                                                                                                                                                                                                                                                                                |
-| Staffing                        | Roles<br />Tasks<br />Responsibilites<br />Training Needs<br />Hiring Needs                                                                                                                                                                                                                                                      |
-| Schedule                        | -                                                                                                                                                                                                                                                                                                                                |
-| Test Strategy (of the project)  | Test Sub-processes<br />Test Deliverables<br />Test Design Techniques<br />Test completions criteria<br />Metrics to be collected<br />Test Data requirements<br />Test Environment requirements<br />Retesting & regression testing<br />Suspension & resumption criteria<br />Deviations from the organisational test strategy |
+| Item                           | Details                                                                                                                                                                                                                                                                                                                          |
+|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Context of testing             | Type of Test Plan<br />Test Items<br />Test Scope<br />Assumptions & Constraints<br />Stakeholders                                                                                                                                                                                                                               |
+| Testing Lines of Communication | -                                                                                                                                                                                                                                                                                                                                |
+| Risk Register                  | Risks                                                                                                                                                                                                                                                                                                                            |
+| Testing Activites & Estimates  | -                                                                                                                                                                                                                                                                                                                                |
+| Staffing                       | Roles<br />Tasks<br />Responsibilites<br />Training Needs<br />Hiring Needs                                                                                                                                                                                                                                                      |
+| Schedule                       | -                                                                                                                                                                                                                                                                                                                                |
+| Test Strategy (of the project) | Test Sub-processes<br />Test Deliverables<br />Test Design Techniques<br />Test completions criteria<br />Metrics to be collected<br />Test Data requirements<br />Test Environment requirements<br />Retesting & regression testing<br />Suspension & resumption criteria<br />Deviations from the organisational test strategy |
 
 
 ## Test Activities & Testware - Test Monitoring & Control
@@ -101,12 +101,14 @@ Proper Configuration Management should be in place to ensure thorough & consiste
 * These reports provide relevant information on the test progress & a summary of test execution results 
 
 ### Test Progress Report – ISO/IEC/IEEE 29119 Standard
-* Reporting Period
-* Progress against the test plan
-* Factors blocking progress
-* Test Measures
-* New & changed risks
-* Planned testing
+| Item                           |
+|--------------------------------|
+| Reporting Period               |
+| Progress against the test plan |
+| Factors blocking progress      |
+| Test Measure                   |
+| New & changed risks            |
+| Planned testing                |
 
 ## Test Activities & Testware - Test Analysis
 ### Test Analysis - Test Activities & Tasks
@@ -204,15 +206,15 @@ Proper Configuration Management should be in place to ensure thorough & consiste
 * Each test case should be bi-directionally traceable to the test conditions it covers
 
 ### Test Case Specification – ISO/IEC/IEEE 29119 Standard
-| Item            | Details                                                                                                                                         |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Test Coverage Items   | Overview<br/>Unique Identifier<br/>Description<br/>Priority<br/>Traceability                                                                    |
-| Test Cases | Overview<br/>Unique Identifier<br/>Objective<br/>Priority<br/>Traceability<br/>Preconditions<br/>Inputs<br/>Expected Results<br/>Actual Results |
+| Item                | Details                                                                                                                                         |
+|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test Coverage Items | Overview<br/>Unique Identifier<br/>Description<br/>Priority<br/>Traceability                                                                    |
+| Test Cases          | Overview<br/>Unique Identifier<br/>Objective<br/>Priority<br/>Traceability<br/>Preconditions<br/>Inputs<br/>Expected Results<br/>Actual Results |
 
 ## Test Activities & Testware - Test Implementation
 ### Test Implementation – Test Activities & Tasks
 * In the test implementation phase, testware necessary for test execution is created/acquired
-* ‘Do we now have everything in place to run the tests?’
+* _‘Do we now have everything in place to run the tests?’_
 
 Ideally, all these tasks are completed before test execution as otherwise precious test execution time might be lost on test implementation tasks.
 

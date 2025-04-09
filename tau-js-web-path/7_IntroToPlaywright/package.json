@@ -18,6 +18,7 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.51.1",
-    "@types/node": "^22.13.14"
+    "@types/node": "^22.13.14",
+    "@applitools/eyes-playwright": "^1.17.0"
   }
 }

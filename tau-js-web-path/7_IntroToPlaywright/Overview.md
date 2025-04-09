@@ -20,7 +20,7 @@ It supports multiple languages, and in this course, we are going to focus on Typ
 ## How to run Playwright tests
 `npx playwright test`
 
-## Chapter 1
+## Chapter 1 Time to Explore Playwright
 [Exercises](exercises/chapter1.md)
 [Resources](extra-resources/chapter1.md)
 
@@ -48,7 +48,7 @@ It supports multiple languages, and in this course, we are going to focus on Typ
 
 ### Quiz
 
-## Chapter 2
+## Chapter 2 The Test Runner & Your First Test
 [Exercises](exercises/chapter2.md)
 [Resources](extra-resources/chapter2.md)
 
@@ -81,12 +81,74 @@ It supports multiple languages, and in this course, we are going to focus on Typ
 
    Playwright will get all the elements that contains the text "Java" anywhere and in case there is more than 1 will thrown an error and fail the test.
 
-## Chapter 3
+## Chapter 3 Coding Like a Pro
 [Exercises](exercises/chapter3.md)
 [Resources](extra-resources/chapter3.md)
-## Chapter 4
+
+### Quiz
+1. **Why would we have a beforeEach method in a test?**
+
+   To simplify writing and avoid code duplication. The beforeEach will be executed always before each test and common usages of it are: open a URL, create a page object, log test information such as test title.
+
+2. **What is correct about test.describe?**
+
+   It's optional to have a test.describe and we can have more than 1 test.describe in a test file. We can also use test.describe.skip to skip all the test scenarios inside a describe or test.describe.only to run only this describe.
+
+3. **What is NOT correct about methods?**
+
+   If you have a beforeEach, you need to have a corresponding afterEach.
+
+4. **What is NOT true about Page Object Models?**
+
+   It's mandatory in your project if you want a clean code.
+
+5. **What is the difference between `.toContainText()` and `.toHaveText()`?**
+
+   `.toHaveText()` will consider the exact text if using a string, while `.toContainText()` will consider if the text is substring in the same situation.
+
+6. **What is a right way to click and hold for 5 secs?**
+
+   .click({ delay: 5000 })
+
+## Chapter 4 Visual Regression Testing with Applitools
 [Exercises](exercises/chapter4.md)
 [Resources](extra-resources/chapter4.md)
+
+Playwright has the ability to produce and visually compare screenshots through the command - expect(page).toHaveScreenshot().
+
+### Quiz
+1. **What's the difference between the ultra fast grid (UFG) and the classic runner?**
+   The UFG perform cross-browser testing and rerenders snapshots on all the target browsers in the cloud while the classic runner renders snapshots using only the machine's local configuration.
+   
+2. **What is NOT true about Applitools?**
+   
+   We can only compare snapshots of a full page. There is no way to select or ignore an specific area for comparison.
+   
+3. **What parameters does the eyes.open method take?**
+
+   driver, appName, testName, viewportSize, sessionType
+
+4. **When does Applitools save the snapshot baseline?**
+
+   When we run the first test it automatically creates a baseline or when there is a failure and we manually accept the new baseline.
+
 ## Chapter 5
 [Exercises](exercises/chapter5.md)
 [Resources](extra-resources/chapter5.md)
+
+1. **What you cannot find inside the trace?**
+   
+   Test Video
+  
+2. **What are things displayed by Playwright when a test fails?**
+
+   Expected vs Received, Locator resolved to multiple elements and a few suggestions of how to fix it, Line of the code with the error.
+   
+3. **What are the configuration options necessary to setup a good report?**
+
+   retries, reporter, trace
+   
+4. **What is necessary to stop the code at certain line when debugging?**
+
+   a breakpoint
+   

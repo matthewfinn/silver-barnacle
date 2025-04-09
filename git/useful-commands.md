@@ -1,3 +1,11 @@
+### Merge master into feature branch 
+```bash
+git pull
+git merge origin master
+git status
+```
+
+
 ### Remove cache to re-apply a .gitignore file
 ```bash
 git rm -r --cached .

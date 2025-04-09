@@ -25,7 +25,7 @@ export const USE_ULTRAFAST_GRID: boolean = false;
 export let Batch: BatchInfo;
 export let Config: Configuration;
 export let Runner: EyesRunner;
-let eyes: Eyes;
+let eyes: Eyes; // performs screenshot check
 // end of Applitools
 
 // beforeAll for Applitools

@@ -15,7 +15,7 @@
 
 ### (Don’t) Shoot the Messenger
 Keep in mind:
-* Confirmation bias
+* Confirmation bias (the tendency to interpret new evidence as confirmation of one's existing beliefs or theories)
 * Collaboration & teamwork instead of battles
 * Stay objective & factual, not focused on the person
 * Try to understand the way the other person feels & reacts
