@@ -55,7 +55,7 @@ exports.config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "warn",
+  logLevel: "debug",
   //
   // Set specific log levels per logger
   // loggers:
@@ -127,6 +127,7 @@ exports.config = {
       "./steps/**/then.js"
     ], // <string[]> (file/dir) require files before executing features
     backtrace: false, // <boolean> show full backtrace for errors
+    failIfPending: true,  // This will make sure missing steps cause the test to fail
     requireModule: [], // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
     dryRun: false, // <boolean> invoke formatters without executing steps
     failFast: false, // <boolean> abort the run on first failure
@@ -135,7 +136,7 @@ exports.config = {
     snippets: true, // <boolean> hide step definition snippets for pending steps
     source: true, // <boolean> hide source uris
     profile: [], // <string[]> (name) specify the profile to use
-    strict: false, // <boolean> fail if there are any undefined or pending steps
+    strict: true, // <boolean> fail if there are any undefined or pending steps
     tags: [], // <string[]> (expression) only execute the features or scenarios with tags matching the expression
     timeout: 60000, // <number> timeout for step definitions
     ignoreUndefinedDefinitions: false // <boolean> Enable this config to treat undefined definitions as warnings.
