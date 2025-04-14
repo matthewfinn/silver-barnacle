@@ -23,4 +23,8 @@ Just like Feature Files, WebDriverIO expects to find our Step Definitions in a s
 ````
 
 To run the tests
-`node_modules/.bin/wdio ./wdio.conf.js` OR  `npx wdio run wdio.conf.js`
+`node_modules/.bin/wdio ./wdio.conf.js` OR  `npx wdio wdio.conf.js`
+
+[Regexr](https://regexr.com/) is useful to validate expressions
+
+## 4.4 Support Files
