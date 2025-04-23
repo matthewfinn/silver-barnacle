@@ -41,3 +41,11 @@ It's a good way to have a maintainable automation project for 2 reasons.
 1. If some element on a page changes it's selector, we can pretty easily update the Page Object without having to worry about modifying any test.
 2. If we decide we want to move away from Cucumber to a different framework, we can easily do so and still retain our Page Objects, and only focus on changing our tests to match that new framework.
 
+## Quiz
+1. **Step Definitions** communicate directly with Feature files
+2. **Page Objects** are files that should store elements and methods related to a page
+3. **Gherkin Statements** should feed into Feature files
+4. **wdio-cucumber-framework** is responsible for communicating between WebdriverIO and Cucumber
+5. The **require** property in the CucumberOpts object is where we can load our step definitions
+6. The **specs** property is where we identify our test files
+7. The first parameter in a step definition function can be a string or **Regular expression**

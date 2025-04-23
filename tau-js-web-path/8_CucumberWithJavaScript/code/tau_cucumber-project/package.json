@@ -26,6 +26,7 @@
   "dependencies": {
     "@wdio/cli": "^9.12.5",
     "cucumber": "^6.0.7",
+    "dotenv": "^16.5.0",
     "webdriver": "^5.11.12"
   }
 }
