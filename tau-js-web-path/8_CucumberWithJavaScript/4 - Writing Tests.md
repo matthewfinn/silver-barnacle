@@ -1,5 +1,5 @@
 # Writing Tests
-
+![Screenshot 2025-04-23 113120.png](assets/Screenshot%202025-04-23%20113120.png)
 ## 4.1 Installing Dependencies
 
 WebDriverIO is a tool that we use to automate the browser, and we'll be leveraging it to create our Cucumber project.
@@ -31,3 +31,13 @@ To run the tests
 This is where we put our general reusable functions, typically actions and assertions.
 * Actions that you want your automation to do that will be executed in various Feature files.
 * Assertions - functions that will perform actual verification of data to judge if a test should pass or fail.
+
+## Page Objects
+**Page Objects are a representation of a page in a website or application.**
+
+It contains selectors for elements on the page, and methods responsible for interacting with the page. Basically, it allows us to separate the logic of our tests from the static nature of our pages.
+
+It's a good way to have a maintainable automation project for 2 reasons.
+1. If some element on a page changes it's selector, we can pretty easily update the Page Object without having to worry about modifying any test.
+2. If we decide we want to move away from Cucumber to a different framework, we can easily do so and still retain our Page Objects, and only focus on changing our tests to match that new framework.
+

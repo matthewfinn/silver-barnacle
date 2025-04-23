@@ -1,6 +1,6 @@
-import { When } from '@cucumber/cucumber';
+import { When } from "@cucumber/cucumber";
 import googleSearch from "../../support/actions/search";
 
 When(/^The user enters "(.*)" into the search bar$/, keyword => {
-  googleSearch(keyword, $(".gLFyf.gsfi"), $(".aajZCb .gNO89b"));
+  googleSearch(keyword);
 });
