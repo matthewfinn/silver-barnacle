@@ -28,3 +28,6 @@ To run the tests
 [Regexr](https://regexr.com/) is useful to validate expressions
 
 ## 4.4 Support Files
+This is where we put our general reusable functions, typically actions and assertions.
+* Actions that you want your automation to do that will be executed in various Feature files.
+* Assertions - functions that will perform actual verification of data to judge if a test should pass or fail.

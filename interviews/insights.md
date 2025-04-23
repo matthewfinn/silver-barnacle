@@ -77,3 +77,17 @@ If you don’t have a good grasp of the universe of what’s possible, you can�
 A work log is a document that contains the list of tasks you accomplished. The granularity and the type of tasks don’t matter, as long as you keep track of what you did.
 
 Useful for performance reviews, resume
+
+## Ownership
+Imagine you can only choose one engineer:
+1. One is technically brilliant but you need to regularly chase them for updates, unblock them, and remind them of priorities.
+2. The other is technically okay but has a high degree of agency. They ask the right questions, keep stakeholders informed, and drive work forward without being pushed.
+
+Who do you choose?
+
+In a team setting, brilliance without ownership creates bottlenecks.
+But someone with agency multiplies the impact of everyone around them.
+
+Give me the one who gets things done.
+
+Skill can be taught. Ownership is rare.

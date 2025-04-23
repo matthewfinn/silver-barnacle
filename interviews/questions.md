@@ -1,16 +1,19 @@
-# Tell me about yourself
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interview Questions</title>
+</head>
+</html>
+
+## Tell me about yourself
 I started my career in quality assurance, working on a mix of manual and automated testing across web, Android, and backend systems. This gave me a solid foundation in testing strategies, as well as experience with tools like Nightwatch.js and performance testing with Locust.
 
 Over time, I transitioned into software engineering roles, where I worked on Android development, API integrations, system troubleshooting, and release planning. I also spent some time in a lead role, managing and mentoring engineers, as well as driving project delivery by acting as a scrum master for 2 different project teams across multiple teams.
 
-In 2024, I decided to step back and work on my family business, where I handled customer communications via email, some website administration tasks and contributed to construction-related work at our premises and on-site with customers. This time allowed me to reflect on my career path, and I realized I wanted to return to a role with a stronger focus on QA—an area I'm eager to grow in.
+In 2024, I decided to step back and work on my family business, where I handled customer communications via email, some website administration tasks, and contributed to construction-related work at our premises and on-site with customers. I also worked part-time for a friend's business involved in car restoration and fabrication, which was especially enjoyable as cars are one of my main hobbies. This time allowed me to reflect on my career path, and I came to the conclusion I wanted to return to a role with a stronger focus on QA—an area I'm eager to grow in.
 
 While my software development experience was valuable, I’ve found that I’m most passionate about ensuring software quality—particularly in testing APIs, improving testing processes, and identifying issues early. That’s why I’m now focused on returning to a dedicated QA role, where I can combine my testing background with my development knowledge to contribute to high-quality, reliable software.
-
-## What I want to be (... in 5 years?)
-* An experienced QA engineer with very strong automation skills and good working knowledge in CI/CD pipelines and infrastructure
-* I would like to become expert in a subject I enjoy - testing and test automation!
-* I prefer being the person who gets an indepth understanding of an application of SaaS package and it's capabilities via exploratory testing.
 
 ## Why I want to be a QA
 * Interest in Quality:
@@ -27,6 +30,14 @@ While my software development experience was valuable, I’ve found that I’m m
 
 * Detail-Oriented with a User-Focused Mindset:
 > I am naturally detail-oriented (maybe borderline pedantic) which is essential for catching even the smallest issues that could affect the end-user experience. I have a user-focused mindset, always thinking about how the software will be used in the real world and ensuring it meets the highest standards. By thoroughly testing applications and addressing potential issues early, I’m able to contribute to building software that not only functions correctly but also provides a smooth and reliable experience for the customer.
+
+## Reasons for Leaving last role
+I left my last role in 2024, as I realized that the people management aspects of the position weren’t the best fit for me, and I wasn’t enjoying that part of the job. After spending so many years in that company, it felt like a good time for a change. I took some time to work on my family business, where I managed email and website administration tasks and also contributed to construction-related work. This experience gave me the opportunity to reflect on my career direction, and I realized I wanted to return to a role with a stronger focus on QA, an area I’m eager to learn more about and grow in. Additionally, the culture in my previous role involved a lot of out-of-hours and unpaid overtime, which led to additional PTO that I wasn’t able to fully utilize due to workload, impacting my work-life balance. I’m now seeking a role that offers both a better work-life balance and the opportunity to grow within QA.
+
+## What I want to be (... in 5 years?)
+* An experienced QA engineer with very strong automation skills and good working knowledge in CI/CD pipelines and infrastructure
+* I would like to become expert in a subject I enjoy - testing and test automation!
+* I prefer being the person who gets an indepth understanding of an application of SaaS package and it's capabilities via exploratory testing.
 
 ## Why I want to work there
 * Company Values and Culture:
@@ -65,26 +76,70 @@ While my software development experience was valuable, I’ve found that I’m m
 * If required get someone to mediate i.e. manager, scrum master, product owner
 
 ### Example of a time I had a conflict
-Honestly a rare occurrence of any hostile conflict in my career as I generally have the ability to get along with everyone even when our viewpoints differ.
-* Root cause of issues lay with other teams 
-  * Gathered evidence and concisely present in person (or on a call) rather than creating hostility with calling people out on a ticket
-* Conflict with 3rd party provider of MDM
-  * 
-* 100 point estimation from engineer - resolved conflict by asking them to list out the risks they saw to justify and asked for clarifications
-* Code Review Disagreements
-  * Hopped on a call, explained the design decisions and the reasons for which and why xyz wouldn't work within the required project timeline and made some compromises
+
+#### Root cause of issues lay with other teams 
+**S:** We were dealing with recurring production issues that were being traced back to changes or misconfigurations introduced by other teams. These issues were affecting our team’s deliverables and putting us in a difficult position with stakeholders.
+**T:** My goal was to address the root causes without creating friction between teams, and to establish a more collaborative way of catching and preventing such issues early on.
+**A:** I gathered concrete examples of the issues, highlighting the impact they had and tracing them back objectively, without placing blame. I set up a cross-team discussion to walk through these cases constructively and suggested ways we could improve shared testing coverage, configuration validation, and communication during releases. I also proposed a lightweight pre-release checklist for dependencies that could affect multiple teams.
+**R:** The conversation helped reduce tension and opened up a more cooperative relationship between the teams. We agreed on shared ownership for certain areas and implemented some of the checklist suggestions. Over time, these steps led to a noticeable drop in cross-team issues and a smoother release process.
+
+#### Conflict with 3rd party provider of MDM
+**S:** We were experiencing ongoing issues with our mobile app deployment process that were traced back to the 3rd-party MDM provider we used. Their system occasionally caused delays or failed deployments, which affected our internal testing timelines and customer releases.
+**T:** I needed to address the reliability issues with the MDM provider, escalate concerns when necessary, and work towards a more dependable integration—without damaging the working relationship.
+**A:** I documented specific incidents with timestamps, logs, and impact summaries to build a clear case. I then arranged a call with the provider’s support and account management teams, where I walked them through our concerns in a constructive but firm way. I also proposed some process improvements, like earlier testing windows, better status communication, and fallback deployment options. Internally, we reviewed our own automation scripts to ensure we weren’t contributing to the problem.
+**R:** The provider acknowledged the issues and made some internal changes to prioritize our account. They also provided us with more proactive status updates and direct support contact. As a result, we had fewer deployment failures, improved our release predictability, and restored confidence in the MDM process both internally and externally.
+
+#### Estimation Disagreements
+**S:** During a sprint planning session, a teammate strongly insisted that a particular story be estimated at 100 story points, which was far outside our usual range and would have skewed the entire sprint’s planning and velocity tracking.
+**T:** My goal was to understand their reasoning, maintain a respectful team dynamic, and help arrive at a more reasonable, shared estimation that reflected our team's standards and kept the planning process on track.
+**A:** I acknowledged their concerns and asked them to walk through the complexity they saw in the story. I then suggested we break the story down into smaller, more manageable tasks. By doing that, we could estimate each part more accurately and keep our point system meaningful. I also reminded the team of our usual estimation guidelines and why consistency is important for velocity tracking and forecasting.
+**R:** We were able to break the story into several smaller items that, combined, had a more reasonable total estimate. The teammate appreciated being heard, and the planning session stayed collaborative and productive. It also helped reinforce a shared understanding of how to use story points effectively for future sessions.
+
+#### Code Review Disagreements
+**S:** We were dealing with a critical production bug that was affecting a large number of users. I identified the root cause and implemented a fix quickly to minimize impact. However, during code review, another engineer disagreed with my implementation, feeling it wasn’t the cleanest or most elegant solution.
+**T:** My goal was to explain why the chosen solution was necessary under the time constraints, maintain a good working relationship with the teammate, and ensure any longer-term improvements were still considered.
+**A:** I acknowledged their concerns and explained the context — that the priority was to restore functionality as quickly as possible due to the severity of the issue. I pointed out that the fix was scoped tightly to avoid regressions and wouldn’t introduce technical debt if we scheduled a follow-up refactor. I also added a comment in the code linking to a ticket for improving the implementation post-release.
+**R:** The fix was deployed quickly and resolved the issue without further incidents. The teammate appreciated the explanation and agreed with the short-term decision given the circumstances. We later revisited the area together and implemented a cleaner solution once the pressure was off. It helped reinforce that we could handle urgent situations pragmatically without losing sight of long-term quality.
+
+#### QA Hypothetical Example
+**S:** Let’s say I’m testing a new feature, and I come across a behavior that seems incorrect — maybe something subtle in the flow or logic that doesn’t feel intuitive from a user’s perspective. I raise it as a potential bug, but the developer responds that it matches the written requirements and isn’t actually a defect.
+**T:** As the QA, my responsibility is to ensure quality from both a functional and user experience standpoint. In this case, I’d need to find a way to advocate for a potential issue while also being collaborative and not blocking progress unnecessarily.
+**A:** I’d start by reviewing the user story, acceptance criteria, and any related design notes or discussions. If it’s still unclear, I’d arrange a quick sync with the developer — and ideally the product owner as well — to talk it through. I’d explain the issue from the user’s point of view, highlighting why it could lead to confusion or unexpected behavior. If it’s not a clear-cut bug, I might suggest logging it as an improvement or edge case for future sprints, while ensuring the current behavior is documented if we decide to move forward.
+**R:** In a case like that, the result would ideally be a shared understanding across QA, dev, and product. We’d avoid unnecessary last-minute changes, but still make sure that quality concerns are heard and tracked. It also helps foster a more open, collaborative dynamic between teams — where QA isn’t just gatekeeping, but helping shape the product experience.
+
 
 ## Above & Beyond
-* CAELD run-in, weekend work
-* Switchover evening/weekend work & on-call
-* T3 roadmap - weekend work
-* Regularly stepped in for software managers & directors during planned and unforseen absenses 
+### CAELD run-in
+**S:**  was brought onto a compliance-driven project late after completing another project ahead of schedule. The project involved drivers switching from one compliance app to another, which was a critical transition to meet new regulatory requirements. However, I discovered that the switchover process had not been considered in detail, and the team had assumed that a simple config change would be enough to address the transition smoothly. This assumption overlooked several critical user experience (UX) and functionality issues that could have made the switchover difficult and frustrating for the drivers.
+**T:** My task was to identify and resolve the issues with the switchover process, ensuring that the transition between apps would be seamless and intuitive for the drivers. I had to do this within the tight project timeline, while also ensuring compliance requirements were met. 
+**A:** After identifying the gaps, I immediately highlighted the issue to my manager and explained that the team’s assumption about the config change wasn’t enough to ensure a smooth transition. I collaborated with the Product team, CTO, and my manager to design a fix that would address the UX flaws and guide the drivers through the transition effectively. We worked to refine the switchover process, adding necessary steps and improving the user interface to make it more intuitive. Given the time constraints, I worked over the weekend to implement the fix and conducted thorough testing to ensure it met both usability standards and compliance requirements. Additionally, I was on-call to handle any urgent issues that arose during the switchover process.
+**R:** The switchover process was successfully improved, ensuring that the drivers could transition between apps with minimal friction. The project was delivered on time and met all compliance requirements. The fix significantly improved the UX, making the switchover process smooth and efficient. The collaboration with my manager, CTO, and Product team ensured the issue was resolved quickly, avoiding potential disruptions and ensuring the successful adoption of the new app.
+
+### T3 Roadmap
+**S:** In my previous role, I was working on a Tier 3 roadmap to address common and problematic customer issues. The deadlines, promised by account management, were tight and required us to resolve issues quickly, often resulting in weekend work to meet those deadlines.
+**T:** While addressing these immediate issues was essential, I knew we needed to create a longer-term solution to prevent the same problems from recurring. My task was to help resolve the customer issues quickly while ensuring we had the breathing room to properly investigate the root causes and apply long-term fixes.
+**A:** To buy the team some time to focus on thorough testing and root cause analysis, I developed data fix scripts that could be run daily. These scripts provided a temporary workaround for the most pressing customer issues, allowing us to address them immediately while maintaining system stability. At the same time, I worked with the team to focus on fixing the root causes, ensuring we had the necessary time to thoroughly test and deploy solutions without compromising quality.
+**R:** The data fix scripts allowed us to provide quick resolutions for customers, meeting immediate needs and preventing further escalation. This gave the team the space to address the underlying issues more thoroughly, leading to more effective long-term solutions. The result was a reduction in customer complaints, improved system stability, and a more balanced workload for the team. The customer relationships improved due to our proactive approach, and account management was satisfied with our ability to manage both immediate and long-term needs.
+
+### Regularly stepped in for software managers & directors during planned and unforseen absenses 
+**S:** Although it wasn’t part of my official responsibilities, I was often called upon to step in for software managers and directors during their planned and unforeseen absences. This typically involved attending important meetings with other directors and teams to keep the project momentum going and ensure decisions were made in their absence.
+**T:** My task was to represent the leadership team effectively, ensure alignment across teams, and maintain the flow of communication, even though stepping into this role was not an explicit part of my job description. I needed to act as a leader in these meetings to ensure no progress was lost.
+**A:** I proactively prepared by reviewing all relevant materials, understanding the key concerns and project statuses, and aligning with the absent managers or directors ahead of time. During the meetings, I communicated updates, made decisions where necessary, and facilitated discussions to keep everything on track. Afterward, I provided detailed updates to the managers or directors to ensure they were kept in the loop.
+**R:** By stepping in above and beyond my official role, I helped ensure continuity in communication and decision-making, preventing delays or misalignment. Teams appreciated the stability and leadership, and my involvement strengthened cross-functional relationships. This experience gave me valuable insights into higher-level strategic decision-making and further developed my leadership skills.
 
 ## Introduction of new Processes
-* UAT process
-* Code review process due to bug slip
-  * Tech leads CC'd, 2 approvals
-* 
+### UAT process
+**S:** We noticed recurring issues with mobile app releases—instability that sometimes required hotfixes or even full rollbacks. These problems weren’t always caught during internal testing, which affected customer experience and put pressure on the team post-release.
+**T:** We needed a way to catch issues earlier, particularly those that only appeared under real-world usage, and reduce the risk of unstable releases reaching the full customer base.
+**A:** We introduced a UAT process where app updates were first released to a subset of devices used by select customers. This was done in coordination with our Tier 2 customer support team, who helped identify suitable participants and gather feedback. We monitored the performance and user feedback during this staged rollout and used it to catch and fix issues before a full-scale release.
+**R:** This staged approach helped us detect edge cases and device-specific issues earlier, reducing the number of hotfixes and rollbacks needed. It also improved customer trust, as fewer users were impacted by defects, and it gave us more confidence in each release.
+
+### Code Review Process
+**S:** We had a few incidents where bugs made it into production, despite existing testing and review practices. These issues highlighted gaps in our code review process, especially around complex or high-impact changes.
+**T:** We needed to strengthen our review process to catch more issues before code was merged and ensure higher visibility and accountability on critical changes.
+**A:** We formalized a stricter code review policy. Going forward, all pull requests required two approvals before merging. Additionally, tech leads were CC’d on changes touching sensitive areas of the codebase, even if they weren’t the reviewers, to ensure visibility and provide optional oversight. We also encouraged reviewers to go beyond syntax and style checks and focus more on logic and potential side effects.
+**R:** This change improved code quality and reduced the number of bugs reaching production. It also helped spread knowledge across the team and made it easier to catch architectural or design concerns early. Over time, we saw fewer regressions, and tech leads appreciated the added visibility without being overwhelmed with approvals.
+
 
 ## Projects I'm proud of 
 * T3 roadmap increased stability
@@ -327,12 +382,8 @@ Remember: Seniority is about impact, not tenure.
 </body>
 </html>
 
-## Reasons for Leaving last role
-I left my last role in 2024. I realised that the people management aspects of the role weren’t the best fit for me, and I wasn’t enjoying that part of the job. After spending so many years in that company, it felt like a good time for a change. I took some time to work on my family business, where I managed email and website administration tasks and also contributed to construction-related work. This experience gave me the opportunity to reflect on my career direction. I realised I wanted to return to a role with a stronger focus on QA, an area I’m eager to learn more about and grow in. Additionally, the culture in my previous role involved a lot of out-of-hours and unpaid overtime, which affected my work-life balance. I’m now seeking a role that offers both a better work-life balance and the opportunity to grow within QA.
-
-
 ## Salary
-Since I’m transitioning from a senior engineering role, I understand QA has its own salary expectations, and I’m not looking to match my previous pay. For a mid-level QA role in Ireland, I think something around €45,000 to €65,000 makes sense, depending on the scope. I also bring some added value from my dev background, especially with test automation and understanding how things are built. At this stage, I’m also looking for a role that offers a good balance — something rewarding but sustainable long-term with scope for progression.
+I understand QA has its own salary expectations, and I’m not looking to match my previous pay. For a mid-level QA role in Ireland, I think something around €45,000 to €65,000 makes sense, depending on the scope. I also bring some added value from my dev background, especially with test automation and understanding how things are built. At this stage, I’m also looking for a role that offers a good balance — something rewarding but sustainable long-term with scope for progression.
 
 ## Questions for Potential Employer
 * Onboarding Structure
@@ -343,12 +394,19 @@ Since I’m transitioning from a senior engineering role, I understand QA has it
 * Technologies used 
 * Current automation setup details
 
-## What is Shift-Left Testing?
-> "Shift-Left Testing refers to the practice of involving testing early in the software development lifecycle, rather than waiting until later stages like the end of development or post-production. The goal is to detect and address issues as soon as possible, during the requirements, design, and coding phases, which leads to better quality, reduced costs, and quicker releases."
+## Shift-Left
+### What is Shift-Left Testing?
+> "Shift-Left Testing refers to the practice of involving testing early in the software development lifecycle, rather than waiting until later stages like dev complete. The goal is to detect and address issues as soon as possible, during the requirements, design, and coding phases, which leads to better quality, reduced costs, and quicker releases."
 
-## Why is Shift-Left Beneficial?
+### Why is Shift-Left Beneficial?
 > "Shift-Left Testing helps identify issues early, preventing them from escalating into more expensive and time-consuming problems later. It allows teams to fix defects sooner, which ultimately leads to more reliable software, fewer bugs, and faster delivery. It also encourages collaboration between developers, testers, and other stakeholders early in the process, promoting a shared responsibility for quality."
 
-## How Do You Approach Shift-Left Testing?
+### How Do You Approach Shift-Left Testing?
 > "In my experience, I’ve implemented Shift-Left practices by involving QA early in the development cycle. For example, I work closely with developers during the design and coding phases to define test cases based on user stories or features. Additionally, I focus on automating tests as early as possible, creating unit and integration tests that can be executed during the development phase, to catch bugs before they make it into later stages. By catching issues earlier, we reduce rework and improve the overall quality of the software."
 
+### Notes
+Star Format
+**S:**
+**T:**
+**A:**
+**R:**
