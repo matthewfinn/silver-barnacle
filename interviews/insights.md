@@ -91,3 +91,22 @@ But someone with agency multiplies the impact of everyone around them.
 Give me the one who gets things done.
 
 Skill can be taught. Ownership is rare.
+
+## 12 Lessons from a Senior SWE
+1. Estimates are just guesses
+2. POCs are better than long documents
+3. Don't waste time arguing about tools or tech
+4. Always automate code style and best practices
+5. Showing progress is better than doing the work
+6. The more senior you are, the less it's about coding
+7. You learn to love tests when you work with a legacy app
+8. Every tech problem is a communication problem
+9. Don't start big refactorings if nobody ask you to
+10. Projects fail because of poor communication
+11. The work isn't over when you finish coding
+12. Solve the problem you have today
+
+The hardest part isn't coding.
+It's "people and interactions."
+
+And that's where the real growth happens.
