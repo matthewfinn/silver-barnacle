@@ -23,7 +23,7 @@ describe('Todo application', () => {
         cy.checkA11y(null, { includedImpacts: ['critical', 'serious'] });
 
     });
-    
+
     it('should exclude specific accessibility rules', () => {
         cy.checkA11y(null, {
             rules: {
