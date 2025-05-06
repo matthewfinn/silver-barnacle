@@ -1,3 +1,5 @@
+[Previous](1%20-%20The%20Theory%20Behind%20ATDD.md) | [Next](3%20-%20Writing%20Acceptance%20Test%20in%20Cypress.md)
+
 # Setting Up The Project
 
 ## Create Reach App

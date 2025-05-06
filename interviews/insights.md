@@ -110,3 +110,7 @@ The hardest part isn't coding.
 It's "people and interactions."
 
 And that's where the real growth happens.
+
+## Logging
+The ultimate flex isn't coding perfectly
+It's building systems that make inevitable mistakes visible before they become catastrophes.
