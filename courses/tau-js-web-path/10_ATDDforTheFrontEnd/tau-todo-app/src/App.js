@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import Add from './Add';
+
 function App() {
   const [items, setItems] = useState([]);
 
@@ -8,8 +10,9 @@ function App() {
   };
 
   return (
-    <>
-    </>
+  <>
+  <Add />
+  </>
   );
 }
 

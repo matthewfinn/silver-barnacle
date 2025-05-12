@@ -79,7 +79,16 @@ describe('todo add', () => {
 })
 ````
 
-
+## Quiz
+1. Which keyword do we use for test scenarios in jest?
+   **test**
+2. Which command is used to run jest 
+    **react-scripts test**
+3. Which API function can we use in Testing Library to get test ids?
+    **ByTestId**
+4. Which package have we **not** installed related to Testing Library?
+    **dom**
+5. 
 ## Resources
 [add.spec.js](https://github.com/lewisP707/acceptance-test-driven-development-for-front-end/blob/chapter-5/src/__tests__/add.spec.js)
 [Github: Chapter 4 Starting Point Code](https://github.com/lewisP707/acceptance-test-driven-development-for-front-end/releases/tag/chapter-4)

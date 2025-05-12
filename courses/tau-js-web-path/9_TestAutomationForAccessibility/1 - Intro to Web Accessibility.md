@@ -16,7 +16,7 @@ _Published on December 2008_
 The W3C or World Wide Web Consortium has come up with the Web Content Accessibility Guidelines, which provides a list of guidelines and recommendations on how to make your website more accessible. 
 It contains a set of rules which were grouped under four categories - perceivable, operable, understandable, and robust (POUR for short)
 
-* **P**erceivable - The information should be presented to your users in different 
+* **P**erceivable - The information should be presented to your users in ways they can perceive.
   * Some of your users might have some difficulties with one of their senses, which means that they have to be reliant on using an assistive technology, such as screen readers to access your website.
 * **O**perable - The principle that your users must be able to operate your website by using different means.
   * For example, some of your users might have motor difficulties and will find it hard to use a mouse. This means that your website should also be accessible if users will only use a keyboard.
