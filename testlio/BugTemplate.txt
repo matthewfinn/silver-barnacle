@@ -1,0 +1,16 @@
+**Is reproducible**
+Device and OS: Apple iPhone 12, iOS 18.4.1
+Testable App version: 1.0
+Network: Wi-Fi
+Location: Ireland
+Reproducibility rate: 3/3
+
+Steps to reproduce:
+1.
+2.
+
+Expected result:
+
+Actual result:
+
+Note:
