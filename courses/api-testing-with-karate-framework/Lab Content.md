@@ -1,5 +1,10 @@
 # API Testing with Karate Framework
 
+## Learning Objectives 
+* Understanding API Testing and Karate Framework
+* Sending GET, POST, PUT, PATCH and DELETE request via Karate framework
+* Adding assertions via Karate framework
+
 ## What is an API?
 
 * API stands for **A**pplication **P**rogramming **I**nterface.
@@ -355,3 +360,191 @@ Karate Test report is location at `target/karate-reports/karate-summary.html`
     Then status 201
     And match response.name == productName
 ```
+
+## Write a test scenario to send a POSR request where request payload is in a JSON 
+
+Two options here I played around with
+```java
+ * def jsonData = read("../testData/requestPayload.json")
+    Given request jsonData
+```
+OR 
+```java
+Given request read("../testData/requestPayload.json")
+```
+
+## Write a test scenario to send a PUT request
+PUT request = replace object, entire object required
+
+```java
+  Scenario: Verify update product API
+    * def productName = "Apple iPhone 15"
+    Given request
+      """
+      {
+        "name": "#(productName)",
+        "type": "Mobile",
+        "price": 739,
+        "shipping": 39,
+        "upc": "string",
+        "description": "#(productName)",
+        "manufacturer": "Apple",
+        "model": "iPhone 15",
+        "url": "/apple-iphone-15",
+        "image": "iphone-15.png"
+      }
+      """
+    When method post
+    # status created is 201
+    Then status 201
+    And match response.name == productName
+    * def productId = response.id
+    * print 'productId: ', productId
+
+    Given path "products/" + productId
+    And request
+      """
+      {
+        "name": "#(productName)",
+        "type": "Mobile",
+        "price": 629,
+        "shipping": 39,
+        "upc": "string",
+        "description": "#(productName)",
+        "manufacturer": "Apple",
+        "model": "iPhone 15",
+        "url": "/apple-iphone-15",
+        "image": "iphone-15.png"
+      }
+      """
+
+    When method put
+    Then status 200
+    Then match response.price == 629
+```
+
+## Write a test scenario to send a PATCH request
+Only changed attributes are required for a PATCH request
+
+```java
+Scenario: Verify update PATCH product API
+    * def productName = "Apple iPhone 15"
+    Given request
+      """
+      {
+        "name": "#(productName)",
+        "type": "Mobile",
+        "price": 739,
+        "shipping": 39,
+        "upc": "string",
+        "description": "#(productName)",
+        "manufacturer": "Apple",
+        "model": "iPhone 15",
+        "url": "/apple-iphone-15",
+        "image": "iphone-15.png"
+      }
+      """
+    When method post
+    # status created is 201
+    Then status 201
+    And match response.name == productName
+    Then match response.price == 739
+    Then match response.shipping == 39
+    * def productId = response.id
+    * print 'productId: ', productId
+
+    Given path "products/" + productId
+    And request
+      """
+      {
+        "price": 609,
+        "shipping": 19,
+      }
+      """
+    When method patch
+    Then status 200
+    Then match response.price == 609
+    Then match response.shipping == 19
+```
+## Write a test scenario to send a DELETE request
+
+```java
+Scenario: Verify delete product API
+    * def productName = "Apple iPhone 15"
+    Given request
+      """
+      {
+        "name": "#(productName)",
+        "type": "Mobile",
+        "price": 739,
+        "shipping": 39,
+        "upc": "string",
+        "description": "#(productName)",
+        "manufacturer": "Apple",
+        "model": "iPhone 15",
+        "url": "/apple-iphone-15",
+        "image": "iphone-15.png"
+      }
+      """
+    When method post
+    # status created is 201
+    Then status 201
+    And match response.name == productName
+    Then match response.price == 739
+    Then match response.shipping == 39
+    * def productId = response.id
+    * print 'productId: ', productId
+
+    Given path "products/" + productId
+    When method delete
+    Then status 200
+
+    Given path "products/" + productId
+    When method get
+    Then status 404
+```
+
+## Graded Assignment Quiz
+1. Which of the following is true about Karate Framework?
+
+    * Using the Karate framework we can do API, UI and Performance testing
+    * In the Karate framework test cases are written using the BDD  and follows the Cucumber framework like syntax
+    * Karate framework provides a rich library for assertions
+
+2. Which of the following statement is true for Karate framework?
+
+    * Statements written under Background runs before every test scenario
+    * get, post, put, patch and delete are the keywords used to send the respective method
+
+3. What is the purpose of TestRunner class?
+
+    * It has a code to execute the feature files
+
+4. Which of the following is a correct way to create a variable in a feature file in Karate framework?
+
+    * `* def var = "value"`
+    * `Given def limit = 20`
+
+5. Which variable (keyword) in the Karate framework holds the response of an API?
+
+    * response
+
+6. Which of the following is not a correct way of defining an assertion in the Karate framework?
+
+    *  `And match response.data == "array"`
+
+7. Which of the following is correct way to verify status in Karate Framework?
+
+    * Then status 200
+
+8. Which method or API is used to read a file in Karate framework?
+
+    * `* def payload = read("filepath")`
+
+9. Status code for NOT Found item is ?
+
+    * 404 Not Found
+
+10. What is the difference between PUT and PATCH
+
+    * PATCH required partial request payload (only updated fields) whereas PUT requires complete request payload (updated + unchanged)

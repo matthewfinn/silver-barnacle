@@ -1,0 +1,12 @@
+{
+  "name": "Apple iPhone 16",
+  "type": "Mobile",
+  "price": 929,
+  "shipping": 39,
+  "upc": "string",
+  "description": "Apple iPhone 16",
+  "manufacturer": "Apple",
+  "model": "iPhone 16",
+  "url": "/apple-iphone-16",
+  "image": "iphone-16.png"
+}
