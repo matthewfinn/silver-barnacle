@@ -458,15 +458,6 @@ Docker handles this easily by using the docker-compose.yml we already created! I
 
 ![grid-scale-chrome.png](assets/grid-scale-chrome.png)
 
-## Resources
-[LoL Esports Website](https://lolesports.com/)
-[Esports Automation Repo](https://github.com/elsnoman/esports-automation)
-[dotnet test Command Documenation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-test?tabs=netcore21)
-[Docker Compose Scale Documentation](https://docs.docker.com/compose/reference/scale/)
-[Desired Capabilities Documentation](https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities)
-[Local Selenium Grid Console](localhost:4444/grid/console)
-[Selenium Grid Documentation (non-Docker)](https://seleniumhq.github.io/docs/grid.html)
-
 ## Quiz
 1. **Tests should NOT share a WebDriver**
    True
@@ -482,3 +473,87 @@ Docker handles this easily by using the docker-compose.yml we already created! I
 
 5. **If I wanted to scale my chrome containers to 10, which command would I use?**
    docker-compose up -d --scale chrome=10
+
+## Resources
+[LoL Esports Website](https://lolesports.com/)
+[Esports Automation Repo](https://github.com/elsnoman/esports-automation)
+[dotnet test Command Documenation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-test?tabs=netcore21)
+[Docker Compose Scale Documentation](https://docs.docker.com/compose/reference/scale/)
+[Desired Capabilities Documentation](https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities)
+[Local Selenium Grid Console](localhost:4444/grid/console)
+[Selenium Grid Documentation (non-Docker)](https://seleniumhq.github.io/docs/grid.html)
+
+# 5 - Scaling Containers
+## One Machine isn't Enough
+One machine can only scale so far before running out of resources. In other words, you can only create so many containers and browsers on one machine.
+
+## Introducing Swarm
+We solve this by connecting multiple machines together that each have a Docker Engine. A collection of Docker Engines joined into a cluster is called a **Swarm**.
+
+![lesson5_img1.png](assets/lesson5_img1.png)
+
+Here we have six Linux VMs. These could be physical machines, or virtual machines created with something like VirtualBox, or even cloud instances like ec2's from AWS. Either way, you need to know their IPs and configure some ports so they can communicate with each other. Then you just join each machine into the swarm. Each machine in the swarm is called a Node.
+
+Swarms consist of Manager Nodes and Worker Nodes. Worker Nodes listen for tasks sent by the Manager Nodes and then execute them. Manager Nodes can execute tasks just like Workers, but they are also in charge of sending tasks to Workers and maintaining the **Desired State** of the Swarm.
+
+## Desired vs Actual State
+![lesson5_img2.png](assets/lesson5_img2.png)
+
+Desired State is just what we want our swarm to look like.
+
+If our Desired State was to have 6 nodes with 3 managers and 3 workers where the lead would have the Hub and the rest of the nodes would have one or more containers of Firefox browsers, then Docker Swarm would make sure that its Actual State always matched the Desired State.
+So if our Hub and one of our worker nodes went down or got stale or anything else for whatever reason, then Docker would detect this and spin up an entirely new Lead Manager with a hub and a Worker with new Firefox containers for us
+
+## Docker Stack
+A stack is a group of interrelated services that share dependencies, and can be orchestrated and scaled together.
+![lesson5_img3.png](assets/lesson5_img3.png)
+
+When we needed to scale containers on our one machine, we used:
+> ``docker-compose up``
+
+Docker Stack does the same thing but allow us to deploy our services across an entire swarm in one command! The best part is that you can even use the same ``docker-compose.yml`` file you were using before.
+
+### How to start?
+Steps to get started with Docker Swarm:
+1. You need more than one machine and Docker must be installed on each.
+2. You need to know their IPs and network them successfully. You may need to remove some firewalls for example.
+3. Run this command on the first machine to start the swarm and have a Lead Manager Node:
+   ``docker swarm init``
+   This will also provide you with the commands and tokens needed to join other machines as workers or managers.
+4. Run this command in the terminal of the other machines to join them to the swarm:
+   ``docker swarm join``
+   You will have two tokens to choose from - one that joins the machine as a manager and another that joins the machine as a worker.
+5. Once you have all the nodes you want in the swarm connected, then deploy your stack against your swarm. Remember that this uses the docker-compose.yml file to easily spin up your Selenium Grid.
+6. Now you can start running your tests at any scale! Just remember to change the URL that you pass into your ``RemoteWebDriver`` so the tests target the Grid correctly.
+
+## Quiz
+1. **A collection of Docker Engines joined into a cluster is called a**
+   Docker Swarm
+
+2. **You can only use Virtual Machines in a Docker Swarm**
+   False
+
+3. **Manager Nodes can execute tasks like Worker Nodes**
+   True
+
+4. **Which is true about Docker Swarm?**
+   Swarm will maintain the Desired State for you automatically
+
+5. **Which Docker command is used to initialize a Swarm?**
+   ``docker swarm init``
+
+6. **The token to add a Worker or Manager Node is the same**
+   False
+
+7. **Docker must be installed on each machine you want to join to the swarm**
+   True
+
+8. **Which is NOT true about Docker Stack?**
+   Stack will initialize the Swarm for you
+   
+## Resources
+[SeleniumHQ Official "Getting Started with Docker Compose"](https://github.com/SeleniumHQ/docker-selenium/wiki/Getting-Started-with-Docker-Compose)
+[Docker Swarm Documenation](https://docs.docker.com/get-started/part4/)
+[Docker Stack Documentation](https://docs.docker.com/get-started/part5/)
+[Getting started with Kubernetes and Selenium](https://itnext.io/scaling-selenium-test-execution-with-kubernetes-c79bc53979f5)
+[Jenkins with Docker Documentation](https://github.com/jenkinsci/docker)
