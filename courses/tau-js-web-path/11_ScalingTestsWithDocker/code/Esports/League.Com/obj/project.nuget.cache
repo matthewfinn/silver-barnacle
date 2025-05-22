@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "h//FnzZLwds=",
+  "success": true,
+  "projectFilePath": "D:\\Documents\\Repositories\\silver-barnacle\\courses\\tau-js-web-path\\11_ScalingTestsWithDocker\\code\\Esports\\League.Com\\League.Com.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mattf\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\mattf\\.nuget\\packages\\restsharp\\106.3.1\\restsharp.106.3.1.nupkg.sha512",
+    "C:\\Users\\mattf\\.nuget\\packages\\selenium.support\\3.14.0\\selenium.support.3.14.0.nupkg.sha512",
+    "C:\\Users\\mattf\\.nuget\\packages\\selenium.webdriver\\3.14.0\\selenium.webdriver.3.14.0.nupkg.sha512"
+  ],
+  "logs": []
+}

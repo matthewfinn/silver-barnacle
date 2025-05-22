@@ -1,0 +1,11 @@
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\bin\Debug\netcoreapp2.1\Framework.deps.json
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\bin\Debug\netcoreapp2.1\Framework.dll
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\bin\Debug\netcoreapp2.1\Framework.pdb
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp2.1\Framework.csproj.AssemblyReference.cache
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp2.1\Framework.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp2.1\Framework.AssemblyInfoInputs.cache
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp2.1\Framework.AssemblyInfo.cs
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp2.1\Framework.csproj.CoreCompileInputs.cache
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp2.1\Framework.sourcelink.json
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp2.1\Framework.dll
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp2.1\Framework.pdb

@@ -1,0 +1,13 @@
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\bin\Debug\netcoreapp8.0\Framework.deps.json
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\bin\Debug\netcoreapp8.0\Framework.dll
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\bin\Debug\netcoreapp8.0\Framework.pdb
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\Framework.csproj.AssemblyReference.cache
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\Framework.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\Framework.AssemblyInfoInputs.cache
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\Framework.AssemblyInfo.cs
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\Framework.csproj.CoreCompileInputs.cache
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\Framework.sourcelink.json
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\Framework.dll
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\refint\Framework.dll
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\Framework.pdb
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\Framework\obj\Debug\netcoreapp8.0\ref\Framework.dll

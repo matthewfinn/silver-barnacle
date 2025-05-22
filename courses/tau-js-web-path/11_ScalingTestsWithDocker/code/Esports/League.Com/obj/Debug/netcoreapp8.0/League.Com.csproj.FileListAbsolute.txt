@@ -1,0 +1,16 @@
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\bin\Debug\netcoreapp8.0\League.Com.deps.json
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\bin\Debug\netcoreapp8.0\League.Com.dll
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\bin\Debug\netcoreapp8.0\League.Com.pdb
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\bin\Debug\netcoreapp8.0\Framework.dll
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\bin\Debug\netcoreapp8.0\Framework.pdb
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\League.Com.csproj.AssemblyReference.cache
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\League.Com.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\League.Com.AssemblyInfoInputs.cache
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\League.Com.AssemblyInfo.cs
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\League.Com.csproj.CoreCompileInputs.cache
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\League.Com.sourcelink.json
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\League.Com.csproj.Up2Date
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\League.Com.dll
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\refint\League.Com.dll
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\League.Com.pdb
+D:\Documents\Repositories\silver-barnacle\courses\tau-js-web-path\11_ScalingTestsWithDocker\code\Esports\League.Com\obj\Debug\netcoreapp8.0\ref\League.Com.dll
