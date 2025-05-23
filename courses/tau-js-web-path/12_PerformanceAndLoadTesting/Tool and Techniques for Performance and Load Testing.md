@@ -173,3 +173,267 @@ Now that we're in mobile mode, we can do another audit with Lighthouse, this tim
 
 Resulting report:
 ![mobile-chrome-lighthouse-report.png](assets/mobile-chrome-lighthouse-report.png)
+
+## Page Speed Insights - Mobile
+![page-speed-insights-mobile.png](assets/page-speed-insights-mobile.png)
+
+## WebPageTest - Mobile
+Can configure mobile device with 3G network
+![webpagetest-mobile.png](assets/webpagetest-mobile.png)
+
+Test Running
+![webpagetest-mobile.png](assets/webpagetest-mobile-2.png)
+
+Test Report
+![webpagetest-mobile.png](assets/webpagetest-mobile-3.png)
+
+## Android Studio Profiler
+![chapter3-image3.png](assets/chapter3-image3.png)
+
+Select option to _Profile or debug APK_
+![android-studio.png](assets/android-studio.png)
+
+Select an APK to test
+![android-studio-apk.png](assets/android-studio-apk.png)
+
+The first thing that Android Profiler is going to do is look at the size of the files on your APK.
+This is very important for download times and Google actually has rules about how big APKs can be and also how much space you're taking up on the phone itself.
+![android-studio-apk-profile.png](assets/android-studio-apk-profile.png)
+
+Now that everything is here, You just push the Profiler button and select your connected device. Now, it's going to install the APK on your device.
+You can see that we have CPU, memory, network, and energy.
+Every time something happens, you can see the dot highlighted below.
+You can watch this for certain spikes when things happen, if it's using too much CPU, too much energy, all that sort of thing, all available here.
+![chapter3-image3.2.png](assets/chapter3-image3.2.png)
+
+## Xcode Instruments
+
+Apple provides similar tooling for iOS devices, except it's a little more complicated, of course, because it's iOS.
+
+![chapter3-image4.png](assets/chapter3-image4.png)
+
+You need to have an account that is a developer account with Apple and then you have to have a test application that's built using the development certificate.
+You can use Xcode Devices window to load the test application and Xcode Instruments to begin profiling and it'll be very similar to the Android profiler.
+
+## Device Statistics
+Finally, you can actually just check your device while you're using application to monitor the resources that it's using.
+
+![chapter3-image5.png](assets/chapter3-image5.png)
+The battery usage, memory, mobile data usage, all of these things are available on either an Android or an iOS phone and they can be very useful for determining how an application is behaving.
+
+## Quiz
+1. **Chrome Dev Tools can emulate a 3G network on your laptop**
+    True
+
+2. **How do redirects cause issues for web page performance?**
+   By increasing the total number of network calls
+
+
+3. **WebPageTest can run tests on which device?**
+   * Samsung Galaxy S7
+   * iPhone SE
+   * iPad Mini 2
+
+4. **What has to be enabled on your Android device before profiling with Android Studio?**
+   USB Debugging
+
+5. **What profiling information is generally NOT available on a mobile device?**
+    Request response speed
+
+
+## Resources
+[Android Studio](https://developer.android.com/studio)
+[Instruments Help Topics](https://developer.apple.com/library/archive/documentation/AnalysisTools/Conceptual/instruments_help-collection/Chapter/Chapter.html)
+
+# 4 - Load Testing Tools
+
+## What are the things you want to think about when you're choosing a tool? 
+**Open source versus commercial**
+If your company already has a license for LoadRunner for example, that is probably the tool that you'll want to use. Whereas if you're just getting started, you might want to pick up an open source tool to begin with. And there's a lot of tools that you can start out open source and then move into an enterprise version of that same tool.
+
+**Local versus cloud**
+Are you expecting to run all of your test within your local network or are you outsourcing it to some kind of cloud provider that's going to do the running of the test and give you a report?
+
+**UI vs Script**
+Are you more comfortable with tool that has a UI or are you okay with writing a script for your tool in pure code? Something like JMeter which has a graphical interface might be better for somebody who's not as familiar with coding. But developers and other people who are comfortable with code might prefer Gatling or another tool where you can just write scripts directly.
+
+**Integration with other development tools**
+If you're in a Visual Studio environment, then it makes sense to use the Visual Studio load testing tool that's available.
+Also, if there's already expertise in your company on a certain tool, then by all means leverage that expertise. So, I'm not going to recommend that you use one specific tool and that's the only tool to use. The important thing is to understand what's out there and understand what fits best into your situation.
+
+## Demo using Restful Booker
+Using a local instance of Restful Booker API: [Restful Booker API](https://restful-booker.herokuapp.com/)
+Test Scenario: Frequent booking lookups and less frequent addition of new reservations
+
+### JMeter
+[JMeter Download Page](https://jmeter.apache.org/download_jmeter.cgi)
+
+* GUI based tool written in Java
+* First released in 1998
+* Rich plugin ecosystem
+* You can use JMeter for HTTP calls, FTP calls, web sockets, database, Redis. There's even a web driver plugin for Selenium. Basically, any way that a client and a server can communicate with each other, it's probably covered by a JMeter plugin. And if it's not, you can write your own plugin pretty easily if you're familiar with Java.
+* Supports the Groovy scripting engine (scripty Java)
+* Supports record & playback
+* Supports distributed testing
+
+#### Running JMeter
+* Run `bin/JMeter.bat`
+
+#### Setup JMeter for Demo
+* Downloaded JMX file for course from [here](https://jmeter.apache.org/download_jmeter.cgi)
+* Had to install [JMeter plugin manager](https://jmeter-plugins.org/get/) and put it in the ``lib/ext`` directory
+* Got the `.jmx` file with the sample tests from [here](https://github.com/ambertests/tau_perf/blob/master/RestfulBooker.jmx) & saved it at `JMeter/RestfulBooker.jmx`
+
+##### Plugins
+Options > Plugins Manager
+
+![jmeter-plugins.png](assets/jmeter-plugins.png)
+
+#### Testing with JMeter
+The way that works is you have a test plan & then you can create sort of local variables for your test plan & then you create these thread groups
+![jmeter-env.png](assets/jmeter-env.png)
+Each thread essentially represents a user and this particular thread group has a hundred users and it runs for 90 seconds. 
+![jmeter-threadgroups.png](assets/jmeter-threadgroups.png)
+
+And within this thread group I have these HTTP requests, which is going to the host and looking at the booking, getting it by name, id. So, any HTTP requests you can put together in one of these samplers or you could add more.
+![jmeter-threadgroups-request.png](assets/jmeter-threadgroups-request.png)
+
+This is how you add things and there are lots of options.
+
+![jmeter-add.png](assets/jmeter-add.png)
+
+Running the tests, output: 
+
+_Response times over time_
+![jmeter-running.png](assets/jmeter-running.png)
+
+_Aggregate report_
+![jmeter-running.png](assets/jmeter-running-2.png)
+
+Running from the CLI
+`` .\apache-jmeter-5.6.3\bin\jmeter.bat -t RestfulBooker.jmx -n -l rb_testresults.csv``
+![jmeter-cli.png](assets/jmeter-cli.png)
+
+Now that the test is completer we can review the results saved in the ``rb_testresults.csv`` file
+![jmeter-load-results.png](assets/jmeter-load-results.png)
+
+![jmeter-load-results-now.png](assets/jmeter-load-results-now.png)
+
+### Gatling
+* Scala-based tool
+  * Scala is a scripting language that runs in the JVM
+* First released in 2012
+* Pure scripting interface
+* Support record & playback
+* More modern architecture can support a higher load than JMeter
+* Enterprise version is available
+* More info @ [https://gatling.io](https://gatling.io)
+
+#### Setup
+* Installed Scala plugin in IntelliJ
+* Setup Scala SDK by downloading the one recommended in the plugin interface
+
+#### Running Tests
+
+Sample code located [here](https://github.com/ambertests/tau_perf/blob/master/RestfulBookerSimulation.scala)
+
+Each of the objects is essentially the equivilant of a thread group in JMeter
+````scala
+/**
+ * Copyright 2011-2017 GatlingCorp (http://gatling.io)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package restfulbooker
+
+import io.gatling.core.Predef._
+import io.gatling.http.Predef._
+import scala.concurrent.duration._
+
+class RestfulBookerSimulation extends Simulation {
+
+  object Browse {
+    val browse = repeat(100) {
+      exec(http("get_all_bookings")
+      .get("/booking"))
+      .pause(300 milliseconds)
+      .exec(http("get_by_name")
+      .get("/booking?lastname=Smith"))
+      .pause(250 milliseconds)
+    .exec(http("get_by_id")
+      .get("/booking/3"))
+      .pause(425 milliseconds)
+    }
+  }
+
+  object Book {
+    val feeder = csv("rb_names.csv").random
+
+    val book = repeat(20){
+      feed(feeder)
+      .exec(
+        http("create_booking") // Here's an example of a POST request
+        .post("/booking")
+			  .body(StringBody(
+          """{
+              "firstname" : "${firstName}",
+              "lastname" : "${lastName}",
+              "totalprice" : 111,
+              "depositpaid" : true,
+              "additionalneeds" : "Breakfast",
+              "bookingdates" : {
+                "checkin" : "2013-02-23",
+                "checkout" : "2014-10-23"
+              }
+            }""")).asJSON
+      )
+      .pause(5)
+    }
+  }
+
+  val httpConf = http
+    .baseURL("http://localhost:3001") // Here is the root for all relative URLs
+    .acceptHeader("*/*") // Here are the common headers
+    .contentTypeHeader("application/json")
+
+  // val scn = scenario("Create and Find Bookings") // A scenario is a chain of requests and pauses
+  //   .exec(http("get_all_bookings")
+  //     .get("/booking"))
+  //   .exec(http("get_by_name")
+  //     .get("/booking?lastname=Smith"))
+  //   .exec(http("get_by_id")
+  //     .get("/booking/3"))
+  //   .exec(http("create_booking") // Here's an example of a POST request
+  //     .post("/booking")
+	// 		.body(RawFileBody("RestfulBooker_create_request.txt")))
+
+  val lookers = scenario("Lookers").exec(Browse.browse)
+  val bookers = scenario("Bookers").exec(Book.book)
+
+  setUp(
+    lookers.inject(rampUsers(100) over (30 seconds)),
+    bookers.inject(rampUsers(30) over (10 seconds))
+  ).protocols(httpConf)
+
+  // setUp(scn.inject(atOnceUsers(1)).protocols(httpConf))
+}
+````
+
+**Output report**
+
+![chapter4-image8.png](assets/chapter4-image8.png)
+
+### Generating Load
+Once you have your script figured out, of course the idea is to run a lot of instances of your scripts so you can generate hundreds, thousands, maybe even millions of users for your application.
+
+![chapter4-image9.png](assets/chapter4-image9.png)
