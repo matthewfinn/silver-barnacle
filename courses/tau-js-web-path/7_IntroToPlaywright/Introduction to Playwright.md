@@ -10,7 +10,6 @@ Playwright is a framework that enables reliable end-to-end testing for modern we
 
 It supports multiple languages, and in this course, we are going to focus on Typescript.
 
-# Introduction to Playwright
 ## Playwright Documentation - Menus & Search
 [https://playwright.dev/](https://playwright.dev/)
 

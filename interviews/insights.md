@@ -123,3 +123,31 @@ It's building systems that make inevitable mistakes visible before they become c
 5. The most important engineering ideas are timeless. Don't obsessively learn the latest tech.
 6. Engineers who can write and make complicated ideas simple have outsized influence. The IDE isn't the only place to do valuable work.
 7. Code only matters if it solves a real problem for a real person.
+
+## SQL Injection
+“Can you explain what a SQL injection is?”
+
+Imagine you own a restaurant
+Someone walks in and says
+“Table for 2 please”
+Simple, clean, safe
+
+Now imagine someone walks in and says
+“Table for 2; burn the kitchen”
+And the host actually does it
+That’s SQL injection
+
+It happens when a web app takes raw user input and sends it straight into a database
+without checking or cleaning it
+
+A hacker can sneak in extra commands
+like
+DROP TABLE
+DELETE *
+
+Suddenly your app is doing things it was never supposed to do Because it trusted the input too much
+
+SQL injection isn’t just technical
+It’s about trust
+And what happens when you don’t set boundaries
+https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html 

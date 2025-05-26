@@ -1,3 +1,30 @@
+# Chapter 1 - Introduction to Chai
+[Chai Assertion Library](https://www.chaijs.com/)
+
+Chai is an assertion library for JavaScript frameworks.
+
+Assert statements are used to make sure that the assumptions and actual results of the function are exactly same.
+
+We need a lot of assertions in our test to make sure that the actual result is same as the expected one or
+that meets the acceptance criteria of the test.
+
+Chai's interfaces are broadly classified into two: TDD styles and BDD styles.
+
+| **BDD** | **TDD** |
+|---------|---------|
+| Expect  | Assert  |
+| Should  |         |
+
+# Chapter 2 - Installing Chai
+
+As a prerequisite, NodeJS has to be installed.
+Adding Chai Assertion Library
+Okay, so I have created a simple Node JS project called “chai” here. Let us see how to add Chai Library to this one.
+
+Navigate to the project path through a terminal and enter the command:
+
+`npm install chai -save-dev`
+
 # Chapter 3 - Assertions
 ### 3.1 Assertion Styles: Assert, Expect & Should
 
@@ -128,7 +155,7 @@ should.not.Throw
 
 
 ### Assert
-The assert style is exposed through assert interface. This provides the classic assert-dot notation, 
+The assert style is exposed through assert interface. This provides the classic assert-dot notation,
 similar to that packaged with node.js. This assert module, however, provides several additional tests and is browser compatible.
 
 ````javascript
@@ -156,7 +183,7 @@ chai.config.includeStack = true; // turn on stack trace
 * @param {Boolean}
 * @default true
 
-User configurable property, influences whether or not the showDiff flag should be included in the thrown AssertionErrors. 
+User configurable property, influences whether or not the showDiff flag should be included in the thrown AssertionErrors.
 false will always be false; true will be true when the assertion has requested a diff be shown.
 
 ````javascript
