@@ -1,5 +1,5 @@
 # 1 - Basic Concepts
-When we think of load and performance issues, we often think of![img.png](img.png) outages where websites are going down at the least opportune times and that is certainly an issue.
+When we think of load and performance issues, we often think of![img.png](assets/img.png) outages where websites are going down at the least opportune times and that is certainly an issue.
 **But it's more than just websites going down.**
 The speed and responsiveness of your website or application has a direct impact on how long customers will stay at your site and how likely they are to actually spend money.
 
