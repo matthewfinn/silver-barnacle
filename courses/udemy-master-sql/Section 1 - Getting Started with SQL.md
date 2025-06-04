@@ -320,7 +320,7 @@ ORDER BY amount DESC
 
 ## LIMIT
 * Used to LIMIT the number of rows in the output
-* ALWAYS at the very end of your query
+* **ALWAYS at the very end of your query**
 * Can help to get a quick idea about a table
 
 ### Syntax
