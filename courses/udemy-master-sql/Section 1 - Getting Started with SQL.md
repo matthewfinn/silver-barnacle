@@ -1,3 +1,4 @@
+[← Table of Contents](ToC.md)
 # Section 1: Getting Started with SQL!
 
 **SQL = Structured Query Language**
