@@ -1,5 +1,5 @@
 [← Table of Contents](ToC.md)
-# Section 3: Basics - Grouping
+# Section 3 - Basics: Grouping
 ## Aggregate Functions
 * Aggregate values in multiple rows to one value
 * You can **NOT** include another column
@@ -203,3 +203,162 @@ ORDER BY totalpayment DESC
 ```
 
 ## GROUP BY - Multiple Columns
+
+**SUM of each customers spend split by staff member**
+```sql
+SELECT
+staff_id,
+customer_id, 
+COUNT(*) AS num_rentals,
+SUM(amount) AS total
+FROM payment 
+GROUP BY customer_id, staff_id
+ORDER BY num_rentals DESC
+```
+
+### Coding Exercise 14: GROUP BY multiple columns
+Create a query showing the total sales amount (AS total_sales_amount) and total number of items sold  (AS total_items_sold), grouped by ``category`` and ``sale_date``. Order the results by ``category`` in ascending order and then by ``sale_date`` in ascending order.
+
+Use the ``sales`` table with columns: ``category``, ``sale_date``, ``amount``.
+
+```sql
+SELECT 
+category,
+sale_date,
+COUNT(*) as total_items_sold,
+SUM(amount) as total_sales_amount
+FROM sales
+GROUP BY sale_date, category
+ORDER BY category ASC
+```
+
+### Challenge: GROUP BY multiple columns
+> There are two competitions between the two employees.
+>  1. Which employee had the highest sales amount in a single day?
+>  2. Which employee had the most sales in a single day (not counting payments with amount = 0?
+> 
+> Write two SQL queries to get the answers!
+
+**Solution 1**
+```sql
+SELECT 
+staff_id,
+DATE(payment_date) AS date,
+SUM(amount) AS sales_total_amount
+FROM payment
+GROUP BY staff_id, date
+ORDER BY sales_total_amount DESC
+LIMIT 1
+```
+
+**Solution 2**
+```sql
+SELECT 
+staff_id,
+COUNT(*) as num_sales,
+DATE(payment_date) AS date
+FROM payment
+WHERE amount <> 0
+GROUP BY staff_id, date
+ORDER BY num_sales DESC
+LIMIT 1
+```
+
+## HAVING
+* Used to filter aggregate functions in GROUP BY clauses
+* ``HAVING`` **can only be used with** ``GROUP BY``
+
+### Examples
+**Customers with total spend greater than 200**
+```sql
+SELECT 
+customer_id,
+SUM(amount)
+FROM payment
+GROUP BY customer_id 
+HAVING SUM(amount) > 200
+```
+
+**Staff members with number of sales over 300 grouped by date**
+``` sql
+SELECT 
+staff_id,
+COUNT(*) as num_sales,
+DATE(payment_date) AS date
+FROM payment
+WHERE amount <> 0
+GROUP BY staff_id, date 
+HAVING COUNT(*) > 300 
+ORDER BY num_sales DESC
+```
+
+**Staff members with number of sales over 300 OR less than 50 grouped by date**
+``` sql
+SELECT 
+staff_id,
+COUNT(*) as num_sales,
+DATE(payment_date) AS date
+FROM payment
+WHERE amount <> 0
+GROUP BY staff_id, date 
+HAVING COUNT(*) > 300 OR COUNT(*) < 50
+ORDER BY num_sales DESC
+```
+
+### Coding Exercise 15: HAVING
+Find the cities with more than two transactions where the average transaction amount exceeds $150.00. List the city and the average transaction amount (AS AverageAmount), sorted by the average transaction amount in descending order.
+
+**Necessary Information:**
+* **Table name:** ``Sales``
+* **Columns to consider:** ``City``, ``Amount``, ``TransactionID``
+
+```sql
+SELECT
+City,
+AVG(amount) AS AverageAmount
+FROM Sales
+GROUP BY City
+HAVING AVG(Amount) > 150 AND COUNT(*) > 2
+ORDER BY AVG(Amount) DESC
+```
+
+### Challenge: HAVING
+> In 2020, April 28, 29 and 30 were days with very high revenue. That's why we want to focus in this task only on these days(filter accordingly).
+Find out what is the average payment amount grouped by customer and day – consider only the days/customers with more than 1 payment (per customer and day).
+Order by the average amount in a descending order. 
+> Write a SQL query to find out!
+
+**Solution**
+```sql
+SELECT
+customer_id,
+DATE(payment_date),
+ROUND(AVG(amount), 2) as avg_amount,
+COUNT(*) as num_sales
+FROM payment
+WHERE DATE(payment_date) IN('2020-04-28', '2020-04-29', '2020-04-30')
+GROUP BY customer_id, DATE(payment_date)
+HAVING COUNT(*) > 1
+ORDER BY avg_amount DESC
+```
+**OR**
+
+```sql
+SELECT
+customer_id,
+DATE(payment_date),
+ROUND(AVG(amount), 2) as avg_amount,
+COUNT(*) as num_sales
+FROM payment
+WHERE payment_date BETWEEN '2020-04-28' AND '2020-05-01'
+GROUP BY customer_id, DATE(payment_date)
+HAVING COUNT(*) > 1
+ORDER BY avg_amount DESC
+```
+
+## Setting up the 2nd project
+[flight_database.zip](resources/flight_database.zip)
+
+1. Open CLI in pgAdmin by right-clicking any database and select PSQL tool
+2. Paste command ``\i' D:/Documents/Repositories/silver-barnacle/courses/udemy-master-sql/resources/flight_database/flight_database.sql'``
+3. Hit Enter, this will execute the commands to create a database called **demo**

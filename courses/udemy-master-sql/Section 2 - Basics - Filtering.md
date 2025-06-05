@@ -1,5 +1,5 @@
 [← Table of Contents](ToC.md)
-# Section 2: Basics - Filtering
+# Section 2 - Basics: Filtering
 ## WHERE
 * Used to FILTER the data in the output
 * Always after ``FROM``

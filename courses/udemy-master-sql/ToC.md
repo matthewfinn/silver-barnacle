@@ -6,3 +6,4 @@ Master SQL in just 15 days from Basics to Pro by working daily on real-life proj
 [Section 1 - Getting Started with SQL](Section%201%20-%20Getting%20Started%20with%20SQL.md)
 [Section 2 - Basics - Filtering](Section%202%20-%20Basics%20-%20Filtering.md)
 [Section 3 - Basics - Grouping](Section%203%20-%20Basics%20-%20Grouping.md)
+[Section 4 - Intermediate - Functions](Section%204%20-%20Intermediate%20-%20Functions.md)
