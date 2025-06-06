@@ -1,5 +1,5 @@
 [← Table of Contents](ToC.md)
-# Section 4 - Intermediate: Functions
+# Section 4: Functions
 
 ## LENGTH, LOWER & UPPER
 ### Syntax & Examples
@@ -636,4 +636,8 @@ from rental
 where return_date is not null
 group by customer_id
 order by rental_length desc
+```
+
+```sql
+
 ```

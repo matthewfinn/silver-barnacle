@@ -19,3 +19,6 @@ Follow this format (A 2x2 table)
 |-|-|
 | | |
 ```
+#### Alignment
+| Default Header | Left Align | Right Align | Center Align |
+|----------------|:-----------|------------:|:------------:|

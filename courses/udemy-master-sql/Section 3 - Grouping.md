@@ -1,5 +1,5 @@
 [← Table of Contents](ToC.md)
-# Section 3 - Basics: Grouping
+# Section 3: Grouping
 ## Aggregate Functions
 * Aggregate values in multiple rows to one value
 * You can **NOT** include another column
