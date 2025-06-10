@@ -11,3 +11,4 @@ Mast er SQL in just 15 days from Basics to Pro by working daily on real-life pro
 ### Intermediate
 [Section 4 - Functions](Section%204%20-%20Functions.md)
 [Section 5 - Conditional Expressions](Section%205%20-%20Conditional%20Expressions.md)
+[Section 6 - Joins](Section%206%20-%20Joins.md)
