@@ -498,3 +498,51 @@ WHERE first_name='GEORGE' and last_name='LINTON'
 GROUP BY title, first_name, last_name
 ORDER BY count DESC
 ```
+
+## Summary
+In SQL, certain keywords like `INNER` and `OUTER` in joins are optional and used primarily for clarity. Here's a breakdown:
+Most SQL engines (like PostgreSQL, SQL Server, and Oracle) allow the shorter form (`JOIN`, `LEFT JOIN`, etc.) for convenience.
+
+### Join Keyword Equivalence Table
+
+| Join Type         | Optional Keyword Version     | Equivalent With Full Keywords       |
+|------------------|------------------------------|-------------------------------------|
+| INNER JOIN       | `JOIN`                       | `INNER JOIN`                        |
+| LEFT OUTER JOIN  | `LEFT JOIN`                  | `LEFT OUTER JOIN`                   |
+| RIGHT OUTER JOIN | `RIGHT JOIN`                 | `RIGHT OUTER JOIN`                  |
+| FULL OUTER JOIN  | `FULL JOIN`                  | `FULL OUTER JOIN`                   |
+
+### Explanation of Each Join Type
+![img37.png](assets/img37.png)
+
+- **`INNER JOIN` (`JOIN`)**  
+  Returns rows when there is a match in both tables. This is the default join type when you use `JOIN` without a modifier.
+   ```sql
+      SELECT e.name, d.name
+      FROM employees e
+      JOIN departments d ON e.dept_id = d.id;
+   ```
+- **`LEFT OUTER JOIN` (`LEFT JOIN`)**  
+  Returns all rows from the left table, and matched rows from the right table. If there is no match, NULLs are returned for columns from the right table.
+   ```sql
+      SELECT e.name, d.name
+      FROM employees e
+      LEFT JOIN departments d ON e.dept_id = d.id;
+   ```
+- **`RIGHT OUTER JOIN` (`RIGHT JOIN`)**  
+  Returns all rows from the right table, and matched rows from the left table. If there is no match, NULLs are returned for columns from the left table.
+   ```sql
+      SELECT e.name, d.name
+      FROM employees e
+      RIGHT JOIN departments d ON e.dept_id = d.id;
+   ```
+- **`FULL OUTER JOIN` (`FULL JOIN`)**  
+  Returns all records from both tables, with NULLs in place where there is no match.
+    * If a row in the left table has no match in the right table → it’s still included (with NULLs for right table columns). 
+    * If a row in the right table has no match in the left table → it’s still included (with NULLs for left table columns). 
+    * If there is a match → you get the combined row.
+   ```sql
+      SELECT e.name, d.name
+      FROM employees e
+      FULL JOIN departments d ON e.dept_id = d.id;  
+   ```
