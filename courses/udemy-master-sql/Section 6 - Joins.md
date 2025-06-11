@@ -59,7 +59,7 @@ INNER JOIN TableB B
 ON A.employee = B.employee
 ```
 
-### Practical Examples
+### Examples
 **greencycles database**
 
 ```sql
