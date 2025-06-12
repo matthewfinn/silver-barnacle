@@ -66,3 +66,12 @@ git add .
 
 # Amend the commit without changing the commit message, but add " - amended by TOC script" to prevent looping
 git commit --amend --no-edit -m "$(git log -1 --pretty=%B) - amended by TOC script"
+```
+### Remove URLs
+```shell
+git remote -v 
+git remote set-url origin git@github.com:your-username/your-repo.git
+
+git remote set-url origin git@github.com:matthewfinn/interviews.git
+
+```
