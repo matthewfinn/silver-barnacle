@@ -15,3 +15,4 @@ Mast er SQL in just 15 days from Basics to Pro by working daily on real-life pro
 
 ### Advanced
 [Section 7 - UNION & Subqueries](Section%207%20-%20UNION%20%26%20Subqueries.md)
+[Section 8 - Course Project](Section%208%20-%20Course%20Project.md)
