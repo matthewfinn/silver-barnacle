@@ -506,15 +506,79 @@ ORDER BY name
 **Question:** Which is the top-performing film in the animation category?
 **Answer:** DOGMA FAMILY with 178.70.
 
-**My Solution**
+**My Solution** &#9989;
 ```sql
-
+SELECT 
+title, 
+name, 
+SUM(amount) 
+FROM film f
+INNER JOIN film_category fc
+ON f.film_id = fc.film_id
+INNER JOIN category c
+ON fc.category_id = c.category_id
+INNER JOIN inventory i 
+ON f.film_id = i.film_id
+INNER JOIN rental r 
+ON i.inventory_id = r.inventory_id
+INNER JOIN payment p
+ON r.rental_id = p.rental_id
+GROUP BY title, name
+HAVING SUM(amount) = (SELECT MAX(total) FROM 
+                      (SELECT 
+						title, 
+						name, 
+						SUM(amount) as total
+						FROM film f
+						INNER JOIN film_category fc
+						ON f.film_id = fc.film_id
+						INNER JOIN category c
+						ON fc.category_id = c.category_id
+						INNER JOIN inventory i 
+						ON f.film_id = i.film_id
+						INNER JOIN rental r 
+						ON i.inventory_id = r.inventory_id
+						INNER JOIN payment p
+						ON r.rental_id = p.rental_id
+						GROUP BY title, name) sub
+			            WHERE c.name=sub.name)
 ```
 
 **Course Solution**
 ```sql
-
+SELECT
+title,
+name,
+SUM(amount) as total
+FROM payment p
+LEFT JOIN rental r
+ON r.rental_id=p.rental_id
+LEFT JOIN inventory i
+ON i.inventory_id=r.inventory_id
+LEFT JOIN film f
+ON f.film_id=i.film_id
+LEFT JOIN film_category fc
+ON fc.film_id=f.film_id
+LEFT JOIN category c
+ON c.category_id=fc.category_id
+GROUP BY name,title
+HAVING SUM(amount) =     (SELECT MAX(total)
+			  FROM 
+                                (SELECT
+			          title,
+                                  name,
+			          SUM(amount) as total
+			          FROM payment p
+			          LEFT JOIN rental r
+			          ON r.rental_id=p.rental_id
+			          LEFT JOIN inventory i
+			          ON i.inventory_id=r.inventory_id
+				  LEFT JOIN film f
+				  ON f.film_id=i.film_id
+				  LEFT JOIN film_category fc
+				  ON fc.film_id=f.film_id
+				  LEFT JOIN category c1
+				  ON c1.category_id=fc.category_id
+				  GROUP BY name,title) sub
+			   WHERE c.name=sub.name)
 ```
-
-## Evaluation
-**Score:**
