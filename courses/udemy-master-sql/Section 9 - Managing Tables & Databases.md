@@ -258,7 +258,7 @@ address_id INT REFERENCES address(address_id))
 
 ```
 
-### Assignment 1: CREATE TABLE
+### Assignment 1: `CREATE TABLE`
 Create a table called `online_sales` with the following columns:
 1. `transaction_id` 
 2. `customer_id` 
@@ -283,7 +283,7 @@ promotion_code VARCHAR(10) DEFAULT 'None'
 )
 ```
 
-## INSERT
+## `INSERT`
 ### Syntax
 ```sql
 INSERT INTO <table>
@@ -307,7 +307,7 @@ INSERT INTO online_sales
 VALUES (269,13,10.99),(270,12,22.99)
 ```
 
-### Assignment 2: INSERT
+### Assignment 2: `INSERT`
 Insert these values in the table online _sales:
 
 ![img48.webp](assets/img48.webp)
@@ -327,7 +327,7 @@ Q: Why doesn't it work to insert 'SUMMERDEAL2022' in the column promotion_code?
 A: Violates column character limit
     `ERROR:  value too long for type character varying(10)`
 
-## ALTER TABLE
+## `ALTER TABLE`
 * ADD, DELETE columns
 * ADD, DROP constraints
 * RENAME columns
@@ -447,7 +447,7 @@ ALTER TABLE old_table_name
 RENAME TO new_table_name
 ```
 
-### Challenge: ALTER TABLE
+### Challenge: `ALTER TABLE`
 Changes to be made to the director table in the greencycles db
 1. director_account_name to VARCHAR(30)
 2. drop the default on the last_name
@@ -472,7 +472,7 @@ ALTER TABLE director
 RENAME TO directors
 ```
 
-## DROP & TRUNCATE
+## `DROP` & `TRUNCATE`
 * `DROP TABLE <table_name>` - Deletes Table
 * `DROP SCHEMA <schema_name>` - Deletes Object
 * `TRUNCATE TABLE <table_name>` or `TRUNCATE <table_name>` - Deletes all data in table
@@ -504,7 +504,7 @@ SELECT * FROM emp_table
 TRUNCATE emp_table
 ```
 
-## CHECK
+## `CHECK`
 * Limit the value range that can be placed in a column
 
 ### Syntax
@@ -579,7 +579,7 @@ ALTER TABLE director
 RENAME CONSTRAINT date_check TO data_constraint
 ```
 
-### Challenge: CHECK
+### Challenge: `CHECK`
 Create a table called songs with the following columns:
 ![img50.png](assets/img50.png)
 

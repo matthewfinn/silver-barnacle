@@ -637,7 +637,3 @@ where return_date is not null
 group by customer_id
 order by rental_length desc
 ```
-
-```sql
-
-```
