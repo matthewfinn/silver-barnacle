@@ -21,5 +21,7 @@ Mast er SQL in just 15 days from Basics to Pro by working daily on real-life pro
 
 ### Pro
 [Section 11 - Window Functions](Section%2011%20-%20Window%20Functions.md)
+[Section 12 - Grouping Sets - Rollups - Self-Joins](Section%2012%20-%20Grouping%20Sets%20-%20Rollups%20-%20Self-Joins.md)
+[Section 13 - Course Project](Section%2013%20-%20Course%20Project.md)
 
 ### Extra
