@@ -1,5 +1,5 @@
 # 15 Days of SQL: The Complete SQL Masterclass 2025
-Mast er SQL in just 15 days from Basics to Pro by working daily on real-life projects
+Master SQL in just 15 days from Basics to Pro by working daily on real-life projects
 [Udemy Course Link](https://www.udemy.com/course/15-days-of-sql/)
 
 ## Sections
@@ -21,7 +21,9 @@ Mast er SQL in just 15 days from Basics to Pro by working daily on real-life pro
 
 ### Pro
 [Section 11 - Window Functions](Section%2011%20-%20Window%20Functions.md)
-[Section 12 - Grouping Sets - Rollups - Self-Joins](Section%2012%20-%20Grouping%20Sets%20-%20Rollups%20-%20Self-Joins.md)
+[Section 12 - Grouping Sets, Rollups & Self-Joins](Section%2012%20-%20Grouping%20Sets%20-%20Rollups%20-%20Self-Joins.md)
 [Section 13 - Course Project](Section%2013%20-%20Course%20Project.md)
+[Section 14 - Stored Procedures, Transactions & User-Defined Functions.md](Section%2014%20-%20Stored%20Procedures%20-%20Transactions%20-%20User-Defined%20Functions.md)
+[Section 15 - Indexes - Partitioning - Query Optimisation](Section%2015%20-%20Indexes%20-%20Partitioning%20-%20Query%20Optimisation.md)
 
 ### Extra

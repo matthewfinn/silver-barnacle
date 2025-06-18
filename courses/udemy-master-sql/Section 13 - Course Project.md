@@ -4,7 +4,7 @@
 * * &#9989; = correct, &#10060; = incorrect - marked beside _My Solution_ for each question
 
 
-## Task 1
+## Task 1 - Create Tables
 **Difficulty:** Moderate
 
 ### Task 1.1
@@ -49,7 +49,7 @@ CREATE TABLE departments(
 );
 ```
 
-## Task 2
+## Task 2 - Alter Tables
 **Difficulty:** Moderate
 
 Alter the employees table in the following way:
@@ -72,7 +72,7 @@ ALTER TABLE employees
 RENAME COLUMN job_position TO position_title
 ```
 
-## Task 3
+## Task 3 - Insert Data
 **Difficulty:** Moderate
 ### Task 3.1
 
@@ -165,7 +165,7 @@ VALUES
 (5, 'Back Office', 'Administration')
 ```
 
-## Task 4
+## Task 4 - Update data
 **Difficulty:** Moderate
 
 ### Task 4.1
@@ -223,7 +223,7 @@ Output:
 |-----|
 |8834.75|
 
-## Task 5
+## Task 5 - Create View
 **Difficulty:** Advanced
 
 ### Task 5.1
@@ -260,7 +260,7 @@ LEFT JOIN employees mng
 ON emp.manager_id=mng.emp_id;
 ```
 
-## Task 6
+## Task 6 - Query Averages Per Role Title
 **Difficulty:** Moderate
 Write a query that returns the average salaries for each positions with appropriate roundings.
 
@@ -296,7 +296,7 @@ What is the average salary for a Software Engineer in the company.
 **Answer:**
 6028.00
 
-## Task 7
+## Task 7 - Query Averages Per Division
 **Difficulty:** Moderate
 Write a query that returns the average salaries per division.
 
@@ -324,7 +324,7 @@ What is the average salary in the Sales department?
 Answer:
 6107.41
 
-## Task 8
+## Task 8 - Window Functions/Correlated Subqueries
 **Difficulty:** Advanced
 
 ### Task 8.1
@@ -385,7 +385,7 @@ WHERE salary <
 Answer:
 9
 
-## Task 9
+## Task 9 - Window Function
 **Difficulty:** Advanced
 
 Write a query that returns a running total of the salary development by the start_date.
@@ -420,7 +420,7 @@ What was the total salary after 2018-12-31?
 Answer:
 180202.70
 
-## Task 10
+## Task 10 - Window Function & Unions
 **Difficulty**: Pro / Very difficult
 Create the same running total but now also consider the fact that people were leaving the company.
 
@@ -484,7 +484,7 @@ WHERE is_active ='false'
 ORDER BY start_date) a 
 ```
 
-## Task 11
+## Task 11 - Ranking & Correlated Subqueries
 **Difficulty:** Advanced to Pro
 
 ### Task 11.1
@@ -643,7 +643,7 @@ WHERE e1.position_title=e3.position_title)
 ORDER BY position_title
 ```
 
-## Task 12
+## Task 12 - Grouping Sets
 **Difficulty:** Pro
 
 Write a query that returns all meaningful aggregations of
@@ -724,7 +724,7 @@ position_title
 ORDER BY 1,2,3
 ```
 
-## Task 13
+## Task 13 - Ranking & Natural Join
 **Difficulty:** Advanced to Pro
 Write a query that returns all employees (emp_id) including their position_title, department, their salary, and the rank of that salary partitioned by department.
 The highest salary per division should have rank 1.
@@ -791,7 +791,7 @@ FROM employees
 NATURAL LEFT JOIN departments
 ```
 
-## Task 14
+## Task 14 - Ranking & Natural Join
 
 **Difficulty:** Pro
 Write a query that returns only the top earner of each department including
@@ -823,7 +823,7 @@ Output:
 |12    |Software Engineer|Back Office|7119.00 |
 |8     |SQL Analyst   |Finance   |9993.68 |
 |3     |Head of Sales |Sales     |12587.00|
-|24    |Web Developper|Website   |6418.00 |
+|24    |Web Developer|Website   |6418.00 |
 
 
 Question:

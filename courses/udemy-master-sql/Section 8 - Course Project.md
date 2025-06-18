@@ -5,7 +5,7 @@
 * All challenges related to the **greencycles** demo database supplied
 * &#9989; = correct, &#10060; = incorrect - marked beside _My Solution_ for each question
 
-## Question 1:
+## Question 1 - DISTINCT
 **Level:** Simple
 **Topic:** DISTINCT
 **Task:** Create a list of all the different (distinct) replacement costs of the films.
@@ -26,7 +26,7 @@ FROM film
 ORDER BY 1
 ```
 
-## Question 2:
+## Question 2 - CASE + GROUP BY
 **Level:** Moderate
 **Topic:** CASE + GROUP BY
 **Task:** Write a query that gives an overview of how many films have replacements costs in the following cost ranges
@@ -65,14 +65,14 @@ FROM film
 GROUP BY cost_range
 ```
 
-## Question 3: &#9989;
+## Question 3 - JOIN
 **Level:** Moderate
 **Topic:** JOIN
 **Task:** Create a list of the film titles including their title, length, and category name ordered descendingly by length. Filter the results to only the movies in the category 'Drama' or 'Sports'.
 **Question:** In which category is the longest film and how long is it?
 **Answer:** Sports and 184
 
-**My Solution**
+**My Solution** &#9989;
 ```sql
 SELECT f.title, f.length, c.name
 FROM film f
@@ -99,7 +99,7 @@ WHERE name = 'Sports' OR name = 'Drama'
 ORDER BY length DESC
 ```
 
-## Question 4:
+## Question 4 - JOIN & GROUP BY
 **Level:** Moderate
 **Topic:** JOIN & GROUP BY
 **Task:** Create an overview of how many movies (titles) there are in each category (name).
@@ -134,7 +134,7 @@ GROUP BY name
 ORDER BY 2 DESC
 ```
 
-## Question 5:
+## Question 5 - JOIN & GROUP BY
 **Level:** Moderate
 **Topic:** JOIN & GROUP BY
 **Task:** Create an overview of the actors' first and last names and in how many movies they appear in.
@@ -173,7 +173,7 @@ GROUP BY a.actor_id,first_name, last_name
 ORDER BY COUNT(*) DESC
 ```
 
-## Question 6:
+## Question 6 - LEFT JOIN & FILTERING
 **Level:** Moderate
 **Topic:** LEFT JOIN & FILTERING
 **Task:** Create an overview of the addresses that are not associated to any customer.
@@ -197,7 +197,7 @@ ON c.address_id = a.address_id
 WHERE c.first_name is null
 ```
 
-## Question 7:
+## Question 7 - JOIN & GROUP BY
 **Level:** Moderate
 **Topic:** JOIN & GROUP BY
 **Task:** Create the overview of the sales  to determine the from which city (we are interested in the city in which the customer lives, not where the store is) most sales occur.
@@ -236,7 +236,7 @@ GROUP BY city
 ORDER BY city DESC
 ```
 
-## Question 8:
+## Question 8 - JOIN & GROUP BY
 **Level:** Moderate to Difficult
 **Topic:** JOIN & GROUP BY
 **Task:** Create an overview of the revenue (sum of amount) grouped by a column in the format "country, city".
@@ -279,7 +279,7 @@ GROUP BY country ||', ' ||city
 ORDER BY 2 ASC
 ```
 
-## Question 9:
+## Question 9 - Uncorrelated Subquery
 **Level:** Difficult
 **Topic:** Uncorrelated subquery
 **Task:** Create a list with the average of the sales amount each staff_id has per customer.
@@ -309,7 +309,7 @@ GROUP BY customer_id, staff_id) a
 GROUP BY staff_id
 ```
 
-## Question 10: 
+## Question 10 - EXTRACT + Uncorrelated Subquery
 **Level:** Difficult to Very Difficult
 **Topic:** EXTRACT + Uncorrelated subquery
 **Task:** Create a query that shows average daily revenue of all Sundays.
@@ -343,7 +343,7 @@ FROM
 	 GROUP BY DATE(payment_date),weekday) daily
 ```
 
-## Question 11:
+## Question 11 - Correlated Subquery
 **Level:** Difficult to Very Difficult
 **Topic:** Correlated subquery
 **Task:** Create a list of movies - with their length and their replacement cost - that are longer than the average length in each replacement cost group.
@@ -374,7 +374,7 @@ WHERE length > (SELECT AVG(length) FROM film f2
 ORDER BY length ASC
 ```
 
-## Question 12:
+## Question 12 - Uncorrelated Subquery
 **Level:** Very difficult
 **Topic:** Uncorrelated subquery
 **Task:** Create a list that shows the "average customer lifetime value" grouped by the different districts.
@@ -423,7 +423,7 @@ GROUP BY district
 ORDER BY 2 DESC
 ```
 
-## Question 13:
+## Question 13 - Correlated Query
 **Level:** Very Difficult
 **Topic:** Correlated query
 **Task:** Create a list that shows all payments including the payment_id, amount, and the film category (name) plus the total amount that was made in this category. Order the results ascendingly by the category (name) and as second order criterion by the payment_id ascendingly.
@@ -499,7 +499,7 @@ ON c.category_id=fc.category_id
 ORDER BY name
 ```
 
-## Bonus question 14:
+## Bonus question 14 - Correlated & Uncorrelated Subqueries (nested)
 **Level:** Extremely difficult
 **Topic:** Correlated and uncorrelated subqueries (nested)
 **Task:** Create a list with the top overall revenue of a film title (sum of amount per title) for each category (name).
