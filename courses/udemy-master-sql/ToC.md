@@ -27,3 +27,4 @@ Master SQL in just 15 days from Basics to Pro by working daily on real-life proj
 [Section 15 - Indexes - Partitioning - Query Optimisation](Section%2015%20-%20Indexes%20-%20Partitioning%20-%20Query%20Optimisation.md)
 
 ### Extra
+[Section 16 - CTEs (Common Table Expressions)](Section%2016%20-%20CTEs%20%28Common%20Table%20Expressions%29.md)

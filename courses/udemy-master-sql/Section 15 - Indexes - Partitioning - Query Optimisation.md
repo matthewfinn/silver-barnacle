@@ -303,4 +303,163 @@ ALTER ROLE analyst_emp CREATEDB;
 GRANT analyst_emp TO mia;
 ```
 
-## What are indexes?
+## Indexes
+**Pros:** Indexes are used to increase the performance of read operations**
+**Cons:** Can make data writes slower & additional table will take up more storage
+
+### Using indexes
+* Under the hood data is stored without a particular order
+* Full Table scans are Read-inefficient
+* There are different types of indexes for different situations
+![img70.png](assets/img70.png)
+
+#### Example
+* Placing an index on the `customer_id` column would create a lookup table with pointers to the rows
+* i.e. Record with `customer_id` is in location 1
+![img71.png](assets/img71.png)
+
+### B-Tree index
+* Most common type of index
+* Multi-level tree structure
+* Breaks data down into pages or blocks
+* Should be used for high-cardinality (unique) columns i.e. good for a PK
+* Not entire table (costy in terms of storage)
+* In PostgreSQL there is an index on primary keys by default
+
+![img72.png](assets/img72.png)
+
+### Bitmap index
+* Particularly good for data warehouses i.e. A central repository 
+* Good for large amounts of data with low-cardinality (many repeating values)
+* Very storage efficient
+* More optimised for read & few DML(data manipulation) operations
+
+
+![img73.png](assets/img73.png)
+* `1 1 1 0 0` - meaning "visa" can be found in rows 1, 2 & 3
+* `0 0 0 1 1` - meaning "mastercard" can be found in row 4 & 5
+
+### Indexes - Guidelines
+
+|                              B-Tree Index                               |      Bitmap Index      |
+|:-----------------------------------------------------------------------:|:----------------------:|
+|                              Default Index                              | Slow to update/insert  |
+| Unique Columns (range of different values)<br>Phone numbers, names, PKs |   Storage efficient    |
+|                                                                         | Great read performance |
+
+* Should we put an index on every column? No, they come with a cost
+  * Storage
+  * Create/Update time
+* Only when necessary - if we experience slow query performance due to full table scans
+* Small tables do not require indexes
+* On which columns? Columns that are used as filters (i.e. `WHERE` clauses & `JOIN`)
+
+### Demo: Creating Indexes
+#### Syntax
+**Single column with default (B-Tree) index type**
+```sql
+CREATE INDEX index_name
+ON table_name
+   (
+      column_name
+   );
+```
+**Multiple columns**
+```sql
+CREATE INDEX index_name
+ON table_name [USING method]
+   (
+      column_name
+      [,…]
+   );
+```
+**Multiple columns with default (B-Tree) index type**
+```sql
+CREATE INDEX index_name
+ON table_name [USING method]
+   (
+      column_name1,
+      column_name2
+   );
+```
+
+**Dropping an index**
+```sql
+DROP INDEX <index_name>
+```
+
+#### Examples
+An example of a costly correlated subquery - took 34.978s
+```sql
+SELECT
+(SELECT AVG(amount) FROM payment p2
+	WHERE p2.rental_id = p1.rental_id
+) FROM payment p1
+```
+
+Put an index on `rental_id`
+```sql
+CREATE INDEX idx_rental_id_payment
+ON payment
+(rental_id)
+```
+
+Now running this took 1.237s
+```sql
+SELECT
+(SELECT AVG(amount) FROM payment p2
+	WHERE p2.rental_id = p1.rental_id
+) FROM payment p1
+```
+
+### Assignment 3: Creating indexes
+Execute the following query:
+```sql
+SELECT * FROM flights f2
+WHERE flight_no < (SELECT MAX(flight_no)
+   FROM flights f1
+WHERE f1.departure_airport=f2.departure_airport
+)
+```
+
+This query has a very bad performance - ~44s 
+
+Test indexes on different columns and compare their performance.
+
+Also consider an index on multiple columns.
+
+**Questions for this assignment**
+On which column(s) would you place an index to get the best performance in the query?
+`flight_no` & `departure_airport`
+
+```sql
+CREATE INDEX idx_flights_flight_on
+ON flights
+(flight_no, departure_airport)
+```
+
+## Execution Plan & Query Performance
+
+**Execution Plan** - Order of steps to execute a query
+**Query optimizer** - Find the best way to execute the query
+
+### Explain Function in pgAdmin
+* An estimate of how the query will be executed
+![img74.png](assets/img74.png)
+
+![explain_plan_1750352759517.svg](assets/explain_plan_1750352759517.svg)
+
+### Explain Analyse Function in pgAdmin
+* Shows how the query was executed
+* Can click on each of the operations to see how long they took
+![img75.png](assets/img75.png)
+
+```sql
+SELECT
+(SELECT AVG(amount)
+ FROM payment p2
+ WHERE p2.rental_id=p1.rental_id)
+FROM payment p1
+```
+
+![explain_analyse_plan_1.svg](assets/explain_analyse_plan_1.svg)
