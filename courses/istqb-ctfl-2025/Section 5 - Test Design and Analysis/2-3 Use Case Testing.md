@@ -14,7 +14,7 @@
 * Interactions can be represented using workflows, activity diagrams, business process models
 * Mostly at the system & acceptance levels
 * Good at finding defects in the real world use of the system
-* Tests are designed to exercise the defined behaviours:#
+* Tests are designed to exercise the defined behaviours:
   * Basic
   * Exceptional
   * Alternative

@@ -1,7 +1,5 @@
 [🔙 Home](../home.md)
 
-
-
 # Black-Box Test Techniques
 
 ## Equivalence Partitioning
@@ -23,7 +21,7 @@
 
 ### Points of Attention in Equivalence Partitioning
 * Partitions must **NOT** overlap & must **NOT** be empty
-* Partitions do **NOT** have to be ordered or bordered; they can be:
+* Partitions do **NOT** have to be ordered or bordered
 
 ### Equivalence Partitioning – Example
 * Savings Account in a bank – earns different interest percentages – depending on balance
@@ -71,6 +69,7 @@
 |---------|---------------|-----------------|------------|
 | < 0.00  | 0.00 -> 50.00 | 50.01 -> 999.99 | > 999.99   |
 
+
 | Partition                  | Low       | High       | 
 |----------------------------|-----------|------------|
 | Invalid < 0.00             | No low BV | -0.01      |
@@ -85,6 +84,7 @@
   * Boundary Value **AND** value of the closest neighbor belonging to the adjacent partition
 * 100% 2-value BVA coverage – cover ALL coverage items (Boundary Values)
 * Coverage calculation:
+
   $$
   \frac{\textbf{No. of boundary values tested}}{\textbf{Total no. of identified boundary values}} \times 100\%
   $$
@@ -114,8 +114,9 @@
 * Part of the coverage items are NOT Boundary Values
 * 100 % 3-value BVA coverage – cover ALL coverage items (Boundary Values & their neighbors)
 * Coverage calculation:
+
   $$
-  \frac{\textbf{No. of boundary values & their Neighbours exercised}}{\textbf{Total no. of identified boundary values & their Neighbours}} \times 100\%
+  \frac{\textbf{No. of boundary values and their Neighbours exercised}}{\textbf{Total no. of identified boundary values and their Neighbours}} \times 100\%
   $$
 
 ### Boundary Value Analysis (3-value) applied

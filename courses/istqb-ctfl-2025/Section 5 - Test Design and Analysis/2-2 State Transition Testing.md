@@ -70,6 +70,7 @@ $$
 2. **Valid Transitions Coverage (aka 0-switch coverage)**
    * Coverage items are single valid transitions
    * 100% valid transition coverage – exercise all valid transitions
+   
 $$
  \frac{\textbf{No. of exercised valid transitions}}{\textbf{Total no. of valid transitions}} \times 100\%
 $$
@@ -81,8 +82,9 @@ $$
      * Try to exercise all invalid transitions
    * Test only one invalid transition per test case to avoid **fault masking**
    * Often a minimum requirement for mission & safety-critical software
+
 $$
- \frac{\textbf{No. of exercised valid & invalid transitions}}{\textbf{Total no. of valid & invalid transitions}} \times 100\%
+ \frac{\textbf{No. of exercised valid/invalid transitions}}{\textbf{Total no. of valid/invalid transitions}} \times 100\%
 $$
 
 #### State Transition Testing - Summary

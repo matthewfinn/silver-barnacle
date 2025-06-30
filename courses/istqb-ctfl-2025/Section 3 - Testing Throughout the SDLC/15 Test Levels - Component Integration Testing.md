@@ -3,7 +3,7 @@
 
 
 # Component Integration Testing
-* AKA Unit Integration Testing#
+* a.k.a. Unit Integration Testing
 * Focuses on interfaces & interactions between integrated components
 * Performed after Component testing – mainly by developers
 * In general part of an automated CI process
