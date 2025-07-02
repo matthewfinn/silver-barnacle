@@ -1,0 +1,8 @@
+adb -s serial_number shell
+su
+//kill service
+pkill <process name>
+// kill every 10 seconds until stopped
+watch -n 10 pkill <process name>
+//check if it's running
+ps | grep -E "<process name>"

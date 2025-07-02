@@ -1,7 +1,0 @@
-FCOM
-############################################
-Run FCOM Locally: 
-gulp serve --mantle=http://localhost:8080
-gulp serve --mantle=https://dev-server.net
-gulp serve --mantle=http://qa-server.com
-gulp serve --mantle=https://prod-server.com

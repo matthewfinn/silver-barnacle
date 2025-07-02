@@ -1,8 +1,0 @@
-adb -s serial_number shell
-su
-//kill oberon
-pkill ie.bluetree.android.rcom5.oberon
-// kill every 10 seconds until stopped
-watch -n 10 pkill ie.bluetree.android.rcom5.oberon
-//check if it's running
-ps | grep -E "oberon"
