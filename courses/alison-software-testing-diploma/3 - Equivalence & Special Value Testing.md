@@ -256,11 +256,103 @@ UBV = Upper Boundary Value
   2. Did we issue informative error messages?
   3. Did we allow some kind of recovery from the error?
 
+#### Some Limitations of Boundary Value Testing
+
+Boundary Value Testing (BVT) is very useful for **numeric inputs**, where we can clearly identify minimum, maximum, and boundary-adjacent values. However, it has some **limitations** when applied to other types of inputs.
+
+##### 1. Handling Boolean Variables
+- **Limitation:** Boolean variables only have two possible values: `true` and `false`.
+- **Explanation:** Since there are no "boundaries" in the numeric sense, boundary value testing **does not apply**.
+- **What to Do:** For booleans, you simply test **both possible values** (true and false), typically using **equivalence class testing** instead.
+
+##### 2. Handling Non-Numerical Variables (e.g., Text/String Inputs)
+- **Limitation:** With strings or textual inputs, there’s **no numeric boundary** like min/max numbers.
+- **Explanation:** You cannot apply traditional boundary analysis (like `min`, `min+1`, `max-1`, `max`) on textual data directly.
+- **What to Consider Instead:**
+  - **Length Boundaries:** You can apply boundary testing to the **length** of the text (e.g., empty string, 1 character, maximum allowed length).
+  - **Lexical Boundaries:** Sometimes, you can consider **alphabetical order** (e.g., testing strings like "a", "z").
+  - **Special Characters:** Test cases may include boundary conditions around **allowed vs disallowed characters** (e.g., including symbols, whitespace).
+- **Summary:** For text inputs, boundary testing usually focuses on **input length** or **format restrictions**, not numeric boundaries.
+
+##### Summary Table
+
+| Variable Type | Can BVT Be Applied? | Notes                                                                               |
+|---------------|---------------------|-------------------------------------------------------------------------------------|
+| Numeric       | ✅ Yes               | Classic use of BVT with min, max, and just-inside/outside values.                   |
+| Boolean       | ❌ Not Applicable    | Only two valid values; use equivalence partitioning instead.                        |
+| Text/String   | ⚠️ Limited Use      | Can test **length boundaries** and **format-based limits**, not numeric boundaries. |
+
 #### Quiz: BB Test Design
 * Design a black box test suite for a function that solves the quadratic equation of the form `ax^2 + bx + c = 0`
 
-#### Some Limitations of Boundary Value Testing
-* How to handle boolean variables?
-* What about non-numerical variables where the values may be text?
+**Equivalence classes**
+* Invalid Equation
+* Valid Equation: Roots? Complex, Real, Coincident, Unique
+
+##### 1. Invalid Equation
+- **Description:** The equation is not quadratic (e.g., `a = 0`).
+- **Test Cases:**
+  | Test Case | a | b | c | Expected Outcome |
+  |------------|---|---|---|------------------|
+  | Invalid - Linear Equation | 0 | 2 | 3 | Error or "Not quadratic" |
+  | Invalid - Invalid Equation | 0 | 0 | 3 | Error or "Invalid equation" |
+
+##### 2. Valid Quadratic Equations
+
+###### A. Complex Roots (Discriminant < 0)
+- **Description:** When the discriminant is less than zero (`D < 0`), the quadratic equation has **two complex conjugate roots**. This means there are **no real number solutions**, and the roots will involve the imaginary unit `i` (square root of -1).
+
+Example Explanation:
+- **Equation:** `1x² + 2x + 5 = 0`
+- **Coefficients:** a = 1, b = 2, c = 5
+- **Discriminant (D): D = b² - 4ac = 2² - 4(1)(5) = 4 - 20 = -16**
+
+- **Since D = -16 < 0, the roots are complex**.
+- **Expected Outcome:** Two complex roots, e.g., `x₁ = -1 + 2i`, `x₂ = -1 - 2i`.
+
+**Test Case:**
+| Test Case      | a  | b  | c  | Discriminant (D) | Expected Outcome           |
+|-----------------|----|----|----|------------------|----------------------------|
+| Complex Roots   | 1  | 2  | 5  | -16              | Two complex conjugate roots |
+
+###### B. Real and Distinct Roots (Discriminant > 0)
+- **Description:** Two unique real roots.
+- **Test Case:**
+  | Test Case | a | b | c | Discriminant (D) | Expected Outcome |
+  |------------|---|---|---|------------------|------------------|
+  | Two Real Roots | 1 | -3 | 2 | 1 | Two real distinct roots |
+
+###### C. Real and Coincident Roots (Discriminant = 0)
+- **Description:** One repeated real root.
+- **Test Case:**
+  | Test Case | a | b | c | Discriminant (D) | Expected Outcome |
+  |------------|---|---|---|------------------|------------------|
+  | Coincident Root | 1 | 2 | 1 | 0 | One repeated real root |
+
+---
+
+##### Summary Table
+
+| Class | Description | Example Equation | Example Coefficients (a, b, c) |
+|--------|---------------------------|-----------------------------|---------------------------------|
+| Invalid | Not a quadratic equation | `0x² + 2x + 3 = 0` | (0, 2, 3) |
+| Complex Roots | D < 0 | `1x² + 2x + 5 = 0` | (1, 2, 5) |
+| Real Unique Roots | D > 0 | `1x² - 3x + 2 = 0` | (1, -3, 2) |
+| Real Coincident Roots | D = 0 | `1x² + 2x + 1 = 0` | (1, 2, 1) |
 
 ## Lesson Summary
+**The key points from this module are:**
+* Equivalence class and Special Value testing is a testing strategy for black box testing.
+* Equivalence class testing divides the input data of a software unit into partitions of equivalent data from which test cases can be derived. With creating equivalence classes, you create one for both an invalid and a valid set of values.
+* Special Value testing is where the tester has reason to believe certain values would fail when executing the program.
+* Boundary Value Analysis is selecting test cases at the boundaries of different equivalence classes. The basic boundary value testing would include 5 situations:
+  1. at minimum boundary
+  2. immediately above minimum
+  3. between minimum and maximum
+  4. immediately below maximum
+  5. at maximum boundary
+   
+* Robustness testing is an extension of Boundary values, it is really a test of error handling, asking:
+  1. did you anticipate the error situations?
+  2. did you issue informative error messages?
+  3. did you allow some kind of recovery from the error?
