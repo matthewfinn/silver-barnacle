@@ -1,0 +1,1 @@
+[Where does AI fit in the future of software testing](https://www.qt.io/quality-assurance/blog/where-does-ai-fit-in-the-future-of-software-testing)

@@ -255,7 +255,7 @@ else:
 * Test Strategy primarily addresses:  
   * Which types of tests to deploy?
   * How much effort to devote to which type of testing?
-    * Black-box: Usage-based testing (based on customers actual usage patterms)
+    * Black-box: Usage-based testing (based on customers actual usage patterns)
     * White-box: Structure based
 
 

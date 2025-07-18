@@ -15,7 +15,7 @@ public class CheckIfPalindrome{
 
     }
 
-    private static boolean isPalindrome(String s){
+    private boolean isPalindrome(String s){
 
         String reverse = "";
         for(int i = s.length() - 1; i >= 0; i--){

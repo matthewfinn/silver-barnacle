@@ -7,4 +7,5 @@ LinkedIn
 https://toolsqa.com/
 Stackoverflow
 devtoolsdaily.com
-https://imalittletester.com/ 
+https://imalittletester.com/
+https://www.professionalqa.com/special-value-testing
