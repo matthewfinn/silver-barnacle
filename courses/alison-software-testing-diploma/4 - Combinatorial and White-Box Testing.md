@@ -497,23 +497,43 @@ This is exhaustive testing — totally impractical!
 | **Better Risk Coverage**   | Combining them helps detect issues across **functional, structural, and security aspects**, reducing overall product risk.                                                                                 |
 
 ### White-Box Testing Strategies
-**Coverage-based:**
-* Design test cases to cover certain software elements
-**Fault-based:**
-* Design test cases to expose some category of faults
+Coverage-Based vs Fault-Based Testing
+
+| **Approach**       | **Definition**                                                                | **Examples**                                                |
+| ------------------ | ----------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| **Coverage-Based** | Focuses on executing specific elements of code (statements, branches, paths). | Statement, Decision/Branch, Path, Condition, MC/DC Coverage |
+| **Fault-Based**    | Focuses on designing tests to reveal specific types of faults or defects.     | Mutation Testing, Error Guessing                            |
 
 
-**Some techniques:**
 
-| **Technique**                                                  | **What It Means**                                                                | **What It Focuses On**                                                                               |
-|----------------------------------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| **Statement Coverage**                                         | Have all **lines of code** been executed at least once?                          | **Every statement** runs during tests.                                                               |
-| **Branch Coverage**                                            | Have all **if/else branches** been executed?                                     | Every **decision point** is tested both **true and false**.                                          |
-| **Path Coverage**                                              | Have all possible **execution paths** been followed?                             | **All paths** through the code, even combinations of branches.                                       |
-| **Condition Coverage**                                         | Have all **conditions** in decisions been **true and false** at least once?      | Focus on each **individual condition**, even in complex expressions.                                 |
-| **MC/DC Coverage**<br>*(Modified Condition/Decision Coverage)* | Does **each condition independently affect the decision outcome**?               | Used in **high-safety industries** (aviation, medical), more thorough than basic condition coverage. |
-| **Mutation Testing**                                           | Make **small code changes (mutations)** — do your tests **catch and fail** them? | Measures test suite **effectiveness**, by checking if it detects **introduced bugs**.                |
-| **Data Flow-based Testing**                                    | Focus on **how data is used** — test **definitions and uses of variables**.      | Detects issues like **uninitialized variables, wrong assignments**.                                  |
+**Key Coverage Techniques Explained**
+| **Technique**                                    | **Focus**                                                                                           | **Key Point**                                                                      |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Statement Coverage**                           | Ensure **every line of code** executes at least once.                                               | 100% Statement Coverage is weakest; does **not guarantee branch logic is tested**. |
+| **Decision/Branch Coverage**                     | Ensure **every decision point** (if/else, case, loop) takes **all possible outcomes** (True/False). | 100% Decision Coverage **implies Statement Coverage** but **not vice versa**.      |
+| **Condition Coverage**                           | Ensure **each individual condition** within a decision is **true and false** at least once.         | Does **not guarantee** overall decision outcomes are fully exercised.              |
+| **Modified Condition/Decision Coverage (MC/DC)** | Ensure **each condition independently affects the decision outcome**.                               | More rigorous; required in **safety-critical industries** (aviation, medical).     |
+| **Path Coverage**                                | Ensure **every possible execution path** is taken.                                                  | 100% Path Coverage **implies Branch, Decision, and Statement Coverage**.           |
+| **Mutation Testing**                             | Intentionally introduce **small code changes (mutations)** to check if tests detect errors.         | Focused on **fault detection**, often considered **fault-based testing**.          |
+| **Data Flow Testing**                            | Focuses on **data usage**, testing paths between variable **definitions and uses**.                 | Detects **data-related bugs**, like uninitialized or wrongly assigned variables.   |
+          |
+
+**Summary of Relationships Between Coverages**
+* Path Coverage → Decision/Branch Coverage → Statement Coverage (Strongest → Weakest).
+* MC/DC Coverage is stronger than Condition Coverage, but weaker than Path Coverage.
+* Condition Coverage ≠ Decision Coverage (they test different aspects).
+* Branch Coverage = Decision Coverage (in most practical cases and ISTQB).
+
+**Examples of Coverage Levels**
+| **Coverage Type**   | **Coverage Goal**                                     | **Example of Sufficiency**                                                |
+| ------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Statement**       | All lines of code run at least once.                  | May miss if-statements never taking the false path.                       |
+| **Branch/Decision** | All **True/False outcomes** of decisions tested.      | Detects faulty branching logic; **implies Statement Coverage**.           |
+| **Condition**       | Every **sub-condition** true and false at least once. | Can **miss overall decision outcomes** (may not toggle final outcome).    |
+| **MC/DC**           | Each **condition independently affects outcome**.     | Needed in **high-assurance** industries (aviation, automotive, medical).  |
+| **Path**            | All **possible paths** are executed.                  | Detects complex logic flaws, but **often infeasible for large programs**. |
+
+
 
 ### Coverage-Based Testing vs. Fault-Based Testing
 * Idea behind coverage-based testing:

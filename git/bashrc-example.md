@@ -1,40 +1,65 @@
 notepad ~/.bashrc opens bash rc file from CLI
 
 ## Aliases
-alias gst='git status'
-alias gp='git pull'
-alias grev='git checkout -- .'
-alias gpu='git push'
-alias gd='git diff'
-alias gaa='git add .'
-alias gco='git checkout'
-alias gcm='git checkout master'
-alias gr='git remote'
-alias grv='git remote -v'
-alias grset='git remote set-url'
-alias gcp='git cherry-pick'
-alias glg='git log --stat --max-count=10'
-alias glgg='git log --graph --max-count=10'
-alias glgga='git log --graph --decorate --all'
-alias glo='git log --oneline --decorate --color'
-alias glog='git log --oneline --decorate --color --graph'
-alias gaa='git add .'
-alias gm='git merge'
-alias grh='git reset HEAD'
-alias grhh='git reset HEAD --hard'
-alias gclean='git reset --hard && git clean -dfx'
-alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+### status
+`alias gst='git status'`
 
+### pull
+`alias gp='git pull'`
 
-alias gpoat='git push origin --all && git push origin --tags'
-alias gsta='git stash'
-alias gstp='git stash pop'
-alias gstd='git stash drop'
+### revert current changes locally
+`alias grev='git checkout -- .'`
+
+### add
+`alias gaa='git add .'`
+
+### commit with message
+* `gcmt My Message` will behave like git commit -m "My Message"
+`alias gcmt='f() { git commit -m "$*"; }; f'`
+
+### push
+`alias gpu='git push'`
+
+### diffs
+`alias gd='git diff'`
+
+### checkouts
+`alias gco='git checkout'`
+`alias gcm='git checkout master'`
+
+#### revert current changes locally
+`alias grev='git checkout -- .'`
+
+### remotes
+`alias gr='git remote'`
+`alias grv='git remote -v'`
+`alias grset='git remote set-url'`
+
+### misc
+`alias gcp='git cherry-pick'`
+`alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'`
+`alias gpoat='git push origin --all && git push origin --tags'`
+`alias gsta='git stash'`
+`alias gstp='git stash pop'`
+`alias gstd='git stash drop'`
+`alias gm='git merge'`
+
+### logs
+`alias glg='git log --stat --max-count=10'`
+`alias glgg='git log --graph --max-count=10'`
+`alias glgga='git log --graph --decorate --all'`
+`alias glo='git log --oneline --decorate --color'`
+`alias glog='git log --oneline --decorate --color --graph'`
+
+### resets
+`alias grh='git reset HEAD'`
+`alias grhh='git reset HEAD --hard'`
+`alias gclean='git reset --hard && git clean -dfx'`
 
 ## Will cd into the top of the current repository or submodule.
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 
-## these alias commit and uncomit wip branches
+## these alias commit and uncommit wip branches
 alias gwip='git add -A; git ls-files --deleted -z | xargs -r0 git rm; git commit -m "--wip--"'
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
