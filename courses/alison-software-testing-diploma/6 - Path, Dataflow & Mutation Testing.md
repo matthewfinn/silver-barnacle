@@ -119,8 +119,214 @@ Where:
 - $E$ = Number of edges (arrows in the CFG)
 - $N$ = Number of nodes (statements or blocks)
 
+### Cyclomatic Complexity
+* McCabes metric provides a quantitative measure of testing difficulty and the reliability
+* Intuitively - Number of bounded areas increases with the number of decision nodes and loops
+* The Cyclomatic Complexity of a program provides:
+  * A **lower bound/minimum** on the number of test cases to be designed to guarantee coverage of all linearly independent paths
+  
+Another way of computing cyclomatic complexity:
+* Inspect CFG
+* Determine number of bounded areas in the graph
+
+$CC = V(G) = Total number of bounded areas + 1$
+
+Bounded area = A closed loop formed by a set of nodes and edges. It represents an independent logical path or decision structure in the program. Bounded areas typically arise from branching constructs like `if`, `while`, `for`, or `case`.
+
+#### Example 1
+Consider the following pseudocode:
+
+```pseudocode
+start
+|
+v
+if (condition)
+|         \
+v          v
+block1     block2
+\         /
+v       v
+end
+```
+
+Corresponding CFG
+```pseudocode
+        [Start]
+           |
+           v
+        [Condition]
+         /      \
+        v        v
+   [Block1]   [Block2]
+         \      /
+          v    v
+          [End]
+
+```
+Identifying Bounded Areas:
+There is 1 bounded area: the loop formed between Condition, Block1, and Block2.
+
+Therefore:
+$CC = V(G) = Total number of bounded areas + 1 = 1 + 1 = 2$
+
+#### Example 2
+![cfg_example-annotated.png](assets/cfg_example-annotated.png)
+
+Therefore:
+$CC = V(G) = Total number of bounded areas + 1 = 2 + 1 = 3$
+
+### Practical Path Testing
+* The tester proposes initial set of test data using their experience and judgement
+* A dynamic program analyser is used to:
+  * Measure which parts of the program have been tested
+  * Result used to determine when enough coverage has been reached
+
+### Derivation of Test Cases
+1. Draw control flow graph
+2. Determine cyclomatic complexity
+3. Determine the set of linearly independent paths
+4. Prepare test cases
+   * Force execution along each path
+   * Not practical for larger programs
+
+#### Example
+```java
+int function(int x, int y){
+    while( x != y){
+        if(x > y){
+            x = x - y;
+        }else {
+            y = y - x;
+        }
+    }
+    return x;
+}
+
+```
+
+#### Test Cases
+* Number of independent paths = 3
+  * 1 → 6, test case (x = 1, y = 1)
+  * 1 → 2 → 3 → 5 → 1 → 6, test case (x = 1, y = 2)
+  * 1 → 2 → 4 → 5 → 1 → 6, test case (x = 2, y = 1)
+
+![cfg_3_path.png](assets/cfg_3_path.png)
+
+
 ## Dataflow and Mutation Testing
+### White-Box Testing: Recap
+![coverage-strength.png](assets/coverage-strength.png)
+
+### Data Flow-Based Testing
+* Selects test paths of a program based on the locations of definitions and uses of different variables in a program
+* For a given statement numbered S:
+  * DEF(S) = { X | variable X is defined (i.e., assigned a value) in statement S }
+  * USES(S) = { X | variable X is used (i.e., its value is read) in statement S }
+  * Example: 
+    * `1: a = b;` 
+      * `DEF(1) = {a}`
+      * `USES(1) = {b}`
+    * `2: a = a + b;` 
+      * `DEF(2) = {a}`
+      * `USES(2) = {a,b}`
+
+* A variable X is said to be live at statement S1 if
+  * X is defined at the state S
+  * There exists a path from S to S1 not containing any definition of X
+
+#### Example
+```java
+public class DataFlowExample {
+  public void dataFlowExample() {
+    int x = 10;                        // 1: DEF(1) = {x}, USES(1) = {}
+    int y = 5;                         // 2: DEF(2) = {y}, USES(2) = {}
+    if (x > y) {                       // 3: DEF(3) = {}, USES(3) = {x, y}
+      x = x + y;                       // 4: DEF(4) = {x}, USES(4) = {x, y}
+    } else {                           // 5: N/A - Control Structure
+      y = y + 2;                       // 6: DEF(6) = {y}, USES(6) = {y}
+    }                                  // 7: N/A - Control Structure
+    System.out.println("x = " + x);    // 8: DEF(8) = {}, USES(8) = {x}
+    System.out.println("y = " + y);    // 9: DEF(9) = {}, USES(9) = {y}
+  }
+}
+```
+
+#### Definition-use chain (DU chain)
+* Format `[Variable Name, Statement at which it's defined, Statement when its used]`
+* Example `[X, S, S1]`
+  * S & S1 are statement numbers
+  * X in DEF(S)
+  * X in USES(S1)
+  * The definition of X in the statement S is live at statement S1
+
+#### Simple Data Flow-Based Testing Strategy
+* Every DU chain in a program must be covered at least once
+* Useful for selecting test paths of a program containing nested if and loop statements
 
 ## Mutation Testing
+* The software is first tested using an initial test suite, typically designed using white-box testing strategies.
+* Once the initial testing is complete, mutation testing is performed to evaluate the quality of the test suite.
+* The core idea behind mutation testing is to make small, deliberate changes (called mutations) to the program's source code.
+
+### Main idea
+* **Insert faults into a program**
+  * Check if the test suite is able to detect these
+  * This either validates or invalidates the test suite
+
+### Terminology
+* Each small change made to the original program is called a **mutant**.
+* The resulting modified version of the program (after applying one such change) is called a **mutated program** or simply a **mutant program**.
+
+>If the test suite fails when run against a mutant, the mutant is said to be killed (i.e., the test detected the change).
+If the test suite passes even with the mutant, the mutant is alive, indicating that the test suite might be inadequate.
+
+### Example
+Suppose the original code is:
+```java
+if (a == b)
+```
+A mutation could change it to:
+```java
+if (a != b) // Relational operator mutation
+```
+If your test suite does not fail after this change, it suggests the tests aren't covering this decision condition well enough.
+
+### Use
+* If a mutant remains alive even after all test cases have been executed:
+  * **The test suite is enhanced to kill the mutant**
+* The process of generating and killing of mutants can be automated by predefining a set of primitive changes that can be applied to the program
+
+### Examples of primitive changes to a program
+* Deleting a statement
+* Altering an arithmetic operator
+* Changing the value of a constant
+* Changing a data type
+* etc.
+
+### Traditional Mutation Operators
+* Deletion of a statement
+* Boolean:
+  * Replacement of a statement with another e.g. `==` and `>=`, `<` and `<=`
+  * Replacement of boolean expressions with _true_ or _false_ e.g. `a || b` with `true`
+* Replacement of arithmetic operators
+  * e.g. `*` and `+`, `/` and `-`
+* Replacements of variables (ensuring same scope and type)
+
+### Underlying Hypotheses
+* Mutation testing is based on the following 2 hypotheses
+  1. The Competent Programmer Hypothesis (CPH)
+     > The Competent Programmer Hypothesis assumes that programmers write code that is almost correct — i.e., most real-world faults are small deviations from the intended correct program.
+
+     * Therefore, introducing small changes (mutants) simulates realistic errors.
+     * If a test suite can catch these small changes, it is likely to catch actual bugs introduced by competent programmers.
+  
+  2. The Coupling Effect
+     > The Coupling Effect suggests that test cases capable of detecting simple faults (i.e., single mutants) are also likely to detect more complex faults, which are combinations of simple faults.
+
+     * This justifies using simple mutants for evaluating test suite effectiveness.
+     * It implies that if your test suite can kill all single mutants, it’s probably good enough to detect more complicated errors too.
+
+### The Mutation Process
+![the-mutation-process.png](assets/the-mutation-process.png)
 
 ## Lesson Summary 
