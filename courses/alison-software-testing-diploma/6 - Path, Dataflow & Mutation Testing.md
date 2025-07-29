@@ -329,4 +329,53 @@ If your test suite does not fail after this change, it suggests the tests aren't
 ### The Mutation Process
 ![the-mutation-process.png](assets/the-mutation-process.png)
 
+### Equivalent Mutants
+* An equivalent mutant is a mutated version of the program that, despite the code change, behaves identically to the original program for all possible inputs.
+* Because the mutant does not change the program’s behavior, no test case can distinguish it from the original, so it can never be killed by any test.
+
+**Why Equivalent Mutants Matter?**
+* They **inflate the number of mutants** without providing useful information, potentially lowering the mutation score unfairly.
+* Identifying equivalent mutants is undecidable in general, so they are usually handled heuristically (e.g., manual inspection or tooling support).
+
+#### Example
+Original Code:
+```java
+if (a > b) {
+    doSomething();
+}
+```
+Equivalent mutant (changing `>` to `>=` when `a` and `b` are never equal):
+```java
+if (a >= b) {
+    doSomething();
+}
+```
+If the program logic ensures `a` is never equal to `b`, this mutant behaves exactly the same as the original.
+
+### Disadvantages of Mutation Testing
+* Equivalent Mutants
+* Computationally very expensive
+  * A large number of possible mutants can be generated
+* Certain types of faults are very difficult to inject
+  * Only simple syntactic faults introduced
+
+### Quiz 1
+Q: Identify advantages and disadvantages of mutation testing 
+
+Advantages:
+* Can be automated
+* Helps effectively strengthen black box adn coverage-based test suite
+
+Disadvantages:
+* Equivalent Mutants
+
 ## Lesson Summary 
+Path coverage testing is designs cases that all linearly independent paths in the program are executed at least once.
+A control flow graph describes:
+• The sequence in which different instructions of a program get executed
+• The way control flows through the program
+With loops the number of paths can become extremely large, making all path testing impractical.
+
+In Dataflow testing you have test cases that covers the definitions and uses of different variables in a program. Dataflow testing strategies are useful for selecting test paths of a program containing nested if and loop statements.
+
+Mutation testing is a fault base testing technique, where you introduce a specific fault into a program and then check whether the test cases are effective against it. Mutation testing is performed after the initial testing is complete.
