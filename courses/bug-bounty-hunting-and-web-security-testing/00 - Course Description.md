@@ -13,9 +13,9 @@ At the end of the course I will take you through a **two hour pentest or bug hun
 
 
 As mentioned you'll learn much more than just how to discover security bugs in this course, but here's a list of the main security bugs and vulnerabilities that will be covered in the course:
-* Information Disclosure
-* IDOR (Insecure Direct Object Reference)
+* Information Disclosure Vulnerabilities
 * Broken Access Control
+  * IDOR (Insecure Direct Object Reference)
   * Directory / Path Traversal
   * Cookie Manipulation
   * CSRF (Client-Side Request Forgery)
@@ -30,7 +30,7 @@ As mentioned you'll learn much more than just how to discover security bugs in t
   * Bypassing CSP (Content Security Policy)
   * SQL Injection
   * Blind SQLi
-* Time-based Blind SQLi
+  * Time-based Blind SQLi
 * SSRF (Server-Side Request Forgery)
 * Blind SSRF
 * XXE (XML External Entity) Injection
