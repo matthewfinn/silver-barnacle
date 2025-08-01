@@ -1,0 +1,2 @@
+0000000000000000000000000000000000000000 7116f65a6753cfcfd7a266063168cb0f73ea2d35 Carlos Montoya <carlos@carlos-montoya.net> 1753967215 +0000	commit (initial): Add skeleton admin panel
+7116f65a6753cfcfd7a266063168cb0f73ea2d35 d563bed10c663db5cbe7bedea82c058256332eac Carlos Montoya <carlos@carlos-montoya.net> 1753967215 +0000	commit: Remove admin password from config
