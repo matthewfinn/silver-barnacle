@@ -204,9 +204,60 @@ Typically used to send data from input fields of a website e.g. A login form, se
 These values are sent as part of the request body.
 ![2-login-form.png](assets/2-login-form.png)
 
-A way to intercept this data is by running a proxy
+A way to intercept this data is by running a proxy i.e. Burp Suite
 ![2-proxy.png](assets/2-proxy.png)
 
 ## Manipulating Application Behaviour Through the HTTP GET Method
+![2-get-requests.png](assets/2-get-requests.png)
+
+### Lab: Information disclosure in error messages
+[PortSwigger Lab: Information disclosure in error messages](https://portswigger.net/web-security/information-disclosure/exploiting/lab-infoleak-in-error-messages)
+
+### Lab Solution
+1. Open website
+2. Select a product
+3. Change the `productID` path parameter to something invalid i.e. `https://0adc00ce04e7f2c980203fcf00ab001c.web-security-academy.net/product?productId=bla `
+4. Observe the exception thrown - The unexpected data type causes an exception, and a full stack trace is displayed in the response. This reveals that the lab is using Apache Struts 2 2.3.31.
+   ```java
+   Internal Server Error: java.lang.NumberFormatException: For input string: "bla"
+       at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+       at java.base/java.lang.Integer.parseInt(Integer.java:661)
+       at java.base/java.lang.Integer.parseInt(Integer.java:777)
+       at lab.c.w.x.y.Z(Unknown Source)
+       at lab.o.go.g.z.h(Unknown Source)
+       at lab.o.go.i.z.p.E(Unknown Source)
+       at lab.o.go.i.e.lambda$handleSubRequest$0(Unknown Source)
+       at s.x.s.t.lambda$null$3(Unknown Source)
+       at s.x.s.t.N(Unknown Source)
+       at s.x.s.t.lambda$uncheckedFunction$4(Unknown Source)
+       at java.base/java.util.Optional.map(Optional.java:260)
+       at lab.o.go.i.e.y(Unknown Source)
+       at lab.server.k.a.n.l(Unknown Source)
+       at lab.o.go.v.B(Unknown Source)
+       at lab.o.go.v.l(Unknown Source)
+       at lab.server.k.a.k.p.B(Unknown Source)
+       at lab.server.k.a.k.b.lambda$handle$0(Unknown Source)
+       at lab.c.t.z.p.Q(Unknown Source)
+       at lab.server.k.a.k.b.Q(Unknown Source)
+       at lab.server.k.a.r.V(Unknown Source)
+       at s.x.s.t.lambda$null$3(Unknown Source)
+       at s.x.s.t.N(Unknown Source)
+       at s.x.s.t.lambda$uncheckedFunction$4(Unknown Source)
+       at lab.server.gv.B(Unknown Source)
+       at lab.server.k.a.r.G(Unknown Source)
+       at lab.server.k.w.c.q(Unknown Source)
+       at lab.server.k.q.m(Unknown Source)
+       at lab.server.k.c.m(Unknown Source)
+       at lab.server.gd.F(Unknown Source)
+       at lab.server.gd.r(Unknown Source)
+       at lab.x.e.lambda$consume$0(Unknown Source)
+       at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       at java.base/java.lang.Thread.run(Thread.java:1583)
+   
+   Apache Struts 2 2.3.31
+   ```
+5. Go back to the lab, click _Submit solution_, and enter _2 2.3.31_ to solve the lab.
+
 
 ## Intercepting Requests with Burp Proxy
