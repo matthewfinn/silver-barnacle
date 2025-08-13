@@ -216,7 +216,7 @@ A way to intercept this data is by running a proxy i.e. Burp Suite
 ### Lab Solution
 1. Open website
 2. Select a product
-3. Change the `productID` path parameter to something invalid i.e. `https://0adc00ce04e7f2c980203fcf00ab001c.web-security-academy.net/product?productId=bla `
+3. Change the `productID` path parameter to something invalid i.e. `https://0adc00ce04e7f2c980203fcf00ab001c.web-security-academy.net/product?productId=bla` OR `https://0adc00ce04e7f2c980203fcf00ab001c.web-security-academy.net/product?productId=10000000`
 4. Observe the exception thrown - The unexpected data type causes an exception, and a full stack trace is displayed in the response. This reveals that the lab is using Apache Struts 2 2.3.31.
    ```java
    Internal Server Error: java.lang.NumberFormatException: For input string: "bla"
@@ -257,7 +257,32 @@ A way to intercept this data is by running a proxy i.e. Burp Suite
    
    Apache Struts 2 2.3.31
    ```
-5. Go back to the lab, click _Submit solution_, and enter _2 2.3.31_ to solve the lab.
+5. Enter _2 2.3.31_ to solve the lab. 
 
+This is an **Information Disclosure** bug and if there's vulnerabilities present in that version of _Apache Struts_ they could be used to exploit the application.
 
 ## Intercepting Requests with Burp Proxy
+
+![2-burp-proxy.png](assets/2-burp-proxy.png)
+
+![2-burp-forward-drop.png](assets/2-burp-forward-drop.png)
+**Forward** - Lets it reach the target server
+**Drop** - Stops it reaching target server
+
+![2-burp-suite-interception.png](assets/2-burp-suite-interception.png)
+
+1. Select Proxy Tab & Open _zsecurity.org_
+2. Make sure Intercept is ON
+3. You can see the request details such as cookies etc.
+
+Below we can see 8 request body attributes/values that can be tested for vulnerabilities.
+This expands your attack surface by a great deal!!
+![2-burp-modify.png](assets/2-burp-modify.png)
+```log
+action=pagination_request&sid=5f10a8b5u7&unid=&page=3&lang=&ajax_nonce=896ddb4309&custom_data%5Bsf_taxo%5D=%7B%7D&custom_data%5Bsf_opera%5D=%7B%7D
+```
+
+The values here can be modified and the new values will be sent
+
+They can also be modified in the _Inspector_ tab
+![2-inspector-modification.png](assets/2-inspector-modification.png)
