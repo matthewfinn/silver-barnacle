@@ -1,3 +1,6 @@
+// EVERYTHING HERE WILL FAIL DUE TO THE NEED FOR AN APPLITOOLS API KEY!!!!!!
+
+
 import { test, type Page } from '@playwright/test';
 import { HomePage } from '../pages/home-page';
 import { TopMenuPage } from '../pages/top-menu-page';
@@ -42,7 +45,7 @@ test.beforeAll(async() => {
     Batch = new BatchInfo({name: `Playwright website - ${runnerName}`});
     
     Config = new Configuration();
-    // Config.setApiKey("<your-api-key>");
+    Config.setApiKey("bleeblaablue");
     
     Config.setBatch(Batch);
     if (USE_ULTRAFAST_GRID) {
