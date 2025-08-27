@@ -1,6 +1,7 @@
 {
-  "name": "7_introtoplaywright",
+  "name": "tau-introduction-to-playwright",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test:e2e": "npx playwright test tests/",
@@ -15,10 +16,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.51.1",
-    "@types/node": "^22.13.14",
-    "@applitools/eyes-playwright": "^1.17.0"
+    "@applitools/eyes-playwright": "^1.17.0",
+    "@playwright/test": "^1.55.0",
+    "dotenv": "^16.0.3"
   }
 }

@@ -607,9 +607,91 @@ test.describe.skip('Test Case', () => {
    });
 });
 ```
-### Page Object Model
+### Page Object Models
 
-### Locators & Actions
+**`home-page.ts`**
+```javascript
+import { type Locator, type Page, expect } from '@playwright/test';
+
+export class HomePage {
+    readonly page: Page;
+    readonly getStartedButton: Locator;
+    readonly pageTitle: RegExp;
+
+    constructor(page: Page) {
+        this.page = page;
+        this.getStartedButton = page.getByRole('link', { name: 'Get started' });
+        this.pageTitle = /Playwright/;
+    }
+
+    async clickGetStarted() {
+        await this.getStartedButton.click();
+    }
+
+    async assertPageTitle() {
+        await expect(this.page).toHaveTitle(this.pageTitle);
+    }
+}
+
+export default HomePage;
+```
+
+**`Example2.spec.ts`**
+```javascript
+import {test, expect, Page} from '@playwright/test';
+import { HomePage} from '../pages/home-page';
+// AAA Pattern
+// POM
+
+const URL = 'https://playwright.dev/';
+let homePage: HomePage;
+
+test.beforeEach(async ({page}) =>{
+    await page.goto(URL);
+    homePage = new HomePage(page);
+});
+
+async function clickGetStarted(page:Page) {
+    await homePage.clickGetStarted();
+}
+
+test.describe('Playwright Site Test', () => {
+    test('has title', async ({ page }) => {
+    // Assertion
+        await homePage.assertPageTitle();
+    });
+
+    test('get started link', async ({ page }) => {
+        await clickGetStarted(page)
+        await expect(page).toHaveURL(/.*intro/);
+    });
+
+    /**
+     * 1. Open the page
+     * 2. Click Get Started
+     * 3. Hover over the language dropdown
+     * 4. Click Java option
+     * 5. Check the URL
+     * 6. Check the text "Installing Playwright" isn't displayed
+     * 7. Check the text below is present and visiable
+     * 
+     Playwright is distributed as a set of Maven modules. The easiest way to use it is to add one dependency to your project's pom.xml as described below. If you're not familiar with Maven please refer to its documentation.
+    * 
+    */
+    test('check Java page', async ({ page }) => {
+        await await clickGetStarted(page);
+        await page.getByRole('button', { name: 'Node.js' }).hover();
+        await page.getByText('Java', { exact: true }).click();
+        // await page.getByRole('navigation', { name: 'Main' }).getByText('Java').click(); // in case the locator above doesn't work, you can use this line. Remove the line above and use this one instead.
+        await expect(page).toHaveURL('https://playwright.dev/java/docs/intro');
+        await expect(page.getByText('Installing Playwright', { exact: true })).not.toBeVisible();
+        const javaDescription = `Playwright is distributed as a set of Maven modules. The easiest way to use it is to add one dependency to your project's pom.xml as described below. If you're not familiar with Maven please refer to its documentation.`;
+        await expect(page.getByText(javaDescription)).toBeVisible();
+    });
+
+});
+
+```
 
 
 ### Exercises
@@ -684,9 +766,44 @@ test.describe.skip('Test Case', () => {
 
 
 ## Chapter 4 Troubleshooting Test Issues
-[Exercises](exercises/chapter5.md)
-[Resources](extra-resources/chapter5.md)
+`**demo-todo-app.spec.ts**`
+Changed code to intentionally fail the test
+``` javascript
+  test('should hide other controls when editing', async ({ page }) => {
+    //const todoItem = page.getByTestId('todo-item').nth(1);
+    const todoItem = page.getByTestId('todo-item'); // intentionally changed here to fail the test
+    await todoItem.dblclick();
+    await expect(todoItem.getByRole('checkbox')).not.toBeVisible();
+    await expect(todoItem.locator('label', {
+      hasText: TODO_ITEMS[1],
+    })).not.toBeVisible();
+    await checkNumberOfTodosInLocalStorage(page, 3);
+  });
 
+```
+
+Tests run with `npx playwright test tests-examples/ --project=chromium`
+
+**Failing Test Report**
+![failing-test.png](assets/failing-test.png)
+
+**Trace**
+![trace.png](assets/trace.png)
+
+### Exercises
+1. Make a few other tests fail and explore the reports. What new things have you observed?
+2. Debug a test via VS Code Playwright extension and also via Playwright Inspector. What differences have you noticed? What is the best option in your opinion and why?
+3. Explore the option `await page.pause();` to debug a test. Is it helpful? How is that compared to the Playwright Inspector and VS Code extension?
+4. When running the tests in UI, activate the [watch mode](https://playwright.dev/docs/test-ui-mode#watch-mode) and update a few tests. What happens?
+
+### Resources
+1. [Trace Viewer Intro](https://playwright.dev/docs/trace-viewer-intro)
+2. [Test UI Mode](https://playwright.dev/docs/test-ui-mode)
+3. [Debug](https://playwright.dev/docs/debug)
+4. [Codegen Intro](https://playwright.dev/docs/codegen-intro)
+5. [Test Configuration](https://playwright.dev/docs/test-configuration)
+
+### Quiz
 1. **What you cannot find inside the trace?**
    
    Test Video

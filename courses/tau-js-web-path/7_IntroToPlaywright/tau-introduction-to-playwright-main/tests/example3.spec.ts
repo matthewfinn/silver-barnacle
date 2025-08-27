@@ -1,3 +1,6 @@
+// EVERYTHING HERE WILL FAIL DUE TO THE NEED FOR AN APPLITOOLS API KEY!!!!!!
+
+
 import { test, type Page } from '@playwright/test';
 import { HomePage } from '../pages/home-page';
 import { TopMenuPage } from '../pages/top-menu-page';
@@ -25,7 +28,7 @@ export const USE_ULTRAFAST_GRID: boolean = false;
 export let Batch: BatchInfo;
 export let Config: Configuration;
 export let Runner: EyesRunner;
-let eyes: Eyes; // performs screenshot check
+let eyes: Eyes;
 // end of Applitools
 
 // beforeAll for Applitools
@@ -37,13 +40,13 @@ test.beforeAll(async() => {
     else {
         Runner = new ClassicRunner();
     }
-
+    
     const runnerName = (USE_ULTRAFAST_GRID) ? 'Ultrafast Grid' : 'Classic runner';
     Batch = new BatchInfo({name: `Playwright website - ${runnerName}`});
-
+    
     Config = new Configuration();
-    // Config.setApiKey("<your-api-key>");
-
+    Config.setApiKey("bleeblaablue");
+    
     Config.setBatch(Batch);
     if (USE_ULTRAFAST_GRID) {
         Config.addBrowser(800, 600, BrowserType.CHROME);
@@ -93,7 +96,7 @@ test.describe('Playwright website', () => {
         // https://applitools.com/docs/api-ref/sdk-api/playwright/js-intro/checksettings
         await eyes.check('Home page', Target.window().fully());
     });
-
+    
     test('get started link', async ({ page }) => {
         await clickGetStarted(page);
         await topMenuPage.assertPageUrl(pageUrl);
@@ -101,13 +104,13 @@ test.describe('Playwright website', () => {
         // Layout: Check only the layout and ignore actual text and graphics.
         await eyes.check('Get Started page', Target.window().fully().layout());
     });
-
+    
     test('check Java page', async ({ page }) => {
         await test.step('Act', async () => {
             await clickGetStarted(page);
             await topMenuPage.hoverNode();
             await topMenuPage.clickJava();
-        });
+        });    
         await test.step('Assert', async () => {
             await topMenuPage.assertPageUrl(pageUrl);
             await topMenuPage.assertNodeDescriptionNotVisible();

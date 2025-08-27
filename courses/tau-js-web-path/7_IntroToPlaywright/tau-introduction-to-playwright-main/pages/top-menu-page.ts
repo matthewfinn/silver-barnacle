@@ -22,7 +22,7 @@ export class TopMenuPage {
     async hoverNode() {
         await this.nodeLink.hover();
     }
-
+    
     async clickJava() {
         await this.javaLink.click();
     }

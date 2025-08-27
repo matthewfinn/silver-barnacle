@@ -17,7 +17,7 @@ test.beforeAll(async ({ playwright }) => {
     // create a db connection
     // reuse a sign in state
 });
-
+  
 test.beforeEach(async ({ page }, testInfo) => {
     console.log(`Running ${testInfo.title}`);
     // open a URL
@@ -42,7 +42,7 @@ test.afterEach( async ({ page }, testInfo) => {
 
 // test.describe('Test Case', () => {
 // test.describe.only('Test Case', () => {
-test.describe.skip('Test Case', () => {
+test.describe('Test Case', () => {
     test('Test Scenario One', async ({ page }) => {
         await test.step('Step One', async () => {
             // ...
@@ -54,7 +54,7 @@ test.describe.skip('Test Case', () => {
 
         // ...
     });
-
+  
     test('Test Scenario Two', async ({ page }) => {
         // Arrange
         // Act
@@ -66,7 +66,7 @@ test.describe.skip('Test Case', () => {
         // Act
         // Assert
     });
- */
+ */  
 /**
     test.skip('Test Scenario Four', async ({ page }) => {
         // Arrange
@@ -76,3 +76,4 @@ test.describe.skip('Test Case', () => {
  */
 
   });
+  
