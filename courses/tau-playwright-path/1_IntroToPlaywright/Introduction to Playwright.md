@@ -454,7 +454,163 @@ test('check Java page', async ({ page }) => {
    Playwright will get all the elements that contains the text "Java" anywhere and in case there is more than 1 an error will be thrown and fail the test.
 
 ## Chapter 3 Coding Like a Pro
-WE ARE HERE
+### Test Structure
+**AAA Pattern**
+```javascript
+
+// [Arrange]
+// [Act]
+// [Assert]
+```
+
+**Before All**
+Declares a `beforeAll` hook that is executed once per worker process before all tests.
+
+When called in the scope of a test file, runs before all tests in the file. When called inside a `test.describe()` group, runs before all tests in the group.
+```javascript
+import { test, expect } from '@playwright/test';
+
+test.beforeAll(async ({ playwright }) => {
+    test.skip(
+      !!process.env.PROD,
+      'Test intentionally skipped in production due to data dependency.'
+    );
+    // start a server
+    // create a db connection
+    // reuse a sign in state
+});
+```
+**Before Each**
+Declares a `beforeEach` hook that is executed before each test.
+
+When called in the scope of a test file, runs before each test in the file. When called inside a `test.describe()` group, runs before each test in the group.
+
+You can access all the same `Fixtures` as the test body itself, and also the TestInfo object that gives a lot of useful information. For example, you can navigate the page before starting the test.
+```javascript
+import { test, expect } from '@playwright/test';
+//...
+test.beforeEach(async ({ page }, testInfo) => {
+console.log(`Running ${testInfo.title}`);
+// open a URL
+// clean up the DB
+// create a page object
+// dismiss a modal
+// load params
+});
+```
+
+**After All**
+Declares an `afterAll` hook that is executed once per worker after all tests.
+
+When called in the scope of a test file, runs after all tests in the file. When called inside a `test.describe()` group, runs after all tests in the group.
+```javascript
+import { test, expect } from '@playwright/test';
+//...
+test.afterAll(async ({ page }, testInfo) => {
+console.log('Test file completed.');
+// close a DB connection
+});
+
+```
+**After Each**
+Declares an `afterEach` hook that is executed after each test.
+
+When called in the scope of a test file, runs after each test in the file. When called inside a `test.describe()` group, runs after each test in the group.
+
+You can access all the same `Fixtures` as the test body itself, and also the `TestInfo` object that gives a lot of useful information. For example, you can check whether the test succeeded or failed.
+```javascript
+import { test, expect } from '@playwright/test';
+//...
+test.afterEach( async ({ page }, testInfo) => {
+console.log(`Finished ${testInfo.title} with status ${testInfo.status}`);
+
+if (testInfo.status !== testInfo.expectedStatus)
+console.log(`Did not run as expected, ended up at ${page.url()}`);
+// clean up all the data we created for this test through API calls
+});
+
+```
+**Describe**
+You can declare a group of tests with a title. The title will be visible in the test report as a part of each test's title.
+```javascript
+import { test, expect } from '@playwright/test';
+//...
+test.describe('Test Case', () => {
+    test('Test Scenario One', async ({ page }) => {
+    await test.step('Step One', async () => {
+    // ...
+    });
+
+    await test.step('Step Two', async () => {
+    // ...
+    });
+
+    // ...
+    });
+
+    test('Test Scenario Two', async ({ page }) => {
+    // Arrange
+    // Act
+    // Assert
+    });
+});
+```
+**Only**
+Declares a focused test. If there are some focused tests or suites, all of them will be run but nothing else.
+```javascript
+import { test, expect } from '@playwright/test';
+//...
+test.describe.only('Test Case', () => {
+   test('Test Scenario One', async ({ page }) => {
+   await test.step('Step One', async () => {
+   // ...
+   });
+   
+   await test.step('Step Two', async () => {
+   // ...
+   });
+   
+   // ...
+   });
+   
+   test('Test Scenario Two', async ({ page }) => {
+   // Arrange
+   // Act
+   // Assert
+   });
+});
+```
+**Skip**
+Skip a test. Playwright will not run the test past the `test.skip()` call.
+
+Skipped tests are not supposed to be ever run. If you intend to fix the test, use `test.fixme()` instead.
+```javascript
+import { test, expect } from '@playwright/test';
+//...
+test.describe.skip('Test Case', () => {
+   test('Test Scenario One', async ({ page }) => {
+   await test.step('Step One', async () => {
+   // ...
+   });
+   
+   await test.step('Step Two', async () => {
+   // ...
+   });
+   
+   // ...
+   });
+   
+   test('Test Scenario Two', async ({ page }) => {
+   // Arrange
+   // Act
+   // Assert
+   });
+});
+```
+### Page Object Model
+
+### Locators & Actions
+
 
 ### Exercises
 1. Delete the file `top-menu-page.ts` and try to recreate it. What did you learn?

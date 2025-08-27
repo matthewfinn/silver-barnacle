@@ -42,7 +42,7 @@ test.afterEach( async ({ page }, testInfo) => {
 
 // test.describe('Test Case', () => {
 // test.describe.only('Test Case', () => {
-test.describe.skip('Test Case', () => {
+test.describe('Test Case', () => {
     test('Test Scenario One', async ({ page }) => {
         await test.step('Step One', async () => {
             // ...
