@@ -3,7 +3,7 @@ import LoginPage from '../pages/login-page';
 import pages from '../../utils/pages';
 import userData from '../../data/user-data';
 
-const userName = process.env.USERNAME!;
+const userName = process.env.APP_USERNAME!;
 const password = process.env.PASSWORD!;
 let loginPage: LoginPage;
 
