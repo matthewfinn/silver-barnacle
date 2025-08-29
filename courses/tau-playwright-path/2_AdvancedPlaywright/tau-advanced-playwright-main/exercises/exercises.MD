@@ -1,19 +1,10 @@
 
 
 
-## Chapter 2 - Exercises
-
-1. Implement a new test using dynamic page object for the Forms page (https://demoqa.com/automation-practice-form). Note that this page doesn't require a sign in, so you'll need to have it covered. What changes in the existing code you had to make? How did you handle the buildUrl strategy?
-
-2. Implement a new test using fixture for the search at the Book Store page (https://demoqa.com/books). Explore scenarios for 1 single result ("You Don't Know JS"), multiple results ("java") and no results ("playwright"). How easy was to implement those multiple scenarios? Is the code easy to understand? Do you considere the use of fixtures for this scenario a good strategy?
-
-3. Implement a new test using fixture for the search at the Book Store page (https://demoqa.com/books). Explore scenarios for 1 single result ("You Don't Know JS"), multiple results ("java") and no results ("playwright"). Explore the use of params too. How easy was to implement those multiple scenarios? Is the code easy to understand? Do you considere the use of fixtures for this scenario a good strategy?
 
 ## Chapter 3 - Exercises
 
-1. Implement a new test for "delete 1 book from the collection" (https://demoqa.com/profile) using the existing `deleteBookAPIByIsbn` in [delete-books-collection.ts](/tests/api/requests/delete-books-collection.ts). How easy was to use that existing method? What challenges did you have to implement the test? Did you use the swagger docs at all? Did you need to make any changes for the method to work?
 
-2. Implement a new test for "add list of books to collection" (this is not available in the UI, only via API) - Here is the [swagger doc](https://demoqa.com/swagger/#/BookStore/BookStoreV1BooksPost:~:text=Description-,addListOfBooks,-*). How easy was to use the standard methodology? What challenges did you have to implement the test? How did you handle the buildUrl strategy? Was the error handling implementation usefull at all?
 
 ## Chapter 4 - Exercises
 

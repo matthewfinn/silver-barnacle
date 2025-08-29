@@ -1,4 +1,4 @@
-import { test as base } from '@playwright/test';
+import { test as base, expect } from '@playwright/test';
 import BookPage from '../pages/book-page';
 import hooks from '../../utils/hooks';
 import pages from '../../utils/pages';

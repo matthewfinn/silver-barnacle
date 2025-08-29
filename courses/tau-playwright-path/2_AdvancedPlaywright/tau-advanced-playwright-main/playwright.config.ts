@@ -5,7 +5,7 @@ require('dotenv').config();
 
 export default defineConfig({
   globalSetup: require.resolve('./tests/setup/global-setup'),
-  fullyParallel: false,
+  fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 0,
   workers: undefined,
@@ -30,7 +30,6 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        storageState: 'storageState.json',
        },
     },
     {

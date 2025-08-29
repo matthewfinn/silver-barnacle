@@ -4,15 +4,15 @@ import baseEnvUrl from './tests/utils/environmentBaseUrl';
 require('dotenv').config();
 
 export default defineConfig({
-//   globalSetup: require.resolve('./tests/setup/global-setup'),
-  fullyParallel: true,
+  globalSetup: require.resolve('./tests/setup/global-setup'),
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: 0,
   workers: undefined,
   reporter: 'html',
   // timeout: 5000,
   use: {
-    // storageState: 'storageState.json',
+    storageState: 'storageState.json',
     trace: 'on',
     baseURL: process.env.ENV === 'production' 
       ? baseEnvUrl.production.home
@@ -30,6 +30,7 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
+        storageState: 'storageState.json',
        },
     },
     {

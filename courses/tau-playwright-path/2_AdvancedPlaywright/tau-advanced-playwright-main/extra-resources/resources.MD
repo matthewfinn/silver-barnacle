@@ -1,11 +1,5 @@
 
-## Chapter 2 - Extra resources
-1. https://playwright.dev/docs/test-fixtures
 
-## Chapter 3 - Extra resources
-1. https://playwright.dev/docs/api/class-apirequestcontext
-2. https://playwright.dev/docs/api/class-apirequest
-3. https://playwright.dev/docs/api/class-apiresponse
 
 ## Chapter 4 - Extra resources
 1. https://playwright.dev/docs/test-parameterize#passing-environment-variables

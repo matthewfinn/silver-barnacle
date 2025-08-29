@@ -46,7 +46,6 @@ class SearchPage {
     await expect(this.notLoggedInLabel).not.toBeVisible();
     // await expect(this.notLoggedInLabel).toBeVisible();
   }
-
   async checkLoggedInUser() {
     await expect(this.notLoggedInLabel).not.toBeVisible();
     await expect(this.bookUserLabel).toBeVisible();

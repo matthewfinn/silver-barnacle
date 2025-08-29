@@ -14,7 +14,7 @@ async function deleteAllBooksByUser(apiContext: APIRequestContext, userId: strin
 async function deleteBookAPIByIsbn(apiContext: APIRequestContext, userId: string, isbn: string) {
   const method = methods.delete;
   const requestOptions = { data: { isbn: isbn, userId: userId }};
-  const requestUrl = buildUrl(endpoints.books.delete);
+  const requestUrl = buildUrl(endpoints.book.delete); // this was changed for it to work as API endpoint needed to be added to apiPaths.ts and apiEndpoints.ts
   const response = await executeRequest(apiContext, requestUrl, method, requestOptions);
 }
 

@@ -6,5 +6,8 @@ export default {
   },
   account: {
     get: 'api.account/get',
+  },
+  book: {
+    delete: 'api.book/delete'
   }
 };

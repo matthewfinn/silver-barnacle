@@ -10,7 +10,6 @@ export async function executeRequest(
     const response = await apiContext[method](requestUrl, requestOptions);
     const responseCode = await response.status();
     const responseOk = await response.ok();
-
     if (!responseOk) {
     // if (responseCode !== 200) {
       const errorStatus = `Code: ${responseCode} \r\n`;

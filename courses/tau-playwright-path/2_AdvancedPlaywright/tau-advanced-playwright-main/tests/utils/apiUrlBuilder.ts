@@ -29,7 +29,7 @@ function searchParamsForUrl(page: string, userId?: string) {
 
   switch (page) {
     case endpoints.books.delete:
-      queryParams = { UserId: userId };;
+      //queryParams = { UserId: userId };;
       break;
     default:
       queryParams = {};
@@ -46,7 +46,7 @@ export function buildUrl(endpoint: string, userId?: string, isbn?: string) {
   ]
   .filter(Boolean)
   .join('?');
-  
+  console.log("URL IS " + url)
   return url;
 }
 
