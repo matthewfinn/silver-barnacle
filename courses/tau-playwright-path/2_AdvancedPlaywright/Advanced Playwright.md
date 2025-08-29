@@ -965,29 +965,115 @@ I forced an error by changing the user ID to an invalid ID, and here is what we 
 
 ### Exercises
 1. Implement a new test for "delete 1 book from the collection" (https://demoqa.com/profile) using the existing `deleteBookAPIByIsbn` in [delete-books-collection.ts](/tests/api/requests/delete-books-collection.ts). 
-	- How easy was to use that existing method?
-	- What challenges did you have to implement the test? 
-	- Did you use the swagger docs at all? 
-	- Did you need to make any changes for the method to work?
+
 
 2. Implement a new test for "add list of books to collection" (this is not available in the UI, only via API) - Here is the [swagger doc](https://demoqa.com/swagger/#/BookStore/BookStoreV1BooksPost:~:text=Description-,addListOfBooks,-*). 
-	- How easy was to use the standard methodology? 
-	- What challenges did you have to implement the test? 
-	- How did you handle the buildUrl strategy? 
-	- Was the error handling implementation useful at all?
 ### Resources
 1. [class-apirequestcontext](https://playwright.dev/docs/api/class-apirequestcontext)
 2. [class-apirequest](https://playwright.dev/docs/api/class-apirequest)
 3. [class-apiresponse](https://playwright.dev/docs/api/class-apiresponse)
 
 ## Chapter 4 - Data Management
+### .env file
+
+#### Example `.env` file
+``` json
+APP_USERNAME='Matthew'
+USERID='3b93751b-bba8-442f-a52a-254c88b58767'
+PASSWORD='dfE!5wb1c&KCrw'
+ENV='local'
+APITOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Ik1hdHRoZXciLCJwYXNzd29yZCI6ImRmRSE1d2IxYyZLQ3J3IiwiaWF0IjoxNzU2NDc3OTgwfQ.6PCGMDfyyvIy6t2cA18Op9tZ7hqum_H9Z3aEPvraAcY"
+SLACK_WEBHOOK_URL='https://hooks.slack.com/services/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'
+USERNAME_ADMIN='tau-admin'
+USERNAME_USER='tau-user'
+APPLITOOLS_API_KEY='maythequalitybewithyou'
+
+```
+
+Usually included in the `.gitignore` file
+
+#### Setup
+To use it the following is required in the `playwright.config.ts` file
+
+``` typescript
+require('dotenv').config()
+```
+
+as well as the following dependency in the `package.json` file
+```json
+    "dotenv": "^16.1.4" // not specifically this version but you get the idea
+```
+
+#### Usage
+Examples of how you can access the defined variables in the `.env` is
+
+**In a test file**
+``` typescript
+
+// // The `!` tells TypeScript that we are sure this env variable exists (non-null/non-undefined)
+const username = process.env.APP_USERNAME!;
+const password = process.env.PASSWORD!;
+```
+
+**In a configuration file**
+``` typescript
+  use: {
+    storageState: 'storageState.json',
+    trace: 'on',
+    baseURL: process.env.ENV === 'production' 
+      ? baseEnvUrl.production.home
+      : process.env.ENV === 'staging' 
+        ? baseEnvUrl.staging.home
+        : baseEnvUrl.local.home
+  },
+```
+
+
+#### Github Variables & Secrets
+In GitHub inside your report you can go to Settings, scroll the left menu and find "Secrets and variables".
+Click "Actions" and you'll find a "Secrets" tab and a "Variables" tab.
+
+![](assets/chapter4-img5.png)
+
+The difference between both is that secrets won't be logged - it'll be masked - and variables will be logged.
+
+For example, if you are using an environment variable ``ENV``, it's okay to have it exposed here because it's okay to know the value.
+
+But in the secrets, like ``APITOKEN``, you don't want to expose that to anyone, so it will mask it and keep it as a secret.
+
+### JSON file
+
+HERE via TS 3:16
+### API
+
+
+### Mock Data (https interception)
+
+### CSV file
 
 ### Quiz
+1. Why is it not recommended to push .env files?
+
+2. What is a right way to use .env data in a file?
+
+3. What is not a valid sintax?
+
+4. Why is more recommended to manipulate data via API than via database?
+
+5. Mocking the responses is a great resource and it should be used everytime we don't have testing data. This will guarantee the application is working 100% in all layers (UI, API, UNIT).
 
 ### Exercises
 
-### Resources
+1. If you haven't yet, update your newly created tests (Exercise 2.1, 2.3, 2.4, 3.1, 3.2) to use JSON. What are the be benefits of using this approach? Is there any other approach you'd use for these scenarios?
 
+2. Choose one of the scenarios and update it to use a CSV file. Where there any advantages from the coding perspective in using this approach? How about the advantages in terms of test runtime, which approach is the fastest?
+
+3. Implement a test to perform a sort or a search using HTTPS interception for the Books List page (https://demoqa.com/books) - Here is the [swagger doc](https://demoqa.com/swagger/#/BookStore/BookStoreV1BooksGet:~:text=v1/Books-,Parameters,-Try%20it%20out). Do you consider this approach appropriate for this scenario? Why would you not use it?
+### Resources
+1. [passing-environment-variables](https://playwright.dev/docs/test-parameterize#passing-environment-variables)
+2. [mock-api-requests](https://playwright.dev/docs/mock#mock-api-requests)
+3. [mock-browser-apis](https://playwright.dev/docs/mock-browser-apis)
+4. [create-tests-via-a-csv-file](https://playwright.dev/docs/test-parameterize#create-tests-via-a-csv-file)
 ## Chapter 5 - CI with Observability
 
 ### Quiz

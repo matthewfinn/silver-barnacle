@@ -2,10 +2,7 @@
 
 
 ## Chapter 4 - Extra resources
-1. https://playwright.dev/docs/test-parameterize#passing-environment-variables
-2. https://playwright.dev/docs/mock#mock-api-requests
-3. https://playwright.dev/docs/mock-browser-apis
-4. https://playwright.dev/docs/test-parameterize#create-tests-via-a-csv-file
+
 
 ## Chapter 5 - Extra resources
 1. https://testautomationu.applitools.com/playwright-intro/chapter4.html
