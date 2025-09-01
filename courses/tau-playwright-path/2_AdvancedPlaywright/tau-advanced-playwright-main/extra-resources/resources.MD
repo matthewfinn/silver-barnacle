@@ -11,11 +11,7 @@
 4. https://applitools.com/docs/api-ref/sdk-api/playwright/js-intro/checksettings
 
 ## Chapter 6 - Extra resources
-1. https://playwright.dev/docs/ci
-2. https://playwright.dev/docs/test-parallel
-3. https://testautomationu.applitools.com/github-actions-for-testing/
-4. https://timdeschryver.dev/blog/using-playwright-test-shards-in-combination-with-a-job-matrix-to-improve-your-ci-speed
-5. https://playwrightsolutions.com/whats-an-easy-way-to-tell-how-many-workers/
+
 
 ## GitHub repos worth taking a look
 

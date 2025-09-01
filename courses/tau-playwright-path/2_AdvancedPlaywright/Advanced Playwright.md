@@ -1043,28 +1043,222 @@ But in the secrets, like ``APITOKEN``, you don't want to expose that to anyone, 
 
 ### JSON file
 
-HERE via TS 3:16
+**Example Test Values**
+``` json
+export default {
+    invalidPassword: 'invalid_password',
+    invalidUsername: 'invalid_user',
+    books: {
+        duplicate: '9781449365035',
+        new: '9781449337711',
+    }
+};
+
+```
+
+**Example Environment Details**
+``` json
+export default {
+    ci: {
+      prefix: 'https://demoqa',
+      suffix: '.com',
+    },
+    local: {
+      api: 'https://demoqa.com',
+      home: 'https://demoqa.com',
+    },
+    production: {
+      api: 'https://demoqa.com',
+      home: 'https://demoqa.com',
+    },
+    staging: {
+      api: 'https://demoqa.com',
+      home: 'https://demoqa.com',
+    },
+};
+```
+
+**Example usage**
+``` typescript
+import baseAPIUrl from '../../utils/environmentBaseUrl';
+import userData from '../../data/user-data';
+
+const env = process.env.ENV!;
+
+test.beforeAll(async ({ playwright }) => {
+  apiContext = await playwright.request.newContext({
+      baseURL: baseAPIUrl[env].api,
+      extraHTTPHeaders: {
+          Authorization: `Basic ${Buffer.from(`${userName}:${password}`).toString('base64')}`,
+          Accept: 'application/json',
+      },
+  });
+});
+
+test.describe('Book - Fixture & API with isolated auth', () => {
+  test('Add duplicate book', async ({ bookPage }) => {
+      await addBooks(userId, userData.books.duplicate);
+      await bookPage.goto(userData.books.duplicate);
+  });
+});
+```
 ### API
 
+Make calls to an API to get or push information
+``` typescript
+
+async function deleteAllBooksByUser(apiContext: APIRequestContext, userId: string) {
+  const method = methods.delete;
+  const requestOptions = {};
+  const requestUrl = buildUrl(endpoints.books.delete, userId);
+  const response = await executeRequest(apiContext, requestUrl, method, requestOptions);
+}
+
+async function deleteBookAPIByIsbn(apiContext: APIRequestContext, userId: string, isbn: string) {
+  const method = methods.delete;
+  const requestOptions = { data: { isbn: isbn, userId: userId }};
+  const requestUrl = buildUrl(endpoints.book.delete); // this was changed for it to work as API endpoint needed to be added to apiPaths.ts and apiEndpoints.ts
+  const response = await executeRequest(apiContext, requestUrl, method, requestOptions);
+}
+```
+
+**Can also use direct database connection!**
 
 ### Mock Data (https interception)
 
+``` typescript
+// Test file
+import { test, type Page, type BrowserContext } from '@playwright/test';
+import ProfilePage from '../pages/profile-page';
+import apiPaths from '../../utils/apiPaths';
+import pages from '../../utils/pages';
+
+let profilePage: ProfilePage;
+
+test.beforeEach(async ({ page }) => {
+    await page.goto(pages.profile);
+    profilePage = new ProfilePage(page);
+});
+
+test.describe('Profile - API Interception', () => {
+    test('Sort books', async ({ page, context }) => { 
+        await watchAPICallAndMockResponse(page, context);
+        await profilePage.checkBooksList();
+        await profilePage.sortBooksList();
+        await profilePage.checkSort();
+    });
+});
+
+async function watchAPICallAndMockResponse(page: Page, context: BrowserContext) {
+    await profilePage.mockBooksListResponse(context);
+    const [response] = await Promise.all([
+        page.waitForResponse(new RegExp(apiPaths.account)),
+        await page.reload(),
+    ]);
+    await response.json();
+}
+
+// Mocking Response
+this.booksCollectionRequestRegExp = new RegExp(apiPaths.account);
+
+// apiPaths.account evaluation below
+/**
+export default {
+  account: 'Account/v1/User',
+  books: 'BookStore/v1/Books',
+  book: 'BookStore/v1/Book'
+};
+
+**/
+
+ async mockBooksListResponse(context: BrowserContext) {
+    await context.route(this.booksCollectionRequestRegExp, (route) => route.fulfill({
+      body: JSON.stringify({...(bookListData)})
+    }));
+  }
+  
+  
+// Mock Data
+export default {
+    userId: "2f24c011-a654-4781-9f42-b8b6bfcf7d10",
+    username: "tau-playwright",
+    books: [
+        {
+            isbn: "9781449337711",
+            title: "Designing Evolvable Web APIs with ASP.NET",
+            subTitle: "Harnessing the Power of the Web",
+            author: "Glenn Block et al.",
+            publish_date: "2020-06-04T09:12:43.000Z",
+            publisher: "O'Reilly Media",
+            pages: 238,
+            description: "Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft",
+            website: "http://chimera.labs.oreilly.com/books/1234000001708/index.html"
+        },
+        {
+            isbn: "9781449331818",
+            title: "Learning JavaScript Design Patterns",
+            subTitle: "A JavaScript and jQuery Developer's Guide",
+            author: "Addy Osmani",
+            publish_date: "2020-06-04T09:11:40.000Z",
+            publisher: "O'Reilly Media",
+            pages: 254,
+            description: "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da",
+            website: "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"
+        }
+    ]
+};
+```
+
 ### CSV file
 
+The Playwright test-runner runs in Node.js, this means you can directly read files from the file system and parse them with your preferred CSV library.
+
+See for example this CSV file, in our example input.csv:
+``` csv
+"test_case","some_value","some_other_value"
+"value 1","value 11","foobar1"
+"value 2","value 22","foobar21"
+"value 3","value 33","foobar321"
+"value 4","value 44","foobar4321"
+
+```
+
+Based on this we'll generate some tests by using the csv-parse library from NPM:
+
+``` typescript
+import fs from 'fs';
+import path from 'path';
+import { test } from '@playwright/test';
+import { parse } from 'csv-parse/sync';
+
+const records = parse(fs.readFileSync(path.join(__dirname, 'input.csv')), {
+  columns: true,
+  skip_empty_lines: true
+});
+
+for (const record of records) {
+  test(`foo: ${record.test_case}`, async ({ page }) => {
+    console.log(record.test_case, record.some_value, record.some_other_value);
+  });
+}
+```
 ### Quiz
-1. Why is it not recommended to push .env files?
-
-2. What is a right way to use .env data in a file?
-
-3. What is not a valid sintax?
-
-4. Why is more recommended to manipulate data via API than via database?
-
-5. Mocking the responses is a great resource and it should be used everytime we don't have testing data. This will guarantee the application is working 100% in all layers (UI, API, UNIT).
+1. **Why is it not recommended to push .env files?**
+		.env files are usually used to store sensitive data. Due to security issues, this file should not be pushed to any repositories neither shared between people.
+2. **What is a right way to use .env data in a file?**
+		process.env.VARNAME
+3. **What is not a valid syntax?**
+		baseAPIUrl.[env].api
+4. **Why is more recommended to manipulate data via API than via database?**
+		because APIs contain rules that will prevent inconsistent data to be added to the database.
+5. **Mocking the responses is a great resource and it should be used everytime we don't have testing data. This will guarantee the application is working 100% in all layers (UI, API, UNIT).**
+		false
 
 ### Exercises
 
 1. If you haven't yet, update your newly created tests (Exercise 2.1, 2.3, 2.4, 3.1, 3.2) to use JSON. What are the be benefits of using this approach? Is there any other approach you'd use for these scenarios?
+
+
 
 2. Choose one of the scenarios and update it to use a CSV file. Where there any advantages from the coding perspective in using this approach? How about the advantages in terms of test runtime, which approach is the fastest?
 
@@ -1077,7 +1271,29 @@ HERE via TS 3:16
 ## Chapter 5 - CI with Observability
 
 ### Quiz
+1. **Why is it important to add the reports to the pipeline?**
+		
+2. **Why is it important to connect your pipeline to a communication tool?**
+		
+3. **What is the ideal value of shardTotal?**
+		
+4. **What would be nice to have in a communication tool's post in order to improve communication and simplify the issue identification process?**
+		
 
 ### Exercises
 
+1. If you are working on a project, regardless the testing framework your team is using, idetify the stages of your pipeline. 
+    1. How long each stage is taking? 
+    2. Is there any job or stage that can be pararelized to speed up the pipeline? 
+    3. Are the tests using any pararelization strategy? 
+    4. Are the end-to-end/ui tests blocking the deployment?
+    5. Is there any communication (email to the team or job's result posted in a communication tool such as Slack or Microsoft Teams) being sent?
+    6. How often does the build fail and it's noticed only after hours/days?
+2. If you are already using playwright, are you using any sharding strategy? How often do you need to revisit that setup to keep it efficient?
+
 ### Resources
+1. https://playwright.dev/docs/ci
+2. https://playwright.dev/docs/test-parallel
+3. https://testautomationu.applitools.com/github-actions-for-testing/
+4. https://timdeschryver.dev/blog/using-playwright-test-shards-in-combination-with-a-job-matrix-to-improve-your-ci-speed
+5. https://playwrightsolutions.com/whats-an-easy-way-to-tell-how-many-workers/

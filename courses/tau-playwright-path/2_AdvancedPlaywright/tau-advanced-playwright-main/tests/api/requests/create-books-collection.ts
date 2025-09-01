@@ -21,7 +21,7 @@ async function addListOfBooksToCollection(apiContext: APIRequestContext, userId:
     }
   };
   const requestUrl = buildUrl(endpoints.books.post, userId);
-  const response = await executeRequest(apiContext, requestUrl, method, requestOptions);
+  await executeRequest(apiContext, requestUrl, method, requestOptions);
 }
 
 export default { addBookToCollection, addListOfBooksToCollection };

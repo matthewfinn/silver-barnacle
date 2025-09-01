@@ -29,7 +29,7 @@ function searchParamsForUrl(page: string, userId?: string) {
 
   switch (page) {
     case endpoints.books.delete:
-      //queryParams = { UserId: userId };;
+      queryParams = { UserId: userId };;
       break;
     default:
       queryParams = {};

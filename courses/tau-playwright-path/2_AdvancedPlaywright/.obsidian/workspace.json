@@ -169,19 +169,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "cb474db5f90b2095",
+  "active": "b56667022b6dfa09",
   "lastOpenFiles": [
-    "assets/chapter4-img5.png",
-    "assets/Unconfirmed 319547.crdownload",
-    "tau-advanced-playwright-main/playwright-report/data/baf30ef0057231979ef28197007cffb7c604092b.zip",
-    "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-c0304-xture-API-Add-list-of-books-chromium/trace.zip",
-    "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-c0304-xture-API-Add-list-of-books-chromium",
+    "tau-advanced-playwright-main/playwright-report/data/4643e1b7f5fd37c871f9489a03d51742f507ff7c.zip",
+    "tau-advanced-playwright-main/playwright-report/data/232a35af24768aa777e343918cbd7d4993a7483a.zip",
+    "tau-advanced-playwright-main/playwright-report/data/ca5d59ffa91b2ed75e30c5955d64dd5a8f5ca6df.zip",
+    "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-b8d3e-PI-Optionally-delete-a-book-chromium/trace.zip",
+    "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-b8d3e-PI-Optionally-delete-a-book-chromium",
+    "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-b47e4-rmation-matches-local-books-chromium/trace.zip",
+    "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-b47e4-rmation-matches-local-books-chromium",
+    "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-540b1-xture-API-Add-list-of-books-chromium/trace.zip",
+    "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-540b1-xture-API-Add-list-of-books-chromium",
     "tau-advanced-playwright-main/test-results/setup-trace.zip",
     "tau-advanced-playwright-main/test-results",
-    "tau-advanced-playwright-main/playwright-report/data/5cb93ee70e3ed357e2825e8b5ee03e1b94eb980f.zip",
-    "tau-advanced-playwright-main/playwright-report/data/d4c1ab0208ba27c1c4d463cfcb2c5ca1ee22ad6f.zip",
-    "tau-advanced-playwright-main/playwright-report/data/e2c2439e5fe7203147d30af7051679423463b9f9.zip",
-    "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-2c41f-e-API-Delete-a-book-by-ISBN-chromium/trace.zip",
+    "assets/chapter4-img5.png",
     "assets/chapter3-img9.png",
     "tau-advanced-playwright-main/playwright-report/data/4e94e68eb61387c4cb23f4204788083cd582b6a4.md",
     "tau-advanced-playwright-main/test-results/tests-ui-specs-book-with-f-3eb07-ture-API-Add-brand-new-book-chromium/error-context.md",
@@ -205,7 +206,6 @@
     "assets/storage-state.png",
     "tau-advanced-playwright-main/playwright-report/data/9313ec224c771cd46982151f4fe528015c9ff1c3.md",
     "tau-advanced-playwright-main/test-results/tests-ui-specs-login-Book-Store---Login-successfull-login-chromium/error-context.md",
-    "assets/scr.png",
     "Advanced Playwright.md",
     "assets/Screenshot.md"
   ]

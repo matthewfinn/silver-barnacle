@@ -17,6 +17,7 @@ test.beforeAll(async ({ playwright }) => {
         baseURL: baseAPIUrl[env].api,
         extraHTTPHeaders: {
             // Authorization: `Basic ${apiToken}`,
+            
             Authorization: `Basic ${Buffer.from(`${userName}:${password}`).toString('base64')}`,
             // Authorization: `Basic ${env}`,
             Accept: 'application/json',
