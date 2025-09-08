@@ -1257,12 +1257,6 @@ for (const record of records) {
 ### Exercises
 
 1. If you haven't yet, update your newly created tests (Exercise 2.1, 2.3, 2.4, 3.1, 3.2) to use JSON. What are the be benefits of using this approach? Is there any other approach you'd use for these scenarios?
-
-
-
-2. Choose one of the scenarios and update it to use a CSV file. Where there any advantages from the coding perspective in using this approach? How about the advantages in terms of test runtime, which approach is the fastest?
-
-3. Implement a test to perform a sort or a search using HTTPS interception for the Books List page (https://demoqa.com/books) - Here is the [swagger doc](https://demoqa.com/swagger/#/BookStore/BookStoreV1BooksGet:~:text=v1/Books-,Parameters,-Try%20it%20out). Do you consider this approach appropriate for this scenario? Why would you not use it?
 ### Resources
 1. [passing-environment-variables](https://playwright.dev/docs/test-parameterize#passing-environment-variables)
 2. [mock-api-requests](https://playwright.dev/docs/mock#mock-api-requests)
@@ -1270,15 +1264,151 @@ for (const record of records) {
 4. [create-tests-via-a-csv-file](https://playwright.dev/docs/test-parameterize#create-tests-via-a-csv-file)
 ## Chapter 5 - CI with Observability
 
+### The yml file
+**playwright.yml**
+
+``` yml
+name: Playwright Tests
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+env:
+  USERNAME: ${{ secrets.USERNAME }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+  USERID: ${{ secrets.USERID }}
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+  USERNAME_ADMIN: ${{ secrets.USERNAME_ADMIN }}
+  USERNAME_USER: ${{ secrets.USERNAME_USER }}
+  APITOKEN: ${{ secrets.APITOKEN }}
+  APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+  ENV: ${{ vars.ENV }}
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 20
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright@1.35.0 install --with-deps
+    - name: Run Playwright tests
+      run: npm run test-ui-c
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: index.html
+        path: playwright-report/index.html
+        retention-days: 30
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results
+        path: test-results/
+        retention-days: 30
+    - uses: act10ns/slack@v1
+      if: always()
+      with:
+        status: ${{ job.status }}
+        config: .github/config/slack.yml
+```
+
+### Github Actions & Slack Integration
+
+``` yaml
+# https://github.com/marketplace/actions/slack-github-actions-slack-integration
+username: GitHub-CI
+icon_url: https://github.com/raptatinha/tau-advanced-playwright/blob/main/.github/config/TAU_Advanced-Playwright_230226.png
+
+pretext: Triggered via {{eventName}} by {{actor}} {{or action "action"}} {{ref}} `{{diffRef}}`
+title: GitHub Actions
+title_link: https://support.github.com
+
+text: |
+  *<{{workflowRunUrl}}|Workflow _{{workflow}}_ job _{{jobName}}_ triggered by _{{eventName}}_ is _{{jobStatus}}_>* for <{{refUrl}}|`{{ref}}`>
+  {{#if description}}<{{diffUrl}}|`{{diffRef}}`> - {{description}}{{/if}}
+  {{#if payload.commits}}
+  *Commits*
+  {{#each payload.commits}}
+  <{{this.url}}|`{{truncate this.id 8}}`> - {{this.message}}
+  {{/each}}
+  {{/if}}
+
+fallback: |-
+  [GitHub] {{workflow}} #{{runNumber}} {{jobName}} is {{jobStatus}}
+
+fields:
+  - title: Job Steps
+    value: "{{#each jobSteps}}{{icon this.outcome}} {{@key}}\n{{/each}}"
+    short: false
+  - title: Workflow
+    value: "<{{workflowUrl}}|{{workflow}}>"
+    short: true
+  - title: Git Ref
+    value: "{{ref}} ({{refType}})"
+    short: true
+  - title: Run ID
+    value: |-
+      <{{workflowRunUrl}}|{{runId}}>
+    short: true
+  - title: Run Number
+    value: "{{runNumber}}"
+    short: true
+  - title: Actor
+    value: "{{actor}}"
+    short: true
+  - title: Job Status
+    value: "{{jobStatus}}"
+    short: true
+
+footer: >-
+  <{{repositoryUrl}}|{{repositoryName}}> {{workflow}} #{{runNumber}}
+
+colors:
+  success: '#5DADE2'
+  failure: '#884EA0'
+  cancelled: '#A569BD'
+  default: '#7D3C98'
+
+icons:
+  success: ':white_check_mark:'
+  failure: ':grimacing:'
+  cancelled: ':x:'
+  skipped: ':heavy_minus_sign:'
+  default: ':interrobang:'
+```
+
+### Parallelisation Strategy & Sharding
+
+When we talk about continuous integration, it's extremely important to be mindful about the time that your pipelines are taking to run.
+
+We want to optimize it as much as we can to make the releases as fast as they can possibly be.
+
+Besides Playwright parallelism, it also supports sharding, which is creating multiple machines to execute the tests at the same time.
+
+GitHub Actions and GitLab support that, and you need to understand how your infrastructure works to find the best option available.
+
+Sometimes having 10 machines won't be any faster than having 5 machines, and that's because we still need to install the dependencies, install the browsers, and run the test for each machine.
+
+In that case, you need to exercise a little bit and understand how your application works with the different options of sharding.
+
 ### Quiz
 1. **Why is it important to add the reports to the pipeline?**
-		
+		Without the reports, we would need to check the pipeline logs and try to identify the issues there. This is not only more time-consuming but also a tedious task. The reports provide easy access to the test results, accelerating the investigation process in case of issues.
 2. **Why is it important to connect your pipeline to a communication tool?**
-		
+		To provide early feedback and independence to the whole team. Without that, we would need to have a routine to constantly check the tests and ensure they are passing.
 3. **What is the ideal value of shardTotal?**
-		
+		This will depend on the infrastructure and the number of tests. Because every run will need to set up the environment, sometimes a large number won't have a positive impact on the process. It's necessary to explore a few options until we find a good configuration.
 4. **What would be nice to have in a communication tool's post in order to improve communication and simplify the issue identification process?**
-		
+		link to the commit/pull request; link to the build log; link to the test reports;
 
 ### Exercises
 
@@ -1292,8 +1422,8 @@ for (const record of records) {
 2. If you are already using playwright, are you using any sharding strategy? How often do you need to revisit that setup to keep it efficient?
 
 ### Resources
-1. https://playwright.dev/docs/ci
-2. https://playwright.dev/docs/test-parallel
-3. https://testautomationu.applitools.com/github-actions-for-testing/
-4. https://timdeschryver.dev/blog/using-playwright-test-shards-in-combination-with-a-job-matrix-to-improve-your-ci-speed
-5. https://playwrightsolutions.com/whats-an-easy-way-to-tell-how-many-workers/
+1. [Playwright CI Docs](https://playwright.dev/docs/ci)
+2. [Playwright Test Parallel Docs](https://playwright.dev/docs/test-parallel)
+3. [Github Actions for testing](https://testautomationu.applitools.com/github-actions-for-testing/)
+4. [Playwright Shards](https://timdeschryver.dev/blog/using-playwright-test-shards-in-combination-with-a-job-matrix-to-improve-your-ci-speed)
+5. [How to tell how many workers you need](https://playwrightsolutions.com/whats-an-easy-way-to-tell-how-many-workers/)

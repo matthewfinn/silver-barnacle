@@ -11,6 +11,7 @@ const env = process.env.ENV!;
 const password = process.env.PASSWORD!;
 const userId = process.env.USERID!;
 const userName = process.env.APP_USERNAME!;
+let numBooks = 8;
 
 test.beforeAll(async ({ playwright }) => {
     apiContext = await playwright.request.newContext({
@@ -28,6 +29,9 @@ test.describe.serial.only('Books - Fixture & API', () => {
   test('Add list of books', async () => {
     isbns = bookData.books.map(book => book.isbn);
     await addAllBooksToCollection(userId, isbns);
+    const apiResponse = await getUserAccountInformation(userId);
+    expect(apiResponse.books.length).toBe(numBooks);
+
   });
 
   test('Verify user account information matches local books', async () => {
@@ -35,13 +39,16 @@ test.describe.serial.only('Books - Fixture & API', () => {
     const localIsbns = bookData.books.map(b => b.isbn).sort();
     const apiIsbns = apiResponse.books.map(b => b.isbn).sort();
 
-    expect(apiIsbns.length).toBe(localIsbns.length);
+    numBooks = apiIsbns.length;
+    expect(numBooks).toBe(localIsbns.length);
     expect(apiIsbns).toEqual(localIsbns);
   });
 
   test('Optionally delete a book', async () => {
     // Example: delete a single book if needed
-    // await deleteBook(userId, "9781449325862");
+    await deleteBook(userId, "9781449325862");
+    const apiResponse = await getUserAccountInformation(userId);
+    expect(apiResponse.books.length).toBe(numBooks - 1);
   });
 });
 
@@ -59,7 +66,6 @@ test.afterAll(async () => {
     console.error('Failed to clean books:', err);
   }
 });
-
 
 
 async function deleteBook(userId: string, isbn: string) {

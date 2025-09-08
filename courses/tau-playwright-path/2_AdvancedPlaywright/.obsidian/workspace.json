@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -169,11 +170,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "b56667022b6dfa09",
+  "active": "e0c51f542976a595",
   "lastOpenFiles": [
-    "tau-advanced-playwright-main/playwright-report/data/4643e1b7f5fd37c871f9489a03d51742f507ff7c.zip",
-    "tau-advanced-playwright-main/playwright-report/data/232a35af24768aa777e343918cbd7d4993a7483a.zip",
-    "tau-advanced-playwright-main/playwright-report/data/ca5d59ffa91b2ed75e30c5955d64dd5a8f5ca6df.zip",
+    "tau-advanced-playwright-main/playwright-report/data/50c7df41b98483a18604f26d1c181fffecdc5eb7.zip",
+    "tau-advanced-playwright-main/playwright-report/data/3bd9c28c5c21d97490e1459f5fcb087571a1b5f6.zip",
+    "tau-advanced-playwright-main/playwright-report/data/77d8469763e424cd0f08756967c38c922a0af332.zip",
     "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-b8d3e-PI-Optionally-delete-a-book-chromium/trace.zip",
     "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-b8d3e-PI-Optionally-delete-a-book-chromium",
     "tau-advanced-playwright-main/test-results/tests-ui-specs-books-exerc-b47e4-rmation-matches-local-books-chromium/trace.zip",
