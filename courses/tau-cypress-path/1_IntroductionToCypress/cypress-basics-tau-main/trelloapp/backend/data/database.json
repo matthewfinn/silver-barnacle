@@ -15,56 +15,7 @@
       "id": 2
     }
   ],
-  "cards": [
-    {
-      "order": 0,
-      "boardId": 1,
-      "listId": 1,
-      "name": "bread",
-      "created": "2025-09-08",
-      "deadline": "2025-09-11",
-      "description": "",
-      "completed": false,
-      "id": 1
-    },
-    {
-      "order": 0,
-      "boardId": 1,
-      "listId": 1,
-      "name": "milk",
-      "created": "2025-09-08",
-      "deadline": "2025-09-11",
-      "description": "",
-      "completed": false,
-      "id": 2
-    },
-    {
-      "order": 2,
-      "boardId": 1,
-      "listId": 1,
-      "name": "paracetemol",
-      "created": "2025-09-08",
-      "deadline": "2025-09-11",
-      "description": "",
-      "completed": false,
-      "id": 3
-    }
-  ],
-  "lists": [
-    {
-      "boardId": 1,
-      "name": "grocery store",
-      "order": 0,
-      "created": "2025-09-08",
-      "id": 1
-    },
-    {
-      "boardId": 1,
-      "name": "chemist",
-      "order": 1,
-      "created": "2025-09-08",
-      "id": 2
-    }
-  ],
+  "cards": [],
+  "lists": [],
   "users": []
 }
