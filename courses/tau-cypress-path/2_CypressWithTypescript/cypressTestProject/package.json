@@ -9,7 +9,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cypress": "^15.1.0"
+    "cypress": "^15.1.0",
+    "cypress-real-events": "^1.15.0"
   },
   "devDependencies": {
     "typescript": "^5.9.2"

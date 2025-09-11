@@ -124,7 +124,7 @@ Download Test Code [here](https://github.com/filiphric/cypress-basics-tau/tree/m
 ### Trello App
 Download linked repo containing sample Trello app [here](https://github.com/filiphric/trelloapp-vue-vite-ts/tree/8bdade320057e6edce60877ac8ca17bb730dacf8)
 
-Bundled as a submodule is an app that is a clone of a popular [Trello app](https://trello.com/). 
+It is part of the silver-barnacle repository and located at: courses\tau-cypress-path\TrelloTestApplication
 You can create boards, lists and cards. You can drag and drop cards between lists or even upload a picture to the card detail. There’s also a very simple signup and login which will allow you to create private boards
 
 #### Installation
