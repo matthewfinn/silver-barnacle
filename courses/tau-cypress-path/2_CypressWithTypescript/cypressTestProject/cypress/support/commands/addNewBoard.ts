@@ -1,5 +1,5 @@
 export { }
-import Board from './../../../../../TrelloTestApplication/src/typings/board'
+import Board from '@typings/board';
 declare global {
     namespace Cypress{
         interface Chainable {
@@ -9,8 +9,7 @@ declare global {
              * @example
              * cy.addBoard('new board')
              */
-            addBoard(name: string):
-            Chainable<Board>
+            addBoard(name: string): Chainable<Board>
         }
     }
 }

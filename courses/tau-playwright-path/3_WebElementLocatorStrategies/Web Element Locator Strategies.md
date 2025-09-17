@@ -1,3 +1,4 @@
+# Web Element Locator Strategies
 # Chapter 1 - What's in a Web Page?
 A "Web page" is a document on the World Wide Web that can be displayed in a browser on a computer or device.
 Popular websites like Google, Facebook, and Wikipedia all have multiple pages with different content.

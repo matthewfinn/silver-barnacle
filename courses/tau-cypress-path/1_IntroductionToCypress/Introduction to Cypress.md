@@ -1,3 +1,4 @@
+# Introduction to Cypress
 ## Chapter 1 - What is Cypress
 
 Cypress is your go-to tool for testing anything that operates within a browser.

@@ -1,4 +1,4 @@
-
+# Cypress with TypeScript
 TypeScript  is slowly becoming the number one language for web development.
 ## Chapter 1 - Exploring types
 
@@ -29,7 +29,7 @@ console.log(add(1,2)) // 3
 
 type EvenNumber = 2 | 4 | 6 | 8
 
-const addEvenNumbers= (a: EvenNumber, b: EvenNumber) => {
+const addEvenNumbers = (a: EvenNumber, b: EvenNumber) => {
     return a + b;
 }
 
@@ -647,9 +647,75 @@ after(() => {
 
 ### Using Types from source application
 
-1. import it into custom command file
-		`import Board from './../../../../../TrelloTestApplication/src/typings/board'`
-2. Can use properties in test file
+**The paths are as follows**
+```
+tau-cypress-path/
+├─ TrelloTestApplication/                     # Main application
+│  └─ src/
+│     └─ typings/                             # TypeScript type definitions
+│        └─ board.d.ts                        # Board interface/type
+│
+└─ 2_CypressWithTypescript/                   # Cypress project
+   └─ cypressTestProject/
+      ├─ cypress/
+      │  ├─ fixtures/                         # Cypress test data
+      │  │  └─ lists.json
+      │  │
+      │  └─ support/
+      │     └─ commands/
+      │        └─ addNewBoard.ts              # Custom Cypress command
+      │
+      ├─ cypress.config.js                    # Cypress runtime config
+      └─ tsconfig.json                        # TypeScript compiler config
+
+```
+
+### Steps to import types
+1. Add to `tsconfig.json`
+	``` json
+	{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node", "cypress-real-events"],
+    "baseUrl": "./",
+    "paths": {
+      "@fixtures/*": ["cypress/fixtures/*"],
+      "@typings/*": ["../../TrelloTestApplication/src/typings/*"]
+    }
+  },
+  "include": ["**/*.ts", "cypress/support/e2e.ts"]
+}
+	```
+2. Add to `cypress.config.json`
+``` json
+const { defineConfig } = require("cypress");
+const path = require('path');
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      // This makes @fixtures workac
+      config.env = {
+        ...config.env,
+        alias: {
+          '@fixtures': path.resolve(__dirname, 'cypress/fixtures'),
+          '@typings': path.resolve(__dirname, '../../TrelloTestApplication/src/typings'),
+        },
+      };
+      return config;
+    },
+    baseUrl: 'http://localhost:3000',
+
+  },
+});
+
+```
+3. Import it with 
+	``` typescript
+	import Board from '@typings/board';
+	```
+4. Can use properties in test file
 	![](assets/types.png)
 ### Quiz
 1. **We need to run our tests in order to check types**
@@ -664,18 +730,294 @@ after(() => {
 
 ## Chapter 7 - Chapter 7 - Using utility types in custom commands
 
+### Basic Custom Command
+Similar to the way in which we created 'addNewBoard' in the last chapter. We can improve on this in the following sections
+![](assets/edit-board.png)
+The API actually does not allow us to use everything.
+For example, We cannot change the user or we cannot change the created date when that board was created.
+This means that I cannot use my interface as it is currently defined.
+
+What can we do? There are multiple options that I can choose.
+
+The bare minimum I can do is to use something that's called **utility types.**
+
+### Utility type: Record
+This enables us to define what kind of keys we want to type, and what kind of parameters those keys should have.
+If I type something like `<string, any>`, this will mean that inside `editBoard`, I can just pass any object.
+
+![](assets/chapter7-img5.png)
+Anything that will have a parameter and a value will be good enough.
+
+I can even pass an empty object, and my `editBoard` function would still not complain.
+
+Now, this is less than ideal.
+
+We need to be more specific, but there are some cases where we don't really care what kind of object we pass, as long as it's an object.
+
+### Utility Type: Pick
+This enables us to pick any attributes that we want from an existing interface.
+
+I'm going to use `<Board, 'id'>`.
+![](assets/chapter7-img6.png)
+
+I paste it into my custom command, and when I now save my file and go to my spec file, you can see that my TypeScript compiler is complaining.
+
+![](assets/chapter7-img7.png)
+I simply cannot pass an empty object.
+
+What I need to do is pass an `id`.
+
+If I do that, the errors disappear.
+
+Now, if I take a look into my custom command and what it actually does, I can see that it will call a PATCH request to /`api/boards/` with a certain id, and then we are going to be passing the `body` that will contain all of the changes that we want to make.
+
+``` typescript
+export { }
+import Board from '@typings/board';
+declare global {
+    namespace Cypress{
+        interface Chainable {
+            /**
+             * Changes a board via API
+             * @param body - changes you want to make to the board
+             * @example
+             * cy.editBoard(1)
+             */
+            editBoard(body: Pick<Board, 'id' | 'name' | 'starred'>): Chainable<Board>
+        }
+    }
+}
+
+Cypress.Commands.add('editBoard', (body: Pick<Board, 'id' | 'name' | 'starred'>) => {
+
+        Cypress.log({
+            displayName: 'edit board',
+            consoleProps() {
+                return{
+                    id: body.id
+                }
+            }
+        })
+        return cy.request('PATCH', `/api/boards/${body.id}`, body).its('body');
+})
+```
+
+For example, if we take a look into this interface, we might want to change the name of our board, or maybe even the starred attribute.
+
+``` typescript
+interface Board {
+  id: number;
+  starred: boolean;
+  name: string;
+  created: string;
+  user: number;
+}
+export default Board;
+```
+
+
+### Utility Type: Omit
+This Pick utility type is quite useful, but I can choose an opposite approach, and just pick all of the keys from my board interface, but leave out some of them.
+
+To do this, I can use the utility type called Omit, and this is going to do the exact opposite.
+
+Instead of requiring ``id``, ``name``, and ``starred``, it's going to require all of the others - so that would be user and created.
+
+If we want to keep our function working, we need to add those into our ``Omit`` utility type - so that's going to be ``created | user``
+
+``` typescript
+export { }
+import Board from '@typings/board';
+declare global {
+    namespace Cypress{
+        interface Chainable {
+            /**
+             * Changes a board via API
+             * @param body - changes you want to make to the board
+             * @example
+             * cy.editBoard(1)
+             */
+            editBoard(body: Omit<Board, 'created' | 'user'>): Chainable<Board>
+        }
+    }
+}
+
+Cypress.Commands.add('editBoard', (body: Omit<Board, 'created' | 'user'>) => {
+
+        Cypress.log({
+            displayName: 'edit board',
+            consoleProps() {
+                return{
+                    id: body.id
+                }
+            }
+        })
+        return cy.request('PATCH', `/api/boards/${body.id}`, body).its('body');
+})
+```
+
+The only problem might be that whenever we call ``editBoard``, we are required to call both ``name`` and the ``starred`` attribute, which is something we might not always want to do.
+
+What if we just want to change the name or just want to change the starred attribute?
+
+In that case, we can go ahead and define our attributes explicitly.
+
+What I'm going to do is I'm going to define an object, and I'm going to say that there will be a key of ``id`` that's going to be a type of ``Board['id]``.
+
+Then, I'm going to say that there's also an attribute of ``name`` with the type of ``Board['name']`` and an attribute ``starred``, which will be a type of Board['starred'].
+
+We can make these options by adding `?`
+``` typescript
+export { }
+import Board from '@typings/board';
+declare global {
+    namespace Cypress {
+        interface Chainable {
+            /**
+             * Changes a board via API
+             * @param body - changes you want to make to the board
+             * @example
+             * cy.editBoard(1)
+             */
+            editBoard(body: {
+                id: Board['id'],
+                name?: Board['name'],
+                starred?: Board['starred']
+            }): Chainable<Board>
+        }
+    }
+}
+
+Cypress.Commands.add('editBoard', (body: {
+                id: Board['id'],
+                name?: Board['name'],
+                starred?: Board['starred']
+            }) => {
+
+    Cypress.log({
+        displayName: 'edit board',
+        consoleProps() {
+            return {
+                id: body.id
+            }
+        }
+    })
+    return cy.request('PATCH', `/api/boards/${body.id}`, body).its('body');
+})
+```
+
+### Utility Type: Partial
+With this one, We can say that the argument of this `editBoard` function can be a `Partial<Board>` interface.
+
+``` typescript
+export { }
+import Board from '@typings/board';
+declare global {
+    namespace Cypress {
+        interface Chainable {
+            /**
+             * Changes a board via API
+             * @param body - changes you want to make to the board
+             * @example
+             * cy.editBoard(1)
+             */
+            editBoard(body: Partial<Board>): Chainable<Board>
+        }
+    }
+}
+
+Cypress.Commands.add('editBoard', (body: Partial<Board>) => {
+
+    Cypress.log({
+        displayName: 'edit board',
+        consoleProps() {
+            return {
+                id: body.id
+            }
+        }
+    })
+    return cy.request('PATCH', `/api/boards/${body.id}`, body).its('body');
+})
+```
+This means that if I start typing, I get these suggestions for different attributes, but none of them are required.
+
+If I take a look into what ``editBoard`` actually does, it seems that it is always going to require ``body.id``.
+
+We basically always need to pass it if we want our API call to work.
+
+### Combining Utility Types
+
+What I can do is that I can actually combine these utility types.
+
+I'm going to keep the `Partial<Board>`, but then I'm going to add to this type another type that's called `Required<>`.
+
+In this one, I need to define which types are required, but I'm actually going to pass a ``Pick`` utility type, and from my ``Board``, I'm going to pick the ``'id'``.
+![](assets/chapter7-img15.png)
+
+Now in `editBoard`, I am required to use the id, which will be a number.
+
+But I also have the optional keys, so if I want to pass the name, I can pass it, or I can pass the starred say it's, for example, false.
+
+### Cleanup duplication
+Usually, I need to type everything twice to include that both in my custom command, and also in the type definition.
+
+There is a different way of how we can do this.
+
+Basically - copy the whole function and define it as a function of its own.
+
+I'm going to call it `editBoard`, and paste the function in here.
+Now, the thing that we do here is that I'll use this function as an argument into the `Cypress.Commands.add` function.
+
+Now that we have defined my custom command as a standard JavaScript function, what we can do here is say that this `editBoard()` function will actually be a `typeof` our `editBoard`.
+
+``` typescript
+export { }
+import Board from '@typings/board';
+declare global {
+    namespace Cypress {
+        interface Chainable {
+            /**
+             * Changes a board via API
+             * @param body - changes you want to make to the board
+             * @example
+             * cy.editBoard(1)
+             */
+            editBoard: typeof editBoard
+        }
+    }
+}
+
+const editBoard = (body: Partial<Board> & Required<Pick<Board, 'id'>>) => {
+
+    Cypress.log({
+        displayName: 'edit board',
+        consoleProps() {
+            return {
+                id: body.id
+            }
+        }
+    })
+    return cy.request('PATCH', `/api/boards/${body.id}`, body).its('body');
+}
+
+Cypress.Commands.add('editBoard', editBoard)
+```
 ### Quiz
+1. **"Pick" utility type will**
+	Create a type from given interface that contains just the set of properties we define
+2. **"Omit" utility type will**
+	Create a type that contains types from given interface, but without properties we define
+3. **writing a type like this: ``"starred? :string"`` will make the "starred" property**
+	optional
+4. **We can create a combination of different utility types**
+	true
 
-### Resources 
 
-## Chapter 8 - Chapter 8 - Using the CLI to check types
+## Chapter 8 - Using the CLI to check types
+A really powerful feature of TypeScript is the ability to check all the errors in the project.
 
-### Quiz
+We can do that using our `tsc` command.
+In this case, we are going to pass a flag `--noEmit`, which is just going to run our compiler and find all the errors in our project.
 
-### Resources 
-
-## Chapter 9 - Leveraging TypeScript for visual testing
-
-### Quiz
-
-### Resources 
+if we were to add an error - for example, change this `id` to `ids`, which is something that our body interface does not contain - then save my test and run my command, then immediately it is going to complain.
+![](assets/chapter8-img1.png)

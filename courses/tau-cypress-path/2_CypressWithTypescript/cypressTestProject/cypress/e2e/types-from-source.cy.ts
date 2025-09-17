@@ -7,7 +7,6 @@ describe('testing types from source', () => {
                 expect(body.name).to.equal('API Board')
                 expect(body.user).to.equal(0)
                 expect(body.starred).to.equal(false)
-                expect(body.user).to.equal(0)
                 expect(body.created).to.equal(new Date().toISOString().split('T')[0]) // toISOString() returns something like "2025-09-11T14:30:00.000Z". split('T')[0] extracts just the date part.
             })
         /* yielded object example
@@ -21,7 +20,23 @@ describe('testing types from source', () => {
         */
 
     })
+
+    it('editing a board', () => {
+        cy.editBoard({
+            id: 1,
+            name: 'Edited API Board',
+            starred: true
+        }).then((body) => {
+                expect(body.id).to.exist
+                expect(body.id).to.equal(1)
+                expect(body.name).to.equal('Edited API Board')
+                expect(body.user).to.equal(0)
+                expect(body.starred).to.equal(true)
+                expect(body.created).to.equal(new Date().toISOString().split('T')[0]) // toISOString() returns something like "2025-09-11T14:30:00.000Z". split('T')[0] extracts just the date part.
+            })
+    })
 })
+
 
 after(() => {
     cy.request('POST', '/api/reset'); // reset everything

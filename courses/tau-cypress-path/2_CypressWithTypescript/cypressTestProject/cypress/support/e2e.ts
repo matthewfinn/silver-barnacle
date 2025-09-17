@@ -18,3 +18,4 @@
 import 'cypress-real-events/support'
 import './commands/getByPlaceholder'
 import './commands/addNewBoard'
+import './commands/editBoard'

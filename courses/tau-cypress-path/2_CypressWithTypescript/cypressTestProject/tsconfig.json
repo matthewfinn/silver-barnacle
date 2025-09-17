@@ -5,7 +5,8 @@
     "types": ["cypress", "node", "cypress-real-events"],
     "baseUrl": "./",
     "paths": {
-      "@fixtures/*": ["cypress/fixtures/*"]
+      "@fixtures/*": ["cypress/fixtures/*"],
+      "@typings/*": ["../../TrelloTestApplication/src/typings/*"]
     }
   },
   "include": ["**/*.ts", "cypress/support/e2e.ts"]
