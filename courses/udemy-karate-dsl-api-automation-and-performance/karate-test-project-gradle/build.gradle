@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+ext {
+    karateVersion = '1.5.1'
+    logbackVersion = '1.5.6'
+}
+
+dependencies {
+    testImplementation "io.karatelabs:karate-junit5:${karateVersion}"
+    testImplementation "ch.qos.logback:logback-classic:${logbackVersion}"
+}
+
+sourceSets {
+    test {
+        resources {
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "karate.options", System.properties.getProperty("karate.options")
+    systemProperty "karate.env", System.properties.getProperty("karate.env")
+    outputs.upToDateWhen { false }
+}
+
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,5 @@
+# Created at 2025-09-18T16:19:50.921
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Documents\Repositories\silver-barnacle\courses\udemy-karate-dsl-api-automation-and-performance\karate-test-project-maven\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
