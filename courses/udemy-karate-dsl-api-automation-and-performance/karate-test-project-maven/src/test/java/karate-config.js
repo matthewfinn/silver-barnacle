@@ -5,14 +5,19 @@ function fn() {
     env = 'dev';
   }
   var config = {
-    env: env,
-    myVarName: 'someValue'
+    apiURL: 'https://conduit-api.bondaracademy.com/api'
   }
   if (env == 'dev') {
-    // customize
-    // e.g. config.foo = 'bar';
-  } else if (env == 'e2e') {
-    // customize
+    config.userEmail =  "matt.finn@hotmail.com"
+    config.userPassword = "D$kpw!px8O^ZgPsq"
+  } else if (env == 'qa') {
+    config.userEmail =  "test@example.com"
+    config.userPassword = "blabla"
   }
+
+  // configure global Authorization header for all tests
+  var accessToken = karate.callSingle('classpath:utils/CreateToken.feature', config).authToken;
+  karate.configure('headers', {Authorization: accessToken})
+  
   return config;
 }
